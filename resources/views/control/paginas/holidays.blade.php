@@ -1,6 +1,6 @@
 @extends('plantilla')
 @section('titulo')
-    Vacacion
+    Vacaciones
 @endsection
     @section('additionals_css')
 @endsection
