@@ -1,6 +1,6 @@
 @extends('plantilla')
 @section('titulo')
-    Bienvenida
+    Home
 @endsection
     @section('additionals_css')
 @endsection
