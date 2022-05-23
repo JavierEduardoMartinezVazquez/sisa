@@ -68,7 +68,11 @@ Route::get('verificar_baja_holidays', 'HolidaysController@verificar_baja_holiday
 Route::post('baja_holidays', 'HolidaysController@baja_holidays')->name('baja_holidays');
 
 /*---------------Controlador de Permisos----------------*/
-Route::get('');
-Route::get('');
-Route::get('');
-Route::get('');
+Route::get('Permissions', 'PermissionsController@Permissions')->name('Permissions');
+Route::get('obtener_ultimo_id_permissions', 'PermissionsController@obtener_ultimo_id_permissions')->name('obtener_ultimo_id_permissions');
+Route::post('guardar_permissions', 'PermissionsController@guardar_permissions')->name('guardar_permissions');
+Route::get('listar_permissions', 'PermissionsController@listar_permissions')->name('listar_permissions');
+Route::get('obtener_permissions', 'PermissionsController@obtener_permissions')->name('obtener_permissions');
+Route::post('modificar_permissions', 'PermissionsController@modificar_permissions')->name('modificar_permissions');
+Route::get('verificar_baja_permissions', 'PermissionsController@verificar_baja_permissions')->name('verificar_baja_permissions');
+Route::post('baja_permissions', 'PermissionsController@baja_permissions')->name('baja_permissions');

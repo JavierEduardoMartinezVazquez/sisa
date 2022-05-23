@@ -25,7 +25,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{route('Permissions')}}" class="nav-link">
                   <i class="nav-icon fas fa-calendar-check"></i>
                   <p>Permisos</p>
                 </a>
