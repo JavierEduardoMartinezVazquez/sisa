@@ -69,3 +69,6 @@ Route::post('baja_holidays', 'HolidaysController@baja_holidays')->name('baja_hol
 
 /*---------------Controlador de Permisos----------------*/
 Route::get('');
+Route::get('');
+Route::get('');
+Route::get('');
