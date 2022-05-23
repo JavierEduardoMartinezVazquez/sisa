@@ -76,7 +76,7 @@
 <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav me-auto my-2 my-lg- navbar-nav-scroll"></ul>
         <form class="col-2">
-          <a href="http://localhost/asistenciasocasa/public/sucursales" class="btn btn-outline-secondary">REGISTRATE</a>
+          <a href="http://127.0.0.1:8000/register" class="btn btn-outline-secondary">REGISTRATE</a>
         </form>
       </div>
     </div>
@@ -100,7 +100,7 @@
                             <br>
                             <br>
                             <br>
-                            <a href="http://127.0.0.1:8000/Start" class="btn btn-outline-secondary">INGRESAR</a>
+                            <a href="http://127.0.0.1:8000/login" class="btn btn-outline-secondary">INGRESAR</a>
                         </div>
                       </div>
                 </div>

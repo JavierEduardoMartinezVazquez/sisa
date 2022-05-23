@@ -13,8 +13,7 @@
           <li class="nav-item has-treeview"><!--<li class="nav-item has-treeview menu-open">-->
             <a href="#" class="nav-link active"><!--<a href="#" class="nav-link active">-->
               <i class="nav-icon fas fa-edit"></i>
-              <p>
-                Registro
+              <p>Registro
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>

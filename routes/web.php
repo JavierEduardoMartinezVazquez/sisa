@@ -66,3 +66,6 @@ Route::get('obtener_holidays', 'HolidaysController@obtener_holidays')->name('obt
 Route::post('modificar_holidays', 'HolidaysController@modificar_holidays')->name('modificar_holidays');
 Route::get('verificar_baja_holidays', 'HolidaysController@verificar_baja_holidays')->name('verificar_baja_holidays');
 Route::post('baja_holidays', 'HolidaysController@baja_holidays')->name('baja_holidays');
+
+/*---------------Controlador de Permisos----------------*/
+Route::get('');
