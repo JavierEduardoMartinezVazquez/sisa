@@ -1,7 +1,7 @@
 @extends('plantilla')
 @section('titulo')
-    Días de Vacaciones
-@endsection 
+    Reporte de Vacaciones
+@endsection
     @section('additionals_css')
 @endsection
 @section('content')
@@ -30,7 +30,7 @@
                         <div class="card-header">
                             <div class="row">
                                 <div class="col-sm-8">
-                                    <h4>Días de Vacaciones</h4>
+                                    <h4>Reporte de Vacaciones</h4>
                                 </div>
                                 <div class="col-md-1">
                                     <!---->

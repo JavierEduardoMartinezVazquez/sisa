@@ -87,8 +87,7 @@ Route::post('modificar_employees', 'EmployeesController@modificar_employees')->n
 Route::get('verificar_baja_employees', 'EmployeesController@verificar_baja_employees')->name('verificar_baja_employees');
 Route::post('baja_employees', 'EmployeesController@baja_employees')->name('baja_employees');
 
-/*----------------Controlador de Dias de vacaciones--------*/
-
+/*-----------Controlador de Dias de Vacaciones------------*/
 Route::get('Vacationdays', 'VacationdaysController@Vacationdays')->name('Vacationdays');
 Route::get('obtener_ultimo_id_vacationdays', 'VacationdaysController@obtener_ultimo_id_vacationdays')->name('obtener_ultimo_id_vacationdays');
 Route::post('guardar_vacationdays', 'VacationdaysController@guardar_vacationdays')->name('guardar_vacationdays');
@@ -97,4 +96,14 @@ Route::get('obtener_vacationdays', 'VacationdaysController@obtener_vacationdays'
 Route::post('modificar_vacationdays', 'VacationdaysController@modificar_vacationdays')->name('modificar_vacationdays');
 Route::get('verificar_baja_vacationdays', 'VacationdaysController@verificar_baja_vacationdays')->name('verificar_baja_vacationdays');
 Route::post('baja_vacationdays', 'VacationdaysController@baja_vacationdays')->name('baja_vacationdays');
+
+/*-----------Controlador de Reporte de Vaciones------------*/
+Route::get('Vacationreports', 'VacationreportsController@Vacationreports')->name('Vacationreports');
+Route::get('obtener_ultimo_id_vacationreports', 'VacationreportsController@obtener_ultimo_id_vacationreports')->name('obtener_ultimo_id_vacationreports');
+Route::post('guardar_vacationreports', 'VacationreportsController@guardar_vacationreports')->name('guardar_vacationreports');
+Route::get('listar_vacationreports', 'VacationreportsController@listar_vacationreports')->name('listar_vacationreports');
+Route::get('obtener_vacationreports', 'VacationreportsController@obtener_vacationreports')->name('obtener_vacationreports');
+Route::post('modificar_vacationreports', 'VacationreportsController@modificar_vacationreports')->name('modificar_vacationreports');
+Route::get('verificar_baja_vacationreports', 'VacationreportsController@verificar_baja_vacationreports')->name('verificar_baja_vacationreports');
+Route::post('baja_vacationreports', 'VacationreportsController@baja_vacationreports')->name('baja_vacationreports');
 
