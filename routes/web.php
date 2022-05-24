@@ -117,3 +117,14 @@ Route::post('modificar_permissionsreports', 'PermissionsreportsController@modifi
 Route::get('verificar_baja_permissionsreports', 'PermissionsreportsController@verificar_baja_permissionsreports')->name('verificar_baja_permissionsreports');
 Route::post('baja_permissionsreports', 'PermissionsreportsController@baja_permissionsreports')->name('baja_permissionsreports');
 
+/*-----------------Controlador Cerrar Sesion---------------*/
+Route::get('Exits', 'ExitsController@Exits')->name('Exits');
+Route::get('obtener_ultimo_id_exits', 'ExitsController@obtener_ultimo_id_exits')->name('obtener_ultimo_id_exits');
+Route::post('guardar_exits', 'ExitsController@guardar_exits')->name('guardar_exits');
+Route::get('listar_exits', 'ExitsController@listar_exits')->name('listar_exits');
+Route::get('obtener_exits', 'ExitsController@obtener_exits')->name('obtener_exits');
+Route::post('modificar_exits', 'ExitsController@modificar_exits')->name('modificar_exits');
+Route::get('verificar_baja_exits', 'ExitsController@verificar_baja_exits')->name('verificar_baja_exits');
+Route::post('baja_exits', 'ExitsController@baja_exits')->name('baja_exits');
+
+
