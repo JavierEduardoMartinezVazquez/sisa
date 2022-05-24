@@ -54,7 +54,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{route('Employees')}}" class="nav-link">
                   <i class="nav-icon fas fa-users"></i>
                   <p>Empleados</p>
                 </a>
@@ -77,7 +77,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{route('Vacationdays')}}" class="nav-link">
                   <i class="nav-icon fas fa-calendar-alt"></i>
                   <p>Dias de Vacaciones</p>
                 </a>

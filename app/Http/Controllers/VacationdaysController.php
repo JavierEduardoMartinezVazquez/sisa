@@ -13,11 +13,11 @@ use Helpers;
 use Illuminate\Support\Carbon;
 
 
-class EmployeesController extends Controller
+class VacationdaysController extends Controller
 {
-    public function Employees()
+    public function Vacationdays()
     {
-        return view('control.paginas.employees');
+        return view('control.paginas.vacationdays');
     }
     public function obtener_ultimo_id_user(){
         $ultimoNumeroTabla = User::select("id")->orderBy("id", "DESC")->take(1)->get();
