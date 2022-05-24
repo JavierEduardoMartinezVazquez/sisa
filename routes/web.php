@@ -107,3 +107,13 @@ Route::post('modificar_vacationreports', 'VacationreportsController@modificar_va
 Route::get('verificar_baja_vacationreports', 'VacationreportsController@verificar_baja_vacationreports')->name('verificar_baja_vacationreports');
 Route::post('baja_vacationreports', 'VacationreportsController@baja_vacationreports')->name('baja_vacationreports');
 
+/*-----------Controlador de Reporte de Permisos------------*/
+Route::get('Permissionsreports', 'PermissionsreportsController@Permissionsreports')->name('Permissionsreports');
+Route::get('obtener_ultimo_id_permissionsreports', 'PermissionsreportsController@obtener_ultimo_id_permissionsreports')->name('obtener_ultimo_id_permissionsreports');
+Route::post('guardar_permissionsreports', 'PermissionsreportsController@guardar_permissionsreports')->name('guardar_permissionsreports');
+Route::get('listar_permissionsreports', 'PermissionsreportsController@listar_permissionsreports')->name('listar_permissionsreports');
+Route::get('obtener_permissionsreports', 'PermissionsreportsController@obtener_permissionsreports')->name('obtener_permissionsreports');
+Route::post('modificar_permissionsreports', 'PermissionsreportsController@modificar_permissionsreports')->name('modificar_permissionsreports');
+Route::get('verificar_baja_permissionsreports', 'PermissionsreportsController@verificar_baja_permissionsreports')->name('verificar_baja_permissionsreports');
+Route::post('baja_permissionsreports', 'PermissionsreportsController@baja_permissionsreports')->name('baja_permissionsreports');
+
