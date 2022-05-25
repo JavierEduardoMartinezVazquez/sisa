@@ -49,7 +49,7 @@
               </li>
               <li class="nav-item">
                 <a href="{{route('User')}}" class="nav-link" id="use">
-                  <i class="nav-icon fas fa-user-secret"></i>
+                  <i class="nav-icon fas fa-user"></i>
                   <p>Usuarios</p>
                 </a>
               </li>
@@ -91,7 +91,7 @@
               </li>
               <li class="nav-item">
                 <a href="{{route('Nominas')}}" class="nav-link">
-                  <i class="nav-icon fas fa-book"></i>
+                  <i class="nav-icon fas fa-user"></i>
                   <p>Nomina</p>
                 </a>
               </li>
