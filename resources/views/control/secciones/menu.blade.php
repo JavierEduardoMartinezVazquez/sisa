@@ -30,6 +30,12 @@
                   <p>Permisos</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="{{route('Assistances')}}" class="nav-link">
+                  <i class="nav-icon far fa-calendar-alt"></i>
+                  <p>Asistencias</p>
+                </a>
+              </li>
             </ul>
           </li>
           <li class="nav-item has-treeview">

@@ -136,3 +136,13 @@ Route::get('obtener_nominas', 'NominasController@obtener_nominas')->name('obtene
 Route::post('modificar_nominas', 'NominasController@modificar_nominas')->name('modificar_nominas');
 Route::get('verificar_baja_nominas', 'NominasController@verificar_baja_nominas')->name('verificar_baja_nominas');
 Route::post('baja_nominas', 'NominasController@baja_nominas')->name('baja_nominas');
+
+/*--------------------Controlador Asistencias-------------------*/
+Route::get('Assistances', 'AssistancesController@Assistances')->name('Assistances');
+Route::get('obtener_ultimo_id_assistances', 'AssistancesController@obtener_ultimo_id_assistances')->name('obtener_ultimo_id_assistances');
+Route::post('guardar_assistances', 'AssistancesController@guardar_assistances')->name('guardar_assistances');
+Route::get('listar_assistances', 'AssistancesController@listar_assistances')->name('listar_assistances');
+Route::get('obtener_assistances', 'AssistancesController@obtener_assistances')->name('obtener_assistances');
+Route::post('modificar_assistances', 'AssistancesController@modificar_assistances')->name('modificar_assistances');
+Route::get('verificar_baja_assistances', 'AssistancesController@verificar_baja_assistances')->name('verificar_baja_assistances');
+Route::post('baja_assistances', 'AssistancesController@baja_assistances')->name('baja_assistances');
