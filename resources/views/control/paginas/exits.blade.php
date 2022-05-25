@@ -38,62 +38,30 @@
                                 <div class="col-md-1">
                                     <!---->
                                 </div>
-                                <div class="col-md-1">
-                                    <button type="submit" class="btn btn-danger" onclick="alta()">Agregar</button>
-                                </div>
-                            </div>
-                        </div>
+                                <center>
+                                <div class="col-8">
+                                    <div class="col-sm-6">
+                                      <div class="card">
+                                        <div class="card-body">
+                                          <h3 class="card-text">¿Desea salir del sistema?</h3>
+                                          <a href="#" class="btn btn-primary">Salir</a>
+                                        </div>
+                                      </div>
+                                    </div>
                         <div class="card-body table-responsive">
                             <table id="tablelist" class=" tablelist table table-bordered table-striped display nowrap">
-                                <thead>
-                                    <tr>
-                                        <th ><div style="width:90px !important;">Operación </div></th>
-                                        <th>#</th>
-                                        <th>Nombre</th>
-                                        <th>Empresa</th>
-                                        <th>Departamento</th>
-                                        <th>Puesto</th>
-                                        <th>F.Solicitud</th>
-                                        <th>F.Ingreso</th>
-                                        <th>Aniverario</th>
-                                        <th>F.Inicio</th>
-                                        <th>F.Final</th>
-                                        <th>Inico de labores</th>
-                                        <th>Dias</th>
-                                        <th>P. Prima Vacacional </th>
-                                        <th>D. aniversario anterior</th>
-                                        <th>D. Pendientes</th>
-                                        <th>F. Autorizacion</th>
-                                        <th>Autorizado por</th>
-                                        <th>Status</th>
-                                        <th>Periodo</th>                            
-                                    </tr>
+                               
                                 </thead>
                             </table>
                         </div>
                     </div>
                 </div>
             </div>
+        </center>
         </section>
     </div>
     @include('control.modal.modal_alta')
     @include('control.modal.modal_baja')
 @endsection
 @section('additionals_js')
-    <script>
-    //detectar cuando en el input de buscar por codigo de producto el usuario presione la tecla enter, si es asi se realizara la busqueda con el codigo escrito
-        $(document).ready(function(){
-        $("#hol").addClass('active');
-        });
-    </script>
-    <script>
-        var obtener_ultimo_id_holidays = '{!!URL::to('obtener_ultimo_id_holidays')!!}';
-        var guardar_holidays = '{!!URL::to('guardar_holidays')!!}';
-        var listar_holidays = '{!!URL::to('listar_holidays')!!}';
-        var obtener_holidays = '{!!URL::to('obtener_holidays')!!}';
-        var modificar_holidays = '{!!URL::to('modificar_holidays')!!}';
-        var verificar_baja_holidays = '{!!URL::to('verificar_baja_holidays')!!}';
-        var baja_holidays = '{!!URL::to('baja_holidays')!!}';     
-    </script> 
-    <script src="scripts/holidays.js"></script>
 @endsection    

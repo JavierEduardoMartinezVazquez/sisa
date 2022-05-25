@@ -127,4 +127,12 @@ Route::post('modificar_exits', 'ExitsController@modificar_exits')->name('modific
 Route::get('verificar_baja_exits', 'ExitsController@verificar_baja_exits')->name('verificar_baja_exits');
 Route::post('baja_exits', 'ExitsController@baja_exits')->name('baja_exits');
 
-
+/*--------------------Controlador Nomina-------------------*/
+Route::get('Nominas', 'NominasController@Nominas')->name('Nominas');
+Route::get('obtener_ultimo_id_nominas', 'NominasController@obtener_ultimo_id_nominas')->name('obtener_ultimo_id_nominas');
+Route::post('guardar_nominas', 'NominasController@guardar_nominas')->name('guardar_nominas');
+Route::get('listar_nominas', 'NominasController@listar_nominas')->name('listar_nominas');
+Route::get('obtener_nominas', 'NominasController@obtener_nominas')->name('obtener_nominas');
+Route::post('modificar_nominas', 'NominasController@modificar_nominas')->name('modificar_nominas');
+Route::get('verificar_baja_nominas', 'NominasController@verificar_baja_nominas')->name('verificar_baja_nominas');
+Route::post('baja_nominas', 'NominasController@baja_nominas')->name('baja_nominas');

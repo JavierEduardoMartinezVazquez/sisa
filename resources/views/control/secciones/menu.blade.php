@@ -11,7 +11,7 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item has-treeview"><!--<li class="nav-item has-treeview menu-open">-->
-            <a href="#" class="nav-link active"><!--<a href="#" class="nav-link active">-->
+            <a class="nav-link active"><!--<a href="#" class="nav-link active">-->
               <i class="nav-icon fas fa-edit"></i>
               <p>Registro
                 <i class="right fas fa-angle-left"></i>
@@ -33,7 +33,7 @@
             </ul>
           </li>
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
                 Catalogos
@@ -69,7 +69,7 @@
             </ul>
           </li>
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
                 Reportes
@@ -87,6 +87,12 @@
                 <a href="{{route('Vacationreports')}}" class="nav-link">
                   <i class="nav-icon fas fa-book"></i>
                   <p>Vacaciones</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('Nominas')}}" class="nav-link">
+                  <i class="nav-icon fas fa-book"></i>
+                  <p>Nomina</p>
                 </a>
               </li>
               <li class="nav-item">
