@@ -44,7 +44,7 @@
                                       <div class="card">
                                         <div class="card-body">
                                           <h3 class="card-text">¿Desea salir del sistema?</h3>
-                                          <a href="#" class="btn btn-primary">Salir</a>
+                                          <a href="http://127.0.0.1:8000/" class="btn btn-danger">Salir</a>
                                         </div>
                                       </div>
                                     </div>
