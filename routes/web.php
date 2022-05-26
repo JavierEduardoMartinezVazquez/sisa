@@ -146,3 +146,13 @@ Route::get('obtener_assistances', 'AssistancesController@obtener_assistances')->
 Route::post('modificar_assistances', 'AssistancesController@modificar_assistances')->name('modificar_assistances');
 Route::get('verificar_baja_assistances', 'AssistancesController@verificar_baja_assistances')->name('verificar_baja_assistances');
 Route::post('baja_assistances', 'AssistancesController@baja_assistances')->name('baja_assistances');
+
+/*--------------------Controlador Reporte de Asistencias-------------------*/
+Route::get('Assistancesreports', 'AssistancesreportsController@Assistancesreports')->name('Assistancesreports');
+Route::get('obtener_ultimo_id_assistancesreports', 'AssistancesreportsController@obtener_ultimo_id_assistancesreports')->name('obtener_ultimo_id_assistancesreports');
+Route::post('guardar_assistancesreports', 'AssistancesreportsController@guardar_assistancesreports')->name('guardar_assistancesreports');
+Route::get('listar_assistancesreports', 'AssistancesreportsController@listar_assistancesreports')->name('listar_assistancesreports');
+Route::get('obtener_assistancesreports', 'AssistancesreportsController@obtener_assistancesreports')->name('obtener_assistancesreports');
+Route::post('modificar_assistancesreports', 'AssistancesreportsController@modificar_assistancesreports')->name('modificar_assistancesreports');
+Route::get('verificar_baja_assistancesreports', 'AssistancesreportsController@verificar_baja_assistancesreports')->name('verificar_baja_assistancesreports');
+Route::post('baja_assistancesreports', 'AssistancesreportsController@baja_assistancesreports')->name('baja_assistancesreports');

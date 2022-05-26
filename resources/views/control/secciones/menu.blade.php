@@ -84,6 +84,12 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
+                <a href="{{route('Assistancesreports')}}" class="nav-link">
+                  <i class="nav-icon fas fa-calendar-check"></i>
+                  <p>Reporte de Asistencias</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="{{route('Vacationdays')}}" class="nav-link">
                   <i class="nav-icon fas fa-calendar-alt"></i>
                   <p>Dias de Vacaciones</p>
