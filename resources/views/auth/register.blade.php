@@ -1,3 +1,7 @@
+<div class="col-md-12 border border-danger">
+</div>
+<div class="col-md-12 border border-danger">
+</div>
 <link rel="shortcut icon" href="control/img/favicon.png">
 @extends('layouts.app')
 
@@ -8,40 +12,7 @@
 @section('content')
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-
-<div class="col-md-12 border border-danger">
-</div>
-<div class="col-md-12 border border-danger">
-</div>
-<br>
-
-<nav class="navbar navbar-expand-lg navbar-light bg-ligth">
-    <div class="container">
-    </div>
-    
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          </div>
-        </div>
-      </nav>
-     <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            
-            <form class="col-2">
-                <a href="http://127.0.0.1:8000/" class="btn btn-outline-secondary">Salir</a>
-              </form>
-          </div>
-        </div>
-      </nav>
-    <div class="collapse navbar-collapse" id="navbarScroll">
-        <ul class="navbar-nav me-auto my-2 my-lg-navbar-nav-scroll"></ul> 
-      </div>
-    </div>
-    </nav>
-        
     <header>
-    <br>
       <center>
         <h2>
             <strong>
@@ -143,6 +114,12 @@
             </div>
             
     </header>
+    <div class="col-md-2 offset-md-10">
+        <div class="container">  
+                <a href="http://127.0.0.1:8000/" class="btn btn-outline-secondary">Volver</a>
+          </div>
+        </div>
+        <br>
     <br>
     <br>
     <footer class="bg-light text-center text-lg-start">

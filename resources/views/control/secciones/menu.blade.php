@@ -119,11 +119,13 @@
             </ul>
           </li>
 
+          <li class="nav-item has-treeview">
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('logout') }}"
+            <a href="{{ route('logout') }}" class="nav-link" 
                onclick="event.preventDefault();
                              document.getElementById('logout-form').submit();">
                              <i class="nav-icon fas fa-sign-out-alt"></i>
+
             </a>
         </li> 
 
