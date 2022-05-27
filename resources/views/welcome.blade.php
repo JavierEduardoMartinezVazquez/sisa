@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-      <link rel="icon" href="http://www.socasa.com.mx/images/logo_socasa.png" sizes="16x16 32x" type="image/png">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>SISA</title>
+        <link rel="shortcut icon" href="control/img/favicon.png">
 
         <!-- Fonts -->
          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -109,7 +109,7 @@
 
   <footer class="bg-light text-center text-lg-start">
     <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(255, 0, 0, 0.884);">
+    <div class="text-center p-3" style="background-color: rgb(206, 30, 30);">
         <div class="text-white">
       © 2022 Copyright 
     </div>

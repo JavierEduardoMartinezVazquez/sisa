@@ -5,7 +5,9 @@
           <img src="control/img/foto.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Usuario</a>
+          <h6 class="text-light">
+          {{ Auth::user()->name }}
+          </h6>
         </div>
       </div>
       <nav class="mt-2">
@@ -116,7 +118,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="{{route('Exits')}}" class="nav-link">
+            <a href="{{ route('logout') }}" class="nav-link">
               <i class="nav-icon fas fa-sign-out-alt"></i>
               <p>Cerrar sesión</p>
             </a>

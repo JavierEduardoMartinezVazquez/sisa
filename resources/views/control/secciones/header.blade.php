@@ -12,7 +12,7 @@
     </ul>
     <ul class="navbar-nav ml-auto">
     <li class="nav-item dropdown">
-      <a class="nav-link" href="http://127.0.0.1:8000/Exits">
+      <a class="nav-link" role="button" href="http://127.0.0.1:8000/Exits">
         <i class="fas fa-sign-out-alt"></i>
       </a>
       <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
