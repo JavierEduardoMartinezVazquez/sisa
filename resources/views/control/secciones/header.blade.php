@@ -9,17 +9,20 @@
       <li class="nav-item d-none d-sm-inline-block">
         <!--<a href="#" class="nav-link">link_2</a>-->
       </li>
+
+      
+
     </ul>
     <ul class="navbar-nav ml-auto">
     <li class="nav-item dropdown">
-      <a class="nav-link" role="button" href="http://127.0.0.1:8000/Exits">
-        <i class="fas fa-sign-out-alt"></i>
-      </a>
-      <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" >
-          <i class="fas fa-sign-out-alt"></i> Cerrar sesión
+        <a class="nav-link" href="{{ route('logout') }}"
+           onclick="event.preventDefault();
+                         document.getElementById('logout-form').submit();">
+                         <i class="fas fa-sign-out-alt"></i>
         </a>
+    </li> 
+      
+      
         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
           @csrf
         </form>

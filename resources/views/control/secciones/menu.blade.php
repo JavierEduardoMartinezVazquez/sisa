@@ -4,6 +4,7 @@
         <div class="image">
           <img src="control/img/foto.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
+        
         <div class="info">
           <h6 class="text-light">
           {{ Auth::user()->name }}
@@ -117,12 +118,15 @@
               </li>
             </ul>
           </li>
+
           <li class="nav-item">
-            <a href="{{ route('logout') }}" class="nav-link">
-              <i class="nav-icon fas fa-sign-out-alt"></i>
-              <p>Cerrar sesión</p>
+            <a class="nav-link" href="{{ route('logout') }}"
+               onclick="event.preventDefault();
+                             document.getElementById('logout-form').submit();">
+                             <i class="nav-icon fas fa-sign-out-alt"></i>
             </a>
-          </li>
+        </li> 
+
         </ul>
       </nav>
     </div>
