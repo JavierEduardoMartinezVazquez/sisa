@@ -142,7 +142,9 @@
             { data: 'operaciones', name: 'operaciones', orderable: false, searchable: false },
             { data: 'id', name: 'id', orderable: true, searchable: true },
             { data: 'nombre', name: 'nombre', orderable: true, searchable: true },
+            { data: 'direccion', name: 'direccion', orderable: true, searchable: true },
             { data: 'status', name: 'status', orderable: true, searchable: true },
+            
         ],
         "order": [[ 1, "asc" ]]
         })

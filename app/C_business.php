@@ -11,6 +11,8 @@ class C_business extends Model
     protected $primarykey = 'id';
     protected $fillable = [
         'nombre',
+        'direccion',
         'status'
+        
     ];
 }

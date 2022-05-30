@@ -94,9 +94,6 @@
         <a href="http://127.0.0.1:8000/" class="btn btn-outline-secondary">Volver</a>
   </div>
 </div>
-
-
-
 </div>
 <br>
 <footer class="bg-light text-center text-lg-start">

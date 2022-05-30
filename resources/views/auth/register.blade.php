@@ -119,9 +119,9 @@
                 <a href="http://127.0.0.1:8000/" class="btn btn-outline-secondary">Volver</a>
           </div>
         </div>
+    </div>
         <br>
-    <br>
-    <br>
+        <br>
     <footer class="bg-light text-center text-lg-start">
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgb(206, 30, 30);">
@@ -129,6 +129,5 @@
       © 2022 Copyright 
     </div>
     <!-- Copyright -->
-    </footer>
-       
+    </footer>   
 @endsection
