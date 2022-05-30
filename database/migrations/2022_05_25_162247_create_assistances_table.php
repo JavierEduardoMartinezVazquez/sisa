@@ -15,6 +15,10 @@ class CreateAssistancesTable extends Migration
     {
         Schema::create('assistances', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->date('fechaasis');
+            $table->date('hora entrada');
+            $table->date('horasalida');
+            $table->string('confirmacion');
             $table->timestamps();
         });
     }
