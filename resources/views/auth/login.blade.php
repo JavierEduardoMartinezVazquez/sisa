@@ -37,12 +37,14 @@
             <div class="form-group row">
                 <label for="email" class="col-md-4 col-form-label text-md-center">{{ __('E-Mail') }}</label>
                 <div class="col-md-6">
-                  <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus><br>
-                    @error('email')
+                  <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                   @error('email')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                     @enderror
+                  <br>
+                   
                 </div>
             </div>
 
@@ -73,21 +75,22 @@
                 </div>
             </div>
 <br>    
-            <div class="form-group row mb-0">
-                <div class="col-md-8 offset-md-4">
-                    <button type="submit" class="btn btn-danger">
-                        {{ __('Entrar') }}
-                    </button>
-                    @if (Route::has('password.request'))
+            
+                  <!--  @if (Route::has('password.request'))
                         <a class="btn btn-link" href="{{ route('password.request') }}">
                             {{ __('¿Olvidaste tu contraseña?') }}
                         </a>
-                    @endif
+                    @endif -->
+
+                    <div class="form-group row mb-04">
+                        <div class="col-md-4 offset-md-8">
+                            <button type="submit" class="btn btn-danger">
+                                {{ __('Entrar') }}
+                            </button>
                 </div>
             </div>
         </form>
     </center>
-<br>
 </header>
 <div class="col-md-2 offset-md-10">
 <div class="container">  
@@ -95,7 +98,7 @@
   </div>
 </div>
 </div>
-<br>
+<br><br>
 <footer class="bg-light text-center text-lg-start">
 <!-- Copyright -->
 <div class="text-center p-3" style="background-color: rgb(206, 30, 30);">

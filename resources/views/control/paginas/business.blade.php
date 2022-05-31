@@ -26,7 +26,7 @@
         <section class="content">
             <div class="row">
                 <div class="col-12">
-                    <div class="card">
+                    <div class="card"> 
                         <div class="card-header">
                             <div class="row">
                                 <div class="col-sm-8">
@@ -43,6 +43,8 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
                         <div class="card-body table-responsive">
                             <table id="tablelist" class=" tablelist table table-bordered table-striped display nowrap">
                                 <thead>
