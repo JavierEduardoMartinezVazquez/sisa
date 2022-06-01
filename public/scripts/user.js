@@ -35,7 +35,7 @@
     function obtenerultimoiduser(){
         $.get(obtener_ultimo_id_user, function(numero){
           $("#txtnumero").val(numero);
-        })  
+        })
     }
     //limpiar todos los inputs del formulario alta
     function limpiar(){
@@ -436,7 +436,6 @@
                     '</div>'+
                     '<div class="card-body">'+
                         '<div class="tab-content" id="custom-tabs-one-tabContent">'+
-                        
                             '<div class="tab-pane fade show active" id="p_datos" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">'+
 
                                 '<div class="container">'+

@@ -4,49 +4,22 @@
         <div class="image">
           <img src="control/img/foto.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
-        
         <div class="info">
-          <h6 class="text-light">
-          {{ Auth::user()->name }}
-          </h6>
+          <a href="/home" class="d-block">{{ Auth::user()->name }}</a>
         </div>
+        
       </div>
+
+      
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <li class="nav-item has-treeview"><!--<li class="nav-item has-treeview menu-open">-->
-            <a class="nav-link active"><!--<a href="#" class="nav-link active">-->
-              <i class="nav-icon fas fa-edit"></i>
-              <p>Registro
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('Holidays')}}" class="nav-link" id="hol">
-                  <i class="nav-icon nav-icon fas fa-book"></i>
-                  <p>Vacaciones</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('Permissions')}}" class="nav-link">
-                  <i class="nav-icon fas fa-calendar-check"></i>
-                  <p>Permisos</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('Assistances')}}" class="nav-link">
-                  <i class="nav-icon far fa-calendar-alt"></i>
-                  <p>Asistencias</p>
-                </a>
-              </li>
-            </ul>
-          </li>
+
+
           <li class="nav-item has-treeview">
-            <a class="nav-link">
+            <a class="nav-link active">
               <i class="nav-icon fas fa-copy"></i>
-              <p>
-                Catalogos
-                <i class="fas fa-angle-left right"></i>
+              <p>Catalogos
+                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -77,14 +50,48 @@
               </li>
             </ul>
           </li>
+
+
+
           <li class="nav-item has-treeview">
-            <a class="nav-link">
-              <i class="nav-icon fas fa-chart-pie"></i>
-              <p>
-                Reportes
-                <i class="fas fa-angle-left right"></i>
+            <a class="nav-link active">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>Registro
+                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('Holidays')}}" class="nav-link" id="hol">
+                  <i class="nav-icon nav-icon fas fa-book"></i>
+                  <p>Vacaciones</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('Permissions')}}" class="nav-link" id="perm">
+                  <i class="nav-icon fas fa-calendar-check"></i>
+                  <p>Permisos</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('Assistances')}}" class="nav-link">
+                  <i class="nav-icon far fa-calendar-alt"></i>
+                  <p>Asistencias</p>
+                </a>
+              </li>
+            </ul>
+          
+         
+
+            <li class="nav-item has-treeview">
+              <a class="nav-link active">
+                <i class="nav-icon fas fa-chart-pie"></i>
+                <p>Reportes
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+
+
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{route('Assistancesreports')}}" class="nav-link">
@@ -128,7 +135,7 @@
 
             </a>
         </li> 
-
+          </li>
         </ul>
       </nav>
     </div>
