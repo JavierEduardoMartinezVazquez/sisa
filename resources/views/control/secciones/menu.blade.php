@@ -1,4 +1,4 @@
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: rgb(55, 55, 55)">
     <div class="sidebar">
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
@@ -7,16 +7,13 @@
         <div class="info">
           <a href="/home" class="d-block">{{ Auth::user()->name }}</a>
         </div>
-        
       </div>
 
       
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-
-
           <li class="nav-item has-treeview">
-            <a class="nav-link active">
+            <a class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>Catalogos
                 <i class="right fas fa-angle-left"></i>
@@ -50,11 +47,9 @@
               </li>
             </ul>
           </li>
-
-
-
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item has-treeview">
-            <a class="nav-link active">
+            <a class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
               <p>Registro
                 <i class="right fas fa-angle-left"></i>
@@ -82,9 +77,8 @@
             </ul>
           
          
-
             <li class="nav-item has-treeview">
-              <a class="nav-link active">
+              <a class="nav-link">
                 <i class="nav-icon fas fa-chart-pie"></i>
                 <p>Reportes
                   <i class="right fas fa-angle-left"></i>

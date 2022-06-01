@@ -631,7 +631,7 @@ function verificarbajauser(numero){
             $('#estatusregistro').modal('show');
         }else{
             $("#num").val(numero);
-            $("#textobaja").html("Esta seguro de dar de baja este empleado?");
+            $("#textobaja").html("¿Desea realizar la baja?");
             $("#aceptar").show();
             $('#estatusregistro').modal('show');
         }

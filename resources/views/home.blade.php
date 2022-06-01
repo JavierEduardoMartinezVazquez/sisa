@@ -26,56 +26,66 @@
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-4">
                         <div class="card text-center"">
-                            <div class="card-header" style="background-color: rgb(209, 11, 11)">
-                              <h5 class="text-light">B I E N V E N I D O</h5>
+                            <div class="card-header" style="background-color: rgb(176, 13, 13)">
+                              <h4 class="text-light"><br> ¡Bienvenido <br> {{ Auth::user()->name }}! <section class="content"><br>
+                               </h4>
                             </div>
                           </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">Antes de solicitar vacaciones recuerda….</h3>
-                                <div class="card-tools">
-                                </div>
+                    </div>
+                    <div class="col-7">  
+                            <div class="card-body" style="background-color: rgb(205, 205, 205)">
+                                <div class="sm-6">
+                                    <h6>      
+                                    <br>Usuario: {{ Auth::user()->name }}
+                                    <br>Email: {{ Auth::user()->email }}
+                                    <br>Edad: {{ Auth::user()->edad }}
+                                    <br>
+                                    <br>
+                                    </h6>
                             </div>
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-12 col-sm-12">                            
-                                        <span class="fa fa-check mr-3"></span>Debes de hacer la solicitud con un mínimo de 6 días  de anticipación a la fecha de inicio de vacaciones.
-                                    </div>
-                                    <div class="col-12 col-sm-12">                            
-                                        <span class="fa fa-check mr-3"></span>Etc... 
-                                    </div>
-                                    <div class="col-12 col-sm-12">                            
-                                        <span class="fa fa-check mr-3"></span>Etc... 
-                                    </div>
-                                    <div class="col-12 col-sm-12">                            
-                                        <span class="fa fa-check mr-3"></span>Etc... 
-                                    </div>										
-                                    
-                                </div>
                             </div>
-                            <div class="card-footer">
-                                Gracias
-                            </section>
-
-        <section class="content">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h4> Hola. {{ Auth::user()->name }}</h4>
-                                </div>
-                                <div class="col-md-1">
-                                    <!---->
-                                </div>
-                                <div class="col-md-1">
-                                    <!---->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body table-responsive">
+                    </div>
+                    <div class="col-1">
+                        <div class="card-body" style="background-color: rgb(105, 105, 105)">
                             <br>
-                            @endsection    
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <section class="content">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Antes de solicitar vacaciones recuerda….</h3>
+                        <div class="card-tools">
+                         </div>
+                         </div>
+                         <div class="card-body">
+                             <div class="row">
+                                 <div class="col-12 col-sm-12">
+                                     <span class="fa fa-check mr-3"></span>Debes de hacer la solicitud con un mínimo de 6 días  de anticipación a la fecha de inicio de vacaciones.
+                                        </div>
+                                        <div class="col-12 col-sm-12">                            
+                                                <span class="fa fa-check mr-3"></span>Etc... 
+                                                        </div>
+                                                        <div class="col-12 col-sm-12">                            
+                                                            <span class="fa fa-check mr-3"></span>Etc... 
+                                                        </div>
+                                                        <div class="col-12 col-sm-12">                            
+                                                            <span class="fa fa-check mr-3"></span>Etc... 
+                                                        </div>										
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    Gracias
+                                                </section>
+                                            </div>
+                            @endsection

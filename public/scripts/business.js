@@ -142,7 +142,6 @@
             { data: 'operaciones', name: 'operaciones', orderable: false, searchable: false },
             { data: 'id', name: 'id', orderable: true, searchable: true },
             { data: 'nombre', name: 'nombre', orderable: true, searchable: true },
-            { data: 'direccion', name: 'direccion', orderable: true, searchable: true },
             { data: 'status', name: 'status', orderable: true, searchable: true },
             
         ],
@@ -243,14 +242,14 @@ function verificarbajabusiness(numero){
             //ID del input que esta dentro del formulario del modal de baja
             $("#num").val();
             //<h5 id="textobaja"></h5> etiqueta dentro del formulario del modal de baja
-            $("#textobaja").html("Este empleado ya fue dado de baja..!!!");
+            $("#textobaja").html("Lo sentimos, esta empresa esta dada de baja.");
             // id de boton para la baja dentro del formulario del modal de baja
             $("#aceptar").hide();
             // id del div del modal id="estatusregistro"
             $('#estatusregistro').modal('show');
         }else{
             $("#num").val(numero);
-            $("#textobaja").html("Esta seguro de dar de baja este empleado?");
+            $("#textobaja").html("¿Desea realizar la baja?");
             $("#aceptar").show();
             $('#estatusregistro').modal('show');
         }

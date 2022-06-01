@@ -4,7 +4,7 @@
             <div id="formulario"><!--el ID se coloca en la funcio function mostrarformulario <1>-->
                 <div class="modal-header">
                     <h5 class="modal-title" id="titulomodal"></h5>
-                </div>                
+                </div>
                 <form id="form_Modal_pricipal" action="#"><!--formparsley--<4>-->
                     <div class="modal-body">
                         <div class="col-md-12" id="tabsform"><!--el ID se coloca al final del formulario del archivo JS ($("#tabsform").html(tabs);) <2>-->
@@ -17,12 +17,13 @@
                                 <div class="col-md-3">
                                     <button type="button" class="btn btn-danger btn-sm" id="btnGuardar">Guardar</button>      
                                 </div>                   
-                                <div class="col-md-5">
+                                <div class="col-md-3">
                                     <button type="button" class="btn btn-danger btn-sm" id="btnGuardarModificacion">Actualizar</button>
                                 </div>
-                                <div class="col-md-4">
+                                <!--
+                                <div class="col-md-3">
                                     <button type="button" class="btn btn-danger btn-sm" onclick="limpiar();limpiarmodales();" data-dismiss="modal">Cancelar</button>      
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                     </div>

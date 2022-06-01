@@ -262,7 +262,7 @@ function verificarbajahourhand(numero){
             $('#estatusregistro').modal('show');
         }else{
             $("#num").val(numero);
-            $("#textobaja").html("Esta seguro de dar de baja el horario?");
+            $("#textobaja").html("¿Esta seguro de dar de baja el horario?");
             $("#aceptar").show();
             $('#estatusregistro').modal('show');
         }
