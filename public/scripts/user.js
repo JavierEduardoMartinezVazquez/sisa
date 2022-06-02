@@ -231,7 +231,7 @@
                             '<div class="container">'+
                                 '<div class="form-group row">'+
                                     '<div class="col-md-1">'+
-                                        '<label>ID:</label>'+                            
+                                        '<label>Id:</label>'+                            
                                         '<input type="text" class="form-control" name="numero" id="txtnumero" placeholder="ID" onkeyup="tipoLetra(this);" required readonly>'+
                                     '</div>'+
                                     '<div class="col-md-4">'+
@@ -279,9 +279,16 @@
                                     '<label>Nombre:<b style="color:#F44336 !important;">*</b></label>'+
                                     '<input type="text" class="form-control" name="namee" id="txtnamee" placeholder="Empresa" onkeyup="tipoLetra(this);"  readonly required>'+                          
                                          //'<span name="nom" id="txtnom"></span>'+
-                                                                                                                    
+                                                                                                                   
                                     '</div>'+
-                                    '<div class="col-md-4">'+
+                                    
+                                    '<div class="container">'+
+                                    '<div class="form-group row">'+
+                                    '<div class="col-md-6">'+
+                                        '<label>Horario<b style="color:#F44336 !important;">*</b></label>'+
+                                        '<input type="text" class="form-control" name="horario" id="txthorario" placeholder="Horario" onkeyup="tipoLetra(this);" ondblclick="obtenerhorario();"readonly required>'+
+                                    '</div>'+
+                                    '<div class="col-md-6">'+
                                         '<label>Horario<b style="color:#F44336 !important;">*</b></label>'+
                                         '<input type="text" class="form-control" name="horario" id="txthorario" placeholder="Horario" onkeyup="tipoLetra(this);" ondblclick="obtenerhorario();"readonly required>'+
                                     '</div>'+
@@ -304,6 +311,7 @@
                                     '</div>'+  
                                 '</div>'+
                             '</div>'+
+                            
 
                             '<div class="container">'+
                                 '<div class="form-group row">'+
@@ -419,7 +427,7 @@
     function obteneruser(numero){
         $("#titulomodal").html('Modificación Usuario');
         $.get(obtener_user,{numero:numero },function(data){
-            //se crea al formlario
+            //se crea al formulario
             var tabs =
             '<div class="row">'+
             '<div class="col-12 col-sm-12">'+
@@ -614,14 +622,14 @@ function verificarbajauser(numero){
             //ID del input que esta dentro del formulario del modal de baja
             $("#num").val();
             //<h5 id="textobaja"></h5> etiqueta dentro del formulario del modal de baja
-            $("#textobaja").html("Este empleado ya fue dado de baja..!!!");
+            $("#textobaja").html("Este empleado ya fue dado de baja.");
             // id de boton para la baja dentro del formulario del modal de baja
             $("#aceptar").hide();
             // id del div del modal id="estatusregistro"
             $('#estatusregistro').modal('show');
         }else{
             $("#num").val(numero);
-            $("#textobaja").html("Esta seguro de dar de baja este empleado?");
+            $("#textobaja").html("¿Esta seguro de dar de baja este empleado?");
             $("#aceptar").show();
             $('#estatusregistro').modal('show');
         }

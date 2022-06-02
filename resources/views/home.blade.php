@@ -38,11 +38,11 @@
                             <div class="card-body" style="background-color: rgb(205, 205, 205)">
                                 <div class="sm-6">
                                     <h6>      
-                                    <br>Usuario: {{ Auth::user()->name }}
+                                    Usuario: {{ Auth::user()->name }}
                                     <br>Email: {{ Auth::user()->email }}
-                                    <br>Edad: {{ Auth::user()->edad }}
-                                    <br>
-                                    <br>
+                                    <br>Rol: {{ Auth::user()->rol }}
+                                    <br>Empresa: {{ Auth::user()->empresa }}
+                                    <br>Area: {{ Auth::user()->area }}
                                     </h6>
                             </div>
                             </div>

@@ -15,13 +15,12 @@
                         <div class="modal-footer">
                             <div class="row">
                                 <div class="col-md-3">
-                                    <button type="button" class="btn btn-danger btn-sm" id="btnGuardar">Guardar</button>      
-                                </div>                   
+                                    <button type="button" class="btn btn-danger btn-sm" id="btnGuardar">Guardar</button> 
+                                </div>
                                 <div class="col-md-3">
                                     <button type="button" class="btn btn-danger btn-sm" id="btnGuardarModificacion">Actualizar</button>
                                 </div>
-                                <!--
-                                <div class="col-md-3">
+                                <!--<div class="col-md-3">
                                     <button type="button" class="btn btn-danger btn-sm" onclick="limpiar();limpiarmodales();" data-dismiss="modal">Cancelar</button>      
                                 </div>-->
                             </div>
