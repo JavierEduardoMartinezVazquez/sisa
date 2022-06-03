@@ -79,7 +79,6 @@ class UserController extends Controller
                 $id = $ultimoNumeroTabla[0]->id+1;
         }
             $user = new User;
-            $user->hola=$request->hola;
             $user->name=$request->nombre;
             $user->lastname_p=$request->paterno;
             $user->lastname_m=$request->materno;

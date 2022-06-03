@@ -36,7 +36,7 @@ class BusinessController extends Controller
     public function listar_business (Request $request)
     {
         if($request->ajax()){
-            $data = C_business::select('id','nombre','direccion','status');
+            $data = C_business::select('id','nombre','status');
             return DataTables::of($data)
             ->addColumn('operaciones', function($data){
                 $operaciones = '<div class="container">'.
