@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="control/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
 
 <link rel="stylesheet" href="control/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-">
+
  
 
 

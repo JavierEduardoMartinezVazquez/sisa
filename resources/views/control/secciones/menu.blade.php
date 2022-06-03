@@ -124,7 +124,6 @@ ADMIN
                onclick="event.preventDefault();
                              document.getElementById('logout-form').submit();">
                              <i class="nav-icon fas fa-sign-out-alt"></i>
-
             </a>
         </li> 
           </li>
