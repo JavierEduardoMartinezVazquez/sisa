@@ -287,13 +287,13 @@
                                     '<div class="col-md-6">'+
                                         '<label>Horario<b style="color:#F44336 !important;">*</b></label>'+
                                         '<input type="text" class="form-control" name="horario" id="txthorario" placeholder="Horario" onkeyup="tipoLetra(this);" ondblclick="obtenerhorario();"readonly required>'+
-                                    '</div>'+
+                                    '</div>'+ /*
                                     '<div class="col-md-6">'+
                                         '<label>Horario<b style="color:#F44336 !important;">*</b></label>'+
                                         '<input type="text" class="form-control" name="horario" id="txthorario" placeholder="Horario" onkeyup="tipoLetra(this);" ondblclick="obtenerhorario();"readonly required>'+
                                     '</div>'+
                                 '</div>'+  
-                            '</div>'+
+                            '</div>'+*/
 
                             '<div class="container">'+
                                 '<div class="form-group row">'+

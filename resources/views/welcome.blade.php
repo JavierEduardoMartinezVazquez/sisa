@@ -95,7 +95,7 @@
                             <div class="text">
                               SISTEMA DE ASISTENCIA</h1>
                         </div>
-                        <h1 class="display-6">Soluciones Integrales para tu Camión <br> SOCASA S.A. C.V</h1>
+                        <h1 class="display-6">Soluciones Integrales para tu Camión <br> SOCASA S.A. C.V.</h1>
                         <form class="col-row-12">
                             <br>
                             <br>
