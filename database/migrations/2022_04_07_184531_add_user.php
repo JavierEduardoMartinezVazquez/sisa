@@ -13,6 +13,7 @@ class AddUser extends Migration
      */
     public function up()
     {
+        /*
         DB::table('users')->insert(array(
             'name' => 'ADMINISTRADOR',
             'email' => 'admin@admin.com',
@@ -23,7 +24,7 @@ class AddUser extends Migration
             'status' => 'ALTA',
             'created_at' => date('Y-m-d H:m:s'),
             'updated_at' => date('Y-m-d H:m:s'),
-        ));
+        ));*/
     }
 
     /**

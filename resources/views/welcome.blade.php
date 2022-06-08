@@ -85,6 +85,7 @@
 <br>
 <br>
 <header>
+  <br>
     <!-- Background image -->
     <div class="p-6 text-center bg-image" style="height: 467px;">
       <div class="mask">
@@ -97,7 +98,6 @@
                         </div>
                         <h1 class="display-6">Soluciones Integrales para tu Camión <br> SOCASA S.A. C.V.</h1>
                         <form class="col-row-12">
-                            <br>
                             <br>
                             <br>
                             <a href="http://127.0.0.1:8000/login" class="btn btn-outline-secondary">INGRESAR</a>
@@ -113,8 +113,6 @@
         <div class="text-white">
       © 2022 Copyright 
     </div>
-    <!-- Copyright -->
-  </footer>
- 
+    <br>
     </body>
 </html>

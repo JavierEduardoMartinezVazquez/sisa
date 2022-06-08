@@ -14,7 +14,7 @@ class AddBusiness extends Migration
      */
     public function up()
     {
-        DB::table('business')->insert(array(
+        /*DB::table('business')->insert(array(
             'nombre' => 'SOLUCIONES INTEGRALES PARA TU CAMION S.A DE C.V',
             'status' => 'ALTA',
             'created_at' => date('Y-m-d H:m:s'),
@@ -31,7 +31,7 @@ class AddBusiness extends Migration
             'status' => 'ALTA',
             'created_at' => date('Y-m-d H:m:s'),
             'updated_at' => date('Y-m-d H:m:s'),
-        ));
+        ));*/
     }
 
     /**
