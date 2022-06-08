@@ -1,6 +1,6 @@
 @extends('plantilla')
 @section('titulo')
-    Asistencias
+    Asistencia
 @endsection
     @section('additionals_css')
 @endsection
@@ -30,7 +30,7 @@
                         <div class="card-header">
                             <div class="row">
                                 <div class="col-sm-8">
-                                    <h4>Asistencias</h4>
+                                    <h4>Asistencia</h4>
                                 </div>
                                 <div class="col-md-1">
                                     <!---->
@@ -50,7 +50,17 @@
                                         <th ><div style="width:90px !important;">Operación </div></th>
                                         <th>#</th>
                                         <th>Nombre</th>
-                                        <th>Estatus</th>
+                                        <!--<th>A. Paterno</th>
+                                        <th>A. Materno</th>-->
+                                        <th>Email</th>
+                                        <!--<th>Fecha Corporativo</th>
+                                        <th>Fecha Alta</th>
+                                        <th>Facha Baja</th>
+                                        <th>Horario</th>
+                                        <th>Empresa</th>
+                                        <th>Area</th>
+                                        <th>Rol</th>
+                                        <th>Estatus</th>-->
                                     </tr>
                                 </thead>
                             </table>
@@ -67,17 +77,20 @@
     <script>
     //detectar cuando en el input de buscar por codigo de producto el usuario presione la tecla enter, si es asi se realizara la busqueda con el codigo escrito
         $(document).ready(function(){
-        $("#bus").addClass('active');
+        $("#use").addClass('active');
         });
     </script>
     <script>
-        var obtener_ultimo_id_business = '{!!URL::to('obtener_ultimo_id_business')!!}';
-        var guardar_business = '{!!URL::to('guardar_business')!!}';
-        var listar_business = '{!!URL::to('listar_business')!!}';
-        var obtener_business = '{!!URL::to('obtener_business')!!}';
-        var modificar_business = '{!!URL::to('modificar_business')!!}';
-        var verificar_baja_business = '{!!URL::to('verificar_baja_business')!!}';
-        var baja_business = '{!!URL::to('baja_business')!!}';     
+        var obtener_ultimo_id_user = '{!!URL::to('obtener_ultimo_id_user')!!}';
+        var obtener_empresa = '{!!URL::to('obtener_empresa')!!}';
+        var obtener_horario = '{!!URL::to('obtener_horario')!!}'; 
+        var obtener_roles = '{!!URL::to('obtener_roles')!!}';
+        var guardar_user = '{!!URL::to('guardar_user')!!}';
+        var listar_user = '{!!URL::to('listar_user')!!}';
+        var obtener_user = '{!!URL::to('obtener_user')!!}';
+        var modificar_user = '{!!URL::to('modificar_user')!!}';
+        var verificar_baja_user = '{!!URL::to('verificar_baja_user')!!}';
+        var baja_user = '{!!URL::to('baja_user')!!}';     
     </script> 
-    <script src="scripts/business.js"></script>
+    <script src="scripts/user.js"></script>
 @endsection    
