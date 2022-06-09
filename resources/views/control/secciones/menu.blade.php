@@ -1,4 +1,4 @@
-<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: rgb(85, 85, 85)">
+<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: rgb(56, 56, 56)">
     <div class="sidebar">
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
@@ -8,11 +8,15 @@
           <a href="/home" class="d-block">{{ Auth::user()->name }}</a>
         </div>
       </div>
-ADMIN
+
+      <div class="text-light">
+        ADMIN
+    </div>
+
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item has-treeview">
-            <a class="nav-link">
+            <a class="nav-link active">
               <i class="nav-icon fas fa-copy"></i>
               <p>Catalogos
                 <i class="right fas fa-angle-left"></i>
@@ -48,7 +52,7 @@ ADMIN
           </li>
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item has-treeview">
-            <a class="nav-link">
+            <a class="nav-link active">
               <i class="nav-icon fas fa-edit"></i>
               <p>Registro
                 <i class="right fas fa-angle-left"></i>
@@ -74,9 +78,14 @@ ADMIN
                 </a>
               </li>
             </ul>
+
+<div class="text-light">
     USUARIO
-            <li class="nav-item has-treeview">
-              <a class="nav-link">
+</div>
+            
+    
+    <li class="nav-item has-treeview">
+              <a class="nav-link active">
                 <i class="nav-icon fas fa-chart-pie"></i>
                 <p>Reportes
                   <i class="right fas fa-angle-left"></i>
@@ -85,12 +94,12 @@ ADMIN
 
 
             <ul class="nav nav-treeview">
-              <li class="nav-item">
+              <!--<li class="nav-item">
                 <a href="{{route('Assistancesreports')}}" class="nav-link">
                   <i class="nav-icon fas fa-calendar-check"></i>
                   <p>Reporte de Asistencias</p>
                 </a>
-              </li>
+              </li>-->
               <li class="nav-item">
                 <a href="{{route('Vacationdays')}}" class="nav-link">
                   <i class="nav-icon fas fa-calendar-alt"></i>
@@ -124,10 +133,10 @@ ADMIN
                onclick="event.preventDefault();
                              document.getElementById('logout-form').submit();">
                              <i class="nav-icon fas fa-sign-out-alt"></i>
-            </a>
-        </li> 
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </aside>
+                            </a>
+                          </li>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </aside>

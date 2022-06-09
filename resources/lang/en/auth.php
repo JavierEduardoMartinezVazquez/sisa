@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => 'Verifica que los datos sean correctos.',
+    'failed' => 'Error! Verifique que los datos sean correctos.',
     'throttle' => 'Demasiados intentos de inicio de sesión. Por favor, inténtelo de nuevo en 30 segundos.',
 
 ];
