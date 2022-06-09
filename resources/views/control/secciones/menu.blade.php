@@ -56,6 +56,12 @@ ADMIN
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
+                <a href="{{route('Assistances')}}" class="nav-link">
+                  <i class="nav-icon far fa-calendar-alt"></i>
+                  <p>Asistencias</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="{{route('Holidays')}}" class="nav-link" id="hol">
                   <i class="nav-icon nav-icon fas fa-book"></i>
                   <p>Vacaciones</p>
@@ -65,12 +71,6 @@ ADMIN
                 <a href="{{route('Permissions')}}" class="nav-link" id="perm">
                   <i class="nav-icon fas fa-calendar-check"></i>
                   <p>Permisos</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('Assistances')}}" class="nav-link">
-                  <i class="nav-icon far fa-calendar-alt"></i>
-                  <p>Asistencias</p>
                 </a>
               </li>
             </ul>
