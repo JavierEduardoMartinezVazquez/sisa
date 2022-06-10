@@ -214,14 +214,14 @@
         '<div class="col-12 col-sm-12">'+
             '<div class="card card-primary card-tabs">'+
                 '<div class="card-header p-0 pt-1">'+
-                    '<ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">'+
+                    /*'<ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">'+
                         '<li class="nav-item">'+
                             '<a class="nav-link active" id="dat" data-toggle="pill" href="#p_datos" role="tab" aria-controls="p_datos" aria-selected="true">DATOS GENERALES</a>'+
                         '</li>'+
                         '<li class="nav-item">'+
                             '<a class="nav-link" id="detal" data-toggle="pill" href="#p_detalles" role="tab" aria-controls="p_detalles" aria-selected="false">DETALLES</a>'+
                         '</li>'+
-                    '</ul>'+
+                    '</ul>'+*/
                 '</div>'+
                 '<div class="card-body">'+
                     '<div class="tab-content" id="custom-tabs-one-tabContent">'+
@@ -235,10 +235,13 @@
                                         '<input type="text" class="form-control" name="numero" id="txtnumero" placeholder="ID" onkeyup="tipoLetra(this);" required readonly>'+
                                     '</div>'+
                                     '<div class="col-md-4">'+
-                                        '<label>Nombre:</label>'+                            
+                                        '<label>Nombre(s):</label>'+                            
                                         '<input type="text" class="form-control" name="nombre" id="txtnombre" placeholder="Nombre" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
-                                    '<div class="col-md-4">'+ 
+
+                                    
+                                    
+                                    /*'<div class="col-md-4">'+ 
                                         '<label>A. Paterno</label>'+
                                         '<input type="text" class="form-control" name="paterno" id="txtpaterno" placeholder="1er Apellido" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
@@ -246,14 +249,14 @@
                                         '<label>A. Materno</label>'+
                                         '<input type="text" class="form-control" name="materno" id="txtmaterno" placeholder="2do Apellido"" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+  
-                                '</div>'+
+                                '</div>'+*/
                             '</div>'+
 
                             '<div class="container">'+
                                 '<div class="form-group row">'+
                                     '<div class="col-md-4">'+
                                         '<label>Correo Electrónico</label>'+
-                                        '<input type="text" class="form-control" name="email" id="txtemail" placeholder="email" required autocomplete="email" data-parsley-type="email" onkeyup="tipoMinusculas(this);">'+
+                                        '<input type="text" class="form-control" name="email" id="txtemail" placeholder="Email" required autocomplete="Email" data-parsley-type="email" onkeyup="tipoMinusculas(this);">'+
                                     '</div>'+
                                     '<div class="col-md-4">'+ 
                                         '<label>Contraseña</label>'+
@@ -264,7 +267,7 @@
                                         '<input type="password" class="form-control" name="pass2" id="txtpass2" required autocomplete="new-password" data-parsley-equalto="#txtpass" placeholder="Confirmar contraseña">'+
                                     '</div>'+  
                                 '</div>'+
-                            '</div>'+
+                            /*'</div>'+
                         '</div>'+
                         
                         '<div class="tab-pane fade" id="p_detalles" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">'+
@@ -287,7 +290,8 @@
                                     '<div class="col-md-6">'+
                                         '<label>Horario<b style="color:#F44336 !important;">*</b></label>'+
                                         '<input type="text" class="form-control" name="horario" id="txthorario" placeholder="Horario" onkeyup="tipoLetra(this);" ondblclick="obtenerhorario();"readonly required>'+
-                                    '</div>'+ /*
+                                    '</div>'+ */
+                                    /*
                                     '<div class="col-md-6">'+
                                         '<label>Horario<b style="color:#F44336 !important;">*</b></label>'+
                                         '<input type="text" class="form-control" name="horario" id="txthorario" placeholder="Horario" onkeyup="tipoLetra(this);" ondblclick="obtenerhorario();"readonly required>'+
@@ -295,7 +299,7 @@
                                 '</div>'+  
                             '</div>'+*/
 
-                            '<div class="container">'+
+                           /* '<div class="container">'+
                                 '<div class="form-group row">'+
                                     '<div class="col-md-4">'+
                                         '<label>Fecha Corporativo:</label>'+                            
@@ -310,9 +314,9 @@
                                         '<input type="datetime-local" class="form-control" name="fecha_baj" id="txtfecha_baj" readonly>'+
                                     '</div>'+  
                                 '</div>'+
-                            '</div>'+
+                            '</div>'+*/
                             
-
+/*
                             '<div class="container">'+
                                 '<div class="form-group row">'+
                                     '<div class="col-md-12">'+
@@ -326,7 +330,7 @@
                                         '</div>'+
                                     '</div>'+
                                 '</div>'+
-                            '</div>'+
+                            '</div>'+*/
 
                         '</div>'+
                     '</div>'+
@@ -409,16 +413,16 @@
             { data: 'operaciones', name: 'operaciones', orderable: false, searchable: false },
             { data: 'id', name: 'id', orderable: true, searchable: true },
             { data: 'name', name: 'name', orderable: true, searchable: true },
-            { data: 'lastname_p', name: 'lastname_p', orderable: true, searchable: true },
-            { data: 'lastname_m', name: 'lastname_m', orderable: true, searchable: true },
+            /*{ data: 'lastname_p', name: 'lastname_p', orderable: true, searchable: true },
+            { data: 'lastname_m', name: 'lastname_m', orderable: true, searchable: true },*/
             { data: 'email', name: 'email', orderable: true, searchable: true },
-            { data: 'fechaingresocorp', name: 'fechaingresocorp', orderable: true, searchable: true },
+            /*{ data: 'fechaingresocorp', name: 'fechaingresocorp', orderable: true, searchable: true },
             { data: 'fechaingresoemp', name: 'fechaingresoemp', orderable: true, searchable: true },
             { data: 'fechabaja', name: 'fechabaja', orderable: true, searchable: true },
             { data: 'id_horario', name: 'id_horario', orderable: true, searchable: true },
             { data: 'id_empresa', name: 'id_empresa', orderable: true, searchable: true },
             { data: 'id_area', name: 'id_area', orderable: true, searchable: true },
-            { data: 'id_rol', name: 'id_rol', orderable: true, searchable: true },
+            { data: 'id_rol', name: 'id_rol', orderable: true, searchable: true },*/
             { data: 'status', name: 'status', orderable: true, searchable: true },
         ],
         "order": [[ 1, "asc" ]]
@@ -549,15 +553,15 @@
             console.log(data);//mandas el arreglo
             $("#txtnumero").val(data.user.id);
             $("#txtnombre").val(data.user.name);
-            $("#txtpaterno").val(data.user.lastname_p);
-            $("#txtmaterno").val(data.user.lastname_m);
+            /*$("#txtpaterno").val(data.user.lastname_p);
+            $("#txtmaterno").val(data.user.lastname_m);*/
             $("#txtemail").val(data.user.email);
-            $("#txtempresa").val(data.user.id_empresa);
+            /*$("#txtempresa").val(data.user.id_empresa);
             $("#txthorario").val(data.user.id_horario);
             $("#txtfecha_cor").val(data.fechadeingresocorp);
             $("#txtfecha_ini").val(data.fechadeingresoemp);
             $("#txtfecha_baj").val(data.fechadebaja);
-            $("#roles").html(data.roles);
+            $("#roles").html(data.roles);*/
             mostrarmodalformulario('MODIFICACION', data.permitirmodificacion);
             mostrarformulario();
         }).fail( function() {

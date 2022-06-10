@@ -80,16 +80,16 @@ class UserController extends Controller
         }
             $user = new User;
             $user->name=$request->nombre;
-            $user->lastname_p=$request->paterno;
-            $user->lastname_m=$request->materno;
+            /*$user->lastname_p=$request->paterno;
+            $user->lastname_m=$request->materno;*/
             $user->email=$request->email;
             $user->password=Hash::make($request->pass);
-            $user->fechaingresocorp=$request->fecha_cor;
+            /*$user->fechaingresocorp=$request->fecha_cor;
             $user->fechaingresoemp=$request->fecha_ini;
             $user->id_horario=$request->horario;
             $user->id_empresa=$request->empresa;
-            $user->id_rol=$request->rol;
-            $user->status="ALTA";        
+            $user->id_rol=$request->rol;*/
+            $user->status="ALTA";
             $user->save();
         }
         return response()->json($user);
@@ -100,17 +100,17 @@ class UserController extends Controller
         if($request->ajax()){
             $data = User::select('id', 
             'name',
-            'lastname_p',
-            'lastname_m',
+            /*'lastname_p',
+            'lastname_m',*/
             'email',
-            'fechaingresocorp',
+            /*'fechaingresocorp',
             'fechaingresoemp',
             'fechabaja',
             'id_horario',
             'id_empresa',
             'id_area',
-            'id_rol',
-            'status',
+            'id_rol',*/
+            'status'
         );
             return DataTables::of($data)
             ->addColumn('operaciones', function($data){

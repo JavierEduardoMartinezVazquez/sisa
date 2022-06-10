@@ -49,17 +49,17 @@
                                     <tr>
                                         <th ><div style="width:90px !important;">Operación </div></th>
                                         <th>#</th>
-                                        <th>Nombre</th>
-                                        <th>A. Paterno</th>
-                                        <th>A. Materno</th>
+                                        <th>Nombre(s)</th>
+                                        <!--<th>A. Paterno</th>
+                                        <th>A. Materno</th>-->
                                         <th>Email</th>
-                                        <th>Fecha Corporativo</th>
+                                        <!--<th>Fecha Corporativo</th>
                                         <th>Fecha Alta</th>
                                         <th>Facha Baja</th>
                                         <th>Horario</th>
                                         <th>Empresa</th>
                                         <th>Area</th>
-                                        <th>Rol</th>
+                                        <th>Rol</th>-->
                                         <th>Estatus</th>
                                     </tr>
                                 </thead>
