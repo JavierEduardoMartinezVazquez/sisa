@@ -86,6 +86,69 @@
                                                 </div>
                                                 <div class="card-footer">
                                                     Gracias
-                                                </section>
                                             </div>
+                </div>
+            </section>
+                
+            
+            <section class="content">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Antes de solicitar vacaciones recuerda….</h3>
+                        <div class="card-tools">
+                         </div>
+                         </div>
+                         <div class="card-body">
+                             <div class="row">
+                                 <div class="col-12 col-sm-12">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <div class="card" style="width: 10rem;">
+                                                <img src="http://www.socasa.com.mx/images/logo_socasa.png" class="card-img-top" alt="...">
+                                                </div>
+                                              </div>
+                                        <div class="col-2">
+                                            <div class="card" style="width: 10rem;">
+                                                <img src="http://www.socasa.com.mx/images/logo_socasa.png" class="card-img-top" alt="...">
+                                                </div>
+                                              </div>
+                                        <div class="col-2">
+                                                <div class="card" style="width: 10rem;">
+                                                    <img src="http://www.socasa.com.mx/images/logo_socasa.png" class="card-img-top" alt="...">
+                                                    </div>
+                                                  </div>
+                                        <div class="col-2">
+                                                    <div class="card" style="width: 10rem;">
+                                                        <img src="http://www.socasa.com.mx/images/logo_socasa.png" class="card-img-top" alt="...">
+                                                        </div>
+                                                      </div>
+                                        <div class="col-2">
+                                                        <div class="card" style="width: 10rem;">
+                                                            <img src="http://www.socasa.com.mx/images/logo_socasa.png" class="card-img-top" alt="...">
+                                                            </div>
+                                                          </div>
+                                        <div class="col-2">
+                                            <div class="card" style="width: 10rem;">
+                                                <img src="http://www.socasa.com.mx/images/logo_socasa.png" class="card-img-top" alt="...">
+                                                </div>
+                                              </div>
+                                        </div>
+                                        
+                                      </div>
+                                    </div>
+                    
+                                                    </div>
+                                                </div>
+                </div>
+            </section>
+
+
+               
+            </section>
+    </div>
+    
+                                            
+
+                                        </section>
+
                             @endsection
