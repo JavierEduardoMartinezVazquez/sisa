@@ -441,9 +441,9 @@
                             '<li class="nav-item">'+
                                 '<a class="nav-link active" id="dat" data-toggle="pill" href="#p_datos" role="tab" aria-controls="p_datos" aria-selected="true">DATOS GENERALES</a>'+
                             '</li>'+
-                            '<li class="nav-item">'+
+                            /*'<li class="nav-item">'+
                                 '<a class="nav-link" id="detal" data-toggle="pill" href="#p_detalles" role="tab" aria-controls="p_detalles" aria-selected="false">DETALLES</a>'+
-                            '</li>'+
+                            '</li>'+*/
                         '</ul>'+
                     '</div>'+
                     '<div class="card-body">'+
@@ -459,24 +459,25 @@
                                         '<div class="col-md-4">'+
                                             '<label>Nombre:</label>'+                            
                                             '<input type="text" class="form-control" name="nombre" id="txtnombre" placeholder="Nombre" onkeyup="tipoLetra(this);" required>'+
-                                        '</div>'+
-                                        '<div class="col-md-4">'+ 
+                                        '</div>'+ 
+                                        /*'<div class="col-md-4">'+ 
                                             '<label>A. Paterno</label>'+
                                             '<input type="text" class="form-control" name="paterno" id="txtpaterno" placeholder="1er Apellido" onkeyup="tipoLetra(this);" required>'+
                                         '</div>'+
                                         '<div class="col-md-3">'+ 
                                             '<label>A. Materno</label>'+
                                             '<input type="text" class="form-control" name="materno" id="txtmaterno" placeholder="2do Apellido"" onkeyup="tipoLetra(this);" required>'+
-                                        '</div>'+  
-                                    '</div>'+
-                                '</div>'+
+                                        '</div>'+  */
+                                    //'</div>'+
+                                //'</div>'+
 
-                                '<div class="container">'+
-                                    '<div class="form-group row">'+
+                                //'<div class="container">'+
+                                        //'<div class="form-group row">'+
                                         '<div class="col-md-4">'+
                                             '<label>Correo Electrónico</label>'+
                                             '<input type="text" class="form-control" name="email" id="txtemail" placeholder="email" required autocomplete="email" data-parsley-type="email" onkeyup="tipoMinusculas(this);">'+
                                         '</div>'+
+                                        /*
                                         '<div class="col-md-4">'+ 
                                             '<label>Contraseña</label>'+
                                             '<input type="password" class="form-control" name="pass" id="txtpass" required autocomplete="new-password" placeholder="Contraseña">'+
@@ -484,7 +485,7 @@
                                         '<div class="col-md-4">'+ 
                                             '<label>Confirmar contraseña</label>'+
                                             '<input type="password" class="form-control" name="pass2" id="txtpass2" required autocomplete="new-password" data-parsley-equalto="#txtpass" placeholder="Confirmar contraseña">'+
-                                        '</div>'+  
+                                        '</div>'+  */
                                     '</div>'+
                                 '</div>'+
                             '</div>'+
@@ -503,7 +504,7 @@
                                             '</label>'+
                                             '<span class="label label-danger" name="nom" id="txtnom">'+
                                             '</span>'+                                        
-                                        '</div>'+*/
+                                        '</div>'+
                                         '<div class="col-md-4">'+
                                             '<label>Horario<b style="color:#F44336 !important;">*</b></label>'+
                                             '<input type="text" class="form-control" name="horario" id="txthorario" placeholder="Horario" onkeyup="tipoLetra(this);" ondblclick="obtenerhorario();"readonly required>'+
@@ -534,7 +535,7 @@
                                             '<label>Rol <b style="color:#F44336 !important;">*</b></label>'+
                                             '<div class="col-md-12 form-check" >'+
                                                 '<div class="container">'+
-                                                    '<div class="form-group row" id="roles">'+
+                                                    '<div class="form-group row" id="roles">'+*/
                                                         //se imprime el foreach
                                                     '</div>'+
                                                 '</div>'+                                                                
