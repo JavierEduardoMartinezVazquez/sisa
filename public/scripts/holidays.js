@@ -3,7 +3,7 @@
     var form;
 
     function init(){
-        listarhourhand();
+        listarholidays();
      }
 
     function mostrarmodalformulario(movimiento, permitirmodificacion){
@@ -32,14 +32,14 @@
         $("#formulario").hide();
         $("#contenidomodaltablas").show();
     }
-    function obtenerultimoidhourhand(){
-        $.get(obtener_ultimo_id_hourhand, function(numero){
+    function obtenerultimoidholidays(){
+        $.get(obtener_ultimo_id_holidays, function(numero){
           $("#txtnumero").val(numero);
         })  
     }
     //limpiar todos los inputs del formulario alta
     function limpiar(){
-        $("#form_Modal_pricipal")[0].reset();   
+        $("#form_Modal_pricipal")[0].reset();  
         //Resetear las validaciones del formulario alta
         form = $("#form_Modal_pricipal");
         form.parsley().reset();
@@ -51,7 +51,7 @@
         $("#tabsform").empty();
     }
     function alta(){
-        $("#titulomodal").html('Alta Horario');
+        $("#titulomodal").html('Alta Vacaciones');
         mostrarmodalformulario('ALTA');
         mostrarformulario();
         //formulario alta
@@ -84,7 +84,7 @@
                 '</div>'+ 
             '</div>';
         $("#tabsform").html(tabs);//tabsform es el ID del DIV donde se muestra el formulario del archivo JS <2>
-        obtenerultimoidhourhand();
+        obtenerultimoidholidays();
     }
     $("#btnGuardar").on('click', function (e) {
         e.preventDefault(); //       ID del formulario donde se muestra el modal
@@ -93,7 +93,7 @@
         if (form.parsley().isValid()){
             $.ajax({
                 headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-                url: guardar_hourhand,
+                url: guardar_holidays,
                 type: "post",
                 dataType: "html",
                 data: formData,
@@ -132,7 +132,7 @@
                 form.parsley().validate();
         }
     });
-    function listarhourhand() {
+    function listarholidays() {
         $("#tablelist").DataTable({
           "autoWidth": false,
           "sScrollX": "110%",
@@ -140,7 +140,7 @@
           'language': {
               "url": "control/plugins/datatables/es_es.json",
         },
-        ajax: listar_hourhand,
+        ajax: listar_holidays,
         "createdRow": function( row, data){
             if( data.status ==  `BAJA`){ $(row).css('font-weight','bold').css('color','#dc3545');}
         },
@@ -154,9 +154,9 @@
         "order": [[ 1, "asc" ]]
         })
     }
-    function obtenerhourhand(numero){
-        $("#titulomodal").html('Modificación Horario');
-        $.get(obtener_hourhand,{numero:numero },function(data){
+    function obtenerholidays(numero){
+        $("#titulomodal").html('Modificación Vacaciones');
+        $.get(obtener_holidays,{numero:numero },function(data){
             //se crea al formlario
             var tabs =
             '<div class="card-body">'+
@@ -188,9 +188,9 @@
             '</div>';
             $("#tabsform").html(tabs);
             console.log(data);//mandas el arreglo
-            $("#txtnumero").val(data.hourhand.id);
-            $("#txtentrada").val(data.hourhand.entrada);
-            $("#txtsalida").val(data.hourhand.salida);
+            $("#txtnumero").val(data.holidays.id);
+            $("#txtentrada").val(data.holidays.entrada);
+            $("#txtsalida").val(data.holidays.salida);
             mostrarmodalformulario('MODIFICACION', data.permitirmodificacion);
             mostrarformulario();
         }).fail( function() {
@@ -210,7 +210,7 @@ $("#btnGuardarModificacion").on('click', function (e) {
     if (form.parsley().isValid()){
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-            url:modificar_hourhand,
+            url:modificar_holidays,
             type: "post",
             dataType: "html",
             data: formData,
@@ -249,13 +249,13 @@ $("#btnGuardarModificacion").on('click', function (e) {
         form.parsley().validate();
     }
 });
-function verificarbajahourhand(numero){
-    $.get(verificar_baja_hourhand, {numero:numero}, function(data){
+function verificarbajaholidays(numero){
+    $.get(verificar_baja_holidays, {numero:numero}, function(data){
         if(data.status == 'BAJA'){
             //ID del input que esta dentro del formulario del modal de baja
             $("#num").val();
             //<h5 id="textobaja"></h5> etiqueta dentro del formulario del modal de baja
-            $("#textobaja").html("El horario ya fue dado de baja.");
+            $("#textobaja").html("Las vacaciones ya fueron dadas de baja.");
             // id de boton para la baja dentro del formulario del modal de baja
             $("#aceptar").hide();
             // id del div del modal id="estatusregistro"
@@ -275,7 +275,7 @@ $("#aceptar").on('click', function(e){
     if (form.parsley().isValid()){
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-            url:baja_hourhand,
+            url:baja_holidays,
             type: "post",
             dataType: "html",
             data: formData,

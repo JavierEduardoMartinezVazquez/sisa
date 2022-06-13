@@ -11,7 +11,7 @@ class HolidaysController extends Controller
     {
         return view('control.paginas.holidays');
     }
-    public function obtener_ultimo_id_hourhand(){
+    public function obtener_ultimo_id_holidays(){
         $ultimoNumeroTabla = C_holidays::select("id")->orderBy("id", "DESC")->take(1)->get();
         if(sizeof($ultimoNumeroTabla) == 0 || sizeof($ultimoNumeroTabla) == "" || sizeof($ultimoNumeroTabla) == null){
             $id = 1;
@@ -20,21 +20,21 @@ class HolidaysController extends Controller
         }
         return response()->json($id);
     }
-    public function guardar_hourhand(Request $request){
+    public function guardar_holidays(Request $request){
         $ultimoNumeroTabla = C_holidays::select("id")->orderBy("id", "DESC")->take(1)->get();
         if(sizeof($ultimoNumeroTabla) == 0 || sizeof($ultimoNumeroTabla) == "" || sizeof($ultimoNumeroTabla) == null){
             $id = 1;
         }else{
             $id = $ultimoNumeroTabla[0]->id+1;
         }
-        $hourhand = new C_holidays;
-        $hourhand->entrada=$request->entrada;
-        $hourhand->salida=$request->salida;
-        $hourhand->status='ALTA';        
-        $hourhand->save();
-        return response()->json($hourhand);
+        $holidays = new C_holidays;
+        $holidays->entrada=$request->entrada;
+        $holidays->salida=$request->salida;
+        $holidays->status='ALTA';        
+        $holidays->save();
+        return response()->json($holidays);
     }
-    public function listar_hourhand (Request $request)
+    public function listar_holidays (Request $request)
     {
         if($request->ajax()){
             $data = C_holidays::select('id', 'entrada', 'salida', 'status');
@@ -42,8 +42,8 @@ class HolidaysController extends Controller
             ->addColumn('operaciones', function($data){
                 $operaciones = '<div class="container">'.
                                     '<div class="row">'.
-                                            '<div class="col"><a href="javascript:void(0);" onclick="obtenerhourhand('.$data->id.')"><i class="fas fa-pen-square" aria-hidden="true"></i></a></div>'.
-                                            '<div class="col"><a href="javascript:void(0);" onclick="verificarbajahourhand('.$data->id.')"><i class="fa fa-minus-square" aria-hidden="true"></i></a></div>'.
+                                            '<div class="col"><a href="javascript:void(0);" onclick="obtenerholidays('.$data->id.')"><i class="fas fa-pen-square" aria-hidden="true"></i></a></div>'.
+                                            '<div class="col"><a href="javascript:void(0);" onclick="verificarbajaholidays('.$data->id.')"><i class="fa fa-minus-square" aria-hidden="true"></i></a></div>'.
                                         '</div>'.
                                 '</div>';
                 return $operaciones;
@@ -53,41 +53,41 @@ class HolidaysController extends Controller
         }
     }
 
-    public function obtener_hourhand(Request $request){
-        $hourhand= C_holidays::where('id', $request->numero)->first();
+    public function obtener_holidays(Request $request){
+        $holidays= C_holidays::where('id', $request->numero)->first();
         $permitirmodificacion = 1;
-        if($hourhand->status == 'BAJA'){ 
+        if($holidays->status == 'BAJA'){ 
             $permitirmodificacion = 0;
         }
         $data = array(
-            "hourhand" => $hourhand,
+            "holidays" => $holidays,
             "permitirmodificacion" => $permitirmodificacion
         );
         return response()->json($data);
     }
-    public function modificar_hourhand(Request $request){
-        $hourhand = C_holidays::where('id', $request->numero)->first();
+    public function modificar_holidays(Request $request){
+        $holidays = C_holidays::where('id', $request->numero)->first();
         C_holidays::where('id', $request->numero)
         ->update([
             //atributo de la Base => $request-> nombre de la caja de texto
             'entrada'=> $request->entrada,
             'salida'=> $request->salida
         ]);
-        return response()->json($hourhand);
+        return response()->json($holidays);
     }
-    public function verificar_baja_hourhand(Request $request){
+    public function verificar_baja_holidays(Request $request){
         //variable = $request->variable que recibe del archivo .js
         $numero = $request->numero;
-        $hourhand = C_holidays::where('id', $numero)->first();
-        return response()->json($hourhand);
+        $holidays = C_holidays::where('id', $numero)->first();
+        return response()->json($holidays);
     }
-    public function baja_hourhand(Request $request){
-        $hourhand = C_holidays::where('id', $request->num)->first();
+    public function baja_holidays(Request $request){
+        $holidays = C_holidays::where('id', $request->num)->first();
         C_holidays::where('id', $request->num)
         ->update([
             'status'=> 'BAJA'
         ]);
-        return response()->json($hourhand);
+        return response()->json($holidays);
     }
 }
 

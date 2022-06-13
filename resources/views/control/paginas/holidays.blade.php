@@ -80,5 +80,5 @@
         var verificar_baja_holidays = '{!!URL::to('verificar_baja_holidays')!!}';
         var baja_holidays = '{!!URL::to('baja_holidays')!!}';     
     </script> 
-    <script src="scripts/hourhand.js"></script>
+    <script src="scripts/holidays.js"></script>
 @endsection    
