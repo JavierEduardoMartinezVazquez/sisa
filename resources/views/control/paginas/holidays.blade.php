@@ -49,24 +49,9 @@
                                     <tr>
                                         <th ><div style="width:90px !important;">Operación </div></th>
                                         <th>#</th>
-                                        <th>Nombre</th>
-                                        <th>Empresa</th>
-                                        <th>Departamento</th>
-                                        <th>Puesto</th>
-                                        <th>F.Solicitud</th>
-                                        <th>F.Ingreso</th>
-                                        <th>Aniverario</th>
-                                        <th>F.Inicio</th>
-                                        <th>F.Final</th>
-                                        <th>Inico de labores</th>
-                                        <th>Dias</th>
-                                        <th>P. Prima Vacacional </th>
-                                        <th>D. aniversario anterior</th>
-                                        <th>D. Pendientes</th>
-                                        <th>F. Autorizacion</th>
-                                        <th>Autorizado por</th>
-                                        <th>Status</th>
-                                        <th>Periodo</th>                            
+                                        <th>Entrada</th>
+                                        <th>Salida</th>
+                                        <th>Estatus</th>
                                     </tr>
                                 </thead>
                             </table>
@@ -83,7 +68,7 @@
     <script>
     //detectar cuando en el input de buscar por codigo de producto el usuario presione la tecla enter, si es asi se realizara la busqueda con el codigo escrito
         $(document).ready(function(){
-        $("#hol").addClass('active');
+        $("#hor").addClass('active');
         });
     </script>
     <script>
@@ -95,5 +80,5 @@
         var verificar_baja_holidays = '{!!URL::to('verificar_baja_holidays')!!}';
         var baja_holidays = '{!!URL::to('baja_holidays')!!}';     
     </script> 
-    <script src="scripts/holidays.js"></script>
+    <script src="scripts/hourhand.js"></script>
 @endsection    

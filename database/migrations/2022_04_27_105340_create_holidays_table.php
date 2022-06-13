@@ -15,24 +15,9 @@ class CreateHolidaysTable extends Migration
     {
         Schema::create('holidays', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nombre', 20);
-            $table->string('empresa', 20);
-            $table->string('departamento', 20);
-            $table->string('puesto', 20);
-            $table->date('fsolicitud');
-            $table->date('fingreso');
-            $table->integer('aniversario');
-            $table->date('finicio');
-            $table->date('fechafinal');
-            $table->date('iniciolab');
-            $table->integer('dias');
-            $table->decimal('primavav');
-            $table->decimal('daniant');
-            $table->integer('dpendientes');
-            $table->date('fautorizacion');
-            $table->string('autorizo', 20);
-            $table->string('status', 20);
-            $table->string('periodo', 20);
+            $table->time('entrada')->nullable();
+            $table->time('salida')->nullable();
+            $table->string('status',5)->nullable();
             $table->timestamps();
         });
     }
@@ -47,3 +32,4 @@ class CreateHolidaysTable extends Migration
         Schema::dropIfExists('holidays');
     }
 }
+
