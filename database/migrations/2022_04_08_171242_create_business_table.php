@@ -20,7 +20,7 @@ class CreateBusinessTable extends Migration
             $table->string('nombre',100)->nullable();
             $table->string('status',5)->nullable();
             $table->timestamps();
-        });
+        }); 
     }
 
     /**
