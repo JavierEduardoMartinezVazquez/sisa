@@ -1,8 +1,10 @@
+
 <?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use phpDocumentor\Reflection\Types\Nullable;
 
 class CreateNominasTable extends Migration
 {
@@ -15,6 +17,8 @@ class CreateNominasTable extends Migration
     {
         Schema::create('nominas', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('nombre',100)->nullable();
+            $table->string('status',5)->nullable();
             $table->timestamps();
         });
     }
