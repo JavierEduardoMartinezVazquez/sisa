@@ -39,7 +39,7 @@
     }
     //limpiar todos los inputs del formulario alta
     function limpiar(){
-        $("#form_Modal_pricipal")[0].reset();  
+        $("#form_Modal_pricipal")[0].reset();   
         //Resetear las validaciones del formulario alta
         form = $("#form_Modal_pricipal");
         form.parsley().reset();
@@ -51,7 +51,7 @@
         $("#tabsform").empty();
     }
     function alta(){
-        $("#titulomodal").html('Alta Vacaciones');
+        $("#titulomodal").html('Alta Horario');
         mostrarmodalformulario('ALTA');
         mostrarformulario();
         //formulario alta
@@ -155,7 +155,7 @@
         })
     }
     function obtenerholidays(numero){
-        $("#titulomodal").html('Modificación Vacaciones');
+        $("#titulomodal").html('Modificación Horario');
         $.get(obtener_holidays,{numero:numero },function(data){
             //se crea al formlario
             var tabs =
@@ -255,7 +255,7 @@ function verificarbajaholidays(numero){
             //ID del input que esta dentro del formulario del modal de baja
             $("#num").val();
             //<h5 id="textobaja"></h5> etiqueta dentro del formulario del modal de baja
-            $("#textobaja").html("Las vacaciones ya fueron dadas de baja.");
+            $("#textobaja").html("El horario ya fue dado de baja.");
             // id de boton para la baja dentro del formulario del modal de baja
             $("#aceptar").hide();
             // id del div del modal id="estatusregistro"

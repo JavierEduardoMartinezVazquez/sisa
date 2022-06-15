@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 use Yajra\DataTables\DataTables;
+use App\C_holidays;
+
 use Illuminate\Http\Request;
-use app\C_holidays;
 
 class HolidaysController extends Controller
 {
