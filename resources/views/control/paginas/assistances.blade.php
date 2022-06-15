@@ -59,8 +59,8 @@
                                         <th>Horario</th>
                                         <th>Empresa</th>
                                         <th>Area</th>
-                                        <th>Rol</th>
-                                        <th>Estatus</th>-->
+                                        <th>Rol</th>-->
+                                        <th>Estatus</th>
                                     </tr>
                                 </thead>
                             </table>

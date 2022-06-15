@@ -106,11 +106,11 @@
                   <p>Dias de Vacaciones</p>
                 </a>
               </li>
-              <li class="nav-item">
+              <!--<li class="nav-item">
                 <a href="{{route('Vacationreports')}}" class="nav-link">
                   <i class="nav-icon fas fa-book"></i>
                   <p>Vacaciones</p>
-                </a>
+                </a>-->
               </li>
               <li class="nav-item">
                 <a href="{{route('Nominas')}}" class="nav-link">

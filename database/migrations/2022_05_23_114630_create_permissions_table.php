@@ -1,8 +1,10 @@
+
 <?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use phpDocumentor\Reflection\Types\Nullable;
 
 class CreatePermissionsTable extends Migration
 {
@@ -15,12 +17,10 @@ class CreatePermissionsTable extends Migration
     {
         Schema::create('permissions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nombre');
-            $table->date('finicio');
-            $table->date('ffinal');
-            $table->string('autorizacion');
+            $table->string('nombre',100)->nullable();
+            $table->string('status',5)->nullable();
             $table->timestamps();
-        });
+        }); 
     }
 
     /**
