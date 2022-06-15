@@ -15,6 +15,9 @@ class CreateVacationdaysTable extends Migration
     {
         Schema::create('vacationdays', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->time('entrada')->nullable();
+            $table->time('salida')->nullable();
+            $table->string('status',5)->nullable();
             $table->timestamps();
         });
     }
@@ -29,3 +32,4 @@ class CreateVacationdaysTable extends Migration
         Schema::dropIfExists('vacationdays');
     }
 }
+

@@ -1,17 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+use Yajra\DataTables\DataTables;
+use App\C_vacationdays;
 
 use Illuminate\Http\Request;
-use App\User;
-use App\C_business;
-use Yajra\DataTables\Facades\DataTables;
-use App\C_hourhand;
-use App\C_Roles;
-use Illuminate\Support\Facades\Hash;
-use Helpers;
-use Illuminate\Support\Carbon;
-
 
 class VacationdaysController extends Controller
 {
@@ -19,8 +12,8 @@ class VacationdaysController extends Controller
     {
         return view('control.paginas.vacationdays');
     }
-    public function obtener_ultimo_id_user(){
-        $ultimoNumeroTabla = User::select("id")->orderBy("id", "DESC")->take(1)->get();
+    public function obtener_ultimo_id_vacationdays(){
+        $ultimoNumeroTabla = C_vacationdays::select("id")->orderBy("id", "DESC")->take(1)->get();
         if(sizeof($ultimoNumeroTabla) == 0 || sizeof($ultimoNumeroTabla) == "" || sizeof($ultimoNumeroTabla) == null){
             $id = 1;
         }else{
@@ -28,97 +21,30 @@ class VacationdaysController extends Controller
         }
         return response()->json($id);
     }
-
-    public function obtener_empresa(Request $request){
-        if($request->ajax()){
-            $data = C_business::where('status', 'ALTA')->orderBy("id", "ASC")->get();
-            return DataTables::of($data)
-                ->addColumn('operaciones', function($data){
-                    $boton = '<div class="btn bg-green btn-xs waves-effect" onclick="seleccionarempresa('.$data->nombre.',\')">Seleccionar</div>';
-                    return $boton;
-                })
-                ->rawColumns(['operaciones'])
-                ->make(true);
+    public function guardar_vacationdays(Request $request){
+        $ultimoNumeroTabla = C_vacationdays::select("id")->orderBy("id", "DESC")->take(1)->get();
+        if(sizeof($ultimoNumeroTabla) == 0 || sizeof($ultimoNumeroTabla) == "" || sizeof($ultimoNumeroTabla) == null){
+            $id = 1;
+        }else{
+            $id = $ultimoNumeroTabla[0]->id+1;
         }
+        $vacationdays = new C_vacationdays;
+        $vacationdays->entrada=$request->entrada;
+        $vacationdays->salida=$request->salida;
+        $vacationdays->status='ALTA';        
+        $vacationdays->save();
+        return response()->json($vacationdays);
     }
-    public function obtener_horario(Request $request){
-        if($request->ajax()){
-            $data = C_hourhand::where('status', 'ALTA')->orderBy("id", "ASC")->get();
-            return DataTables::of($data)
-                ->addColumn('operaciones', function($data){
-                    $boton = '<div class="btn bg-green btn-xs waves-effect" onclick="seleccionarhorario('.$data->id.',\')">Seleccionar</div>';
-                    return $boton;
-                })
-                ->rawColumns(['operaciones'])
-                ->make(true);
-        }
-    }
-    public function obtener_roles(){
-        $getroles = C_Roles::orderBy("id", "DESC")->get();
-        $roles = "";
-        $contador = 1;        
-            foreach($getroles as $getrol){
-            $roles = $roles.
-            '<div class="col-md">'.
-                '<input class="form-check-input" type="radio" name="rol" id="rol'.$contador.'" value="'.$getrol->id.'" required></input>'.
-                '<label for="rol'.$contador.'">'.$getrol->tipo.'</label>'.
-            '</div>';
-            $contador++;
-        }
-        return response()->json($roles);
-    }
-    public function guardar_user(Request $request){
-        $email=$request->email;
-        $ExisteUsuario = User::where('email', $email)->first();
-        if($ExisteUsuario == true){
-            $user = 1;
-	    }else{
-            $ultimoNumeroTabla = User::select("id")->orderBy("id", "DESC")->take(1)->get();
-            if(sizeof($ultimoNumeroTabla) == 0 || sizeof($ultimoNumeroTabla) == "" || sizeof($ultimoNumeroTabla) == null){
-                $id = 1;
-            }else{
-                $id = $ultimoNumeroTabla[0]->id+1;
-        }
-            $user = new User;
-            $user->name=$request->nombre;
-            $user->lastname_p=$request->paterno;
-            $user->lastname_m=$request->materno;
-            $user->email=$request->email;
-            $user->password=Hash::make($request->pass);
-            $user->fechaingresocorp=$request->fecha_cor;
-            $user->fechaingresoemp=$request->fecha_ini;
-            $user->id_horario=$request->horario;
-            $user->id_empresa=$request->empresa;
-            $user->id_rol=$request->rol;
-            $user->status="ALTA";        
-            $user->save();
-        }
-        return response()->json($user);
-
-    }
-    public function listar_user (Request $request)
+    public function listar_vacationdays (Request $request)
     {
         if($request->ajax()){
-            $data = User::select('id', 
-            'name',
-            'lastname_p',
-            'lastname_m',
-            'email',
-            'fechaingresocorp',
-            'fechaingresoemp',
-            'fechabaja',
-            'id_horario',
-            'id_empresa',
-            'id_area',
-            'id_rol',
-            'status',
-        );
+            $data = C_vacationdays::select('id', 'entrada', 'salida', 'status');
             return DataTables::of($data)
             ->addColumn('operaciones', function($data){
                 $operaciones = '<div class="container">'.
                                     '<div class="row">'.
-                                            '<div class="col"><a href="javascript:void(0);" onclick="obteneruser('.$data->id.')"><i class="fas fa-pen-square" aria-hidden="true"></i></a></div>'.
-                                            '<div class="col"><a href="javascript:void(0);" onclick="verificarbajabusiness('.$data->id.')"><i class="fa fa-minus-square" aria-hidden="true"></i></a></div>'.
+                                            '<div class="col"><a href="javascript:void(0);" onclick="obtenervacationdays('.$data->id.')"><i class="fas fa-pen-square" aria-hidden="true"></i></a></div>'.
+                                            '<div class="col"><a href="javascript:void(0);" onclick="verificarbajavacationdays('.$data->id.')"><i class="fa fa-minus-square" aria-hidden="true"></i></a></div>'.
                                         '</div>'.
                                 '</div>';
                 return $operaciones;
@@ -128,62 +54,40 @@ class VacationdaysController extends Controller
         }
     }
 
-    public function obtener_user(Request $request){        
-        $user= User::where('id', $request->numero)->first();
+    public function obtener_vacationdays(Request $request){
+        $vacationdays= C_vacationdays::where('id', $request->numero)->first();
         $permitirmodificacion = 1;
-        $getroles = C_Roles::orderBy("id", "DESC")->get();
-        $roles = "";
-        $contador = 1;
-        foreach($getroles as $getrol){
-            if($getrol->id == $user->id_roles){
-                $roles = $roles.
-                '<div class="col-md">'.
-                    '<input class="form-check-input" type="radio" name="rol" id="rol'.$contador.'" value="'.$getrol->id.'" required checked></input>'.
-                    '<label for="rol'.$contador.'">'.$getrol->tipo.'</label>'.
-                '</div>';
-            }else{
-                $roles = $roles.
-                '<div class="col-md">'.
-                    '<input class="form-check-input" type="radio" name="rol" id="rol'.$contador.'" value="'.$getrol->id.'" required></input>'.
-                    '<label for="rol'.$contador.'">'.$getrol->tipo.'</label>'.
-                '</div>';
-            }
-            $contador++;        
-        }        
-        if($user->status == 'BAJA'){ 
+        if($vacationdays->status == 'BAJA'){ 
             $permitirmodificacion = 0;
         }
         $data = array(
-            "user" => $user,
-            "fechadeingresocorp" => Carbon::parse($user->fechaingresocorp)->format('Y-m-d')."T".Carbon::parse($user->fechaingresocorp)->format('H:i'),
-            "fechadeingresoemp" => Carbon::parse($user->fechaingresoemp)->format('Y-m-d')."T".Carbon::parse($user->fechaingresoemp)->format('H:i'),
-            "fechadebaja" => Helpers::formatoinputdatetime($user->fechabaja),
-            "roles" => $roles,
+            "vacationdays" => $vacationdays,
             "permitirmodificacion" => $permitirmodificacion
         );
         return response()->json($data);
     }
-    public function modificar_user(Request $request){
-        $business = User::where('id', $request->numero)->first();
-        User::where('id', $request->numero)
+    public function modificar_vacationdays(Request $request){
+        $vacationdays = C_vacationdays::where('id', $request->numero)->first();
+        C_vacationdays::where('id', $request->numero)
         ->update([
             //atributo de la Base => $request-> nombre de la caja de texto
-            'nombre'=> $request->nombre
+            'entrada'=> $request->entrada,
+            'salida'=> $request->salida
         ]);
-        return response()->json($business);
+        return response()->json($vacationdays);
     }
-    public function verificar_baja_user(Request $request){
+    public function verificar_baja_vacationdays(Request $request){
         //variable = $request->variable que recibe del archivo .js
         $numero = $request->numero;
-        $business = User::where('id', $numero)->first();
-        return response()->json($business);
+        $vacationdays = C_vacationdays::where('id', $numero)->first();
+        return response()->json($vacationdays);
     }
-    public function baja_user(Request $request){
-        $business = User::where('id', $request->num)->first();
-        User::where('id', $request->num)
+    public function baja_vacationdays(Request $request){
+        $vacationdays = C_vacationdays::where('id', $request->num)->first();
+        C_vacationdays::where('id', $request->num)
         ->update([
             'status'=> 'BAJA'
         ]);
-        return response()->json($business);
+        return response()->json($vacationdays);
     }
 }
