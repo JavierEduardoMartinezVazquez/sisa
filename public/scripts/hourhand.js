@@ -76,8 +76,24 @@
                                 '<div class="col-md-4">'+ 
                                 '<label>Salida<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="time" class="form-control" name="salida" id="txtsalida" placeholder="Salida" onkeyup="tipoLetra(this);" required>'+
-                            '</div>'+    
+                            '</div>'+
+                              
 
+                            '<div class="col-md-1">'+
+                                '</div>'+ 
+                                '<div class="col-md-10">'+ 
+                                    '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+ 
+
+                                    '<select class="form-select" name="empresa" id="txtempresa" placeholder="Nombre de la empresa" onkeyup="tipoLetra(this);" required>'+
+    '<option value="Soluciones Integrales para tu Camión Socasa S.A. de C.V.">Soluciones Integrales para tu camión Socasa S.A. de C.V.</option>'+
+  '<option value="Socasa Toluca">Socasa Toluca</option>'+
+  '<option value="Socasa Refaccionaria">Socasa Refaccionaria</option>'+
+  '<option value="UTP usados">UTP usados</option>'+
+  '<option value="UTP usados">UTP seminuevos</option>'+
+'</select>'+
+
+
+                         
                             '</div>'+
                         '</div>'+    
                     '</div>'+
@@ -149,6 +165,7 @@
             { data: 'id', name: 'id', orderable: true, searchable: true },
             { data: 'entrada', name: 'entrada', orderable: true, searchable: true },
             { data: 'salida', name: 'salida', orderable: true, searchable: true },
+            { data: 'empresa', name: 'empresa', orderable: true, searchable: true },
             { data: 'status', name: 'status', orderable: true, searchable: true },
         ],
         "order": [[ 1, "asc" ]]
@@ -180,6 +197,13 @@
                                 '<label>Salida<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="time" class="form-control" name="salida" id="txtsalida" placeholder="Salida" onkeyup="tipoLetra(this);" required>'+
                             '</div>'+    
+                            '</div>'+ 
+                                '<div class="col-md-1">'+
+                                '</div>'+ 
+                                '<div class="col-md-4">'+ 
+                                '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+ 
+                                '<input type="time" class="form-control" name="empresa" id="txtempresa" placeholder="Empresa" onkeyup="tipoLetra(this);" required>'+
+                            '</div>'+  
 
                             '</div>'+
                         '</div>'+    
@@ -191,6 +215,7 @@
             $("#txtnumero").val(data.hourhand.id);
             $("#txtentrada").val(data.hourhand.entrada);
             $("#txtsalida").val(data.hourhand.salida);
+            $("#txtempresa").val(data.hourhand.empresa);
             mostrarmodalformulario('MODIFICACION', data.permitirmodificacion);
             mostrarformulario();
         }).fail( function() {

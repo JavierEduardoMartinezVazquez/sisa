@@ -51,6 +51,7 @@
                                         <th>#</th>
                                         <th>Entrada</th>
                                         <th>Salida</th>
+                                        <th>Empresa</th>
                                         <th>Estatus</th>
                                     </tr>
                                 </thead>
