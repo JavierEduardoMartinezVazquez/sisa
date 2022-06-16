@@ -29,8 +29,8 @@ class HolidaysController extends Controller
             $id = $ultimoNumeroTabla[0]->id+1;
         }
         $holidays = new C_holidays;
-        $holidays->entrada=$request->entrada;
-        $holidays->salida=$request->salida;
+        $holidays->inicio=$request->inicio;
+        $holidays->final=$request->final;
         $holidays->status='ALTA';        
         $holidays->save();
         return response()->json($holidays);
@@ -38,7 +38,7 @@ class HolidaysController extends Controller
     public function listar_holidays (Request $request)
     {
         if($request->ajax()){
-            $data = C_holidays::select('id', 'entrada', 'salida', 'status');
+            $data = C_holidays::select('id', 'inicio', 'final', 'status');
             return DataTables::of($data)
             ->addColumn('operaciones', function($data){
                 $operaciones = '<div class="container">'.
@@ -71,8 +71,8 @@ class HolidaysController extends Controller
         C_holidays::where('id', $request->numero)
         ->update([
             //atributo de la Base => $request-> nombre de la caja de texto
-            'entrada'=> $request->entrada,
-            'salida'=> $request->salida
+            'inicio'=> $request->inicio,
+            'final'=> $request->final
         ]);
         return response()->json($holidays);
     }

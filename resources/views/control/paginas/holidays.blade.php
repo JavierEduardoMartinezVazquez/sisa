@@ -49,8 +49,8 @@
                                     <tr>
                                         <th ><div style="width:90px !important;">Operación </div></th>
                                         <th>#</th>
-                                        <th>Entrada</th>
-                                        <th>Salida</th>
+                                        <th>Inicio</th>
+                                        <th>Final</th>
                                         <th>Estatus</th>
                                     </tr>
                                 </thead>

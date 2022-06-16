@@ -10,8 +10,8 @@ class C_holidays extends Model
     protected $table = 'holidays';
     protected $primarykey = 'id';
     protected $fillable = [
-        'entrada',
-        'salida',
+        'inicio',
+        'final',
         'status'
     ];
 }
