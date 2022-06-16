@@ -23,10 +23,11 @@ class User extends Authenticatable
         'email',
         'email_verified_at',
         'password',
+        /*
         'fechaingresocorp',
         'fechaingresoemp',
         'fechabaja',
-        'id_horario',
+        'id_horario',*/
         'id_empresa',
         'id_area',
         'id_rol',

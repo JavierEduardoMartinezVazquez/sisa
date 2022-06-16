@@ -241,7 +241,7 @@
 
                                     
                                     
-                                    /*'<div class="col-md-4">'+ 
+                                    '<div class="col-md-4">'+ 
                                         '<label>A. Paterno</label>'+
                                         '<input type="text" class="form-control" name="paterno" id="txtpaterno" placeholder="1er Apellido" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
@@ -249,7 +249,7 @@
                                         '<label>A. Materno</label>'+
                                         '<input type="text" class="form-control" name="materno" id="txtmaterno" placeholder="2do Apellido"" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+  
-                                '</div>'+*/
+                                '</div>'+
                             '</div>'+
 
                             '<div class="container">'+
@@ -413,8 +413,8 @@
             { data: 'operaciones', name: 'operaciones', orderable: false, searchable: false },
             { data: 'id', name: 'id', orderable: true, searchable: true },
             { data: 'name', name: 'name', orderable: true, searchable: true },
-            /*{ data: 'lastname_p', name: 'lastname_p', orderable: true, searchable: true },
-            { data: 'lastname_m', name: 'lastname_m', orderable: true, searchable: true },*/
+            { data: 'lastname_p', name: 'lastname_p', orderable: true, searchable: true },
+            { data: 'lastname_m', name: 'lastname_m', orderable: true, searchable: true },
             { data: 'email', name: 'email', orderable: true, searchable: true },
             /*{ data: 'fechaingresocorp', name: 'fechaingresocorp', orderable: true, searchable: true },
             { data: 'fechaingresoemp', name: 'fechaingresoemp', orderable: true, searchable: true },
@@ -460,14 +460,14 @@
                                             '<label>Nombre:</label>'+                            
                                             '<input type="text" class="form-control" name="nombre" id="txtnombre" placeholder="Nombre" onkeyup="tipoLetra(this);" required>'+
                                         '</div>'+ 
-                                        /*'<div class="col-md-4">'+ 
+                                        '<div class="col-md-4">'+ 
                                             '<label>A. Paterno</label>'+
                                             '<input type="text" class="form-control" name="paterno" id="txtpaterno" placeholder="1er Apellido" onkeyup="tipoLetra(this);" required>'+
                                         '</div>'+
                                         '<div class="col-md-3">'+ 
                                             '<label>A. Materno</label>'+
                                             '<input type="text" class="form-control" name="materno" id="txtmaterno" placeholder="2do Apellido"" onkeyup="tipoLetra(this);" required>'+
-                                        '</div>'+  */
+                                        '</div>'+  
                                     //'</div>'+
                                 //'</div>'+
 
@@ -554,8 +554,8 @@
             console.log(data);//mandas el arreglo
             $("#txtnumero").val(data.user.id);
             $("#txtnombre").val(data.user.name);
-            /*$("#txtpaterno").val(data.user.lastname_p);
-            $("#txtmaterno").val(data.user.lastname_m);*/
+            $("#txtpaterno").val(data.user.lastname_p);
+            $("#txtmaterno").val(data.user.lastname_m);
             $("#txtemail").val(data.user.email);
             /*$("#txtempresa").val(data.user.id_empresa);
             $("#txthorario").val(data.user.id_horario);
@@ -583,7 +583,7 @@ $("#btnGuardarModificacion").on('click', function (e) {
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
             url:modificar_user,
-            type: "post",
+            type: "post", 
             dataType: "html",
             data: formData,
             cache: false,
