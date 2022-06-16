@@ -64,14 +64,22 @@
                                 '<div class="col-md-1">'+
                                     '<label>Numero:<b style="color:#F44336 !important;">*</b></label>'+                             
                                     '<input type="text" class="form-control" name="numero" id="txtnumero" required  readonly>'+ 
-                                '</div>'+ 
+                                '</div>'+
+                                '<br>'+
                                 '<div class="col-md-1">'+
                                 '</div>'+ 
-                                '<div class="col-md-10">'+ 
+                                '<div class="col-md-10">'+
+                                
                                     '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="text" class="form-control" name="empresa" id="txtempresa" placeholder="Nombre de la empresa" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+    
-
+                                '<div class="col-md-2">'+
+                                '</div>'+ 
+                                '<div class="col-md-10">'+ 
+                                '<br>'+ 
+                                    '<label>Direccion<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<input type="text" class="form-control" name="direccion" id="txtdireccion" placeholder="Direccion" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+ 
                             '</div>'+
                         '</div>'+    
                     '</div>'+
@@ -142,6 +150,7 @@
             { data: 'operaciones', name: 'operaciones', orderable: false, searchable: false },
             { data: 'id', name: 'id', orderable: true, searchable: true },
             { data: 'empresa', name: 'empresa', orderable: true, searchable: true },
+            { data: 'direccion', name: 'direccion', orderable: true, searchable: true},
             { data: 'status', name: 'status', orderable: true, searchable: true },
             
         ],
@@ -168,6 +177,12 @@
                                     '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="text" class="form-control" name="empresa" id="txtempresa" placeholder="Empresa" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+    
+                                '<div class="col-md-1">'+
+                                '</div>'+ 
+                                '<div class="col-md-10">'+ 
+                                    '<label>Direccion<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<input type="text" class="form-control" name="direccion" id="txtdireccion" placeholder="Direccion" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+   
 
                             '</div>'+
                         '</div>'+    
@@ -178,6 +193,8 @@
             console.log(data);//mandas el arreglo
             $("#txtnumero").val(data.business.id);
             $("#txtempresa").val(data.business.empresa);
+            $("#txtdireccion").val(data.business.direccion);
+            
             mostrarmodalformulario('MODIFICACION', data.permitirmodificacion);
             mostrarformulario();
         }).fail( function() {
