@@ -11,6 +11,7 @@ class C_permissions extends Model
     protected $primarykey = 'id';
     protected $fillable = [
         'nombre',
+        'motivo',
         'status'
         
     ];

@@ -51,8 +51,10 @@
                                     <tr>
                                         <th ><div style="width:90px !important;">Operación</div></th>
                                         <th>#</th>
-                                        <th>Nombre</th>
+                                        <th>Usuario</th>
+                                        <th>Motivo</th>     
                                         <th>Estatus</th>
+                                        
                                     </tr>
                                 </thead>
                             </table>
