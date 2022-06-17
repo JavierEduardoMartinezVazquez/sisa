@@ -51,6 +51,7 @@
                                         <th>#</th>
                                         <th>Inicio</th>
                                         <th>Final</th>
+                                        <th>Días disponibles</th>
                                         <th>Estatus</th>
                                     </tr>
                                 </thead>

@@ -12,6 +12,7 @@ class C_holidays extends Model
     protected $fillable = [
         'inicio',
         'final',
+        'disponibles',
         'status'
     ];
 }

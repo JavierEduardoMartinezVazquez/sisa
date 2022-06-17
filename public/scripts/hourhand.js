@@ -198,7 +198,7 @@
                                 '<input type="time" class="form-control" name="salida" id="txtsalida" placeholder="Salida" onkeyup="tipoLetra(this);" required>'+
                             '</div>'+    
                             '</div>'+ 
-                                '<div class="col-md-1">'+
+                                '<div class="col-md-2">'+
                                 '</div>'+ 
                                 '<div class="col-md-4">'+ 
                                 '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+ 
