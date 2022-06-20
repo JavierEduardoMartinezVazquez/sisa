@@ -51,7 +51,7 @@
         $("#tabsform").empty();
     }
     function alta(){
-        $("#titulomodal").html('Alta Empresa');
+        $("#titulomodal").html('Alta Nomina');
         mostrarmodalformulario('ALTA');
         mostrarformulario();
         //formulario alta
@@ -149,7 +149,7 @@
         })
     }
     function obtenernominas(numero){
-        $("#titulomodal").html('Modificación Empresa');
+        $("#titulomodal").html('Modificación Nomina');
         $.get(obtener_nominas,{numero:numero },function(data){
             //se crea al formlario
             var tabs =
