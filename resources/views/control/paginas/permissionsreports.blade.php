@@ -1,6 +1,6 @@
 @extends('plantilla')
 @section('titulo')
-    Permisos
+    Permisos Reportes
 @endsection
     @section('additionals_css')
 @endsection
@@ -75,7 +75,7 @@
         });
     </script>
     <script>
-        var obtener_ultimo_id_reports = '{!!URL::to('obtener_ultimo_id_permissionsreports')!!}';
+        var obtener_ultimo_id_permissionsreports = '{!!URL::to('obtener_ultimo_id_permissionsreports')!!}';
         var guardar_permissionsreports = '{!!URL::to('guardar_permissionsreports')!!}';
         var listar_permissionsreports = '{!!URL::to('listar_permissionsreports')!!}';
         var obtener_permissionsreports = '{!!URL::to('obtener_permissionsreports')!!}';

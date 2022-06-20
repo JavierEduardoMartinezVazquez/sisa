@@ -283,7 +283,7 @@ $("#aceptar").on('click', function(e){
             cache: false,
             contentType: false,
             processData: false,
-            success:function(data){
+            success:function(data){ 
                 $('#estatusregistro').modal('hide');
                 toastr.success( "La baja se realizo correctamente", "Mensaje", {
                     "timeOut": "6000",

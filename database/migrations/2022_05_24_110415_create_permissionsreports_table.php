@@ -21,7 +21,7 @@ class CreatePermissionsreportsTable extends Migration
             $table->string('motivo',100)->nullable();
             $table->string('status',5)->nullable();
             $table->timestamps();
-        }); 
+        });  
     }
 
     /**

@@ -91,3 +91,4 @@ class permissionsreportsController extends Controller
         return response()->json($permissionsreports);
     }
 }
+
