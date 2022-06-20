@@ -1,6 +1,6 @@
 @extends('plantilla')
 @section('titulo')
-    Días de Vacaciones
+    Días de vacaciones
 @endsection
     @section('additionals_css')
 @endsection
@@ -30,7 +30,7 @@
                         <div class="card-header">
                             <div class="row">
                                 <div class="col-sm-8">
-                                    <h4>Días de Vacaciones</h4>
+                                    <h4>Días de vacaciones</h4>
                                 </div>
                                 <div class="col-md-1">
                                     <!---->
@@ -49,8 +49,9 @@
                                     <tr>
                                         <th ><div style="width:90px !important;">Operación </div></th>
                                         <th>#</th>
-                                        <th>Entrada</th>
-                                        <th>Salida</th>
+                                        <th>Inicio</th>
+                                        <th>Final</th>
+                                        <th>Días disponibles</th>
                                         <th>Estatus</th>
                                     </tr>
                                 </thead>
@@ -77,7 +78,7 @@
         var listar_vacationdays = '{!!URL::to('listar_vacationdays')!!}';
         var obtener_vacationdays = '{!!URL::to('obtener_vacationdays')!!}';
         var modificar_vacationdays = '{!!URL::to('modificar_vacationdays')!!}';
-        var verificar_baja_vacationdays = '{!!URL::to('verificar_baja_vationdays')!!}';
+        var verificar_baja_vacationdays = '{!!URL::to('verificar_baja_vacationdays')!!}';
         var baja_vacationdays = '{!!URL::to('baja_vacationdays')!!}';     
     </script> 
     <script src="scripts/vacationdays.js"></script>

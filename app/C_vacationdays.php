@@ -10,8 +10,9 @@ class C_vacationdays extends Model
     protected $table = 'vacationdays';
     protected $primarykey = 'id';
     protected $fillable = [
-        'entrada',
-        'salida',
+        'inicio',
+        'final',
+        'disponibles',
         'status'
     ];
 }

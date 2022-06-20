@@ -29,8 +29,9 @@ class VacationdaysController extends Controller
             $id = $ultimoNumeroTabla[0]->id+1;
         }
         $vacationdays = new C_vacationdays;
-        $vacationdays->entrada=$request->entrada;
-        $vacationdays->salida=$request->salida;
+        $vacationdays->inicio=$request->inicio;
+        $vacationdays->final=$request->final;
+        $vacationdays->disponibles=$request->disponibles;
         $vacationdays->status='ALTA';        
         $vacationdays->save();
         return response()->json($vacationdays);
@@ -38,7 +39,7 @@ class VacationdaysController extends Controller
     public function listar_vacationdays (Request $request)
     {
         if($request->ajax()){
-            $data = C_vacationdays::select('id', 'entrada', 'salida', 'status');
+            $data = C_vacationdays::select('id', 'inicio', 'final','disponibles', 'status');
             return DataTables::of($data)
             ->addColumn('operaciones', function($data){
                 $operaciones = '<div class="container">'.
@@ -71,8 +72,9 @@ class VacationdaysController extends Controller
         C_vacationdays::where('id', $request->numero)
         ->update([
             //atributo de la Base => $request-> nombre de la caja de texto
-            'entrada'=> $request->entrada,
-            'salida'=> $request->salida
+            'inicio'=> $request->inicio,
+            'final'=> $request->final,
+            'disponibles'=> $request->disponibles
         ]);
         return response()->json($vacationdays);
     }
@@ -91,3 +93,4 @@ class VacationdaysController extends Controller
         return response()->json($vacationdays);
     }
 }
+
