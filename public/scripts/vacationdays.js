@@ -51,7 +51,7 @@
         $("#tabsform").empty();
     }
     function alta(){
-        $("#titulomodal").html('Alta de días de vacaciones');
+        $("#titulomodal").html('Alta Horario');
         mostrarmodalformulario('ALTA');
         mostrarformulario();
         //formulario alta
@@ -69,13 +69,13 @@
                                 '</div>'+ 
                                 '<div class="col-md-4">'+ 
                                     '<label>Entrada<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="date" class="form-control" name="entrada" id="txtentrada" placeholder="Entrada" onkeyup="tipoLetra(this);" required>'+
+                                    '<input type="time" class="form-control" name="entrada" id="txtentrada" placeholder="Entrada" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
                                 '<div class="col-md-1">'+
                                 '</div>'+ 
                                 '<div class="col-md-4">'+ 
                                 '<label>Salida<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="date" class="form-control" name="salida" id="txtsalida" placeholder="Salida" onkeyup="tipoLetra(this);" required>'+
+                                '<input type="time" class="form-control" name="salida" id="txtsalida" placeholder="Salida" onkeyup="tipoLetra(this);" required>'+
                             '</div>'+    
 
                             '</div>'+
@@ -155,7 +155,7 @@
         })
     }
     function obtenervacationdays(numero){
-        $("#titulomodal").html('Modificación');
+        $("#titulomodal").html('Modificación Horario');
         $.get(obtener_vacationdays,{numero:numero },function(data){
             //se crea al formlario
             var tabs =
@@ -172,13 +172,13 @@
                                 '</div>'+ 
                                 '<div class="col-md-4">'+ 
                                     '<label>Entrada<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="date" class="form-control" name="entrada" id="txtentrada" placeholder="Entrada" onkeyup="tipoLetra(this);" required>'+
+                                    '<input type="time" class="form-control" name="entrada" id="txtentrada" placeholder="Entrada" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
                                 '<div class="col-md-1">'+
                                 '</div>'+ 
                                 '<div class="col-md-4">'+ 
                                 '<label>Salida<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="date" class="form-control" name="salida" id="txtsalida" placeholder="Salida" onkeyup="tipoLetra(this);" required>'+
+                                '<input type="time" class="form-control" name="salida" id="txtsalida" placeholder="Salida" onkeyup="tipoLetra(this);" required>'+
                             '</div>'+    
 
                             '</div>'+
