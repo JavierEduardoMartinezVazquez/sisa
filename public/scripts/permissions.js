@@ -51,7 +51,7 @@
         $("#tabsform").empty();
     }
     function alta(){
-        $("#titulomodal").html('Alta Empresa');
+        $("#titulomodal").html('Alta de permiso');
         mostrarmodalformulario('ALTA');
         mostrarformulario();
         //formulario alta
@@ -156,7 +156,7 @@
         })
     }
     function obtenerpermissions(numero){
-        $("#titulomodal").html('Modificación Empresa');
+        $("#titulomodal").html('Modificación');
         $.get(obtener_permissions,{numero:numero },function(data){
             //se crea al formlario
             var tabs =
@@ -174,8 +174,6 @@
                                 '<div class="col-md-10">'+ 
                                     '<label>Usuario<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="text" class="form-control" name="nombre" id="txtnombre" placeholder="" onkeyup="tipoLetra(this);" required>'+
-                                '</div>'+    
-
                                 '</div>'+ 
                                 '<div class="col-md-2">'+
                                 '</div>'+ 

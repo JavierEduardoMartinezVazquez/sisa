@@ -13,18 +13,21 @@ class AddUser extends Migration
      */
     public function up()
     {
-        /*
+        
         DB::table('users')->insert(array(
-            'name' => 'ADMINISTRADOR',
-            'email' => 'admin@admin.com',
-            'email_verified_at' => date('Y-m-d H:m:s'),
+            'name' => 'JAVIER EDUARDO',
+            'email' => 'javier.martinez@socasa.com',
+            //'email_verified_at' => date('Y-m-d H:m:s'),
             'password' => '$2y$10$RnMSJ15cCdl.UiNbXVIIp.bHLz2uecl.mkJXMbIelRp2Rg0CsxHq.',
-            'id_rol' => '3',
-            'remember_token' => '',
+            'lastname_p' => 'MARTINEZ',
+            'lastname_m' => 'VAZQUEZ',
+            //'id_rol' => '3',
+            //'remember_token' => '',
             'status' => 'ALTA',
             'created_at' => date('Y-m-d H:m:s'),
             'updated_at' => date('Y-m-d H:m:s'),
-        ));*/
+        ));
+        
     }
 
     /**

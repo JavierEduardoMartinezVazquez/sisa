@@ -177,7 +177,7 @@
                                     '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="text" class="form-control" name="empresa" id="txtempresa" placeholder="Empresa" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+    
-                                '<div class="col-md-1">'+
+                                '<div class="col-md-2">'+
                                 '</div>'+ 
                                 '<div class="col-md-10">'+ 
                                     '<label>Direccion<b style="color:#F44336 !important;">*</b></label>'+ 
