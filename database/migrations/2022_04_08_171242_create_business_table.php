@@ -19,6 +19,7 @@ class CreateBusinessTable extends Migration
             $table->bigIncrements('id');
             $table->string('empresa',100)->nullable();
             $table->string('direccion')->nullable();
+            $table->integer('numero')->nullable();
             $table->string('status',5)->nullable();
             $table->timestamps();
         }); 

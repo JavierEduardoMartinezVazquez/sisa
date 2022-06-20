@@ -12,6 +12,7 @@ class C_business extends Model
     protected $fillable = [
         'empresa',
         'direccion',
+        'numero',
         'status'
         
     ];

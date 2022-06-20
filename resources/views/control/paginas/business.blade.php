@@ -53,6 +53,7 @@
                                         <th>#</th>
                                         <th>Empresa</th>
                                         <th>Dirección</th>
+                                        <th>No. de empleados</th>
                                         <th>Estatus</th>
                                     </tr>
                                 </thead>
