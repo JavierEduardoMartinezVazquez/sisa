@@ -198,7 +198,7 @@
                                 '<label>Disponibles<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="number" class="form-control" name="numero" id="txtnumero" required >'+
                             '</div>'+
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
                             '</div>'+
                         '</div>'+    
                     '</div>'+
