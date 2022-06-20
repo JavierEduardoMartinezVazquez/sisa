@@ -1,6 +1,6 @@
 @extends('plantilla')
 @section('titulo')
-    Reporte de Permisos
+    Permisos
 @endsection
     @section('additionals_css')
 @endsection
@@ -30,7 +30,7 @@
                         <div class="card-header">
                             <div class="row">
                                 <div class="col-sm-8">
-                                    <h4>Reporte de Permisos</h4>
+                                    <h4>Permisos</h4>
                                 </div>
                                 <div class="col-md-1">
                                     <!---->
@@ -51,8 +51,10 @@
                                     <tr>
                                         <th ><div style="width:90px !important;">Operación</div></th>
                                         <th>#</th>
-                                        <th>Nombre</th>
+                                        <th>Usuario</th>
+                                        <th>Motivo</th>     
                                         <th>Estatus</th>
+                                        
                                     </tr>
                                 </thead>
                             </table>
@@ -73,7 +75,7 @@
         });
     </script>
     <script>
-        var obtener_ultimo_id_permissionsreports = '{!!URL::to('obtener_ultimo_id_permissionsreports')!!}';
+        var obtener_ultimo_id_reports = '{!!URL::to('obtener_ultimo_id_permissionsreports')!!}';
         var guardar_permissionsreports = '{!!URL::to('guardar_permissionsreports')!!}';
         var listar_permissionsreports = '{!!URL::to('listar_permissionsreports')!!}';
         var obtener_permissionsreports = '{!!URL::to('obtener_permissionsreports')!!}';

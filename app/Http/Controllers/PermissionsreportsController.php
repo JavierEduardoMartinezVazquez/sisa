@@ -29,6 +29,8 @@ class permissionsreportsController extends Controller
         }
         $permissionsreports = new C_permissionsreports;
         $permissionsreports->nombre=$request->nombre;
+        $permissionsreports->motivo=$request->motivo;
+        
         $permissionsreports->status='ALTA';        
         $permissionsreports->save();
         return response()->json($permissionsreports);
@@ -36,13 +38,13 @@ class permissionsreportsController extends Controller
     public function listar_permissionsreports (Request $request)
     {
         if($request->ajax()){
-            $data = C_permissionsreports::select('id','nombre','status');
+            $data = C_permissionsreports::select('id','nombre','motivo','status');
             return DataTables::of($data)
             ->addColumn('operaciones', function($data){
                 $operaciones = '<div class="container">'.
                                     '<div class="row">'.
-                                            '<div class="col"><a href="javascript:void(0);" onclick="obtenerpermissionsreports('.$data->id.')"><i class="fas fa-pen-square" aria-hidden="true"></i></a></div>'.
-                                            '<div class="col"><a href="javascript:void(0);" onclick="verificarbajapermissionsreports('.$data->id.')"><i class="fa fa-minus-square" aria-hidden="true"></i></a></div>'.
+                                            '<div class="col"><a href="javascript:void(0);" onclick="obtenerpermissions('.$data->id.')"><i class="fas fa-pen-square" aria-hidden="true"></i></a></div>'.
+                                            '<div class="col"><a href="javascript:void(0);" onclick="verificarbajapermissions('.$data->id.')"><i class="fa fa-minus-square" aria-hidden="true"></i></a></div>'.
                                         '</div>'.
                                 '</div>';
                 return $operaciones;
@@ -69,7 +71,8 @@ class permissionsreportsController extends Controller
         C_permissionsreports::where('id', $request->numero)
         ->update([
             //atributo de la Base => $request-> nombre de la caja de texto
-            'nombre'=> $request->nombre
+            'nombre'=> $request->nombre,
+            'motivo'=> $request->motivo
         ]);
         return response()->json($permissionsreports);
     }

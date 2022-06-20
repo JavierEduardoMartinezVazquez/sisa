@@ -11,6 +11,7 @@ class C_permissionsreports extends Model
     protected $primarykey = 'id';
     protected $fillable = [
         'nombre',
+        'motivo',
         'status'
         
     ];
