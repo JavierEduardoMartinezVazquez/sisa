@@ -33,6 +33,7 @@ class HolidaysController extends Controller
         $holidays->solicitud=$request->solicitud;
         $holidays->departamento=$request->departamento;
         $holidays->puesto=$request->puesto;
+        $holidays->ingreso=$request->ingreso;
         $holidays->inicio=$request->inicio;
         $holidays->final=$request->final;
         $holidays->disponibles=$request->disponibles;
@@ -80,6 +81,7 @@ class HolidaysController extends Controller
             'solicitud'=>$request->solicitud,
             'departamento'=>$request->departamento,
             'puesto'=>$request->puesto,
+            'ingreso'=> $request->ingreso,
             'inicio'=> $request->inicio,
             'final'=> $request->final,
             'disponibles'=> $request->disponibles

@@ -53,6 +53,7 @@
                                         <th>F. Solicitud</th>
                                         <th>Departamento</th>
                                         <th>Puesto</th>
+                                        <th>F. Ingreso</th>
                                         <th>Inicio</th>
                                         <th>Final</th>
                                         <th>Días disponibles</th>

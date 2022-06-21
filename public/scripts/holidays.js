@@ -89,6 +89,12 @@
                                         '<label>Puesto<b style="color:#F44336 !important;">*</b></label>'+ 
                                         '<input type="text" class="form-control" name="puesto" id="txtpuesto" placeholder="Puesto" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
+                                    '<div class="col-md-1">'+
+                                    '</div>'+ 
+                                    '<div class="col-md-10">'+ 
+                                        '<label>F. Ingreso<b style="color:#F44336 !important;">*</b></label>'+ 
+                                        '<input type="date" class="form-control" name="ingreso" id="txtingreso" placeholder="Puesto" onkeyup="tipoLetra(this);" required>'+
+                                    '</div>'+
                                 '<div class="col-md-2">'+
                                 '</div>'+ 
                                 '<div class="col-md-4">'+ 
@@ -224,6 +230,12 @@
                                         '<label>Puesto<b style="color:#F44336 !important;">*</b></label>'+ 
                                         '<input type="text" class="form-control" name="puesto" id="txtpuesto" placeholder="Puesto" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
+                                    '<div class="col-md-1">'+
+                                    '</div>'+ 
+                                    '<div class="col-md-10">'+ 
+                                        '<label>F. Ingreso<b style="color:#F44336 !important;">*</b></label>'+ 
+                                        '<input type="date" class="form-control" name="ingreso" id="txtingreso" placeholder="Puesto" onkeyup="tipoLetra(this);" required>'+
+                                    '</div>'+
                                 '<div class="col-md-1">'+
                                 '</div>'+
                                 '<div class="col-md-4">'+ 
@@ -256,8 +268,9 @@
             $("#txtnumero").val(data.holidays.id);
             $("#txtempleado").val(data.holidays.empleado);
             $("#txtsolicitud").val(data.holidays.solicitud);
-            $("#txtpuesto").val(data.holidays.puesto);
             $("#txtdepartamento").val(data.holidays.departamento);
+            $("#txtpuesto").val(data.holidays.puesto);
+            $("#txtingreso").val(data.holidays.ingreso);
             $("#txtinicio").val(data.holidays.inicio);
             $("#txtfinal").val(data.holidays.final);
             $("#txtdisponibles").val(data.holidays.disponibles);
