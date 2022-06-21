@@ -50,6 +50,7 @@
                                         <th ><div style="width:90px !important;">Operación </div></th>
                                         <th>#</th>
                                         <th>Empleado</th>
+                                        <th>F. Solicitud</th>
                                         <th>Inicio</th>
                                         <th>Final</th>
                                         <th>Días disponibles</th>

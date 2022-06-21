@@ -70,7 +70,13 @@
                                     '<div class="col-md-10">'+ 
                                         '<label>Empleado<b style="color:#F44336 !important;">*</b></label>'+ 
                                         '<input type="text" class="form-control" name="empleado" id="txtempleaod" placeholder="Empleado" onkeyup="tipoLetra(this);" required>'+
-                                    '</div>'+ 
+                                    '</div>'+
+                                    '<div class="col-md-1">'+
+                                '</div>'+ 
+                                '<div class="col-md-4">'+ 
+                                    '<label>F. Solicitud<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<input type="date" class="form-control" name="solicitud" id="txtsolicitud" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+ 
                                 '<div class="col-md-2">'+
                                 '</div>'+ 
                                 '<div class="col-md-4">'+ 
@@ -157,6 +163,7 @@
             { data: 'operaciones', name: 'operaciones', orderable: false, searchable: false },
             { data: 'id', name: 'id', orderable: true, searchable: true },
             { data: 'empleado', name: 'empleado', orderable: true, searchable: true },
+            { data: 'solicitud', name: 'solicitud', orderable: true, searchable: true },
             { data: 'inicio', name: 'inicio', orderable: true, searchable: true },
             { data: 'final', name: 'final', orderable: true, searchable: true },
             { data: 'disponibles', name: 'disponibles', orderable: true, searchable: true },
@@ -184,6 +191,12 @@
                                 '<div class="col-md-4">'+ 
                                     '<label>Empleado<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="text" class="form-control" name="empleado" id="txtempleado" placeholder="Empleado" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+
+                                '<div class="col-md-1">'+
+                                '</div>'+ 
+                                '<div class="col-md-4">'+ 
+                                    '<label>F. Solicitud<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<input type="date" class="form-control" name="solicitud" id="txtsolicitud" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+
                                 '<div class="col-md-1">'+
                                 '</div>'+
@@ -216,6 +229,7 @@
             console.log(data);//mandas el arreglo
             $("#txtnumero").val(data.holidays.id);
             $("#txtempleado").val(data.holidays.empleado);
+            $("#txtsolicitud").val(data.holidays.solicitud);
             $("#txtinicio").val(data.holidays.inicio);
             $("#txtfinal").val(data.holidays.final);
             $("#txtdisponibles").val(data.holidays.disponibles);
