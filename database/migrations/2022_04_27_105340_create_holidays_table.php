@@ -17,6 +17,7 @@ class CreateHolidaysTable extends Migration
             $table->bigIncrements('id');
             $table->string('empleado')->nullable();
             $table->date('solicitud')->nullable();
+            $table->string('departamento')->nullable();
             $table->date('inicio')->nullable();
             $table->date('final')->nullable();
             $table->integer('disponibles')->nullable();
