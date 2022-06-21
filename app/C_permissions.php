@@ -12,6 +12,7 @@ class C_permissions extends Model
     protected $fillable = [
         'nombre',
         'motivo',
+        'fecha',
         'status'
         
     ];

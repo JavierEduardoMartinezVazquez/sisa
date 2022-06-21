@@ -77,6 +77,12 @@
                                     '<label>Motivo<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="text" class="form-control" name="motivo" id="txtmotivo" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
+                                '<div class="col-md-2">'+
+                                '</div>'+ 
+                                '<div class="col-md-4">'+ 
+                                    '<label>Fecha<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<input type="date" class="form-control" name="fecha" id="txtfecha" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+ 
 
                             '</div>'+
                         '</div>'+    
@@ -149,8 +155,8 @@
             { data: 'id', name: 'id', orderable: true, searchable: true },
             { data: 'nombre', name: 'nombre', orderable: true, searchable: true },
             { data: 'motivo', name: 'motivo', orderable: true, searchable: true },
+            { data: 'fecha', name: 'fecha', orderable: true, searchable: true },
             { data: 'status', name: 'status', orderable: true, searchable: true },
-            
         ],
         "order": [[ 1, "asc" ]]
         })
@@ -181,6 +187,12 @@
                                     '<label>Motivo<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="text" class="form-control" name="motivo" id="txtmotivo" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+
+                                '<div class="col-md-2">'+
+                                '</div>'+ 
+                                '<div class="col-md-10">'+ 
+                                    '<label>Fecha<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<input type="date" class="form-control" name="fecha" id="txtfecha" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+
 
                             '</div>'+
                         '</div>'+    
@@ -192,6 +204,8 @@
             $("#txtnumero").val(data.permissions.id);
             $("#txtnombre").val(data.permissions.nombre);
             $("#txtmotivo").val(data.permissions.motivo);
+            $("#txtfecha").val(data.permissions.fecha);
+            
             mostrarmodalformulario('MODIFICACION', data.permitirmodificacion);
             mostrarformulario();
         }).fail( function() {

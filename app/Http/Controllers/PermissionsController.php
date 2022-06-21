@@ -26,10 +26,11 @@ class permissionsController extends Controller
             $id = 1;
         }else{
             $id = $ultimoNumeroTabla[0]->id+1;
-        }
+        }   
         $permissions = new C_permissions;
         $permissions->nombre=$request->nombre;
         $permissions->motivo=$request->motivo;
+        $permissions->fecha=$request->fecha;
         
         $permissions->status='ALTA';        
         $permissions->save();
@@ -38,7 +39,7 @@ class permissionsController extends Controller
     public function listar_permissions (Request $request)
     {
         if($request->ajax()){
-            $data = C_permissions::select('id','nombre','motivo','status');
+            $data = C_permissions::select('id','nombre','motivo','fecha','status');
             return DataTables::of($data)
             ->addColumn('operaciones', function($data){
                 $operaciones = '<div class="container">'.
@@ -72,7 +73,9 @@ class permissionsController extends Controller
         ->update([
             //atributo de la Base => $request-> nombre de la caja de texto
             'nombre'=> $request->nombre,
-            'motivo'=> $request->motivo
+            'motivo'=> $request->motivo,
+            'fecha'=> $request->fecha
+            
         ]);
         return response()->json($permissions);
     }

@@ -52,7 +52,8 @@
                                         <th ><div style="width:90px !important;">Operación</div></th>
                                         <th>#</th>
                                         <th>Usuario</th>
-                                        <th>Motivo</th>     
+                                        <th>Motivo</th> 
+                                        <th>Fecha</th>    
                                         <th>Estatus</th>
                                         
                                     </tr>
