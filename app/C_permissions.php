@@ -13,6 +13,7 @@ class C_permissions extends Model
         'nombre',
         'motivo',
         'fecha',
+        'autorizacion',
         'status'
         
     ];

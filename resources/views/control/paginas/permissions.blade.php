@@ -53,7 +53,8 @@
                                         <th>#</th>
                                         <th>Usuario</th>
                                         <th>Motivo</th> 
-                                        <th>Fecha</th>    
+                                        <th>Fecha</th>
+                                        <th>Autorización</th>    
                                         <th>Estatus</th>
                                         
                                     </tr>

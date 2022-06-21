@@ -79,9 +79,13 @@
                                 '</div>'+ 
                                 '<div class="col-md-2">'+
                                 '</div>'+ 
-                                '<div class="col-md-4">'+ 
+                                '<div class="col-md-5">'+ 
                                     '<label>Fecha<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="date" class="form-control" name="fecha" id="txtfecha" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+ 
+                                '<div class="col-md-5">'+ 
+                                    '<label>Autorizacion<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<input type="text" class="form-control" name="autorizacion" id="txtautorizacion" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
 
                             '</div>'+
@@ -156,6 +160,7 @@
             { data: 'nombre', name: 'nombre', orderable: true, searchable: true },
             { data: 'motivo', name: 'motivo', orderable: true, searchable: true },
             { data: 'fecha', name: 'fecha', orderable: true, searchable: true },
+            { data: 'autorizacion', name: 'autorizacion', orderable: true, searchable: true },
             { data: 'status', name: 'status', orderable: true, searchable: true },
         ],
         "order": [[ 1, "asc" ]]
@@ -189,10 +194,14 @@
                                 '</div>'+
                                 '<div class="col-md-2">'+
                                 '</div>'+ 
-                                '<div class="col-md-10">'+ 
+                                '<div class="col-md-5">'+ 
                                     '<label>Fecha<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="date" class="form-control" name="fecha" id="txtfecha" placeholder="" onkeyup="tipoLetra(this);" required>'+
-                                '</div>'+
+                                '</div>'+ 
+                                '<div class="col-md-5">'+ 
+                                    '<label>Autorizacion<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<input type="text" class="form-control" name="autorizacion" id="txtautorizacion" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+ 
 
                             '</div>'+
                         '</div>'+    
@@ -205,6 +214,7 @@
             $("#txtnombre").val(data.permissions.nombre);
             $("#txtmotivo").val(data.permissions.motivo);
             $("#txtfecha").val(data.permissions.fecha);
+            $("#txtautorizacion").val(data.permissions.autorizacion);
             
             mostrarmodalformulario('MODIFICACION', data.permitirmodificacion);
             mostrarformulario();

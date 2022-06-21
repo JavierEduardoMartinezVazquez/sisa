@@ -30,6 +30,7 @@ class permissionsController extends Controller
         $permissions = new C_permissions;
         $permissions->nombre=$request->nombre;
         $permissions->motivo=$request->motivo;
+        $permissions->autorizacion=$request->autorizacion;
         $permissions->fecha=$request->fecha;
         
         $permissions->status='ALTA';        
@@ -39,7 +40,7 @@ class permissionsController extends Controller
     public function listar_permissions (Request $request)
     {
         if($request->ajax()){
-            $data = C_permissions::select('id','nombre','motivo','fecha','status');
+            $data = C_permissions::select('id','nombre','motivo','fecha','autorizacion','status');
             return DataTables::of($data)
             ->addColumn('operaciones', function($data){
                 $operaciones = '<div class="container">'.
@@ -74,7 +75,8 @@ class permissionsController extends Controller
             //atributo de la Base => $request-> nombre de la caja de texto
             'nombre'=> $request->nombre,
             'motivo'=> $request->motivo,
-            'fecha'=> $request->fecha
+            'fecha'=> $request->fecha,
+            'autorizacion'=> $request->autorizacion
             
         ]);
         return response()->json($permissions);
