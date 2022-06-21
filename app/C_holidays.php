@@ -13,6 +13,7 @@ class C_holidays extends Model
         'empleado',
         'solicitud',
         'departamento',
+        'puesto',
         'inicio',
         'final',
         'disponibles',

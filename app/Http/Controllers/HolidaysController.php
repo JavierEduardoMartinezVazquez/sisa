@@ -32,6 +32,7 @@ class HolidaysController extends Controller
         $holidays->empleado=$request->empleado;
         $holidays->solicitud=$request->solicitud;
         $holidays->departamento=$request->departamento;
+        $holidays->puesto=$request->puesto;
         $holidays->inicio=$request->inicio;
         $holidays->final=$request->final;
         $holidays->disponibles=$request->disponibles;
@@ -42,7 +43,7 @@ class HolidaysController extends Controller
     public function listar_holidays (Request $request)
     {
         if($request->ajax()){
-            $data = C_holidays::select('id', 'empleado', 'solicitud', 'departamento', 'inicio', 'final', 'disponibles', 'status');
+            $data = C_holidays::select('id', 'empleado', 'solicitud', 'departamento', 'puesto', 'inicio', 'final', 'disponibles', 'status');
             return DataTables::of($data)
             ->addColumn('operaciones', function($data){
                 $operaciones = '<div class="container">'.
@@ -78,6 +79,7 @@ class HolidaysController extends Controller
             'empleado'=>$request->empleado,
             'solicitud'=>$request->solicitud,
             'departamento'=>$request->departamento,
+            'puesto'=>$request->puesto,
             'inicio'=> $request->inicio,
             'final'=> $request->final,
             'disponibles'=> $request->disponibles
