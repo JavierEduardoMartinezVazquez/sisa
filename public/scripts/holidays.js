@@ -68,8 +68,20 @@
                                     '<div class="col-md-1">'+
                                     '</div>'+ 
                                     '<div class="col-md-10">'+ 
-                                        '<label>Empleado<b style="color:#F44336 !important;">*</b></label>'+ 
+                                        '<label>Nombre Empleado<b style="color:#F44336 !important;">*</b></label>'+ 
                                         '<input type="text" class="form-control" name="empleado" id="txtempleado" placeholder="Empleado" onkeyup="tipoLetra(this);" required>'+
+                                    '</div>'+
+                                    '<div class="col-md-1">'+
+                                    '</div>'+ 
+                                    '<div class="col-md-10">'+ 
+                                        '<label>A.Paterno<b style="color:#F44336 !important;">*</b></label>'+ 
+                                        '<input type="text" class="form-control" name="paterno" id="txtpaterno" placeholder="Paterno" onkeyup="tipoLetra(this);" required>'+
+                                    '</div>'+
+                                    '<div class="col-md-1">'+
+                                    '</div>'+ 
+                                    '<div class="col-md-10">'+ 
+                                        '<label>A.Materno<b style="color:#F44336 !important;">*</b></label>'+ 
+                                        '<input type="text" class="form-control" name="materno" id="txtmaterno" placeholder="Materno" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
                                     '<div class="col-md-1">'+
                                 '</div>'+ 
@@ -181,6 +193,8 @@
             { data: 'operaciones', name: 'operaciones', orderable: false, searchable: false },
             { data: 'id', name: 'id', orderable: true, searchable: true },
             { data: 'empleado', name: 'empleado', orderable: true, searchable: true },
+            { data: 'paterno', name: 'paterno', orderable: true, searchable: true },
+            { data: 'materno', name: 'materno', orderable: true, searchable: true },
             { data: 'solicitud', name: 'solicitud', orderable: true, searchable: true },
             { data: 'departamento', name: 'departamento', orderable: true, searchable: true },
             { data: 'puesto', name: 'puesto', orderable: true, searchable: true },
@@ -210,9 +224,21 @@
                                 '<div class="col-md-1">'+
                                 '</div>'+ 
                                 '<div class="col-md-4">'+ 
-                                    '<label>Empleado<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<label>Nombre Empleado<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="text" class="form-control" name="empleado" id="txtempleado" placeholder="Empleado" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+
+                                '<div class="col-md-1">'+
+                                    '</div>'+ 
+                                    '<div class="col-md-10">'+ 
+                                        '<label>A.Paterno<b style="color:#F44336 !important;">*</b></label>'+ 
+                                        '<input type="text" class="form-control" name="paterno" id="txtpaterno" placeholder="Paterno" onkeyup="tipoLetra(this);" required>'+
+                                    '</div>'+
+                                    '<div class="col-md-1">'+
+                                    '</div>'+ 
+                                    '<div class="col-md-10">'+ 
+                                        '<label>A.Materno<b style="color:#F44336 !important;">*</b></label>'+ 
+                                        '<input type="text" class="form-control" name="materno" id="txtmaterno" placeholder="Materno" onkeyup="tipoLetra(this);" required>'+
+                                    '</div>'+
                                 '<div class="col-md-1">'+
                                     '</div>'+ 
                                     '<div class="col-md-10">'+ 
@@ -268,6 +294,8 @@
             console.log(data);//mandas el arreglo
             $("#txtnumero").val(data.holidays.id);
             $("#txtempleado").val(data.holidays.empleado);
+            $("#txtpaterno").val(data.holidays.paterno);
+            $("#txtmaterno").val(data.holidays.materno);
             $("#txtsolicitud").val(data.holidays.solicitud);
             $("#txtdepartamento").val(data.holidays.departamento);
             $("#txtpuesto").val(data.holidays.puesto);

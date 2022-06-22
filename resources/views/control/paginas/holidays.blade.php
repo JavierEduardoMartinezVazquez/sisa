@@ -49,7 +49,9 @@
                                     <tr>
                                         <th ><div style="width:90px !important;">Operación </div></th>
                                         <th>#</th>
-                                        <th>Empleado</th>
+                                        <th>Nombre Empleado</th>
+                                        <th>A.Paterno</th>
+                                        <th>A.Materno</th>
                                         <th>F. Solicitud</th>
                                         <th>Departamento</th>
                                         <th>Puesto</th>

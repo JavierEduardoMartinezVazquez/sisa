@@ -11,6 +11,8 @@ class C_holidays extends Model
     protected $primarykey = 'id';
     protected $fillable = [
         'empleado',
+        'paterno',
+        'materno',
         'solicitud',
         'departamento',
         'puesto',
