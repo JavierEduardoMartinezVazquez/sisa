@@ -93,7 +93,7 @@
                                     '</div>'+ 
                                     '<div class="col-md-10">'+ 
                                         '<label>F. Ingreso<b style="color:#F44336 !important;">*</b></label>'+ 
-                                        '<input type="date" class="form-control" name="ingreso" id="txtingreso" placeholder="Puesto" onkeyup="tipoLetra(this);" required>'+
+                                        '<input type="date" class="form-control" name="ingreso" id="txtingreso" placeholder="Ingreso" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
                                 '<div class="col-md-2">'+
                                 '</div>'+ 
@@ -184,6 +184,7 @@
             { data: 'solicitud', name: 'solicitud', orderable: true, searchable: true },
             { data: 'departamento', name: 'departamento', orderable: true, searchable: true },
             { data: 'puesto', name: 'puesto', orderable: true, searchable: true },
+            { data: 'ingreso', name: 'ingreso', orderable: true, searchable: true },
             { data: 'inicio', name: 'inicio', orderable: true, searchable: true },
             { data: 'final', name: 'final', orderable: true, searchable: true },
             { data: 'disponibles', name: 'disponibles', orderable: true, searchable: true },
@@ -234,7 +235,7 @@
                                     '</div>'+ 
                                     '<div class="col-md-10">'+ 
                                         '<label>F. Ingreso<b style="color:#F44336 !important;">*</b></label>'+ 
-                                        '<input type="date" class="form-control" name="ingreso" id="txtingreso" placeholder="Puesto" onkeyup="tipoLetra(this);" required>'+
+                                        '<input type="date" class="form-control" name="ingreso" id="txtingreso" placeholder="Ingreso" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
                                 '<div class="col-md-1">'+
                                 '</div>'+

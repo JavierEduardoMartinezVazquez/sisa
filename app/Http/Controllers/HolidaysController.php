@@ -44,7 +44,7 @@ class HolidaysController extends Controller
     public function listar_holidays (Request $request)
     {
         if($request->ajax()){
-            $data = C_holidays::select('id', 'empleado', 'solicitud', 'departamento', 'puesto', 'inicio', 'final', 'disponibles', 'status');
+            $data = C_holidays::select('id', 'empleado', 'solicitud', 'departamento', 'puesto', 'ingreso', 'inicio', 'final', 'disponibles', 'status');
             return DataTables::of($data)
             ->addColumn('operaciones', function($data){
                 $operaciones = '<div class="container">'.

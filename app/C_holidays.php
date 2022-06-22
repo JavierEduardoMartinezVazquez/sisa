@@ -14,7 +14,7 @@ class C_holidays extends Model
         'solicitud',
         'departamento',
         'puesto',
-        'ingreso',
+        'ingreso', 
         'inicio',
         'final',
         'disponibles',
