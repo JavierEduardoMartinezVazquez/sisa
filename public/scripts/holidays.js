@@ -67,57 +67,47 @@
                                     '</div>'+ 
                                     '<div class="col-md-1">'+
                                     '</div>'+ 
-                                    '<div class="col-md-10">'+ 
-                                        '<label>Nombre Empleado<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<div class="col-md-3">'+ 
+                                        '<label>Nombre<b style="color:#F44336 !important;">*</b></label>'+ 
                                         '<input type="text" class="form-control" name="empleado" id="txtempleado" placeholder="Empleado" onkeyup="tipoLetra(this);" required>'+
-                                    '</div>'+
-                                    '<div class="col-md-1">'+
-                                    '</div>'+ 
-                                    '<div class="col-md-10">'+ 
+                                        '</div>'+ 
+                                    '<div class="col-md-3">'+ 
                                         '<label>A.Paterno<b style="color:#F44336 !important;">*</b></label>'+ 
                                         '<input type="text" class="form-control" name="paterno" id="txtpaterno" placeholder="Paterno" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
-                                    '<div class="col-md-1">'+
-                                    '</div>'+ 
-                                    '<div class="col-md-10">'+ 
+                                    '<div class="col-md-3">'+ 
                                         '<label>A.Materno<b style="color:#F44336 !important;">*</b></label>'+ 
                                         '<input type="text" class="form-control" name="materno" id="txtmaterno" placeholder="Materno" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
                                     '<div class="col-md-1">'+
                                 '</div>'+ 
-                                '<div class="col-md-4">'+ 
+                                '<div class="col-md-3">'+ 
                                     '<label>F. Solicitud<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="date" class="form-control" name="solicitud" id="txtsolicitud" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
-                                '<div class="col-md-1">'+
-                                    '</div>'+ 
-                                    '<div class="col-md-10">'+ 
+                                    '<div class="col-md-4">'+ 
                                         '<label>Departamento<b style="color:#F44336 !important;">*</b></label>'+ 
                                         '<input type="text" class="form-control" name="departamento" id="txtdepartamento" placeholder="Departamento" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
-                                    '<div class="col-md-1">'+
-                                    '</div>'+ 
-                                    '<div class="col-md-10">'+ 
+                                    '<div class="col-md-4">'+ 
                                         '<label>Puesto<b style="color:#F44336 !important;">*</b></label>'+ 
                                         '<input type="text" class="form-control" name="puesto" id="txtpuesto" placeholder="Puesto" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
                                     '<div class="col-md-1">'+
                                     '</div>'+ 
-                                    '<div class="col-md-10">'+ 
-                                        '<label>F. Ingreso<b style="color:#F44336 !important;">*</b></label>'+ 
-                                        '<input type="date" class="form-control" name="ingreso" id="txtingreso" placeholder="Ingreso" onkeyup="tipoLetra(this);" required>'+
-                                    '</div>'+
-                                '<div class="col-md-2">'+
-                                '</div>'+ 
-                                '<div class="col-md-4">'+ 
+                                    
+                                '<div class="col-md-3">'+ 
                                     '<label>Inicio<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="date" class="form-control" name="inicio" id="txtinicio" placeholder="Inicio" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
-                                '<div class="col-md-4">'+ 
+                                '<div class="col-md-3">'+ 
                                 '<label>Final<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="date" class="form-control" name="final" id="txtfinal" placeholder="Final" onkeyup="tipoLetra(this);" required>'+
                             '</div>'+ 
-                            '</div>'+ 
+                            '<div class="col-md-3">'+ 
+                                        '<label>F. Ingreso<b style="color:#F44336 !important;">*</b></label>'+ 
+                                        '<input type="date" class="form-control" name="ingreso" id="txtingreso" placeholder="Ingreso" onkeyup="tipoLetra(this);" required>'+
+                                    '</div>'+
                             '<div class="col-md-2">'+ 
                                 '<label>Totalde días<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="number" class="form-control" name="totaldias" id="txttotaldias" required >'+
@@ -129,10 +119,14 @@
                                 '<div class="col-md-2">'+ 
                                 '<label>Disponibles<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="number" class="form-control" name="disponibles" id="txtdisponibles" required >'+
-                            '</div>'+   
-                            '<div class="col-md-2">'+ 
-                                '<label>Pago<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="text" class="form-control" name="pago" id="txtpago" required >'+
+                            '</div>'+
+                                '<div class="col-md-3">'+ 
+                                    '<label>Pago<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<select class="form-select" name="pago" id="txtempresa" placeholder="Pago" onkeyup="tipoLetra(this);" required>'+ 
+                                  '<option value="SI">SI</option>'+
+                                  '<option value="NO">NO</option>'+
+                                '</select>'+
+
                             '</div>'+
 
 
@@ -236,92 +230,70 @@
                                 '<div class="col-md-1">'+
                                     '<label>Id:<b style="color:#F44336 !important;">*</b></label>'+                             
                                     '<input type="text" class="form-control" name="numero" id="txtnumero" required  readonly>'+ 
-                                '</div>'+   
-                                '<div class="col-md-1">'+
-                                '</div>'+ 
-                                '<div class="col-md-4">'+ 
-                                    '<label>Nombre Empleado<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="text" class="form-control" name="empleado" id="txtempleado" placeholder="Empleado" onkeyup="tipoLetra(this);" required>'+
-                                '</div>'+
-                                '<div class="col-md-1">'+
                                     '</div>'+ 
-                                    '<div class="col-md-10">'+ 
+                                    '<div class="col-md-1">'+
+                                    '</div>'+ 
+                                    '<div class="col-md-3">'+ 
+                                        '<label>Nombre<b style="color:#F44336 !important;">*</b></label>'+ 
+                                        '<input type="text" class="form-control" name="empleado" id="txtempleado" placeholder="Empleado" onkeyup="tipoLetra(this);" required>'+
+                                        '</div>'+ 
+                                    '<div class="col-md-3">'+ 
                                         '<label>A.Paterno<b style="color:#F44336 !important;">*</b></label>'+ 
                                         '<input type="text" class="form-control" name="paterno" id="txtpaterno" placeholder="Paterno" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
-                                    '<div class="col-md-1">'+
-                                    '</div>'+ 
-                                    '<div class="col-md-10">'+ 
+                                    '<div class="col-md-3">'+ 
                                         '<label>A.Materno<b style="color:#F44336 !important;">*</b></label>'+ 
                                         '<input type="text" class="form-control" name="materno" id="txtmaterno" placeholder="Materno" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
-                                '<div class="col-md-1">'+
-                                    '</div>'+ 
-                                    '<div class="col-md-10">'+ 
+                                    '<div class="col-md-1">'+
+                                '</div>'+ 
+                                '<div class="col-md-3">'+ 
+                                    '<label>F. Solicitud<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<input type="date" class="form-control" name="solicitud" id="txtsolicitud" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+ 
+                                    '<div class="col-md-4">'+ 
                                         '<label>Departamento<b style="color:#F44336 !important;">*</b></label>'+ 
                                         '<input type="text" class="form-control" name="departamento" id="txtdepartamento" placeholder="Departamento" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
-                                '<div class="col-md-1">'+
-                                '</div>'+ 
-                                '<div class="col-md-4">'+ 
-                                    '<label>F. Solicitud<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="date" class="form-control" name="solicitud" id="txtsolicitud" placeholder="" onkeyup="tipoLetra(this);" required>'+
-                                '</div>'+
-                                '<div class="col-md-1">'+
-                                    '</div>'+ 
-                                    '<div class="col-md-10">'+ 
+                                    '<div class="col-md-4">'+ 
                                         '<label>Puesto<b style="color:#F44336 !important;">*</b></label>'+ 
                                         '<input type="text" class="form-control" name="puesto" id="txtpuesto" placeholder="Puesto" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
                                     '<div class="col-md-1">'+
                                     '</div>'+ 
-                                    '<div class="col-md-10">'+ 
+                                    
+                                '<div class="col-md-3">'+ 
+                                    '<label>Inicio<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<input type="date" class="form-control" name="inicio" id="txtinicio" placeholder="Inicio" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+ 
+                                '<div class="col-md-3">'+ 
+                                '<label>Final<b style="color:#F44336 !important;">*</b></label>'+ 
+                                '<input type="date" class="form-control" name="final" id="txtfinal" placeholder="Final" onkeyup="tipoLetra(this);" required>'+
+                            '</div>'+ 
+                            '<div class="col-md-3">'+ 
                                         '<label>F. Ingreso<b style="color:#F44336 !important;">*</b></label>'+ 
                                         '<input type="date" class="form-control" name="ingreso" id="txtingreso" placeholder="Ingreso" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
-                                '<div class="col-md-1">'+
-                                '</div>'+
-                                '<div class="col-md-4">'+ 
-                                    '<label>Inicio<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="date" class="form-control" name="inicio" id="txtinicio" placeholder="Inicio" onkeyup="tipoLetra(this);" required>'+
-                                '</div>'+
-                                '<div class="col-md-1">'+
-                                '</div>'+
-                                '<div class="col-md-4">'+ 
-                                '<label>Final<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="date" class="form-control" name="final" id="txtfinal" placeholder="Final" onkeyup="tipoLetra(this);" required>'+
-                            '</div>'+  
-                            '</div>'+
-
-                            '<div class="col-md-2">'+
-                                '</div>'+ 
-                                '<div class="col-md-2">'+ 
-                                '<br>'+
-                                '<label>Total de días<b style="color:#F44336 !important;">*</b></label>'+ 
+                            '<div class="col-md-2">'+ 
+                                '<label>Totalde días<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="number" class="form-control" name="totaldias" id="txttotaldias" required >'+
-                            '</div>'+  
-
-                                '<div class="col-md-1">'+
-                                '</div>'+
+                            '</div>'+ 
                                 '<div class="col-md-4">'+ 
                                 '<label>Inicio de labores<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="date" class="form-control" name="inlabores" id="txtinlabores" placeholder="Inicio de labores" onkeyup="tipoLetra(this);" required>'+
-                            '</div>'+
-                            
-                            '<div class="col-md-2">'+
-                                '</div>'+ 
+                            '</div>'+ 
                                 '<div class="col-md-2">'+ 
-                                '<br>'+
                                 '<label>Disponibles<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="number" class="form-control" name="disponibles" id="txtdisponibles" required >'+
-                            '</div>'+   
-                            '<div class="col-md-2">'+
-                                '</div>'+ 
-                                '<div class="col-md-2">'+ 
-                                '<br>'+
-                                '<label>Pago<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="text" class="form-control" name="pago" id="txtpago" required >'+
-                            '</div>'+   
+                            '</div>'+
+                                '<div class="col-md-3">'+ 
+                                    '<label>Pago<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<select class="form-select" name="pago" id="txtempresa" placeholder="Pago" onkeyup="tipoLetra(this);" required>'+ 
+                                  '<option value="SI">SI</option>'+
+                                  '<option value="NO">NO</option>'+
+                                '</select>'+
+
+                            '</div>'+
 
 
                             '</div>'+
