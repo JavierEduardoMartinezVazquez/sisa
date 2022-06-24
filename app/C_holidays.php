@@ -19,6 +19,7 @@ class C_holidays extends Model
         'ingreso', 
         'inicio',
         'final',
+        'totaldias',
         'inlabores',
         'disponibles',
         'status'

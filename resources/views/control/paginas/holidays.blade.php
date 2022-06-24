@@ -58,8 +58,10 @@
                                         <th>F. Ingreso</th>
                                         <th>Inicio</th>
                                         <th>Final</th>
+                                        <th>Total de días</th>
                                         <th>Ininio de labores</th>
                                         <th>Días disponibles</th>
+                                        <th>Pago de nomina</th>
                                         <th>Estatus</th>
                                     </tr>
                                 </thead>

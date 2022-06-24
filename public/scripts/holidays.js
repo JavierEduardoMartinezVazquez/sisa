@@ -118,6 +118,10 @@
                                 '<input type="date" class="form-control" name="final" id="txtfinal" placeholder="Final" onkeyup="tipoLetra(this);" required>'+
                             '</div>'+ 
                             '</div>'+ 
+                            '<div class="col-md-2">'+ 
+                                '<label>Totalde días<b style="color:#F44336 !important;">*</b></label>'+ 
+                                '<input type="number" class="form-control" name="totaldias" id="txttotaldias" required >'+
+                            '</div>'+ 
                                 '<div class="col-md-4">'+ 
                                 '<label>Inicio de labores<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="date" class="form-control" name="inlabores" id="txtinlabores" placeholder="Inicio de labores" onkeyup="tipoLetra(this);" required>'+
@@ -206,6 +210,7 @@
             { data: 'ingreso', name: 'ingreso', orderable: true, searchable: true },
             { data: 'inicio', name: 'inicio', orderable: true, searchable: true },
             { data: 'final', name: 'final', orderable: true, searchable: true },
+            { data: 'totaldias', name: 'totaldias', orderable: true, searchable: true },
             { data: 'inlabores', name: 'inlabores', orderable: true, searchable: true },
             { data: 'disponibles', name: 'disponibles', orderable: true, searchable: true },
             { data: 'status', name: 'status', orderable: true, searchable: true },
@@ -282,6 +287,15 @@
                                 '<input type="date" class="form-control" name="final" id="txtfinal" placeholder="Final" onkeyup="tipoLetra(this);" required>'+
                             '</div>'+  
                             '</div>'+
+
+                            '<div class="col-md-2">'+
+                                '</div>'+ 
+                                '<div class="col-md-2">'+ 
+                                '<br>'+
+                                '<label>Total de días<b style="color:#F44336 !important;">*</b></label>'+ 
+                                '<input type="number" class="form-control" name="totaldias" id="txttotaldias" required >'+
+                            '</div>'+  
+
                                 '<div class="col-md-1">'+
                                 '</div>'+
                                 '<div class="col-md-4">'+ 
@@ -315,6 +329,7 @@
             $("#txtingreso").val(data.holidays.ingreso);
             $("#txtinicio").val(data.holidays.inicio);
             $("#txtfinal").val(data.holidays.final);
+            $("#txttotaldias").val(data.holidays.totaldias);
             $("#txtinlabores").val(data.holidays.inlabores);
             $("#txtdisponibles").val(data.holidays.disponibles);
             mostrarmodalformulario('MODIFICACION', data.permitirmodificacion);

@@ -24,6 +24,7 @@ class CreateHolidaysTable extends Migration
             $table->date('ingreso')->nullable();
             $table->date('inicio')->nullable();
             $table->date('final')->nullable();
+            $table->integer('totaldias')->nullable();
             $table->date('inlabores')->nullable();
             $table->integer('disponibles')->nullable();
             $table->string('status',5)->nullable();
