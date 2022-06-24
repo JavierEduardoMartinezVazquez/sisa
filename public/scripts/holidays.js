@@ -130,6 +130,10 @@
                                 '<label>Disponibles<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="number" class="form-control" name="disponibles" id="txtdisponibles" required >'+
                             '</div>'+   
+                            '<div class="col-md-2">'+ 
+                                '<label>Pago<b style="color:#F44336 !important;">*</b></label>'+ 
+                                '<input type="text" class="form-control" name="pago" id="txtpago" required >'+
+                            '</div>'+
 
 
                             '</div>'+
@@ -213,6 +217,7 @@
             { data: 'totaldias', name: 'totaldias', orderable: true, searchable: true },
             { data: 'inlabores', name: 'inlabores', orderable: true, searchable: true },
             { data: 'disponibles', name: 'disponibles', orderable: true, searchable: true },
+            { data: 'pago', name: 'pago', orderable: true, searchable: true },
             { data: 'status', name: 'status', orderable: true, searchable: true },
         ],
         "order": [[ 1, "asc" ]]
@@ -310,6 +315,13 @@
                                 '<label>Disponibles<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="number" class="form-control" name="disponibles" id="txtdisponibles" required >'+
                             '</div>'+   
+                            '<div class="col-md-2">'+
+                                '</div>'+ 
+                                '<div class="col-md-2">'+ 
+                                '<br>'+
+                                '<label>Pago<b style="color:#F44336 !important;">*</b></label>'+ 
+                                '<input type="text" class="form-control" name="pago" id="txtpago" required >'+
+                            '</div>'+   
 
 
                             '</div>'+
@@ -332,6 +344,7 @@
             $("#txttotaldias").val(data.holidays.totaldias);
             $("#txtinlabores").val(data.holidays.inlabores);
             $("#txtdisponibles").val(data.holidays.disponibles);
+            $("#txtpago").val(data.holidays.pago);
             mostrarmodalformulario('MODIFICACION', data.permitirmodificacion);
             mostrarformulario();
         }).fail( function() {

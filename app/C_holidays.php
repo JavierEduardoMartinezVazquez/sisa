@@ -22,6 +22,7 @@ class C_holidays extends Model
         'totaldias',
         'inlabores',
         'disponibles',
+        'pago',
         'status'
     ];
 }
