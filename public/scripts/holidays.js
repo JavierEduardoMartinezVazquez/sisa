@@ -117,6 +117,11 @@
                                 '<label>Final<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="date" class="form-control" name="final" id="txtfinal" placeholder="Final" onkeyup="tipoLetra(this);" required>'+
                             '</div>'+ 
+                            '</div>'+ 
+                                '<div class="col-md-4">'+ 
+                                '<label>Inicio de labores<b style="color:#F44336 !important;">*</b></label>'+ 
+                                '<input type="date" class="form-control" name="inlabores" id="txtinlabores" placeholder="Inicio de labores" onkeyup="tipoLetra(this);" required>'+
+                            '</div>'+ 
                                 '<div class="col-md-2">'+ 
                                 '<label>Disponibles<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="number" class="form-control" name="disponibles" id="txtdisponibles" required >'+
@@ -201,6 +206,7 @@
             { data: 'ingreso', name: 'ingreso', orderable: true, searchable: true },
             { data: 'inicio', name: 'inicio', orderable: true, searchable: true },
             { data: 'final', name: 'final', orderable: true, searchable: true },
+            { data: 'inlabores', name: 'inlabores', orderable: true, searchable: true },
             { data: 'disponibles', name: 'disponibles', orderable: true, searchable: true },
             { data: 'status', name: 'status', orderable: true, searchable: true },
         ],
@@ -275,6 +281,13 @@
                                 '<label>Final<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="date" class="form-control" name="final" id="txtfinal" placeholder="Final" onkeyup="tipoLetra(this);" required>'+
                             '</div>'+  
+                            '</div>'+
+                                '<div class="col-md-1">'+
+                                '</div>'+
+                                '<div class="col-md-4">'+ 
+                                '<label>Inicio de labores<b style="color:#F44336 !important;">*</b></label>'+ 
+                                '<input type="date" class="form-control" name="inlabores" id="txtinlabores" placeholder="Inicio de labores" onkeyup="tipoLetra(this);" required>'+
+                            '</div>'+
                             
                             '<div class="col-md-2">'+
                                 '</div>'+ 
@@ -302,6 +315,7 @@
             $("#txtingreso").val(data.holidays.ingreso);
             $("#txtinicio").val(data.holidays.inicio);
             $("#txtfinal").val(data.holidays.final);
+            $("#txtinlabores").val(data.holidays.inlabores);
             $("#txtdisponibles").val(data.holidays.disponibles);
             mostrarmodalformulario('MODIFICACION', data.permitirmodificacion);
             mostrarformulario();

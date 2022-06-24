@@ -58,6 +58,7 @@
                                         <th>F. Ingreso</th>
                                         <th>Inicio</th>
                                         <th>Final</th>
+                                        <th>Ininio de labores</th>
                                         <th>Días disponibles</th>
                                         <th>Estatus</th>
                                     </tr>
