@@ -80,25 +80,21 @@
                               
 
                             '<div class="col-md-1">'+
-                                '</div>'+ 
-                                '<div class="col-md-10">'+ 
-                                    '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+ 
-
-                                    '<select class="form-select" name="empresa" id="txtempresa" placeholder="Nombre de la empresa" onkeyup="tipoLetra(this);" required>'+
-    '<option value="Soluciones Integrales para tu Camión Socasa S.A. de C.V.">Soluciones Integrales para tu camión Socasa S.A. de C.V.</option>'+
-  '<option value="Socasa Toluca">Socasa Toluca</option>'+
-  '<option value="Socasa Refaccionaria">Socasa Refaccionaria</option>'+
-  '<option value="UTP usados">UTP usados</option>'+
-  '<option value="UTP usados">UTP seminuevos</option>'+
-'</select>'+
-
-
-                         
-                            '</div>'+
-                        '</div>'+    
-                    '</div>'+
-                '</div>'+ 
-            '</div>';
+                            '</div>'+ 
+                            '<div class="col-md-10">'+ 
+                                '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+
+                                '<select class="form-select" name="empresa" id="txtempresa" placeholder="Nombre de la empresa" onkeyup="tipoLetra(this);" required>'+
+                                '<option value="SOLUCIONES INTEGRALES PARA TU CAMIÓN SOCASA S.A. DE C.V.">SOLUCIONES INTGEGRALES PARA TU CAMIÓN SOCASA S.A. DE C.V.</option>'+
+                                '<option value="SOCASA TOLUCA">SOCASA TOLUCA</option>'+
+                                '<option value="SOCASA REFACCIONARIA">SOCASA REFACCIONARIA</option>'+
+                                '<option value="UTP USADOS">UTP USADOS</option>'+
+                                '<option value="UTP SEMINUEVOS">UTP SEMINUEVOS</option>'+
+                                '</select>'+
+                        '</div>'+
+                    '</div>'+    
+                '</div>'+
+            '</div>'+ 
+        '</div>';
         $("#tabsform").html(tabs);//tabsform es el ID del DIV donde se muestra el formulario del archivo JS <2>
         obtenerultimoidhourhand();
     }
@@ -198,18 +194,22 @@
                                 '<input type="time" class="form-control" name="salida" id="txtsalida" placeholder="Salida" onkeyup="tipoLetra(this);" required>'+
                             '</div>'+    
                             '</div>'+ 
-                                '<div class="col-md-2">'+
-                                '</div>'+ 
-                                '<div class="col-md-4">'+ 
-                                '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="time" class="form-control" name="empresa" id="txtempresa" placeholder="Empresa" onkeyup="tipoLetra(this);" required>'+
-                            '</div>'+  
-
-                            '</div>'+
-                        '</div>'+    
-                    '</div>'+
-                '</div>'+ 
-            '</div>';
+                            '<div class="col-md-1">'+
+                            '</div>'+ 
+                            '<div class="col-md-10">'+ 
+                                '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+
+                                '<select class="form-select" name="empresa" id="txtempresa" placeholder="Nombre de la empresa" onkeyup="tipoLetra(this);" required>'+
+                                '<option value="SOLUCIONES INTEGRALES PARA TU CAMIÓN SOCASA S.A. DE C.V.">SOLUCIONES INTGEGRALES PARA TU CAMIÓN SOCASA S.A. DE C.V.</option>'+
+                                '<option value="SOCASA TOLUCA">SOCASA TOLUCA</option>'+
+                                '<option value="SOCASA REFACCIONARIA">SOCASA REFACCIONARIA</option>'+
+                                '<option value="UTP USADOS">UTP USADOS</option>'+
+                                '<option value="UTP SEMINUEVOS">UTP SEMINUEVOS</option>'+
+                                '</select>'+
+                        '</div>'+
+                    '</div>'+    
+                '</div>'+
+            '</div>'+ 
+        '</div>';
             $("#tabsform").html(tabs);
             console.log(data);//mandas el arreglo
             $("#txtnumero").val(data.hourhand.id);

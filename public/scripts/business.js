@@ -75,15 +75,12 @@
                                 '</div>'+    
                                 '<div class="col-md-2">'+
                                 '</div>'+ 
-                                '<div class="col-md-10">'+ 
+                                '<div class="col-md-8">'+ 
                                 '<br>'+ 
                                     '<label>Direccion<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="text" class="form-control" name="direccion" id="txtdireccion" placeholder="Direccion" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
                                 '<div class="col-md-2">'+
-                                '</div>'+ 
-                                '<div class="col-md-3">'+ 
-                                '<br>'+
                                 '<label>No. de empleados<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="number" class="form-control" name="numero" id="txtnumero" required >'+
                             '</div>'+
@@ -187,14 +184,11 @@
                                 '</div>'+    
                                 '<div class="col-md-2">'+
                                 '</div>'+ 
-                                '<div class="col-md-10">'+ 
+                                '<div class="col-md-8">'+ 
                                     '<label>Direccion<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="text" class="form-control" name="direccion" id="txtdireccion" placeholder="Direccion" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
                                 '<div class="col-md-2">'+
-                                '</div>'+ 
-                                '<div class="col-md-2">'+ 
-                                '<br>'+
                                 '<label>Disponibles<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="number" class="form-control" name="numero" id="txtnumero" required >'+
                             '</div>'+
