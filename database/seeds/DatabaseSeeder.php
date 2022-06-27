@@ -29,16 +29,11 @@ class DatabaseSeeder extends Seeder
 
         $users->name = "MARCO";
         $users->lastname_p = "POLO";
-        $users->lastname_m = "BLATAZAR";
+        $users->lastname_m = "BALTAZAR";
         $users->email = "marco.baltazar@socasa.com.mx";
         $users->password= bcrypt("12345678");
         $users->status = "ALTA";
 
         $users->save();
-
-
-        
-
-        
     }
 }
