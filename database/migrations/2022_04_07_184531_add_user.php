@@ -14,7 +14,7 @@ class AddUser extends Migration
     public function up()
     {
         
-        DB::table('users')->insert(array(
+       /* DB::table('users')->insert(array(
             'name' => 'JAVIER EDUARDO',
             'email' => 'javier.martinez@socasa.com',
             //'email_verified_at' => date('Y-m-d H:m:s'),
@@ -26,7 +26,7 @@ class AddUser extends Migration
             'status' => 'ALTA',
             'created_at' => date('Y-m-d H:m:s'),
             'updated_at' => date('Y-m-d H:m:s'),
-        ));
+        ));*/
         
     }
 
