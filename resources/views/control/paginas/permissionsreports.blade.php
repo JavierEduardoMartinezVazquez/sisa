@@ -43,9 +43,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                        <div class="card-body table-responsive">
+                   <div class="card-body table-responsive">
                             <table id="tablelist" class=" tablelist table table-bordered table-striped display nowrap">
                                 <thead>
                                     <tr>
