@@ -7,7 +7,7 @@ use App\Configuracion_Tabla;
 use Goutte\Client;
 use GuzzleHttp\Client as GuzzleClient;
 use Symfony\Component\HttpClient\HttpClient;*/
-use Jenssegers\Date\Date;
+use Illuminate\Support\Facades\Date;
 
 
 class Helpers{
