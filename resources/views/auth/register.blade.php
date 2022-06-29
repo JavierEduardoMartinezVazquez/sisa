@@ -96,13 +96,8 @@
                                             <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                                         </div>
                                     </div>
-
                                     <br>
-                                        
-
-                                            
-            
-                                    <div class="form-group row mb-0">
+                                     <div class="form-group row mb-0">
                                         <div class="col-md-6 offset-md-6">
                                             <center>
                                             <button type="submit" class="btn btn-danger">
