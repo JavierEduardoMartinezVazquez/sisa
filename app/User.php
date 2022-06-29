@@ -21,17 +21,24 @@ class User extends Authenticatable
         'lastname_p',
         'lastname_m',
         'email',
-        'email_verified_at',
         'password',
+        'edad',
+        'sucursal',
+        'area',
+        'ingreso',
+        'hentrada',
+        'hsalida',
+
         /*
         'fechaingresocorp',
         'fechaingresoemp',
         'fechabaja',
-        'id_horario',*/
+        'id_horario',
         'id_empresa',
         'id_area',
-        'id_rol',
-        'status',
+        'id_rol',*/
+        'rol',
+        'status'
     ];
 
     /**

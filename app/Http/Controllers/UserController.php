@@ -84,6 +84,14 @@ class UserController extends Controller
             $user->lastname_m=$request->materno;
             $user->email=$request->email;
             $user->password=Hash::make($request->pass);
+            $user->edad=$request->edad;
+            $user->sucursal=$request->sucursal;
+            $user->area=$request->area;
+            $user->ingreso=$request->ingreso;
+            $user->hentrada=$request->hentrada;
+            $user->hsalida=$request->hsalida;
+            $user->rol=$request->rol;
+
             /*$user->fechaingresocorp=$request->fecha_cor;
             $user->fechaingresoemp=$request->fecha_ini;
             $user->id_horario=$request->horario;
@@ -103,6 +111,14 @@ class UserController extends Controller
             'lastname_p',
             'lastname_m',
             'email',
+            'edad',
+            'sucursal',
+            'area',
+            'ingreso',
+            'hentrada',
+            'hsalida',
+            'rol',
+            
             /*'fechaingresocorp',
             'fechaingresoemp',
             'fechabaja',

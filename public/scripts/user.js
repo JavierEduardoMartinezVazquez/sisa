@@ -265,6 +265,46 @@
                                         '<input type="password" class="form-control" name="pass2" id="txtpass2" required autocomplete="new-password" data-parsley-equalto="#txtpass" placeholder="Confirmar contraseña">'+
                                     '</div>'+  
                                 '</div>'+
+                                '<div class="col-md-3">'+ 
+                                        '<label>Edad</label>'+
+                                        '<input type="number" class="form-control" name="edad" id="txtedad" required autocomplete="Edad" placeholder="Edad">'+
+                                    '</div>'+
+                                    '<div class="col-md-1">'+
+                                    '</div>'+ 
+                                    '<div class="col-md-10">'+ 
+                                        '<label>Sucursal<b style="color:#F44336 !important;">*</b></label>'+
+                                        '<select class="form-select" name="sucursal" id="txtsucursal" placeholder="Nombre de la sucursal" onkeyup="tipoLetra(this);" required>'+
+                                        '<option value="SOLUCIONES INTEGRALES PARA TU CAMIÓN SOCASA S.A. DE C.V.">SOLUCIONES INTGEGRALES PARA TU CAMIÓN SOCASA S.A. DE C.V.</option>'+
+                                        '<option value="SOCASA TOLUCA">SOCASA TOLUCA</option>'+
+                                        '<option value="SOCASA REFACCIONARIA">SOCASA REFACCIONARIA</option>'+
+                                        '<option value="UTP USADOS">UTP USADOS</option>'+
+                                        '<option value="UTP SEMINUEVOS">UTP SEMINUEVOS</option>'+
+                                        '</select>'+
+                                '</div>'+
+                                    '<div class="col-md-3">'+ 
+                                        '<label>Area</label>'+
+                                        '<input type="text" class="form-control" name="area" id="txtsucursal" placeholder="Area" onkeyup="tipoLetra(this);" required>'+
+                                    '</div>'+
+                                    '</div>'+
+                                '<div class="col-md-3">'+ 
+                                        '<label>Fecha de ingreso</label>'+
+                                        '<input type="date" class="form-control" name="ingreso" id="txtingreso" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                    '</div>'+
+                                '<div class="col-md-3">'+ 
+                                        '<label>H. Entrada</label>'+
+                                        '<input type="time" class="form-control" name="hentrada" id="txthentrada" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                    '</div>'+
+                                    '<div class="col-md-3">'+ 
+                                    '<label>H. Salida</label>'+
+                                    '<input type="time" class="form-control" name="hsalida" id="txthsalida" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+
+                                '<div class="col-md-3">'+ 
+                                    '<label>Rol<b style="color:#F44336 !important;">*</b></label>'+
+                                        '<select class="form-select" name="rol" id="txtsucursal" placeholder="Rol" onkeyup="tipoLetra(this);" required>'+
+                                        '<option value="ADMIN">ADMIN</option>'+
+                                        '<option value="USUARIO">USUARIO</option>'+
+                                '</div>'+
+                                
                             /*'</div>'+
                         '</div>'+
                         
@@ -414,6 +454,14 @@
             { data: 'lastname_p', name: 'lastname_p', orderable: true, searchable: true },
             { data: 'lastname_m', name: 'lastname_m', orderable: true, searchable: true },
             { data: 'email', name: 'email', orderable: true, searchable: true },
+            { data: 'edad', name: 'edad', orderable: true, searchable: true },
+            { data: 'sucursal', name: 'sucursal', orderable: true, searchable: true },
+            { data: 'area', name: 'area', orderable: true, searchable: true },
+            { data: 'ingreso', name: 'ingreso', orderable: true, searchable: true },
+            { data: 'hentrada', name: 'hentrada', orderable: true, searchable: true },
+            { data: 'hsalida', name: 'hsalida', orderable: true, searchable: true },
+            { data: 'rol', name: 'rol', orderable: true, searchable: true },
+
             /*{ data: 'fechaingresocorp', name: 'fechaingresocorp', orderable: true, searchable: true },
             { data: 'fechaingresoemp', name: 'fechaingresoemp', orderable: true, searchable: true },
             { data: 'fechabaja', name: 'fechabaja', orderable: true, searchable: true },
@@ -544,6 +592,13 @@
             $("#txtpaterno").val(data.user.lastname_p);
             $("#txtmaterno").val(data.user.lastname_m);
             $("#txtemail").val(data.user.email);
+            $("#txtedad").val(data.user.edad);
+            $("#txtsucursal").val(data.user.sucursal);
+            $("#txtarea").val(data.user.area);
+            $("#txtingreso").val(data.user.ingreso);
+            $("#txthentrada").val(data.user.hentrada);
+            $("#txthsalida").val(data.user.hsalida);
+            $("#txtrol").val(data.user.rol);
             /*$("#txtempresa").val(data.user.id_empresa);
             $("#txthorario").val(data.user.id_horario);
             $("#txtfecha_cor").val(data.fechadeingresocorp);

@@ -21,7 +21,6 @@ class DatabaseSeeder extends Seeder
         $users->lastname_m = "VAZQUEZ";
         $users->email = "javier.martinez@socasa.com.mx";
         $users->password= bcrypt("854620");
-        $users->status = "ALTA";
 
         $users->save();
 
@@ -32,8 +31,6 @@ class DatabaseSeeder extends Seeder
         $users->lastname_m = "BALTAZAR";
         $users->email = "marco.baltazar@socasa.com.mx";
         $users->password= bcrypt("12345678");
-        $users->status = "ALTA";
-
         $users->save();
     }
 }
