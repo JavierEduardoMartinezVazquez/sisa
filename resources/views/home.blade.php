@@ -128,8 +128,7 @@
                                             <div class="card" style="width: 10rem;">
                                                 <img src="http://www.socasa.com.mx/images/logo_socasa.png" class="card-img-top" alt="...">
                                                 </div>
-                                              </div>
-                                      
+                                              </div>  
             </section>
     </div>
     @endsection
