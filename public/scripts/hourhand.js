@@ -62,7 +62,7 @@
                         '<div class="container">'+
                             '<div class="form-group row">'+
                                 '<div class="col-md-1">'+
-                                    '<label>Numero:<b style="color:#F44336 !important;">*</b></label>'+                             
+                                    '<label>ID:<b style="color:#F44336 !important;">*</b></label>'+                             
                                     '<input type="text" class="form-control" name="numero" id="txtnumero" required  readonly>'+ 
                                 '</div>'+ 
                                 '<div class="col-md-1">'+
@@ -79,7 +79,7 @@
                             '</div>'+
                               
 
-                            '<div class="col-md-1">'+
+                            '<div class="col-md-2">'+
                             '</div>'+ 
                             '<div class="col-md-10">'+ 
                                 '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+
@@ -178,7 +178,7 @@
                         '<div class="container">'+
                             '<div class="form-group row">'+
                                 '<div class="col-md-1">'+
-                                    '<label>Numero:<b style="color:#F44336 !important;">*</b></label>'+                             
+                                    '<label>ID:<b style="color:#F44336 !important;">*</b></label>'+                             
                                     '<input type="text" class="form-control" name="numero" id="txtnumero" required  readonly>'+ 
                                 '</div>'+ 
                                 '<div class="col-md-1">'+
@@ -192,9 +192,8 @@
                                 '<div class="col-md-4">'+ 
                                 '<label>Salida<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="time" class="form-control" name="salida" id="txtsalida" placeholder="Salida" onkeyup="tipoLetra(this);" required>'+
-                            '</div>'+    
-                            '</div>'+ 
-                            '<div class="col-md-1">'+
+                            '</div>'+   
+                            '<div class="col-md-2">'+
                             '</div>'+ 
                             '<div class="col-md-10">'+ 
                                 '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+
