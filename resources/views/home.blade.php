@@ -41,7 +41,7 @@
                                     Usuario: {{ Auth::user()->name }}
                                     <br>Email: {{ Auth::user()->email }}
                                     <br>Rol: {{ Auth::user()->rol }}
-                                    <br>Empresa: {{ Auth::user()->empresa }}
+                                    <br>Empresa: {{ Auth::user()->sucursal }}
                                     <br>Area: {{ Auth::user()->area }}
                                     </h6>
                             </div>

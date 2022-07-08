@@ -219,8 +219,8 @@
                         '<li class="nav-item">'+
                             '<a class="nav-link" id="detal" data-toggle="pill" href="#p_detalles" role="tab" aria-controls="p_detalles" aria-selected="false">DETALLES</a>'+
                         '</li>'+
-                    '</ul>'+*/
-                '</div>'+
+                    '</ul>'+
+                '</div>'+*/
                 '<div class="card-body">'+
                     '<div class="tab-content" id="custom-tabs-one-tabContent">'+
                     
@@ -263,18 +263,15 @@
                                     '<div class="col-md-4">'+ 
                                         '<label>Confirmar contraseña</label>'+
                                         '<input type="password" class="form-control" name="pass2" id="txtpass2" required autocomplete="new-password" data-parsley-equalto="#txtpass" placeholder="Confirmar contraseña">'+
-                                    '</div>'+  
-                                '</div>'+
-                                '<div class="col-md-3">'+ 
+                                    '</div>'+
+                                '<div class="col-md-2">'+ 
                                         '<label>Edad</label>'+
                                         '<input type="number" class="form-control" name="edad" id="txtedad" required autocomplete="Edad" placeholder="Edad">'+
                                     '</div>'+
-                                    '<div class="col-md-1">'+
-                                    '</div>'+ 
                                     '<div class="col-md-10">'+ 
                                         '<label>Sucursal<b style="color:#F44336 !important;">*</b></label>'+
                                         '<select class="form-select" name="sucursal" id="txtsucursal" placeholder="Nombre de la sucursal" onkeyup="tipoLetra(this);" required>'+
-                                        '<option value="SOLUCIONES INTEGRALES PARA TU CAMIÓN SOCASA S.A. DE C.V.">SOLUCIONES INTGEGRALES PARA TU CAMIÓN SOCASA S.A. DE C.V.</option>'+
+                                        '<option value="SOLUCIONES INTEGRALES PARA TU CAMIÓN SOCASA S.A. DE C.V.">SOLUCIONES INTEGRALES PARA TU CAMIÓN SOCASA S.A. DE C.V.</option>'+
                                         '<option value="SOCASA TOLUCA">SOCASA TOLUCA</option>'+
                                         '<option value="SOCASA REFACCIONARIA">SOCASA REFACCIONARIA</option>'+
                                         '<option value="UTP USADOS">UTP USADOS</option>'+
@@ -285,12 +282,11 @@
                                         '<label>Area</label>'+
                                         '<input type="text" class="form-control" name="area" id="txtsucursal" placeholder="Area" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
-                                    '</div>'+
                                 '<div class="col-md-3">'+ 
                                         '<label>Fecha de ingreso</label>'+
                                         '<input type="date" class="form-control" name="ingreso" id="txtingreso" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
-                                '<div class="col-md-3">'+ 
+                                '<div class="col-md-3">'+
                                         '<label>H. Entrada</label>'+
                                         '<input type="time" class="form-control" name="hentrada" id="txthentrada" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+

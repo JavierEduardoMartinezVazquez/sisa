@@ -133,7 +133,7 @@ class UserController extends Controller
                 $operaciones = '<div class="container">'.
                                     '<div class="row">'.
                                             '<div class="col"><a href="javascript:void(0);" onclick="obteneruser('.$data->id.')"><i class="fas fa-pen-square" aria-hidden="true"></i></a></div>'.
-                                            '<div class="col"><a href="javascript:void(0);" onclick="verificarbajabusiness('.$data->id.')"><i class="fa fa-minus-square" aria-hidden="true"></i></a></div>'.
+                                            '<div class="col"><a href="javascript:void(0);" onclick="verificarbajauser('.$data->id.')"><i class="fa fa-minus-square" aria-hidden="true"></i></a></div>'.
                                         '</div>'.
                                 '</div>';
                 return $operaciones;
@@ -179,26 +179,26 @@ class UserController extends Controller
         return response()->json($data);
     }
     public function modificar_user(Request $request){
-        $business = User::where('id', $request->numero)->first();
+        $user = User::where('id', $request->numero)->first();
         User::where('id', $request->numero)
         ->update([
             //atributo de la Base => $request-> nombre de la caja de texto
             'nombre'=> $request->nombre
         ]);
-        return response()->json($business);
+        return response()->json($user);
     }
     public function verificar_baja_user(Request $request){
         //variable = $request->variable que recibe del archivo .js
         $numero = $request->numero;
-        $business = User::where('id', $numero)->first();
-        return response()->json($business);
+        $user = User::where('id', $numero)->first();
+        return response()->json($user);
     }
     public function baja_user(Request $request){
-        $business = User::where('id', $request->num)->first();
+        $user = User::where('id', $request->num)->first();
         User::where('id', $request->num)
         ->update([
             'status'=> 'BAJA'
         ]);
-        return response()->json($business);
+        return response()->json($user);
     }
 }

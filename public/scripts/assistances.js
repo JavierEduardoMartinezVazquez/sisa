@@ -3,7 +3,7 @@
     var form;
 
     function init(){
-        listaruser();
+        listarassistances();
      }
 
     function mostrarmodalformulario(movimiento, permitirmodificacion){
@@ -32,8 +32,8 @@
         $("#formulario").hide();
         $("#contenidomodaltablas").show();
     }
-    function obtenerultimoiduser(){
-        $.get(obtener_ultimo_id_user, function(numero){
+    function obtenerultimoidassistances(){
+        $.get(obtener_ultimo_id_assistances, function(numero){
           $("#txtnumero").val(numero);
         })
     }
@@ -377,7 +377,7 @@
         '</div>'+
     '</div>';
         $("#tabsform").html(tabs);//tabsform es el ID del DIV donde se muestra el formulario del archivo JS <2>
-        obtenerultimoiduser();
+        obtenerultimoidassistances();
         obtenerroles();
     }
     $("#btnGuardar").on('click', function (e) {
@@ -387,7 +387,7 @@
         if (form.parsley().isValid()){
             $.ajax({
                 headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-                url:guardar_user,
+                url:guardar_assistances,
                 type: "post",
                 dataType: "html",
                 data: formData,
@@ -435,7 +435,7 @@
         }
     });
 
-    function listaruser() {
+    function listarassistances() {
         $("#tablelist").DataTable({
           "autoWidth": false,
           "sScrollX": "110%",
@@ -443,7 +443,7 @@
           'language': {
               "url": "control/plugins/datatables/es_es.json",
         },
-        ajax: listar_user,
+        ajax: listar_assistances,
         "createdRow": function( row, data){
             if( data.status ==  `BAJA`){ $(row).css('font-weight','bold').css('color','#dc3545');}
         },
@@ -474,9 +474,9 @@
         "order": [[ 1, "asc" ]]
         })
     }
-    function obteneruser(numero){
+    function obtenerassistances(numero){
         $("#titulomodal").html('Modificación Usuario');
-        $.get(obtener_user,{numero:numero },function(data){
+        $.get(obtener_assistances,{numero:numero },function(data){
             //se crea al formulario
             var tabs =
             '<div class="row">'+
@@ -587,18 +587,18 @@
         '</div>';
             $("#tabsform").html(tabs);
             console.log(data);//mandas el arreglo
-            $("#txtnumero").val(data.user.id);
-            $("#txtnombre").val(data.user.name);
-            $("#txtpaterno").val(data.user.lastname_p);
-            $("#txtmaterno").val(data.user.lastname_m);
-            $("#txtemail").val(data.user.email);
-            $("#txtedad").val(data.user.edad);
-            $("#txtsucursal").val(data.user.sucursal);
-            $("#txtarea").val(data.user.area);
-            $("#txtingreso").val(data.user.ingreso);
-            $("#txthentrada").val(data.user.hentrada);
-            $("#txthsalida").val(data.user.hsalida);
-            $("#txtrol").val(data.user.rol);
+            $("#txtnumero").val(data.assistances.id);
+            $("#txtnombre").val(data.assistances.name);
+            $("#txtpaterno").val(data.assistances.lastname_p);
+            $("#txtmaterno").val(data.assistances.lastname_m);
+            $("#txtemail").val(data.assistances.email);
+            $("#txtedad").val(data.assistances.edad);
+            $("#txtsucursal").val(data.assistances.sucursal);
+            $("#txtarea").val(data.assistances.area);
+            $("#txtingreso").val(data.assistances.ingreso);
+            $("#txthentrada").val(data.assistances.hentrada);
+            $("#txthsalida").val(data.assistances.hsalida);
+            $("#txtrol").val(data.assistances.rol);
             /*$("#txtempresa").val(data.user.id_empresa);
             $("#txthorario").val(data.user.id_horario);
             $("#txtfecha_cor").val(data.fechadeingresocorp);
@@ -624,7 +624,7 @@ $("#btnGuardarModificacion").on('click', function (e) {
     if (form.parsley().isValid()){
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-            url:modificar_user,
+            url:modificar_assistances,
             type: "post", 
             dataType: "html",
             data: formData,
@@ -663,8 +663,8 @@ $("#btnGuardarModificacion").on('click', function (e) {
         form.parsley().validate();
     }
 });
-function verificarbajauser(numero){
-    $.get(verificar_baja_user, {numero:numero}, function(data){
+function verificarbajaassistances(numero){
+    $.get(verificar_baja_assistances, {numero:numero}, function(data){
         if(data.status == 'BAJA'){
             //ID del input que esta dentro del formulario del modal de baja
             $("#num").val();
@@ -689,7 +689,7 @@ $("#aceptar").on('click', function(e){
     if (form.parsley().isValid()){
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-            url:baja_user,
+            url:baja_assistances,
             type: "post",
             dataType: "html",
             data: formData,
@@ -728,4 +728,4 @@ $("#aceptar").on('click', function(e){
     }
 });
     
-init();
+init(); 
