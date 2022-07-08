@@ -19,8 +19,8 @@ class CreateHolidaysTable extends Migration
             $table->string('paterno')->nullable();
             $table->string('materno')->nullable();
             $table->date('solicitud')->nullable();
-            $table->string('departamento')->nullable();
-            $table->string('puesto')->nullable();
+            $table->string('sucursal')->nullable();
+            $table->string('area')->nullable();
             $table->date('ingreso')->nullable();
             $table->date('inicio')->nullable();
             $table->date('final')->nullable();

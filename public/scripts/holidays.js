@@ -85,16 +85,20 @@
                                     '<label>F. Solicitud<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="date" class="form-control" name="solicitud" id="txtsolicitud" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
-                                    '<div class="col-md-4">'+ 
-                                        '<label>Departamento<b style="color:#F44336 !important;">*</b></label>'+ 
-                                        '<input type="text" class="form-control" name="departamento" id="txtdepartamento" placeholder="Departamento" onkeyup="tipoLetra(this);" required>'+
+                                '<div class="col-md-8">'+ 
+                                '<label>Sucursal<b style="color:#F44336 !important;">*</b></label>'+
+                                '<select class="form-select" name="sucursal" id="txtsucursal" placeholder="Nombre de la sucursal" onkeyup="tipoLetra(this);" required>'+
+                                '<option value="SOLUCIONES INTEGRALES PARA TU CAMIÓN SOCASA S.A. DE C.V.">SOLUCIONES INTGEGRALES PARA TU CAMIÓN SOCASA S.A. DE C.V.</option>'+
+                                '<option value="SOCASA TOLUCA">SOCASA TOLUCA</option>'+
+                                '<option value="SOCASA REFACCIONARIA">SOCASA REFACCIONARIA</option>'+
+                                '<option value="UTP USADOS">UTP USADOS</option>'+
+                                '<option value="UTP SEMINUEVOS">UTP SEMINUEVOS</option>'+
+                                '</select>'+
+                                '</div>'+ 
+                                    '<div class="col-md-5">'+ 
+                                        '<label>Area<b style="color:#F44336 !important;">*</b></label>'+ 
+                                        '<input type="text" class="form-control" name="area" id="txtarea" placeholder="Area" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
-                                    '<div class="col-md-4">'+ 
-                                        '<label>Puesto<b style="color:#F44336 !important;">*</b></label>'+ 
-                                        '<input type="text" class="form-control" name="puesto" id="txtpuesto" placeholder="Puesto" onkeyup="tipoLetra(this);" required>'+
-                                    '</div>'+
-                                    '<div class="col-md-1">'+
-                                    '</div>'+ 
                                     
                                 '<div class="col-md-3">'+ 
                                     '<label>Inicio<b style="color:#F44336 !important;">*</b></label>'+ 
@@ -203,8 +207,8 @@
             { data: 'paterno', name: 'paterno', orderable: true, searchable: true },
             { data: 'materno', name: 'materno', orderable: true, searchable: true },
             { data: 'solicitud', name: 'solicitud', orderable: true, searchable: true },
-            { data: 'departamento', name: 'departamento', orderable: true, searchable: true },
-            { data: 'puesto', name: 'puesto', orderable: true, searchable: true },
+            { data: 'sucursal', name: 'sucursal', orderable: true, searchable: true },
+            { data: 'area', name: 'area', orderable: true, searchable: true },
             { data: 'ingreso', name: 'ingreso', orderable: true, searchable: true },
             { data: 'inicio', name: 'inicio', orderable: true, searchable: true },
             { data: 'final', name: 'final', orderable: true, searchable: true },
@@ -251,16 +255,20 @@
                                     '<label>F. Solicitud<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="date" class="form-control" name="solicitud" id="txtsolicitud" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
-                                    '<div class="col-md-4">'+ 
-                                        '<label>Departamento<b style="color:#F44336 !important;">*</b></label>'+ 
-                                        '<input type="text" class="form-control" name="departamento" id="txtdepartamento" placeholder="Departamento" onkeyup="tipoLetra(this);" required>'+
+                                '<div class="col-md-8">'+ 
+                                '<label>Sucursal<b style="color:#F44336 !important;">*</b></label>'+
+                                '<select class="form-select" name="sucursal" id="txtsucursal" placeholder="Nombre de la sucursal" onkeyup="tipoLetra(this);" required>'+
+                                '<option value="SOLUCIONES INTEGRALES PARA TU CAMIÓN SOCASA S.A. DE C.V.">SOLUCIONES INTGEGRALES PARA TU CAMIÓN SOCASA S.A. DE C.V.</option>'+
+                                '<option value="SOCASA TOLUCA">SOCASA TOLUCA</option>'+
+                                '<option value="SOCASA REFACCIONARIA">SOCASA REFACCIONARIA</option>'+
+                                '<option value="UTP USADOS">UTP USADOS</option>'+
+                                '<option value="UTP SEMINUEVOS">UTP SEMINUEVOS</option>'+
+                                '</select>'+
+                                '</div>'+ 
+                                    '<div class="col-md-5">'+ 
+                                        '<label>Area<b style="color:#F44336 !important;">*</b></label>'+ 
+                                        '<input type="text" class="form-control" name="area" id="txtarea" placeholder="Area" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
-                                    '<div class="col-md-4">'+ 
-                                        '<label>Puesto<b style="color:#F44336 !important;">*</b></label>'+ 
-                                        '<input type="text" class="form-control" name="puesto" id="txtpuesto" placeholder="Puesto" onkeyup="tipoLetra(this);" required>'+
-                                    '</div>'+
-                                    '<div class="col-md-1">'+
-                                    '</div>'+ 
                                     
                                 '<div class="col-md-3">'+ 
                                     '<label>Inicio<b style="color:#F44336 !important;">*</b></label>'+ 
@@ -308,8 +316,8 @@
             $("#txtpaterno").val(data.holidays.paterno);
             $("#txtmaterno").val(data.holidays.materno);
             $("#txtsolicitud").val(data.holidays.solicitud);
-            $("#txtdepartamento").val(data.holidays.departamento);
-            $("#txtpuesto").val(data.holidays.puesto);
+            $("#txtsucursal").val(data.holidays.sucursal);
+            $("#txtarea").val(data.holidays.area);
             $("#txtingreso").val(data.holidays.ingreso);
             $("#txtinicio").val(data.holidays.inicio);
             $("#txtfinal").val(data.holidays.final);
