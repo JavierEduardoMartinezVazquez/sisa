@@ -16,7 +16,7 @@ class AssistancesController extends Controller
 {
     public function Assistances()
     {
-        return view('control.paginas.user');
+        return view('control.paginas.assistances');
     }
     public function obtener_ultimo_id_user(){
         $ultimoNumeroTabla = User::select("id")->orderBy("id", "DESC")->take(1)->get();
