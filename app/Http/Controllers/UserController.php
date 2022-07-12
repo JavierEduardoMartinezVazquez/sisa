@@ -91,7 +91,6 @@ class UserController extends Controller
             $user->hentrada=$request->hentrada;
             $user->hsalida=$request->hsalida;
             $user->rol=$request->rol;
-
             /*$user->fechaingresocorp=$request->fecha_cor;
             $user->fechaingresoemp=$request->fecha_ini;
             $user->id_horario=$request->horario;
@@ -118,7 +117,6 @@ class UserController extends Controller
             'hentrada',
             'hsalida',
             'rol',
-            
             /*'fechaingresocorp',
             'fechaingresoemp',
             'fechabaja',

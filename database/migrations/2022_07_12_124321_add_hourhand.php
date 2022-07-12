@@ -5,7 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\DB;
 
-class AddBusiness extends Migration
+class AddHourhand extends Migration
 {
     /**
      * Run the migrations.
@@ -14,26 +14,18 @@ class AddBusiness extends Migration
      */
     public function up()
     {
-        DB::table('business')->insert(array(
+        DB::table('hourhand')->insert(array(
+            'entrada' => '08:30:00',
+            'salida' => '05:30:00',
             'empresa' => 'SOLUCIONES INTEGRALES PARA TU CAMION S.A DE C.V',
-            'direccion' => 'xona',
-            'numero' => 23,
             'status' => 'ALTA',
             'created_at' => date('Y-m-d H:m:s'),
             'updated_at' => date('Y-m-d H:m:s'),
         ));
-        DB::table('business')->insert(array(
-            'empresa' => 'AUTOBUSES Y TRACTOCAMIONES DE QUERETARO S.A. DE C.V.',
-            'direccion' => 'xona',
-            'numero' => 18,
-            'status' => 'ALTA',
-            'created_at' => date('Y-m-d H:m:s'),
-            'updated_at' => date('Y-m-d H:m:s'),
-        ));
-        DB::table('business')->insert(array(
-            'empresa' => 'USADOS TRACTOCAMIONES Y PARTES REFACCIONARIAS S.A DE C.V',
-            'direccion' => 'xona',
-            'numero' => 15,
+        DB::table('hourhand')->insert(array(
+            'entrada' => '08:30:00',
+            'salida' => '05:30:00',
+            'empresa' => 'SOLUCIONES INTEGRALES PARA TU CAMION S.A DE C.V',
             'status' => 'ALTA',
             'created_at' => date('Y-m-d H:m:s'),
             'updated_at' => date('Y-m-d H:m:s'),
