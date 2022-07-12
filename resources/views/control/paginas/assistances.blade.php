@@ -1,6 +1,6 @@
 @extends('plantilla')
 @section('titulo')
-    Usuarios
+    Asistencias
 @endsection
     @section('additionals_css')
 @endsection
@@ -30,7 +30,7 @@
                         <div class="card-header">
                             <div class="row">
                                 <div class="col-sm-8">
-                                    <h4>Usuarios</h4>
+                                    <h4>Asistencias</h4>
                                 </div>
                                 <div class="col-md-1">
                                     <!---->

@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Assistances;
 use App\C_business;
 use App\C_hourhand;
 use App\C_Roles;
@@ -13,14 +12,14 @@ use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
 use Illuminate\Foundation\Auth\User;
 
-class AsisstancesController extends Controller
+class AssistancesController extends Controller
 {
-    public function Asisstances()
+    public function Assistances()
     {
-        return view('control.paginas.assistances');
+        return view('control.paginas.user');
     }
-    public function obtener_ultimo_id_assistances(){
-        $ultimoNumeroTabla = Assistances::select("id")->orderBy("id", "DESC")->take(1)->get();
+    public function obtener_ultimo_id_user(){
+        $ultimoNumeroTabla = User::select("id")->orderBy("id", "DESC")->take(1)->get();
         if(sizeof($ultimoNumeroTabla) == 0 || sizeof($ultimoNumeroTabla) == "" || sizeof($ultimoNumeroTabla) == null){
             $id = 1;
         }else{
@@ -67,47 +66,46 @@ class AsisstancesController extends Controller
         }
         return response()->json($roles);
     }
-    public function guardar_assistances(Request $request){
+    public function guardar_user(Request $request){
         $email=$request->email;
-        $ExisteUsuario = Assistances::where('email', $email)->first();
+        $ExisteUsuario = User::where('email', $email)->first();
         if($ExisteUsuario == true){
-            $assistances = 1;
+            $user = 1;
 	    }else{
-            $ultimoNumeroTabla = Assistances::select("id")->orderBy("id", "DESC")->take(1)->get();
+            $ultimoNumeroTabla = User::select("id")->orderBy("id", "DESC")->take(1)->get();
             if(sizeof($ultimoNumeroTabla) == 0 || sizeof($ultimoNumeroTabla) == "" || sizeof($ultimoNumeroTabla) == null){
                 $id = 1;
             }else{
                 $id = $ultimoNumeroTabla[0]->id+1;
         }
-            $assistances = new Assistances;
-            $assistances->name=$request->nombre;
-            $assistances->lastname_p=$request->paterno;
-            $assistances->lastname_m=$request->materno;
-            $assistances->email=$request->email;
-            $assistances->password=Hash::make($request->pass);
-            $assistances->edad=$request->edad;
-            $assistances->sucursal=$request->sucursal;
-            $assistances->area=$request->area;
-            $assistances->ingreso=$request->ingreso;
-            $assistances->hentrada=$request->hentrada;
-            $assistances->hsalida=$request->hsalida;
-            $assistances->rol=$request->rol;
-
+            $user = new User;
+            $user->name=$request->nombre;
+            $user->lastname_p=$request->paterno;
+            $user->lastname_m=$request->materno;
+            $user->email=$request->email;
+            $user->password=Hash::make($request->pass);
+            $user->edad=$request->edad;
+            $user->sucursal=$request->sucursal;
+            $user->area=$request->area;
+            $user->ingreso=$request->ingreso;
+            $user->hentrada=$request->hentrada;
+            $user->hsalida=$request->hsalida;
+            $user->rol=$request->rol;
             /*$user->fechaingresocorp=$request->fecha_cor;
             $user->fechaingresoemp=$request->fecha_ini;
             $user->id_horario=$request->horario;
             $user->id_empresa=$request->empresa;
             $user->id_rol=$request->rol;*/
-            $assistances->status="ALTA";
-            $assistances->save();
+            $user->status="ALTA";
+            $user->save();
         }
-        return response()->json($assistances);
+        return response()->json($user);
 
     }
-    public function listar_assistances (Request $request)
+    public function listar_user (Request $request)
     {
         if($request->ajax()){
-            $data = Assistances::select('id', 
+            $data = User::select('id', 
             'name',
             'lastname_p',
             'lastname_m',
@@ -119,7 +117,6 @@ class AsisstancesController extends Controller
             'hentrada',
             'hsalida',
             'rol',
-            
             /*'fechaingresocorp',
             'fechaingresoemp',
             'fechabaja',
@@ -133,8 +130,8 @@ class AsisstancesController extends Controller
             ->addColumn('operaciones', function($data){
                 $operaciones = '<div class="container">'.
                                     '<div class="row">'.
-                                            '<div class="col"><a href="javascript:void(0);" onclick="obtenerassistances('.$data->id.')"><i class="fas fa-pen-square" aria-hidden="true"></i></a></div>'.
-                                            '<div class="col"><a href="javascript:void(0);" onclick="verificarbajaassistances('.$data->id.')"><i class="fa fa-minus-square" aria-hidden="true"></i></a></div>'.
+                                            '<div class="col"><a href="javascript:void(0);" onclick="obteneruser('.$data->id.')"><i class="fas fa-pen-square" aria-hidden="true"></i></a></div>'.
+                                            '<div class="col"><a href="javascript:void(0);" onclick="verificarbajauser('.$data->id.')"><i class="fa fa-minus-square" aria-hidden="true"></i></a></div>'.
                                         '</div>'.
                                 '</div>';
                 return $operaciones;
@@ -144,14 +141,14 @@ class AsisstancesController extends Controller
         }
     }
 
-    public function obtener_assistances(Request $request){        
-        $assistances= Assistances::where('id', $request->numero)->first();
+    public function obtener_user(Request $request){        
+        $user= User::where('id', $request->numero)->first();
         $permitirmodificacion = 1;
         $getroles = C_Roles::orderBy("id", "DESC")->get();
         $roles = "";
         $contador = 1;
         foreach($getroles as $getrol){
-            if($getrol->id == $assistances->id_roles){
+            if($getrol->id == $user->id_roles){
                 $roles = $roles.
                 '<div class="col-md">'.
                     '<input class="form-check-input" type="radio" name="rol" id="rol'.$contador.'" value="'.$getrol->id.'" required checked></input>'.
@@ -166,40 +163,40 @@ class AsisstancesController extends Controller
             }
             $contador++;        
         }        
-        if($assistances->status == 'BAJA'){ 
+        if($user->status == 'BAJA'){ 
             $permitirmodificacion = 0;
         }
         $data = array(
-            "assistances" => $assistances,
-            "fechadeingresocorp" => Carbon::parse($assistances->fechaingresocorp)->format('Y-m-d')."T".Carbon::parse($assistances->fechaingresocorp)->format('H:i'),
-            "fechadeingresoemp" => Carbon::parse($assistances->fechaingresoemp)->format('Y-m-d')."T".Carbon::parse($assistances->fechaingresoemp)->format('H:i'),
-            "fechadebaja" => Helpers::formatoinputdatetime($assistances->fechabaja),
+            "user" => $user,
+            "fechadeingresocorp" => Carbon::parse($user->fechaingresocorp)->format('Y-m-d')."T".Carbon::parse($user->fechaingresocorp)->format('H:i'),
+            "fechadeingresoemp" => Carbon::parse($user->fechaingresoemp)->format('Y-m-d')."T".Carbon::parse($user->fechaingresoemp)->format('H:i'),
+            "fechadebaja" => Helpers::formatoinputdatetime($user->fechabaja),
             "roles" => $roles,
             "permitirmodificacion" => $permitirmodificacion
         );
         return response()->json($data);
     }
-    public function modificar_assistances(Request $request){
-        $business = Assistances::where('id', $request->numero)->first();
-        Assistances::where('id', $request->numero)
+    public function modificar_user(Request $request){
+        $user = User::where('id', $request->numero)->first();
+        User::where('id', $request->numero)
         ->update([
             //atributo de la Base => $request-> nombre de la caja de texto
             'nombre'=> $request->nombre
         ]);
-        return response()->json($business);
-    }
-    public function verificar_baja_assistances(Request $request){
+        return response()->json($user);
+    }                                                                                                                                                                                                                                                       
+    public function verificar_baja_user(Request $request){
         //variable = $request->variable que recibe del archivo .js
         $numero = $request->numero;
-        $business = Assistances::where('id', $numero)->first();
-        return response()->json($business);
+        $user = User::where('id', $numero)->first();
+        return response()->json($user);
     }
-    public function baja_assistances(Request $request){
-        $business = Assistances::where('id', $request->num)->first();
-        Assistances::where('id', $request->num)
+    public function baja_user(Request $request){
+        $user = User::where('id', $request->num)->first();
+        User::where('id', $request->num)
         ->update([
             'status'=> 'BAJA'
         ]);
-        return response()->json($business);
+        return response()->json($user);
     }
 }

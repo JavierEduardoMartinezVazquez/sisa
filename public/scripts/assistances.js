@@ -3,7 +3,7 @@
     var form;
 
     function init(){
-        listarassistances();
+        listaruser();
      }
 
     function mostrarmodalformulario(movimiento, permitirmodificacion){
@@ -32,8 +32,8 @@
         $("#formulario").hide();
         $("#contenidomodaltablas").show();
     }
-    function obtenerultimoidassistances(){
-        $.get(obtener_ultimo_id_assistances, function(numero){
+    function obtenerultimoiduser(){
+        $.get(obtener_ultimo_id_user, function(numero){
           $("#txtnumero").val(numero);
         })
     }
@@ -219,8 +219,8 @@
                         '<li class="nav-item">'+
                             '<a class="nav-link" id="detal" data-toggle="pill" href="#p_detalles" role="tab" aria-controls="p_detalles" aria-selected="false">DETALLES</a>'+
                         '</li>'+
-                    '</ul>'+*/
-                '</div>'+
+                    '</ul>'+
+                '</div>'+*/
                 '<div class="card-body">'+
                     '<div class="tab-content" id="custom-tabs-one-tabContent">'+
                     
@@ -263,18 +263,15 @@
                                     '<div class="col-md-4">'+ 
                                         '<label>Confirmar contraseña</label>'+
                                         '<input type="password" class="form-control" name="pass2" id="txtpass2" required autocomplete="new-password" data-parsley-equalto="#txtpass" placeholder="Confirmar contraseña">'+
-                                    '</div>'+  
-                                '</div>'+
-                                '<div class="col-md-3">'+ 
+                                    '</div>'+
+                                '<div class="col-md-2">'+ 
                                         '<label>Edad</label>'+
                                         '<input type="number" class="form-control" name="edad" id="txtedad" required autocomplete="Edad" placeholder="Edad">'+
                                     '</div>'+
-                                    '<div class="col-md-1">'+
-                                    '</div>'+ 
                                     '<div class="col-md-10">'+ 
                                         '<label>Sucursal<b style="color:#F44336 !important;">*</b></label>'+
                                         '<select class="form-select" name="sucursal" id="txtsucursal" placeholder="Nombre de la sucursal" onkeyup="tipoLetra(this);" required>'+
-                                        '<option value="SOLUCIONES INTEGRALES PARA TU CAMIÓN SOCASA S.A. DE C.V.">SOLUCIONES INTGEGRALES PARA TU CAMIÓN SOCASA S.A. DE C.V.</option>'+
+                                        '<option value="SOLUCIONES INTEGRALES PARA TU CAMIÓN SOCASA S.A. DE C.V.">SOLUCIONES INTEGRALES PARA TU CAMIÓN SOCASA S.A. DE C.V.</option>'+
                                         '<option value="SOCASA TOLUCA">SOCASA TOLUCA</option>'+
                                         '<option value="SOCASA REFACCIONARIA">SOCASA REFACCIONARIA</option>'+
                                         '<option value="UTP USADOS">UTP USADOS</option>'+
@@ -285,12 +282,11 @@
                                         '<label>Area</label>'+
                                         '<input type="text" class="form-control" name="area" id="txtsucursal" placeholder="Area" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
-                                    '</div>'+
                                 '<div class="col-md-3">'+ 
                                         '<label>Fecha de ingreso</label>'+
                                         '<input type="date" class="form-control" name="ingreso" id="txtingreso" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
-                                '<div class="col-md-3">'+ 
+                                '<div class="col-md-3">'+
                                         '<label>H. Entrada</label>'+
                                         '<input type="time" class="form-control" name="hentrada" id="txthentrada" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
@@ -377,7 +373,7 @@
         '</div>'+
     '</div>';
         $("#tabsform").html(tabs);//tabsform es el ID del DIV donde se muestra el formulario del archivo JS <2>
-        obtenerultimoidassistances();
+        obtenerultimoiduser();
         obtenerroles();
     }
     $("#btnGuardar").on('click', function (e) {
@@ -387,7 +383,7 @@
         if (form.parsley().isValid()){
             $.ajax({
                 headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-                url:guardar_assistances,
+                url:guardar_user,
                 type: "post",
                 dataType: "html",
                 data: formData,
@@ -435,7 +431,7 @@
         }
     });
 
-    function listarassistances() {
+    function listaruser() {
         $("#tablelist").DataTable({
           "autoWidth": false,
           "sScrollX": "110%",
@@ -443,7 +439,7 @@
           'language': {
               "url": "control/plugins/datatables/es_es.json",
         },
-        ajax: listar_assistances,
+        ajax: listar_user,
         "createdRow": function( row, data){
             if( data.status ==  `BAJA`){ $(row).css('font-weight','bold').css('color','#dc3545');}
         },
@@ -474,9 +470,9 @@
         "order": [[ 1, "asc" ]]
         })
     }
-    function obtenerassistances(numero){
+    function obteneruser(numero){
         $("#titulomodal").html('Modificación Usuario');
-        $.get(obtener_assistances,{numero:numero },function(data){
+        $.get(obtener_user,{numero:numero },function(data){
             //se crea al formulario
             var tabs =
             '<div class="row">'+
@@ -587,18 +583,18 @@
         '</div>';
             $("#tabsform").html(tabs);
             console.log(data);//mandas el arreglo
-            $("#txtnumero").val(data.assistances.id);
-            $("#txtnombre").val(data.assistances.name);
-            $("#txtpaterno").val(data.assistances.lastname_p);
-            $("#txtmaterno").val(data.assistances.lastname_m);
-            $("#txtemail").val(data.assistances.email);
-            $("#txtedad").val(data.assistances.edad);
-            $("#txtsucursal").val(data.assistances.sucursal);
-            $("#txtarea").val(data.assistances.area);
-            $("#txtingreso").val(data.assistances.ingreso);
-            $("#txthentrada").val(data.assistances.hentrada);
-            $("#txthsalida").val(data.assistances.hsalida);
-            $("#txtrol").val(data.assistances.rol);
+            $("#txtnumero").val(data.user.id);
+            $("#txtnombre").val(data.user.name);
+            $("#txtpaterno").val(data.user.lastname_p);
+            $("#txtmaterno").val(data.user.lastname_m);
+            $("#txtemail").val(data.user.email);
+            $("#txtedad").val(data.user.edad);
+            $("#txtsucursal").val(data.user.sucursal);
+            $("#txtarea").val(data.user.area);
+            $("#txtingreso").val(data.user.ingreso);
+            $("#txthentrada").val(data.user.hentrada);
+            $("#txthsalida").val(data.user.hsalida);
+            $("#txtrol").val(data.user.rol);
             /*$("#txtempresa").val(data.user.id_empresa);
             $("#txthorario").val(data.user.id_horario);
             $("#txtfecha_cor").val(data.fechadeingresocorp);
@@ -624,7 +620,7 @@ $("#btnGuardarModificacion").on('click', function (e) {
     if (form.parsley().isValid()){
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-            url:modificar_assistances,
+            url:modificar_user,
             type: "post", 
             dataType: "html",
             data: formData,
@@ -663,8 +659,8 @@ $("#btnGuardarModificacion").on('click', function (e) {
         form.parsley().validate();
     }
 });
-function verificarbajaassistances(numero){
-    $.get(verificar_baja_assistances, {numero:numero}, function(data){
+function verificarbajauser(numero){
+    $.get(verificar_baja_user, {numero:numero}, function(data){
         if(data.status == 'BAJA'){
             //ID del input que esta dentro del formulario del modal de baja
             $("#num").val();
@@ -689,7 +685,7 @@ $("#aceptar").on('click', function(e){
     if (form.parsley().isValid()){
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-            url:baja_assistances,
+            url:baja_user,
             type: "post",
             dataType: "html",
             data: formData,
@@ -728,4 +724,4 @@ $("#aceptar").on('click', function(e){
     }
 });
     
-init(); 
+init();
