@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\C_business;
-use App\C_hourhand;
+
 use App\C_Roles;
 use Carbon\Carbon;
 Use Helpers;
@@ -28,30 +27,6 @@ class AssistancesController extends Controller
         return response()->json($id);
     }
 
-    public function obtener_empresa(Request $request){
-        if($request->ajax()){
-            $data = C_business::where('status', 'ALTA')->orderBy("id", "ASC")->get();
-            return DataTables::of($data)
-                ->addColumn('operaciones', function($data){
-                    $boton = '<div class="btn bg-green btn-xs waves-effect" onclick="seleccionarempresa('.$data->nombre.',\')">Seleccionar</div>';
-                    return $boton;
-                })
-                ->rawColumns(['operaciones'])
-                ->make(true);
-        }
-    }
-    public function obtener_horario(Request $request){
-        if($request->ajax()){
-            $data = C_hourhand::where('status', 'ALTA')->orderBy("id", "ASC")->get();
-            return DataTables::of($data)
-                ->addColumn('operaciones', function($data){
-                    $boton = '<div class="btn bg-green btn-xs waves-effect" onclick="seleccionarhorario('.$data->id.',\')">Seleccionar</div>';
-                    return $boton;
-                })
-                ->rawColumns(['operaciones'])
-                ->make(true);
-        }
-    }
     public function obtener_roles(){
         $getroles = C_Roles::orderBy("id", "DESC")->get();
         $roles = "";
