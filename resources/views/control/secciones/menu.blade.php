@@ -108,13 +108,13 @@
                 </a>
               </li>
 
-              <li class="nav-item">
+              <!--<li class="nav-item">
                 <a href="{{route('Vacationdays')}}" class="nav-link">
                   <i class="nav-icon fas fa-calendar-alt"></i>
                   <p>Dias de Vacaciones</p>
                 </a>
               </li>
-              <!--<li class="nav-item">
+              <li class="nav-item">
                 <a href="{{route('Vacationreports')}}" class="nav-link">
                   <i class="nav-icon fas fa-book"></i>
                   <p>Vacaciones</p>
