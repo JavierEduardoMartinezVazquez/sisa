@@ -28,7 +28,7 @@
                 <div class="row">
                     <div class="col-4">
                         <div class="card text-center"">
-                            <div class="card-header" style="background-color: rgb(176, 13, 13)">
+                            <div class="card-header" style="background-color: rgb(71, 71, 71)">
                               <h4 class="text-light"><br> ¡Bienvenido <br> {{ Auth::user()->name }}! <section class="content"><br>
                                </h4>
                             </div>
@@ -48,7 +48,7 @@
                             </div>
                     </div>
                     <div class="col-1">
-                        <div class="card-body" style="background-color: rgb(105, 105, 105)">
+                        <div class="card-body" style="background-color: rgb(201, 0, 0)">
                             <br>
                             <br>
                             <br>

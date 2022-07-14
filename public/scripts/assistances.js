@@ -447,24 +447,7 @@
             { data: 'operaciones', name: 'operaciones', orderable: false, searchable: false },
             { data: 'id', name: 'id', orderable: true, searchable: true },
             { data: 'name', name: 'name', orderable: true, searchable: true },
-            { data: 'lastname_p', name: 'lastname_p', orderable: true, searchable: true },
-            { data: 'lastname_m', name: 'lastname_m', orderable: true, searchable: true },
             { data: 'email', name: 'email', orderable: true, searchable: true },
-            { data: 'edad', name: 'edad', orderable: true, searchable: true },
-            { data: 'sucursal', name: 'sucursal', orderable: true, searchable: true },
-            { data: 'area', name: 'area', orderable: true, searchable: true },
-            { data: 'ingreso', name: 'ingreso', orderable: true, searchable: true },
-            { data: 'hentrada', name: 'hentrada', orderable: true, searchable: true },
-            { data: 'hsalida', name: 'hsalida', orderable: true, searchable: true },
-            { data: 'rol', name: 'rol', orderable: true, searchable: true },
-
-            /*{ data: 'fechaingresocorp', name: 'fechaingresocorp', orderable: true, searchable: true },
-            { data: 'fechaingresoemp', name: 'fechaingresoemp', orderable: true, searchable: true },
-            { data: 'fechabaja', name: 'fechabaja', orderable: true, searchable: true },
-            { data: 'id_horario', name: 'id_horario', orderable: true, searchable: true },
-            { data: 'id_empresa', name: 'id_empresa', orderable: true, searchable: true },
-            { data: 'id_area', name: 'id_area', orderable: true, searchable: true },
-            { data: 'id_rol', name: 'id_rol', orderable: true, searchable: true },*/
             { data: 'status', name: 'status', orderable: true, searchable: true },
         ],
         "order": [[ 1, "asc" ]]
@@ -585,22 +568,7 @@
             console.log(data);//mandas el arreglo
             $("#txtnumero").val(data.user.id);
             $("#txtnombre").val(data.user.name);
-            $("#txtpaterno").val(data.user.lastname_p);
-            $("#txtmaterno").val(data.user.lastname_m);
             $("#txtemail").val(data.user.email);
-            $("#txtedad").val(data.user.edad);
-            $("#txtsucursal").val(data.user.sucursal);
-            $("#txtarea").val(data.user.area);
-            $("#txtingreso").val(data.user.ingreso);
-            $("#txthentrada").val(data.user.hentrada);
-            $("#txthsalida").val(data.user.hsalida);
-            $("#txtrol").val(data.user.rol);
-            /*$("#txtempresa").val(data.user.id_empresa);
-            $("#txthorario").val(data.user.id_horario);
-            $("#txtfecha_cor").val(data.fechadeingresocorp);
-            $("#txtfecha_ini").val(data.fechadeingresoemp);
-            $("#txtfecha_baj").val(data.fechadebaja);
-            $("#roles").html(data.roles);*/
             mostrarmodalformulario('MODIFICACION', data.permitirmodificacion);
             mostrarformulario();
         }).fail( function() {

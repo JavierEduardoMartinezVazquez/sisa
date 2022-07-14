@@ -55,22 +55,8 @@ class AssistancesController extends Controller
         }
             $user = new User;
             $user->name=$request->nombre;
-            $user->lastname_p=$request->paterno;
-            $user->lastname_m=$request->materno;
             $user->email=$request->email;
             $user->password=Hash::make($request->pass);
-            $user->edad=$request->edad;
-            $user->sucursal=$request->sucursal;
-            $user->area=$request->area;
-            $user->ingreso=$request->ingreso;
-            $user->hentrada=$request->hentrada;
-            $user->hsalida=$request->hsalida;
-            $user->rol=$request->rol;
-            /*$user->fechaingresocorp=$request->fecha_cor;
-            $user->fechaingresoemp=$request->fecha_ini;
-            $user->id_horario=$request->horario;
-            $user->id_empresa=$request->empresa;
-            $user->id_rol=$request->rol;*/
             $user->status="ALTA";
             $user->save();
         }
@@ -82,23 +68,7 @@ class AssistancesController extends Controller
         if($request->ajax()){
             $data = User::select('id', 
             'name',
-            'lastname_p',
-            'lastname_m',
             'email',
-            'edad',
-            'sucursal',
-            'area',
-            'ingreso',
-            'hentrada',
-            'hsalida',
-            'rol',
-            /*'fechaingresocorp',
-            'fechaingresoemp',
-            'fechabaja',
-            'id_horario',
-            'id_empresa',
-            'id_area',
-            'id_rol',*/
             'status'
         );
             return DataTables::of($data)
