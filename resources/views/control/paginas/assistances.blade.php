@@ -47,15 +47,10 @@
                             <table id="tablelist" class=" tablelist table table-bordered table-striped display nowrap">
                                 <thead>
                                     <tr>
-                                        <th ><div style="width:90px !important;">Operación </div></th>
-                                        <th>#</th>
-                                        <th>Nombre(s)</th>
                                         
                                         <th>Email</th>
-                                        
+                                        <th>Hora de entrada</th>
                                         <th>Sucursal</th>
-                                       
-                                        <th>Estatus</th>
                                     </tr>
                                 </thead>
                             </table>

@@ -15,11 +15,11 @@ class CreateLoginTable extends Migration
     {
         Schema::create('login', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name',40)->nullable();
+            //$table->string('name',40)->nullable();
             /*$table->string('lastname_p',20)->nullable();
             $table->string('lastname_m',20)->nullable();*/
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
+            //$table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             /*$table->dateTime('fechaingresocorp')->nullable();
             $table->dateTime('fechaingresoemp')->nullable();

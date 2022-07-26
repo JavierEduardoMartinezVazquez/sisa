@@ -90,7 +90,7 @@
                 </div>
             </section>
                 
-            
+            <!--
             <section class="content">
                 <div class="card">
                     <div class="card-header">
@@ -129,6 +129,6 @@
                                                 <img src="http://www.socasa.com.mx/images/logo_socasa.png" class="card-img-top" alt="...">
                                                 </div>
                                               </div>  
-            </section>
+            </section>-->
     </div>
     @endsection
