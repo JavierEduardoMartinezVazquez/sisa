@@ -17,7 +17,7 @@
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item"><a href="#">Layout</a></li>
                         <li class="breadcrumb-item active">Boxed Layout</li>
-                        </ol>-->
+                        </ol>-->        
                     </div>
                 </div>
             </div>
@@ -38,9 +38,7 @@
                                 <div class="col-md-1">
                                     <!---->
                                 </div>
-                                <div class="col-md-1">
-                                    <button type="submit" class="btn btn-danger" onclick="alta()">Agregar</button>
-                                </div>
+                                
                             </div>
                         </div>
                         <div class="card-body table-responsive">
@@ -49,8 +47,6 @@
                                     <tr>
                                         
                                         <th>Email</th>
-                                        <th>Hora de entrada</th>
-                                        <th>Sucursal</th>
                                     </tr>
                                 </thead>
                             </table>
@@ -71,16 +67,16 @@
         });
     </script>
     <script>
-        var obtener_ultimo_id_user = '{!!URL::to('obtener_ultimo_id_user')!!}';
+        var obtener_ultimo_id_assistances = '{!!URL::to('obtener_ultimo_id_assistances')!!}';
         var obtener_empresa = '{!!URL::to('obtener_empresa')!!}';
         var obtener_horario = '{!!URL::to('obtener_horario')!!}'; 
         var obtener_roles = '{!!URL::to('obtener_roles')!!}';
-        var guardar_user = '{!!URL::to('guardar_user')!!}';
-        var listar_user = '{!!URL::to('listar_user')!!}';
-        var obtener_user = '{!!URL::to('obtener_user')!!}';
-        var modificar_user = '{!!URL::to('modificar_user')!!}';
-        var verificar_baja_user = '{!!URL::to('verificar_baja_user')!!}';
-        var baja_user = '{!!URL::to('baja_user')!!}';     
-    </script> 
+        var guardar_assistances = '{!!URL::to('guardar_assistances')!!}';
+        var listar_assistances = '{!!URL::to('listar_assistances')!!}';
+        var obtener_assistances = '{!!URL::to('obtener_assistances')!!}';
+        var modificar_assistances = '{!!URL::to('modificar_assistances')!!}';
+        var verificar_baja_assistances = '{!!URL::to('verificar_baja_assistances')!!}';
+        var baja_assistances = '{!!URL::to('baja_assistances')!!}';     
+    </script>
     <script src="scripts/user.js"></script>
 @endsection    

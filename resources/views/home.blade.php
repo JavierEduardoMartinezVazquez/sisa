@@ -63,7 +63,7 @@
             <section class="content">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Antes de solicitar vacaciones recuerda….</h3>
+                        <h3 class="card-title text-danger">Antes de solicitar vacaciones recuerda….</h3>
                         <div class="card-tools">
                          </div>
                          </div>
@@ -88,9 +88,27 @@
                                                     Gracias
                                             </div>
                 </div>
+                <section class="content">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="text-color">
+                            <h3 class="card-title text-danger">¿Quienes somos?</h3>
+                            <div class="card-tools">
+                             </div>
+                             <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12">
+                                        <br>    
+                                        <span>Somos una empresa integral 100% mexicana, nos encontramos fuertemente consolidada en el Estado de México, con 18 años de experiencia en el ramo de mantenimiento y reparación de unidades colisionadas, restauración, modificación y adaptaciones a tracto camiones, autobuses, pipas, cajas , remolques y equipo aliado.
+                                        </span>
+                                           </div>
+
+
+
+                </div>
             </section>
                 
-            <!--
+            
             <section class="content">
                 <div class="card">
                     <div class="card-header">
@@ -129,6 +147,6 @@
                                                 <img src="http://www.socasa.com.mx/images/logo_socasa.png" class="card-img-top" alt="...">
                                                 </div>
                                               </div>  
-            </section>-->
+            </section>
     </div>
     @endsection

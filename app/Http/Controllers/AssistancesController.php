@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
 use Illuminate\Foundation\Auth\User;
+use App\C_assistances;
 
 class AssistancesController extends Controller
 {
@@ -17,8 +18,8 @@ class AssistancesController extends Controller
     {
         return view('control.paginas.assistances');
     }
-    public function obtener_ultimo_id_user(){
-        $ultimoNumeroTabla = User::select("id")->orderBy("id", "DESC")->take(1)->get();
+    public function obtener_ultimo_id_assistances(){
+        $ultimoNumeroTabla = C_assistances::select("id")->orderBy("id", "DESC")->take(1)->get();
         if(sizeof($ultimoNumeroTabla) == 0 || sizeof($ultimoNumeroTabla) == "" || sizeof($ultimoNumeroTabla) == null){
             $id = 1;
         }else{
@@ -41,24 +42,24 @@ class AssistancesController extends Controller
         }
         return response()->json($roles);
     }
-    public function guardar_user(Request $request){
+    public function guardar_assintances(Request $request){
         $email=$request->email;
-        $ExisteUsuario = User::where('email', $email)->first();
+        $ExisteUsuario = C_assistances::where('email', $email)->first();
         if($ExisteUsuario == true){
             $user = 1;
 	    }else{
-            $ultimoNumeroTabla = User::select("id")->orderBy("id", "DESC")->take(1)->get();
+            $ultimoNumeroTabla = C_assistances::select("id")->orderBy("id", "DESC")->take(1)->get();
             if(sizeof($ultimoNumeroTabla) == 0 || sizeof($ultimoNumeroTabla) == "" || sizeof($ultimoNumeroTabla) == null){
                 $id = 1;
             }else{
                 $id = $ultimoNumeroTabla[0]->id+1;
         }
-            $user = new User;
-            $user->name=$request->nombre;
-            $user->email=$request->email;
-            $user->password=Hash::make($request->pass);
-            $user->status="ALTA";
-            $user->save();
+            $assistances = new C_assistances();
+            //$user->name=$request->nombre;
+            $assistances->email=$request->email;
+            $assistances->password=Hash::make($request->pass);
+            //$user->status="ALTA";
+            $assistances->save();
         }
         return response()->json($user);
 
@@ -66,8 +67,7 @@ class AssistancesController extends Controller
     public function listar_user (Request $request)
     {
         if($request->ajax()){
-            $data = User::select('id', 
-            'name',
+            $data = User::select('id',
             'email',
             'status'
         );
@@ -87,13 +87,13 @@ class AssistancesController extends Controller
     }
 
     public function obtener_user(Request $request){        
-        $user= User::where('id', $request->numero)->first();
+        $assistances= C_assistances::where('id', $request->numero)->first();
         $permitirmodificacion = 1;
         $getroles = C_Roles::orderBy("id", "DESC")->get();
         $roles = "";
         $contador = 1;
         foreach($getroles as $getrol){
-            if($getrol->id == $user->id_roles){
+            if($getrol->id == $assistances->id_roles){
                 $roles = $roles.
                 '<div class="col-md">'.
                     '<input class="form-check-input" type="radio" name="rol" id="rol'.$contador.'" value="'.$getrol->id.'" required checked></input>'.
@@ -108,22 +108,22 @@ class AssistancesController extends Controller
             }
             $contador++;        
         }        
-        if($user->status == 'BAJA'){ 
+        if($assistances->status == 'BAJA'){ 
             $permitirmodificacion = 0;
         }
         $data = array(
-            "user" => $user,
-            "fechadeingresocorp" => Carbon::parse($user->fechaingresocorp)->format('Y-m-d')."T".Carbon::parse($user->fechaingresocorp)->format('H:i'),
-            "fechadeingresoemp" => Carbon::parse($user->fechaingresoemp)->format('Y-m-d')."T".Carbon::parse($user->fechaingresoemp)->format('H:i'),
-            "fechadebaja" => Helpers::formatoinputdatetime($user->fechabaja),
+            "user" => $assistances,
+            "fechadeingresocorp" => Carbon::parse($assistances->fechaingresocorp)->format('Y-m-d')."T".Carbon::parse($assistances->fechaingresocorp)->format('H:i'),
+            "fechadeingresoemp" => Carbon::parse($assistances->fechaingresoemp)->format('Y-m-d')."T".Carbon::parse($assistances->fechaingresoemp)->format('H:i'),
+            "fechadebaja" => Helpers::formatoinputdatetime($assistances->fechabaja),
             "roles" => $roles,
             "permitirmodificacion" => $permitirmodificacion
         );
         return response()->json($data);
     }
-    public function modificar_user(Request $request){
-        $user = User::where('id', $request->numero)->first();
-        User::where('id', $request->numero)
+    public function modificar_assistances(Request $request){
+        $user = C_assistances::where('id', $request->numero)->first();
+        C_assistances::where('id', $request->numero)
         ->update([
             //atributo de la Base => $request-> nombre de la caja de texto
             'nombre'=> $request->nombre
@@ -136,9 +136,9 @@ class AssistancesController extends Controller
         $user = User::where('id', $numero)->first();
         return response()->json($user);
     }
-    public function baja_user(Request $request){
-        $user = User::where('id', $request->num)->first();
-        User::where('id', $request->num)
+    public function baja_assistances(Request $request){
+        $user = C_assistances::where('id', $request->num)->first();
+        C_assistances::where('id', $request->num)
         ->update([
             'status'=> 'BAJA'
         ]);

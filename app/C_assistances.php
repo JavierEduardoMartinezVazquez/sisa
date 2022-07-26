@@ -17,10 +17,10 @@ class C_assistances extends Authenticatable
      */
     protected $fillable = [
         /*'name', 'email', 'password',*/
-        'name',
+
         'email',
         'password',
-        'status'
+        
     ];
 
     /**

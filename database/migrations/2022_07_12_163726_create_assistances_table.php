@@ -17,7 +17,7 @@ class CreateAssistancesTable extends Migration
             //$table->bigIncrements('id');
             //$table->string('name',40)->nullable();
             $table->string('email')->unique();
-            //$table->string('password'); 
+            $table->string('password'); 
            // $table->string('status',5)->nullable();
             $table->rememberToken();
             $table->timestamps();
