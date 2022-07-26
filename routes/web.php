@@ -80,6 +80,15 @@ Route::post('modificar_permissions', 'PermissionsController@modificar_permission
 Route::get('verificar_baja_permissions', 'PermissionsController@verificar_baja_permissions')->name('verificar_baja_permissions');
 Route::post('baja_permissions', 'PermissionsController@baja_permissions')->name('baja_permissions');
 
+/*----------------Controlador de Empleados----------------*/
+Route::get('Employees', 'EmployeesController@Employees')->name('Employees');
+Route::get('obtener_ultimo_id_employees', 'EmployeesController@obtener_ultimo_id_employees')->name('obtener_ultimo_id_employees');
+Route::post('guardar_employees', 'EmployeesController@guardar_employees')->name('guardar_employees');
+Route::get('listar_employees', 'EmployeesController@listar_employees')->name('listar_employees');
+Route::get('obtener_employees', 'EmployeesController@obtener_employees')->name('obtener_employees');
+Route::post('modificar_employees', 'EmployeesController@modificar_employees')->name('modificar_employees');
+Route::get('verificar_baja_employees', 'EmployeesController@verificar_baja_employees')->name('verificar_baja_employees');
+Route::post('baja_employees', 'EmployeesController@baja_employees')->name('baja_employees');
 
 /*-----------Controlador de Dias de Vacaciones------------*/
 Route::get('Vacationdays', 'VacationdaysController@Vacationdays')->name('Vacationdays');
@@ -150,3 +159,13 @@ Route::get('obtener_assistancesreports', 'AssistancesreportsController@obtener_a
 Route::post('modificar_assistancesreports', 'AssistancesreportsController@modificar_assistancesreports')->name('modificar_assistancesreports');
 Route::get('verificar_baja_assistancesreports', 'AssistancesreportsController@verificar_baja_assistancesreports')->name('verificar_baja_assistancesreports');
 Route::post('baja_assistancesreports', 'AssistancesreportsController@baja_assistancesreports')->name('baja_assistancesreports');
+
+/*---------------Controlador empresasreporte-----------------*/
+Route::get('Businessreporte', 'BusinessreporteController@Businessreporte')->name('Businessreporte');
+Route::get('obtener_ultimo_id_businessreporte', 'BusinessreporteController@obtener_ultimo_id_businessreporte')->name('obtener_ultimo_id_businessreporte');
+Route::post('guardar_businessreporte', 'BusinessreporteController@guardar_businessreporte')->name('guardar_businessreporte');
+Route::get('listar_businessreporte', 'BusinessreporteController@listar_businessreporte')->name('listar_businessreporte');
+Route::get('obtener_businessreporte', 'BusinessreporteController@obtener_businessreporte')->name('obtener_businessreporte');
+Route::post('modificar_businessreporte', 'BusinessreporteController@modificar_businessreporte')->name('modificar_businessreporte');
+Route::get('verificar_baja_businessreporte', 'BusinessreporteController@verificar_baja_businessreporte')->name('verificar_baja_businessreporte');
+Route::post('baja_businessreporte', 'BusinessreporteController@baja_businessreporte')->name('baja_businessreporte');

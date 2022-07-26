@@ -86,33 +86,21 @@
                 </p>
               </a>
 
-
-            <ul class="nav nav-treeview">
-              <!--<li class="nav-item">
-                <a href="{{route('Assistancesreports')}}" class="nav-link">
-                  <i class="nav-icon fas fa-calendar-check"></i>
-                  <p>Reporte de Asistencias</p>
-                </a>
-              </li>-->
-
+              <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{route('Assistances')}}" class="nav-link">
                   <i class="nav-icon far fa-calendar-alt"></i>
                   <p>Asistencias</p>
                 </a>
               </li>
-
-              <!--<li class="nav-item">
-                <a href="{{route('Vacationdays')}}" class="nav-link">
-                  <i class="nav-icon fas fa-calendar-alt"></i>
-                  <p>Dias de Vacaciones</p>
+              <li class="nav-item">
+                <a href="{{route('Businessreporte')}}" class="nav-link" id="bus">
+                  <i class="nav-icon far fas fa-cogs"></i>
+                  <p>Empresas</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="{{route('Vacationreports')}}" class="nav-link">
-                  <i class="nav-icon fas fa-book"></i>
-                  <p>Vacaciones</p>
-                </a>-->
+
+            
               </li>
               <li class="nav-item">
                 <a href="{{route('Nominas')}}" class="nav-link">
