@@ -80,15 +80,6 @@ Route::post('modificar_permissions', 'PermissionsController@modificar_permission
 Route::get('verificar_baja_permissions', 'PermissionsController@verificar_baja_permissions')->name('verificar_baja_permissions');
 Route::post('baja_permissions', 'PermissionsController@baja_permissions')->name('baja_permissions');
 
-/*----------------Controlador de Empleados----------------*/
-Route::get('Employees', 'EmployeesController@Employees')->name('Employees');
-Route::get('obtener_ultimo_id_employees', 'EmployeesController@obtener_ultimo_id_employees')->name('obtener_ultimo_id_employees');
-Route::post('guardar_employees', 'EmployeesController@guardar_employees')->name('guardar_employees');
-Route::get('listar_employees', 'EmployeesController@listar_employees')->name('listar_employees');
-Route::get('obtener_employees', 'EmployeesController@obtener_employees')->name('obtener_employees');
-Route::post('modificar_employees', 'EmployeesController@modificar_employees')->name('modificar_employees');
-Route::get('verificar_baja_employees', 'EmployeesController@verificar_baja_employees')->name('verificar_baja_employees');
-Route::post('baja_employees', 'EmployeesController@baja_employees')->name('baja_employees');
 
 /*-----------Controlador de Dias de Vacaciones------------*/
 Route::get('Vacationdays', 'VacationdaysController@Vacationdays')->name('Vacationdays');

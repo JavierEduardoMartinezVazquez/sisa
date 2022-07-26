@@ -35,13 +35,7 @@
                   <p>Usuarios</p>
                 </a>
               </li>
-              <!--
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon fas fa-users"></i>
-                  <p>Empleados</p>
-                </a>
-              </li> -->
+              
               <li class="nav-item">
                 <a href="{{route('Hourhand')}}" class="nav-link" id="hor">
                 <i class="nav-icon far fa-calendar-alt"></i>
