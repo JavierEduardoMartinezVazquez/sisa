@@ -30,7 +30,7 @@
                         <div class="card-header">
                             <div class="row">
                                 <div class="col-sm-8">
-                                    <h4>Empresas</h4>
+                                    <h4>Alta de Empresas</h4>
                                 </div>
                                 <div class="col-md-1">
                                     <!---->
