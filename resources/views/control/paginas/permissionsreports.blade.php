@@ -50,7 +50,9 @@
                                         <th ><div style="width:90px !important;">Operación</div></th>
                                         <th>#</th>
                                         <th>Usuario</th>
-                                        <th>Motivo</th>     
+                                        <th>Motivo</th> 
+                                        <th>Fecha</th>
+                                        <th>Autorización</th>    
                                         <th>Estatus</th>
                                         
                                     </tr>
@@ -73,13 +75,13 @@
         });
     </script>
     <script>
-        var obtener_ultimo_id_permissionsreports = '{!!URL::to('obtener_ultimo_id_permissionsreports')!!}';
-        var guardar_permissionsreports = '{!!URL::to('guardar_permissionsreports')!!}';
-        var listar_permissionsreports = '{!!URL::to('listar_permissionsreports')!!}';
-        var obtener_permissionsreports = '{!!URL::to('obtener_permissionsreports')!!}';
-        var modificar_permissionsreports = '{!!URL::to('modificar_permissionsreports')!!}';
-        var verificar_baja_permissionsreports = '{!!URL::to('verificar_baja_permissionsreports')!!}';
-        var baja_permissionsreports = '{!!URL::to('baja_permissionsreports')!!}';     
+        var obtener_ultimo_id_permissions = '{!!URL::to('obtener_ultimo_id_permissions')!!}';
+        var guardar_permissions = '{!!URL::to('guardar_permissions')!!}';
+        var listar_permissions = '{!!URL::to('listar_permissions')!!}';
+        var obtener_permissions = '{!!URL::to('obtener_permissions')!!}';
+        var modificar_permissions = '{!!URL::to('modificar_permissions')!!}';
+        var verificar_baja_permissions = '{!!URL::to('verificar_baja_permissions')!!}';
+        var baja_permissions = '{!!URL::to('baja_permissions')!!}';     
     </script> 
-    <script src="scripts/permissionsreports.js"></script>
+    <script src="scripts/permissions.js"></script>
 @endsection    
