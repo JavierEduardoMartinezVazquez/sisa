@@ -3,7 +3,7 @@
     var form;
 
     function init(){
-        listarpermissions();
+        listarpermi();
      }
 
     function mostrarmodalformulario(movimiento, permitirmodificacion){
@@ -32,8 +32,8 @@
         $("#formulario").hide();
         $("#contenidomodaltablas").show();
     }
-    function obtenerultimoidpermissions(){
-        $.get(obtener_ultimo_id_permissions, function(numero){
+    function obtenerultimoidpermi(){
+        $.get(obtener_ultimo_id_permi, function(numero){
           $("#txtnumero").val(numero);
         })  
     }
@@ -94,7 +94,7 @@
                 '</div>'+ 
             '</div>';               
         $("#tabsform").html(tabs);//tabsform es el ID del DIV donde se muestra el formulario del archivo JS <2>
-        obtenerultimoidpermissions();
+        obtenerultimoidpermi();
     }
     $("#btnGuardar").on('click', function (e) {
         e.preventDefault(); //       ID del formulario donde se muestra el modal
@@ -103,7 +103,7 @@
         if (form.parsley().isValid()){
             $.ajax({
                 headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-                url: guardar_permissions,
+                url: guardar_permi,
                 type: "post",
                 dataType: "html",
                 data: formData,
@@ -142,7 +142,7 @@
                 form.parsley().validate();
         }
     });
-    function listarpermissions() {
+    function listarpermi() {
         $("#tablelist").DataTable({
           "autoWidth": false,
           "sScrollX": "110%",
@@ -150,7 +150,7 @@
           'language': {
               "url": "control/plugins/datatables/es_es.json",
         },
-        ajax: listar_permissions,
+        ajax: listar_permi,
         "createdRow": function( row, data){
             if( data.status ==  `BAJA`){ $(row).css('font-weight','bold').css('color','#dc3545');}
         },
@@ -166,9 +166,9 @@
         "order": [[ 1, "asc" ]]
         })
     }
-    function obtenerpermissions(numero){
+    function obtenerpermi(numero){
         $("#titulomodal").html('Modificación');
-        $.get(obtener_permissions,{numero:numero },function(data){
+        $.get(obtener_permi,{numero:numero },function(data){
             //se crea al formlario
             var tabs =
             '<div class="card-body">'+
@@ -210,11 +210,11 @@
             '</div>';
             $("#tabsform").html(tabs);
             console.log(data);//mandas el arreglo
-            $("#txtnumero").val(data.permissions.id);
-            $("#txtnombre").val(data.permissions.nombre);
-            $("#txtmotivo").val(data.permissions.motivo);
-            $("#txtfecha").val(data.permissions.fecha);
-            $("#txtautorizacion").val(data.permissions.autorizacion);
+            $("#txtnumero").val(data.permi.id);
+            $("#txtnombre").val(data.permi.nombre);
+            $("#txtmotivo").val(data.permi.motivo);
+            $("#txtfecha").val(data.permi.fecha);
+            $("#txtautorizacion").val(data.permi.autorizacion);
             
             mostrarmodalformulario('MODIFICACION', data.permitirmodificacion);
             mostrarformulario();
@@ -235,7 +235,7 @@ $("#btnGuardarModificacion").on('click', function (e) {
     if (form.parsley().isValid()){
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-            url:modificar_permissions,
+            url:modificar_permi,
             type: "post",
             dataType: "html",
             data: formData,
@@ -274,8 +274,8 @@ $("#btnGuardarModificacion").on('click', function (e) {
         form.parsley().validate();
     }
 });
-function verificarbajapermissions(numero){
-    $.get(verificar_baja_permissions, {numero:numero}, function(data){
+function verificarbajapermi(numero){
+    $.get(verificar_baja_permi, {numero:numero}, function(data){
         if(data.status == 'BAJA'){
             //ID del input que esta dentro del formulario del modal de baja
             $("#num").val();
@@ -300,7 +300,7 @@ $("#aceptar").on('click', function(e){
     if (form.parsley().isValid()){
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-            url:baja_permissions,
+            url:baja_permi,
             type: "post",
             dataType: "html",
             data: formData,

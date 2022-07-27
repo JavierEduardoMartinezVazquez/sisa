@@ -75,13 +75,13 @@
         });
     </script>
     <script>
-        var obtener_ultimo_id_permissions = '{!!URL::to('obtener_ultimo_id_permissions')!!}';
-        var guardar_permissions = '{!!URL::to('guardar_permissions')!!}';
-        var listar_permissions = '{!!URL::to('listar_permissions')!!}';
-        var obtener_permissions = '{!!URL::to('obtener_permissions')!!}';
-        var modificar_permissions = '{!!URL::to('modificar_permissions')!!}';
-        var verificar_baja_permissions = '{!!URL::to('verificar_baja_permissions')!!}';
-        var baja_permissions = '{!!URL::to('baja_permissions')!!}';     
+        var obtener_ultimo_id_permi = '{!!URL::to('obtener_ultimo_id_permi')!!}';
+        var guardar_permi = '{!!URL::to('guardar_permi')!!}';
+        var listar_permi = '{!!URL::to('listar_permi')!!}';
+        var obtener_permi = '{!!URL::to('obtener_permi')!!}';
+        var modificar_permi = '{!!URL::to('modificar_permi')!!}';
+        var verificar_baja_permi = '{!!URL::to('verificar_baja_permi')!!}';
+        var baja_permi = '{!!URL::to('baja_permi')!!}';     
     </script> 
-    <script src="scripts/permissions.js"></script>
+    <script src="scripts/permi.js"></script>
 @endsection    

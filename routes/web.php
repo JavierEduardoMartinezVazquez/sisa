@@ -81,14 +81,14 @@ Route::get('verificar_baja_holidays', 'HolidaysController@verificar_baja_holiday
 Route::post('baja_holidays', 'HolidaysController@baja_holidays')->name('baja_holidays');
 
 /*---------------Controlador de Permisos----------------*/
-Route::get('Permissions', 'PermissionsController@Permissions')->name('Permissions');
-Route::get('obtener_ultimo_id_permissions', 'PermissionsController@obtener_ultimo_id_permissions')->name('obtener_ultimo_id_permissions');
-Route::post('guardar_permissions', 'PermissionsController@guardar_permissions')->name('guardar_permissions');
-Route::get('listar_permissions', 'PermissionsController@listar_permissions')->name('listar_permissions');
-Route::get('obtener_permissions', 'PermissionsController@obtener_permissions')->name('obtener_permissions');
-Route::post('modificar_permissions', 'PermissionsController@modificar_permissions')->name('modificar_permissions');
-Route::get('verificar_baja_permissions', 'PermissionsController@verificar_baja_permissions')->name('verificar_baja_permissions');
-Route::post('baja_permissions', 'PermissionsController@baja_permissions')->name('baja_permissions');
+Route::get('Permi', 'PermiController@Permi')->name('Permi');
+Route::get('obtener_ultimo_id_permi', 'PermiController@obtener_ultimo_id_permi')->name('obtener_ultimo_id_permi');
+Route::post('guardar_permi', 'PermiController@guardar_permi')->name('guardar_permi');
+Route::get('listar_permi', 'PermiController@listar_permi')->name('listar_permi');
+Route::get('obtener_permi', 'PermiController@obtener_permi')->name('obtener_permi');
+Route::post('modificar_permi', 'PermiController@modificar_permi')->name('modificar_permi');
+Route::get('verificar_baja_permi', 'PermiController@verificar_baja_permi')->name('verificar_baja_permi');
+Route::post('baja_permi', 'PermiController@baja_permi')->name('baja_permi');
 
 /*----------------Controlador de Empleados----------------*/
 Route::get('Employees', 'EmployeesController@Employees')->name('Employees');
