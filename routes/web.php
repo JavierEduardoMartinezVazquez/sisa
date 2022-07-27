@@ -60,6 +60,16 @@ Route::post('modificar_hourhand', 'HourhandController@modificar_hourhand')->name
 Route::get('verificar_baja_hourhand', 'HourhandController@verificar_baja_hourhand')->name('verificar_baja_hourhand');
 Route::post('baja_hourhand', 'HourhandController@baja_hourhand')->name('baja_hourhand');
 
+/*---------------Controlador Horariosreporte-----------------*/
+Route::get('Hourhandreporte', 'HourhandreporteController@Hourhandreporte')->name('Hourhandreporte');
+Route::get('obtener_ultimo_id_hourhandreporte', 'HourhandreporteController@obtener_ultimo_id_hourhandreporte')->name('obtener_ultimo_id_hourhandreporte');
+Route::post('guardar_hourhandreporte', 'HourhandreporteController@guardar_hourhandreporte')->name('guardar_hourhandreporte');
+Route::get('listar_hourhandreporte', 'HourhandreporteController@listar_hourhandreporte')->name('listar_hourhandreporte');
+Route::get('obtener_hourhandreporte', 'HourhandreporteController@obtener_hourhandreporte')->name('obtener_hourhandreporte');
+Route::post('modificar_hourhandreporte', 'HourhandreporteController@modificar_hourhandreporte')->name('modificar_hourhandreporte');
+Route::get('verificar_baja_hourhandreporte', 'HourhandreporteController@verificar_baja_hourhandreporte')->name('verificar_baja_hourhandreporte');
+Route::post('baja_hourhandreporte', 'HourhandreporteController@baja_hourhandreporte')->name('baja_hourhandreporte');
+
 /*---------------Controlador Vacaciones-----------------*/
 Route::get('Holidays', 'HolidaysController@Holidays')->name('Holidays');
 Route::get('obtener_ultimo_id_holidays', 'HolidaysController@obtener_ultimo_id_holidays')->name('obtener_ultimo_id_holidays');

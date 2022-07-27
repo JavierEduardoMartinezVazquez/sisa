@@ -30,7 +30,7 @@
                         <div class="card-header">
                             <div class="row">
                                 <div class="col-sm-8">
-                                    <h4>Alta de Horarios</h4>
+                                    <h4>Horarios</h4>
                                 </div>
                                 <div class="col-md-1">
                                     <!---->
@@ -38,9 +38,7 @@
                                 <div class="col-md-1">
                                     <!---->
                                 </div>
-                                <div class="col-md-1">
-                                    <button type="submit" class="btn btn-danger" onclick="alta()">Agregar</button>
-                                </div>
+                                
                             </div>
                         </div>
                         <div class="card-body table-responsive">
@@ -62,8 +60,6 @@
             </div>
         </section>
     </div>
-    @include('control.modal.modal_alta')
-    @include('control.modal.modal_baja')
 @endsection
 @section('additionals_js')
     <script>

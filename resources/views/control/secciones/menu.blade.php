@@ -38,7 +38,7 @@
               
               <li class="nav-item">
                 <a href="{{route('Hourhand')}}" class="nav-link" id="hor">
-                <i class="nav-icon far fa-calendar-alt"></i>
+                <i class="nav-icon nav-icon fas fa-book"></i>
                   <p>Horarios</p>
                 </a>
               </li>
@@ -97,6 +97,13 @@
                 <a href="{{route('Businessreporte')}}" class="nav-link" id="bus">
                   <i class="nav-icon far fas fa-cogs"></i>
                   <p>Empresas</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="{{route('Hourhandreporte')}}" class="nav-link" id="hor">
+                <i class="nav-icon nav-icon fas fa-book"></i>
+                  <p>Horarios</p>
                 </a>
               </li>
 
