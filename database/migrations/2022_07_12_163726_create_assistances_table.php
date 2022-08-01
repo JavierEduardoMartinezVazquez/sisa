@@ -1,8 +1,10 @@
+
 <?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use phpDocumentor\Reflection\Types\Nullable;
 
 class CreateAssistancesTable extends Migration
 {
@@ -15,15 +17,14 @@ class CreateAssistancesTable extends Migration
     {
         Schema::create('assistances', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('usuario',40)->nullable();
-            $table->date('fecha')->unique();
-            $table->time('hentrada'); 
-            $table->time('hsalida');
-            $table->time('observacion');
-            $table->rememberToken();
+            $table->string('empresa',100)->nullable();
+            $table->string('direccion')->nullable();
+            $table->integer('numero')->nullable();
+            $table->string('status',5)->nullable();
             $table->timestamps();
-        });
+        }); 
     }
+
     /**
      * Reverse the migrations.
      *

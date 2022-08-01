@@ -17,7 +17,7 @@
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item"><a href="#">Layout</a></li>
                         <li class="breadcrumb-item active">Boxed Layout</li>
-                        </ol>-->        
+                        </ol>-->
                     </div>
                 </div>
             </div>
@@ -26,7 +26,7 @@
         <section class="content">
             <div class="row">
                 <div class="col-12">
-                    <div class="card">
+                    <div class="card"> 
                         <div class="card-header">
                             <div class="row">
                                 <div class="col-sm-8">
@@ -47,13 +47,12 @@
                             <table id="tablelist" class=" tablelist table table-bordered table-striped display nowrap">
                                 <thead>
                                     <tr>
-                                        
-                                        <th>Usuario</th>
-                                        <th>Fecha</th>
-                                        <th>Entrada</th>
-                                        <th>Salida</th>
-                                        <th>Obeservacion</th>
-
+                                        <th ><div style="width:90px !important;">Operación</div></th>
+                                        <th>#</th>
+                                        <th>Empresa</th>
+                                        <th>Dirección</th>
+                                        <th>No. de empleados</th>
+                                        <th>Estatus</th>
                                     </tr>
                                 </thead>
                             </table>
@@ -70,20 +69,17 @@
     <script>
     //detectar cuando en el input de buscar por codigo de producto el usuario presione la tecla enter, si es asi se realizara la busqueda con el codigo escrito
         $(document).ready(function(){
-        $("#use").addClass('active');
+        $("#bus").addClass('active');
         });
     </script>
     <script>
         var obtener_ultimo_id_assistances = '{!!URL::to('obtener_ultimo_id_assistances')!!}';
-        var obtener_empresa = '{!!URL::to('obtener_empresa')!!}';
-        var obtener_horario = '{!!URL::to('obtener_horario')!!}'; 
-        var obtener_roles = '{!!URL::to('obtener_roles')!!}';
         var guardar_assistances = '{!!URL::to('guardar_assistances')!!}';
         var listar_assistances = '{!!URL::to('listar_assistances')!!}';
         var obtener_assistances = '{!!URL::to('obtener_assistances')!!}';
         var modificar_assistances = '{!!URL::to('modificar_assistances')!!}';
         var verificar_baja_assistances = '{!!URL::to('verificar_baja_assistances')!!}';
         var baja_assistances = '{!!URL::to('baja_assistances')!!}';     
-    </script>
-    <script src="scripts/user.js"></script>
+    </script> 
+    <script src="scripts/assistances.js"></script>
 @endsection    
