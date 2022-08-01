@@ -25,7 +25,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 
-Route::get('Start', 'WelcomeControlles@Start')->name('Start');
+//Route::get('Start', 'WelcomeControlles@Start')->name('Start');
 
 /*---------------Controlador Usuarios-----------------*/
 Route::get('User', 'UserController@User')->name('User');

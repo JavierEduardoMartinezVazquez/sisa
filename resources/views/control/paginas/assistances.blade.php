@@ -38,7 +38,9 @@
                                 <div class="col-md-1">
                                     <!---->
                                 </div>
-                                
+                                <div class="col-md-1">
+                                    <button type="submit" class="btn btn-danger" onclick="alta()">Agregar</button>
+                                </div>
                             </div>
                         </div>
                         <div class="card-body table-responsive">
@@ -46,7 +48,12 @@
                                 <thead>
                                     <tr>
                                         
-                                        <th>Email</th>
+                                        <th>Usuario</th>
+                                        <th>Fecha</th>
+                                        <th>Entrada</th>
+                                        <th>Salida</th>
+                                        <th>Obeservacion</th>
+
                                     </tr>
                                 </thead>
                             </table>

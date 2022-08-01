@@ -446,8 +446,11 @@
         columns: [
             { data: 'operaciones', name: 'operaciones', orderable: false, searchable: false },
             { data: 'id', name: 'id', orderable: true, searchable: true },
-            { data: 'name', name: 'name', orderable: true, searchable: true },
-            { data: 'email', name: 'email', orderable: true, searchable: true },
+            { data: 'usuario', name: 'usuario', orderable: true, searchable: true },
+            { data: 'fecha', name: 'fecha', orderable: true, searchable: true },{ data: 'usuario', name: 'usuario', orderable: true, searchable: true },
+            { data: 'hentrada', name: 'hentrada', orderable: true, searchable: true },
+            { data: 'hsalida', name: 'hsalida', orderable: true, searchable: true },
+            { data: 'observacion', name: 'observacion', orderable: true, searchable: true },
             { data: 'status', name: 'status', orderable: true, searchable: true },
         ],
         "order": [[ 1, "asc" ]]
@@ -567,8 +570,11 @@
             $("#tabsform").html(tabs);
             console.log(data);//mandas el arreglo
             $("#txtnumero").val(data.user.id);
-            $("#txtnombre").val(data.user.name);
-            $("#txtemail").val(data.user.email);
+            $("#txtuser").val(data.user.user);
+            $("#txtfecha").val(data.user.fecha);
+            $("#txthentrada").val(data.user.hentrada);
+            $("#txthsalida").val(data.user.hsalida);
+            $("#txtobservacion").val(data.user.observacion);
             mostrarmodalformulario('MODIFICACION', data.permitirmodificacion);
             mostrarformulario();
         }).fail( function() {

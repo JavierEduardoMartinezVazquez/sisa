@@ -14,11 +14,12 @@ class CreateAssistancesTable extends Migration
     public function up()
     {
         Schema::create('assistances', function (Blueprint $table) {
-            //$table->bigIncrements('id');
-            //$table->string('name',40)->nullable();
-            $table->string('email')->unique();
-            $table->string('password'); 
-           // $table->string('status',5)->nullable();
+            $table->bigIncrements('id');
+            $table->string('usuario',40)->nullable();
+            $table->date('fecha')->unique();
+            $table->time('hentrada'); 
+            $table->time('hsalida');
+            $table->time('observacion');
             $table->rememberToken();
             $table->timestamps();
         });

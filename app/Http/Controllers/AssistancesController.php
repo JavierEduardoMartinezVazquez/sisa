@@ -55,10 +55,12 @@ class AssistancesController extends Controller
                 $id = $ultimoNumeroTabla[0]->id+1;
         }
             $assistances = new C_assistances();
-            //$user->name=$request->nombre;
-            $assistances->email=$request->email;
-            $assistances->password=Hash::make($request->pass);
-            //$user->status="ALTA";
+            $assistances->usuario=$request->nombre;
+            $assistances->fecha=$request->fecha;
+            $assistances->hentrada=$request->hentrada;
+            $assistances->hsalida=$request->hsalida;
+            $assistances->observacion=$request->observacion;
+            //$assistances->status="ALTA";
             $assistances->save();
         }
         return response()->json($user);
@@ -68,8 +70,11 @@ class AssistancesController extends Controller
     {
         if($request->ajax()){
             $data = User::select('id',
-            'email',
-            'status'
+            'usuario',
+            'fecha',
+            'hentrada',
+            'hsalida',
+            'observacion',
         );
             return DataTables::of($data)
             ->addColumn('operaciones', function($data){
