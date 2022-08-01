@@ -28,9 +28,11 @@ class AssistancesController extends Controller
             $id = $ultimoNumeroTabla[0]->id+1;
         }
         $assistances = new C_assistances;
-        $assistances->empresa=$request->empresa;
-        $assistances->direccion=$request->direccion;
-        $assistances->numero=$request->numero;
+        $assistances->usuario=$request->usuario;
+        $assistances->fecha=$request->fecha;
+        $assistances->hentrada=$request->hentrada;
+        $assistances->hsalida=$request->hsalida;
+        $assistances->observaciones=$request->observaciones;
         $assistances->status='ALTA';        
         $assistances->save();
         return response()->json($assistances);
@@ -38,7 +40,7 @@ class AssistancesController extends Controller
     public function listar_assistances (Request $request)
     {
         if($request->ajax()){
-            $data = C_assistances::select('id','empresa','direccion','numero','status');
+            $data = C_assistances::select('id','usuario','fecha','hentrada','hsalida','observaciones','status');
             return DataTables::of($data)
             ->addColumn('operaciones', function($data){
                 $operaciones = '<div class="container">'.
@@ -71,9 +73,11 @@ class AssistancesController extends Controller
         C_assistances::where('id', $request->numero)
         ->update([
             //atributo de la Base => $request-> nombre de la caja de texto
-            'empresa'=> $request->empresa,
-            'direccion'=> $request->direccion,
-            'numero'=> $request->numero
+            'usuario'=> $request->usuario,
+            'fecha'=> $request->fecha,
+            'hentrada'=> $request->hentrada,
+            'hsalida'=> $request->hsalida,
+            'observaciones'=> $request->observaciones
         ]);
         return response()->json($assistances);
     }

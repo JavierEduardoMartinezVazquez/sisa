@@ -10,9 +10,11 @@ class C_assistances extends Model
     protected $table = 'assistances';
     protected $primarykey = 'id';
     protected $fillable = [
-        'empresa',
-        'direccion',
-        'numero',
+        'usuario',
+        'fecha',
+        'hentrada',
+        'hsalida',
+        'observaciones',
         'status'
         
     ];
