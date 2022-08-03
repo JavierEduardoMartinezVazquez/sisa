@@ -69,20 +69,29 @@
                                 '<div class="col-md-1">'+
                                 '</div>'+ 
                                 '<div class="col-md-10">'+
-                                
-                                    '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="text" class="form-control" name="empresa" id="txtempresa" placeholder="Nombre de la empresa" onkeyup="tipoLetra(this);" required>'+
-                                '</div>'+    
-                                '<div class="col-md-2">'+
-                                '</div>'+ 
-                                '<div class="col-md-8">'+ 
-                                '<br>'+ 
-                                    '<label>Direccion<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="text" class="form-control" name="direccion" id="txtdireccion" placeholder="Direccion" onkeyup="tipoLetra(this);" required>'+
-                                '</div>'+ 
-                                '<div class="col-md-2">'+
-                                '<label>No. de empleados<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="number" class="form-control" name="numero" id="txtnumero" required >'+
+                                    '<label>Usuario<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<input type="text" class="form-control" name="usuario" id="txtusuario" placeholder="Usuario" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+
+                                '<div class="col-md-4">'+
+                                '<label>Fecha<b style="color:#F44336 !important;">*</b></label>'+ 
+                                '<input type="date" class="form-control" name="fecha" id="txtfecha" placeholder="Fecha" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+
+                                '<div class="col-md-4">'+
+                                '<label>Entrada<b style="color:#F44336 !important;">*</b></label>'+ 
+                                '<input type="time" class="form-control" name="hentrada" id="txthentrada" placeholder="Entrada" onkeyup="tipoLetra(this);" required>'+ 
+                                '</div>'+
+                                '<div class="col-md-4">'+
+                                '<label>Salida<b style="color:#F44336 !important;">*</b></label>'+ 
+                                '<input type="time" class="form-control" name="hsalida" id="txthsalida" placeholder="Salida" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+
+                                '<div class="col-md-12">'+
+                                '<label>Observaciones<b style="color:#F44336 !important;">*</b></label>'+
+                                '<select class="form-select" name="observaciones" id="txtobservaciones" placeholder="Observaciones" onkeyup="tipoLetra(this);" required>'+
+                                '<option value="NINGUNA">NINGUNA</option>'+
+                                '<option value="RETARDO">RETARDO</option>'+
+                                '<option value="INCAPACIDAD">INCAPACIDAD</option>'+
+                                '<option value="FALTA">FALTA</option>'+
+                                '</select>'+
                             '</div>'+
                             '</div>'+
                         '</div>'+    
@@ -177,24 +186,35 @@
                                 '<div class="col-md-1">'+
                                     '<label>Numero:<b style="color:#F44336 !important;">*</b></label>'+                             
                                     '<input type="text" class="form-control" name="numero" id="txtnumero" required  readonly>'+ 
-                                '</div>'+ 
+                                '</div>'+
+                                '<br>'+
                                 '<div class="col-md-1">'+
                                 '</div>'+ 
-                                '<div class="col-md-10">'+ 
-                                    '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="text" class="form-control" name="empresa" id="txtempresa" placeholder="Empresa" onkeyup="tipoLetra(this);" required>'+
-                                '</div>'+    
-                                '<div class="col-md-2">'+
-                                '</div>'+ 
-                                '<div class="col-md-8">'+ 
-                                    '<label>Direccion<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="text" class="form-control" name="direccion" id="txtdireccion" placeholder="Direccion" onkeyup="tipoLetra(this);" required>'+
-                                '</div>'+ 
-                                '<div class="col-md-2">'+
-                                '<label>No. empleados<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="number" class="form-control" name="numero" id="txtnumero" required >'+
+                                '<div class="col-md-10">'+
+                                    '<label>Usuario<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<input type="text" class="form-control" name="usuario" id="txtusuario" placeholder="Usuario" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+
+                                '<div class="col-md-4">'+
+                                '<label>Fecha<b style="color:#F44336 !important;">*</b></label>'+ 
+                                '<input type="date" class="form-control" name="fecha" id="txtfecha" placeholder="Fecha" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+
+                                '<div class="col-md-4">'+
+                                '<label>Entrada<b style="color:#F44336 !important;">*</b></label>'+ 
+                                '<input type="time" class="form-control" name="hentrada" id="txthentrada" placeholder="Entrada" onkeyup="tipoLetra(this);" required>'+ 
+                                '</div>'+
+                                '<div class="col-md-4">'+
+                                '<label>Salida<b style="color:#F44336 !important;">*</b></label>'+ 
+                                '<input type="time" class="form-control" name="hsalida" id="txthsalida" placeholder="Salida" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+
+                                '<div class="col-md-12">'+
+                                '<label>Observaciones<b style="color:#F44336 !important;">*</b></label>'+
+                                '<select class="form-select" name="observaciones" id="txtobservaciones" placeholder="Observaciones" onkeyup="tipoLetra(this);" required>'+
+                                '<option value="NINGUNA">NINGUNA</option>'+
+                                '<option value="RETARDO">RETARDO</option>'+
+                                '<option value="INCAPACIDAD">INCAPACIDAD</option>'+
+                                '<option value="FALTA">FALTA</option>'+
+                                '</select>'+
                             '</div>'+
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
                             '</div>'+
                         '</div>'+    
                     '</div>'+
