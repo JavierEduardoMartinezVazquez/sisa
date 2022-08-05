@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
-
+/*
         $users = new User();
 
         $users->name = "JAVIER EDUARDO";
@@ -30,6 +30,7 @@ class DatabaseSeeder extends Seeder
         $users->rol="ADMIN";
         $users->status="ALTA";
         $users->save();
+        
 
         $users = new User();
 
@@ -62,7 +63,10 @@ class DatabaseSeeder extends Seeder
         $users->hsalida="05:30:00";
         $users->rol="ADMIN";
         $users->status="ALTA";
-        $users->save();
+        $users->save();*/
+
+        $this->call(RoleSeeder::class);
+        $this->call(UserSeeder::class);
 
 
     }

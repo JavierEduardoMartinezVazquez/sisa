@@ -86,7 +86,7 @@
                     <div class="form-group row mb-04">
                         <div class="col-md-4 offset-md-8">
                             <button type="submit" class="btn btn-danger">
-                                {{ __('Entrar') }}
+                                {{ __('Listo') }}
                             </button>
                 </div>
             </div>

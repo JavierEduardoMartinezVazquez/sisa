@@ -5,9 +5,12 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Spatie\Permission\Traits\HasRoles;
+
 
 class User extends Authenticatable
 {
+    use HasRoles;
     use Notifiable;
 
     /**
@@ -28,15 +31,6 @@ class User extends Authenticatable
         'ingreso',
         'hentrada',
         'hsalida',
-
-        /*
-        'fechaingresocorp',
-        'fechaingresoemp',
-        'fechabaja',
-        'id_horario',
-        'id_empresa',
-        'id_area',
-        'id_rol',*/
         'rol',
         'status'
     ];
