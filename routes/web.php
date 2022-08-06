@@ -28,7 +28,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 //Route::get('Start', 'WelcomeControlles@Start')->name('Start');
 
 /*---------------Controlador Usuarios-----------------*/
-Route::get('User', 'UserController@User')->name('User');
+Route::get('User', 'UserController@User')->middleware('can:User')->name('User');
 Route::get('obtener_ultimo_id_user', 'UserController@obtener_ultimo_id_user')->name('obtener_ultimo_id_user');
 Route::get('obtener_empresa', 'UserController@obtener_empresa')->name('obtener_empresa');
 Route::get('obtener_horario', 'UserController@obtener_horario')->name('obtener_horario');
