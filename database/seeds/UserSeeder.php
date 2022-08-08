@@ -25,7 +25,7 @@ class UserSeeder extends Seeder
             'ingreso' => '2022-05-01',
             'hentrada' =>'08:30:00',
             'hsalida' => '05:30:00',
-            'rol' => 'ADMIN',
+            'rol' => 'Admin',
             'status' => 'ALTA',
         ])->assignRole('Admin');
 
@@ -41,7 +41,7 @@ class UserSeeder extends Seeder
             'ingreso' => '2022-05-01',
             'hentrada' =>'08:30:00',
             'hsalida' => '05:30:00',
-            'rol' => 'USER',
+            'rol' => 'Usuar',
             'status' => 'ALTA',
         ])->assignRole('Usuar');
 

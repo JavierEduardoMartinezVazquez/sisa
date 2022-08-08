@@ -1,6 +1,6 @@
 @extends('plantilla')
 @section('titulo')
-    Reporte de Asistencias
+   Reporte de Asistencias
 @endsection
     @section('additionals_css')
 @endsection
@@ -26,11 +26,11 @@
         <section class="content">
             <div class="row">
                 <div class="col-12">
-                    <div class="card">
+                    <div class="card"> 
                         <div class="card-header">
                             <div class="row">
-                                <div class="col-sm-8">
-                                    <h4>Reporte de Asistencias</h4>
+                                <div class="col-sm-7">
+                                    <h4>Asistencias</h4>
                                 </div>
                                 <div class="col-md-1">
                                     <!---->
@@ -38,35 +38,32 @@
                                 <div class="col-md-1">
                                     <!---->
                                 </div>
+                                @can('User')
                                 <div class="col-md-1">
                                     <button type="submit" class="btn btn-danger" onclick="alta()">Agregar</button>
                                 </div>
+                                @endcan
+                                <div class="col-md-1">
+                                    
+                                    <a class="btn  btn-success waves-effect" href="{{route('export_excel')}}" target="_blank">
+                                        Excel
+                                    </a>
+                                
+                            </div>
                             </div>
                         </div>
                         <div class="card-body table-responsive">
                             <table id="tablelist" class=" tablelist table table-bordered table-striped display nowrap">
                                 <thead>
                                     <tr>
-                                        <th ><div style="width:90px !important;">Operación </div></th>
+                                        <th ><div style="width:90px !important;">Operación</div></th>
                                         <th>#</th>
-                                        <th>Nombre</th>
-                                        <th>Empresa</th>
-                                        <th>Departamento</th>
-                                        <th>Puesto</th>
-                                        <th>F.Solicitud</th>
-                                        <th>F.Ingreso</th>
-                                        <th>Aniverario</th>
-                                        <th>F.Inicio</th>
-                                        <th>F.Final</th>
-                                        <th>Inico de labores</th>
-                                        <th>Dias</th>
-                                        <th>P. Prima Vacacional </th>
-                                        <th>D. aniversario anterior</th>
-                                        <th>D. Pendientes</th>
-                                        <th>F. Autorizacion</th>
-                                        <th>Autorizado por</th>
-                                        <th>Status</th>
-                                        <th>Periodo</th>                            
+                                        <th>Usuario</th>
+                                        <th>Fecha</th>
+                                        <th>Entrada</th>
+                                        <th>Salida</th>
+                                        <th>Observaciones</th>
+                                        <th>Estatus</th>
                                     </tr>
                                 </thead>
                             </table>
@@ -76,24 +73,22 @@
             </div>
         </section>
     </div>
-    @include('control.modal.modal_alta')
-    @include('control.modal.modal_baja')
 @endsection
 @section('additionals_js')
     <script>
     //detectar cuando en el input de buscar por codigo de producto el usuario presione la tecla enter, si es asi se realizara la busqueda con el codigo escrito
         $(document).ready(function(){
-        $("#hol").addClass('active');
+        $("#bus").addClass('active');
         });
     </script>
     <script>
-        var obtener_ultimo_id_holidays = '{!!URL::to('obtener_ultimo_id_holidays')!!}';
-        var guardar_holidays = '{!!URL::to('guardar_holidays')!!}';
-        var listar_holidays = '{!!URL::to('listar_holidays')!!}';
-        var obtener_holidays = '{!!URL::to('obtener_holidays')!!}';
-        var modificar_holidays = '{!!URL::to('modificar_holidays')!!}';
-        var verificar_baja_holidays = '{!!URL::to('verificar_baja_holidays')!!}';
-        var baja_holidays = '{!!URL::to('baja_holidays')!!}';     
+        var obtener_ultimo_id_assistances = '{!!URL::to('obtener_ultimo_id_assistances')!!}';
+        var guardar_assistances = '{!!URL::to('guardar_assistances')!!}';
+        var listar_assistances = '{!!URL::to('listar_assistances')!!}';
+        var obtener_assistances = '{!!URL::to('obtener_assistances')!!}';
+        var modificar_assistances = '{!!URL::to('modificar_assistances')!!}';
+        var verificar_baja_assistances = '{!!URL::to('verificar_baja_assistances')!!}';
+        var baja_assistances = '{!!URL::to('baja_assistances')!!}';     
     </script> 
-    <script src="scripts/holidays.js"></script>
+    <script src="scripts/assistances.js"></script>
 @endsection    

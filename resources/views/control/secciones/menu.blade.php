@@ -55,14 +55,7 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('Assistances')}}" class="nav-link">
-                  <i class="nav-icon far fa-calendar-alt"></i>
-                  <p>Asistencias</p>
-                </a>
-              </li>
-              @endcan
-              @can('Holidays')
+              
               <li class="nav-item">
                 <a href="{{route('Holidays')}}" class="nav-link" id="hol">
                   <i class="nav-icon nav-icon fas fa-book"></i>
@@ -70,6 +63,16 @@
                 </a>
               </li>
               @endcan
+
+              @can('User')
+              <li class="nav-item">
+                <a href="{{route('Assistances')}}" class="nav-link">
+                  <i class="nav-icon far fa-calendar-alt"></i>
+                  <p>Asistencias</p>
+                </a>
+              </li>
+              @endcan
+
               @can('Permi')
               <li class="nav-item">
                 <a href="{{route('Permi')}}" class="nav-link" id="perm">
@@ -90,14 +93,7 @@
                 </p>
               </a>
               <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('Assistances')}}" class="nav-link">
-                  <i class="nav-icon far fa-calendar-alt"></i>
-                  <p>Asistencias</p>
-                </a>
-              </li>
-              @endcan
-              @can('Businessreporte')
+            
               <li class="nav-item">
                 <a href="{{route('Businessreporte')}}" class="nav-link" id="">
                   <i class="nav-icon far fas fa-cogs"></i>
@@ -105,6 +101,15 @@
                 </a>
               </li>
               @endcan
+              @can('Assistancesreports')
+              <li class="nav-item">
+                <a href="{{route('Assistancesreports')}}" class="nav-link">
+                  <i class="nav-icon far fa-calendar-alt"></i>
+                  <p>Asistencias</p>
+                </a>
+              </li>
+              @endcan
+
               @can('Hourhandreporte')
               <li class="nav-item">
                 <a href="{{route('Hourhandreporte')}}" class="nav-link" id="">
