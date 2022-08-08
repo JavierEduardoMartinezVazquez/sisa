@@ -29,7 +29,7 @@
                     <div class="card"> 
                         <div class="card-header">
                             <div class="row">
-                                <div class="col-sm-8">
+                                <div class="col-sm-7">
                                     <h4>Asistencias</h4>
                                 </div>
                                 <div class="col-md-1">
@@ -41,6 +41,13 @@
                                 <div class="col-md-1">
                                     <button type="submit" class="btn btn-danger" onclick="alta()">Agregar</button>
                                 </div>
+                                <div class="col-md-1">
+                                    
+                                    <a class="btn  btn-success waves-effect" href="{{route('export_excel')}}" target="_blank">
+                                        Excel
+                                    </a>
+                                
+                            </div>
                             </div>
                         </div>
                         <div class="card-body table-responsive">

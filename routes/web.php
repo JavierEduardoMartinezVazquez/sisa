@@ -159,6 +159,9 @@ Route::get('obtener_assistances', 'AssistancesController@obtener_assistances')->
 Route::post('modificar_assistances', 'AssistancesController@modificar_assistances')->name('modificar_assistances');
 Route::get('verificar_baja_assistances', 'AssistancesController@verificar_baja_assistances')->name('verificar_baja_assistances');
 Route::post('baja_assistances', 'AssistancesController@baja_assistances')->name('baja_assistances');
+Route::get('export_excel', 'AssistancesController@export_excel')->name('export_excel');
+
+
 
 /*--------------------Controlador Reporte de Asistencias-------------------*/
 Route::get('Assistancesreports', 'AssistancesreportsController@Assistancesreports')->name('Assistancesreports');

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 use Yajra\DataTables\Facades\DataTables;
 use App\C_assistances;
+use App\Exports\AssistancesExport;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class AssistancesController extends Controller
 {
@@ -94,5 +96,11 @@ class AssistancesController extends Controller
             'status'=> 'BAJA'
         ]);
         return response()->json($assistances);
+    }
+    public function export_excel(Request $request){
+        ini_set('max_execution_time', 300); // 5 minutos
+        ini_set('memory_limit', '-1');
+        $columns = ['usuario','fecha','hentrada','hsalida','observaciones'];
+        return Excel::download(new AssistancesExport($columns), "assistance.xlsx");
     }
 }
