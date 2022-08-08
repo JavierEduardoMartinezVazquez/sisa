@@ -70,25 +70,25 @@
                                 '</div>'+ 
                                 '<div class="col-md-10">'+
                                     '<label>Usuario<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="text" class="form-control" name="usuario" id="txtusuario" placeholder="Usuario" onkeyup="tipoLetra(this);" required>'+
+                                    '<input type="text" class="form-control" name="Usuario" id="txtUsuario" placeholder="Usuario" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+
 
 
                                 '<div class="col-md-4">'+
                                 '<label>Fecha<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="date" class="form-control" name="fecha" id="txtfecha" placeholder="Fecha" onkeyup="tipoLetra(this);" required>'+
+                                '<input type="date" class="form-control" name="Fecha" id="txtFecha" placeholder="Fecha" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+
                                 '<div class="col-md-4">'+
                                 '<label>Entrada<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="time" class="form-control" name="hentrada" id="txthentrada" placeholder="Entrada" onkeyup="tipoLetra(this);" required>'+ 
+                                '<input type="time" class="form-control" name="Entrada" id="txtEntrada" placeholder="Entrada" onkeyup="tipoLetra(this);" required>'+ 
                                 '</div>'+
                                 '<div class="col-md-4">'+
                                 '<label>Salida<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="time" class="form-control" name="hsalida" id="txthsalida" placeholder="Salida" onkeyup="tipoLetra(this);" required>'+
+                                '<input type="time" class="form-control" name="Salida" id="txtSalida" placeholder="Salida" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+
                                 '<div class="col-md-12">'+
                                 '<label>Observaciones<b style="color:#F44336 !important;">*</b></label>'+
-                                '<select class="form-select" name="observaciones" id="txtobservaciones" placeholder="Observaciones" onkeyup="tipoLetra(this);" required>'+
+                                '<select class="form-select" name="Observaciones" id="txtObservaciones" placeholder="Observaciones" onkeyup="tipoLetra(this);" required>'+
                                 '<option value="NINGUNA">NINGUNA</option>'+
                                 '<option value="RETARDO">RETARDO</option>'+
                                 '<option value="INCAPACIDAD">INCAPACIDAD</option>'+
@@ -164,11 +164,11 @@
         columns: [
             { data: 'operaciones', name: 'operaciones', orderable: false, searchable: false },
             { data: 'id', name: 'id', orderable: true, searchable: true },
-            { data: 'usuario', name: 'usuario', orderable: true, searchable: true },
-            { data: 'fecha', name: 'fecha', orderable: true, searchable: true},
-            { data: 'hentrada', name: 'hentrada', orderable: true, searchable: true},
-            { data: 'hsalida', name: 'hsalida', orderable: true, searchable: true},
-            { data: 'observaciones', name: 'observaciones', orderable: true, searchable: true},
+            { data: 'Usuario', name: 'Usuario', orderable: true, searchable: true },
+            { data: 'Fecha', name: 'Fecha', orderable: true, searchable: true},
+            { data: 'Entrada', name: 'Entrada', orderable: true, searchable: true},
+            { data: 'Salida', name: 'Salida', orderable: true, searchable: true},
+            { data: 'Observaciones', name: 'Observaciones', orderable: true, searchable: true},
             { data: 'status', name: 'status', orderable: true, searchable: true },
             
         ],
@@ -194,25 +194,25 @@
                                 '</div>'+ 
                                 '<div class="col-md-10">'+
                                     '<label>Usuario<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="text" class="form-control" name="usuario" id="txtusuario" placeholder="Usuario" onkeyup="tipoLetra(this);" required>'+
+                                    '<input type="text" class="form-control" name="Usuario" id="txtUsuario" placeholder="Usuario" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+
 
 
                                 '<div class="col-md-4">'+
                                 '<label>Fecha<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="date" class="form-control" name="fecha" id="txtfecha" placeholder="Fecha" onkeyup="tipoLetra(this);" required>'+
+                                '<input type="date" class="form-control" name="Fecha" id="txtFecha" placeholder="Fecha" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+
                                 '<div class="col-md-4">'+
                                 '<label>Entrada<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="time" class="form-control" name="hentrada" id="txthentrada" placeholder="Entrada" onkeyup="tipoLetra(this);" required>'+ 
+                                '<input type="time" class="form-control" name="Entrada" id="txtEntrada" placeholder="Entrada" onkeyup="tipoLetra(this);" required>'+ 
                                 '</div>'+
                                 '<div class="col-md-4">'+
                                 '<label>Salida<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="time" class="form-control" name="hsalida" id="txthsalida" placeholder="Salida" onkeyup="tipoLetra(this);" required>'+
+                                '<input type="time" class="form-control" name="Salida" id="txtSalida" placeholder="Salida" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+
                                 '<div class="col-md-12">'+
                                 '<label>Observaciones<b style="color:#F44336 !important;">*</b></label>'+
-                                '<select class="form-select" name="observaciones" id="txtobservaciones" placeholder="Observaciones" onkeyup="tipoLetra(this);" required>'+
+                                '<select class="form-select" name="Observaciones" id="txtObservaciones" placeholder="Observaciones" onkeyup="tipoLetra(this);" required>'+
                                 '<option value="NINGUNA">NINGUNA</option>'+
                                 '<option value="RETARDO">RETARDO</option>'+
                                 '<option value="INCAPACIDAD">INCAPACIDAD</option>'+
@@ -227,11 +227,11 @@
             $("#tabsform").html(tabs);
             console.log(data);//mandas el arreglo
             $("#txtnumero").val(data.assistances.id);
-            $("#txtusuario").val(data.assistances.usuario);
-            $("#txtfecha").val(data.assistances.fecha);
-            $("#txthentrada").val(data.assistances.hentrada);
-            $("#txthsalida").val(data.assistances.hsalida);
-            $("#txtobservaciones").val(data.assistances.observaciones); 
+            $("#txtUsuario").val(data.assistances.Usuario);
+            $("#txtFecha").val(data.assistances.Fecha);
+            $("#txtEntrada").val(data.assistances.Entrada);
+            $("#txtSalida").val(data.assistances.Salida);
+            $("#txtObservaciones").val(data.assistances.Observaciones); 
             mostrarmodalformulario('MODIFICACION', data.permitirmodificacion);
             mostrarformulario();
         }).fail( function() {

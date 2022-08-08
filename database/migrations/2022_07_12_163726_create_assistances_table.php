@@ -17,11 +17,11 @@ class CreateAssistancesTable extends Migration
     {
         Schema::create('assistances', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('usuario')->nullable();
-            $table->date('fecha')->nullable();
-            $table->time('hentrada')->nullable();
-            $table->time('hsalida')->nullable();
-            $table->string('observaciones', 15)->nullable();
+            $table->string('Usuario')->nullable();
+            $table->date('Fecha')->nullable();
+            $table->time('Entrada')->nullable();
+            $table->time('Salida')->nullable();
+            $table->string('Observaciones', 15)->nullable();
             $table->string('status',5)->nullable();
             $table->timestamps();
         }); 

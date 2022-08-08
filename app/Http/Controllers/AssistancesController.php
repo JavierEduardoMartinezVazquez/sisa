@@ -30,11 +30,11 @@ class AssistancesController extends Controller
             $id = $ultimoNumeroTabla[0]->id+1;
         }
         $assistances = new C_assistances;
-        $assistances->usuario=$request->usuario;
-        $assistances->fecha=$request->fecha;
-        $assistances->hentrada=$request->hentrada;
-        $assistances->hsalida=$request->hsalida;
-        $assistances->observaciones=$request->observaciones;
+        $assistances->Usuario=$request->Usuario;
+        $assistances->Fecha=$request->Fecha;
+        $assistances->Entrada=$request->Entrada;
+        $assistances->Salida=$request->Salida;
+        $assistances->Observaciones=$request->Observaciones;
         $assistances->status='ALTA';        
         $assistances->save();
         return response()->json($assistances);
@@ -42,7 +42,7 @@ class AssistancesController extends Controller
     public function listar_assistances (Request $request)
     {
         if($request->ajax()){
-            $data = C_assistances::select('id','usuario','fecha','hentrada','hsalida','observaciones','status');
+            $data = C_assistances::select('id','Usuario','Fecha','Entrada','Salida','Observaciones','status');
             return DataTables::of($data)
             ->addColumn('operaciones', function($data){
                 $operaciones = '<div class="container">'.
@@ -75,11 +75,11 @@ class AssistancesController extends Controller
         C_assistances::where('id', $request->numero)
         ->update([
             //atributo de la Base => $request-> nombre de la caja de texto
-            'usuario'=> $request->usuario,
-            'fecha'=> $request->fecha,
-            'hentrada'=> $request->hentrada,
-            'hsalida'=> $request->hsalida,
-            'observaciones'=> $request->observaciones
+            'Usuario'=> $request->Usuario,
+            'Fecha'=> $request->fecha,
+            'Entrada'=> $request->hentrada,
+            'Salida'=> $request->hsalida,
+            'Observaciones'=> $request->observaciones
         ]);
         return response()->json($assistances);
     }
@@ -100,7 +100,7 @@ class AssistancesController extends Controller
     public function export_excel(Request $request){
         ini_set('max_execution_time', 300); // 5 minutos
         ini_set('memory_limit', '-1');
-        $columns = ['usuario','fecha','hentrada','hsalida','observaciones'];
-        return Excel::download(new AssistancesExport($columns), "assistance.xlsx");
+        $columns = ['Usuario','Fecha','Entrada','Salida','Observaciones'];
+        return Excel::download(new AssistancesExport($columns), "Asistencias.xlsx");
     }
 }
