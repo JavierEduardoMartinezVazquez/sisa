@@ -100,7 +100,7 @@
                         <form class="col-row-12">
                             <br>
                             <br>
-                            <a href="http://127.0.0.1:8000/login" class="btn btn-outline-secondary">INGRESAR</a>
+                            <a href="login" class="btn btn-outline-secondary">INGRESAR</a>
                         </div>
                       </div>
                 </div>
