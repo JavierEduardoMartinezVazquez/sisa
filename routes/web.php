@@ -39,6 +39,9 @@ Route::get('obtener_user', 'UserController@obtener_user')->name('obtener_user');
 Route::post('modificar_user', 'UserController@modificar_user')->name('modificar_user');
 Route::get('verificar_baja_user', 'UserController@verificar_baja_user')->name('verificar_baja_user');
 Route::post('baja_user', 'UserController@baja_user')->name('baja_user');
+Route::get('credencial_pdf/{user_id}', 'UserController@credencial_pdf')->name('credencial_pdf');
+
+
 
 /*---------------Controlador empresas-----------------*/
 Route::get('Business', 'BusinessController@Business')->name('Business');

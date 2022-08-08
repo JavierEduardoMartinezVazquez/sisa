@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
 //use Illuminate\Foundation\Auth\User;
+use PDF;
 
 class UserController extends Controller
 {
@@ -133,6 +134,7 @@ class UserController extends Controller
                                     '<div class="row">'.
                                             '<div class="col"><a href="javascript:void(0);" onclick="obteneruser('.$data->id.')"><i class="fas fa-pen-square" aria-hidden="true"></i></a></div>'.
                                             '<div class="col"><a href="javascript:void(0);" onclick="verificarbajauser('.$data->id.')"><i class="fa fa-minus-square" aria-hidden="true"></i></a></div>'.
+                                            '<div class="col"><a class="paddingmenuopciones" href="'.route('credencial_pdf',$data->id).'" target="_blank">Generar credencial</a></div>'.
                                         '</div>'.
                                 '</div>';
                 return $operaciones;
@@ -199,5 +201,15 @@ class UserController extends Controller
             'status'=> 'BAJA'
         ]);
         return response()->json($user);
+    }
+    public function credencial_pdf($user_id){
+        //dd($user_id);
+        $user = User::find($user_id);
+        $pdf = PDF::loadView('control.paginas.credencial', compact('user'))
+        ->setPaper('Letter');
+        //->setOption('margin-left', 2)
+        //->setOption('margin-right', 2)
+        //->setOption('margin-bottom', 10);
+        return $pdf->stream();
     }
 }
