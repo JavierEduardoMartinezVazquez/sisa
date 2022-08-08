@@ -45,7 +45,7 @@
               </li>
             </ul>
             @endcan
-          @can('Assistances')
+          @can('Holidays')
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item has-treeview">
             <a class="nav-link active">
@@ -81,7 +81,7 @@
             @endcan
 
 <!--USUARIO -->
-@can('Assistances')     
+@can('Businessreporte')     
       <li class="nav-item has-treeview">
               <a class="nav-link active">
                 <i class="nav-icon fas fa-chart-pie"></i>

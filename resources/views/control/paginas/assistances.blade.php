@@ -38,9 +38,11 @@
                                 <div class="col-md-1">
                                     <!---->
                                 </div>
+                                @can('User')
                                 <div class="col-md-1">
                                     <button type="submit" class="btn btn-danger" onclick="alta()">Agregar</button>
                                 </div>
+                                @endcan
                                 <div class="col-md-1">
                                     
                                     <a class="btn  btn-success waves-effect" href="{{route('export_excel')}}" target="_blank">

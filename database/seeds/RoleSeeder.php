@@ -133,14 +133,14 @@ class RoleSeeder extends Seeder
         Permission::create(['name' => 'baja_nominas'])->syncRoles([$role1,$role2]);
 
 
-        Permission::create(['name' => 'Assistances'])->syncRoles([$role1,$role2]);
-        Permission::create(['name' => 'obtener_ultimo_id_assistances'])->syncRoles([$role1,$role2]);
-        Permission::create(['name' => 'guardar_assistances'])->syncRoles([$role1,$role2]);
-        Permission::create(['name' => 'listar_assistances'])->syncRoles([$role1,$role2]);
-        Permission::create(['name' => 'obtener_assistances'])->syncRoles([$role1,$role2]);
-        Permission::create(['name' => 'modificar_assistances'])->syncRoles([$role1,$role2]);
-        Permission::create(['name' => 'verificar_baja_assistances'])->syncRoles([$role1,$role2]);
-        Permission::create(['name' => 'baja_assistances'])->syncRoles([$role1,$role2]);
+        Permission::create(['name' => 'Assistances'])->assignRole($role1);
+        Permission::create(['name' => 'obtener_ultimo_id_assistances'])->assignRole($role1);
+        Permission::create(['name' => 'guardar_assistances'])->assignRole($role1);
+        Permission::create(['name' => 'listar_assistances'])->assignRole($role1);
+        Permission::create(['name' => 'obtener_assistances'])->assignRole($role1);
+        Permission::create(['name' => 'modificar_assistances'])->assignRole($role1);
+        Permission::create(['name' => 'verificar_baja_assistances'])->assignRole($role1);
+        Permission::create(['name' => 'baja_assistances'])->assignRole($role1);
         
 
 

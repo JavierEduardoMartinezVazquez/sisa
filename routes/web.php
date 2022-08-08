@@ -154,7 +154,7 @@ Route::get('verificar_baja_nominas', 'NominasController@verificar_baja_nominas')
 Route::post('baja_nominas', 'NominasController@baja_nominas')->name('baja_nominas');
 
 /*--------------------Controlador Asistencias-------------------*/
-Route::get('Assistances', 'AssistancesController@Assistances')->name('Assistances');
+Route::get('Assistances', 'AssistancesController@Assistances')->middleware('can:Assistances')->name('Assistances');
 Route::get('obtener_ultimo_id_assistances', 'AssistancesController@obtener_ultimo_id_assistances')->name('obtener_ultimo_id_assistances');
 Route::post('guardar_assistances', 'AssistancesController@guardar_assistances')->name('guardar_assistances');
 Route::get('listar_assistances', 'AssistancesController@listar_assistances')->name('listar_assistances');

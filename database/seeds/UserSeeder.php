@@ -26,7 +26,7 @@ class UserSeeder extends Seeder
             'hentrada' =>'08:30:00',
             'hsalida' => '05:30:00',
             'rol' => 'ADMIN',
-            'status' => 'Admin',
+            'status' => 'ALTA',
         ])->assignRole('Admin');
 
         User::create([
@@ -42,7 +42,7 @@ class UserSeeder extends Seeder
             'hentrada' =>'08:30:00',
             'hsalida' => '05:30:00',
             'rol' => 'USER',
-            'status' => 'Usuar',
+            'status' => 'ALTA',
         ])->assignRole('Usuar');
 
 
