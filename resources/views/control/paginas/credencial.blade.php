@@ -115,10 +115,10 @@
 	<div class="card">
 		<div class="top-container">
 			<img src="control/img/foto.jpg" class="img-fluid profile-image" width="70">
-			
+            
 			<div class="ml-3">
-				<h5 class="name">{{ Auth::user()->name }} </h5>
-				<p class="mail">{{ Auth::user()->email }} </p>
+				<h5 class="name">{{ $user->name }} </h5>
+				<p class="mail">{{ $user->email }} </p>
 			</div>
 		</div>
 		<div class="recent-border mt-4">
@@ -131,14 +131,14 @@
                     <td>Salida</td>
                 </tr>
                 <tr>
-                    <td>{{ Auth::user()->hentrada }} </td>
-                    <td>{{ Auth::user()->hsalida }} </td>
+                    <td>{{ $user->hentrada }} </td>
+                    <td>{{ $user->hsalida }} </td>
                 </tr>              
             </table>
 		</div>
         <br>
         <div style="text-align:right">
-            {!! DNS2D::getBarcodeHTML('4445645656', 'QRCODE', 5 ,5) !!}
+            {!! DNS2D::getBarcodeHTML("'".$user->id."'", 'QRCODE', 5 ,5) !!}
         </div>
 	</div>
 </div>

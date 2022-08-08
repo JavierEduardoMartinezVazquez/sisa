@@ -134,7 +134,7 @@ class UserController extends Controller
                                     '<div class="row">'.
                                             '<div class="col"><a href="javascript:void(0);" onclick="obteneruser('.$data->id.')"><i class="fas fa-pen-square" aria-hidden="true"></i></a></div>'.
                                             '<div class="col"><a href="javascript:void(0);" onclick="verificarbajauser('.$data->id.')"><i class="fa fa-minus-square" aria-hidden="true"></i></a></div>'.
-                                            '<div class="col"><a class="paddingmenuopciones" href="'.route('credencial_pdf',$data->id).'" target="_blank">Generar credencial</a></div>'.
+                                            '<div class="col"><a class="paddingmenuopciones" href="'.route('credencial_pdf',$data->id).'" target="_blank"><i class="fa fa-address-card" aria-hidden="true"></i></a></div>'.
                                         '</div>'.
                                 '</div>';
                 return $operaciones;
@@ -204,9 +204,11 @@ class UserController extends Controller
     }
     public function credencial_pdf($user_id){
         //dd($user_id);
+        $customPaper = array(0,0,325.00,394.00);
+
         $user = User::find($user_id);
         $pdf = PDF::loadView('control.paginas.credencial', compact('user'))
-        ->setPaper('Letter');
+        ->setPaper($customPaper);
         //->setOption('margin-left', 2)
         //->setOption('margin-right', 2)
         //->setOption('margin-bottom', 10);
