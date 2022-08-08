@@ -69,13 +69,8 @@
         });
     </script>
     <script>
-        var obtener_ultimo_id_business = '{!!URL::to('obtener_ultimo_id_business')!!}';
-        var guardar_business = '{!!URL::to('guardar_business')!!}';
         var listar_business = '{!!URL::to('listar_business')!!}';
-        var obtener_business = '{!!URL::to('obtener_business')!!}';
-        var modificar_business = '{!!URL::to('modificar_business')!!}';
-        var verificar_baja_business = '{!!URL::to('verificar_baja_business')!!}';
-        var baja_business = '{!!URL::to('baja_business')!!}';     
+           
     </script> 
     <script src="scripts/business.js"></script>
 @endsection    
