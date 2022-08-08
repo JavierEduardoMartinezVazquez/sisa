@@ -51,7 +51,7 @@
         $("#tabsform").empty();
     }
     function alta(){
-        $("#titulomodal").html('Alta Empresa');
+        $("#titulomodal").html('Asistencia');
         mostrarmodalformulario('ALTA');
         mostrarformulario();
         //formulario alta
@@ -72,6 +72,14 @@
                                     '<label>Usuario<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="text" class="form-control" name="usuario" id="txtusuario" placeholder="Usuario" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+
+
+
+                                '<div class="col-md-3>'+ 
+                                                '<label>Usuario<b style="color:#F44336 !important;">*</b></label>'+
+                                                    '<select class="form-select" name="usuario" id="txtusuario" placeholder="Usuario" onkeyup="tipoLetra(this);" required>'+
+                                            '</div>'+
+
+
                                 '<div class="col-md-4">'+
                                 '<label>Fecha<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="date" class="form-control" name="fecha" id="txtfecha" placeholder="Fecha" onkeyup="tipoLetra(this);" required>'+
@@ -174,7 +182,7 @@
         })
     }
     function obtenerassistances(numero){
-        $("#titulomodal").html('Modificación Empresa');
+        $("#titulomodal").html('Modificación Asistencia');
         $.get(obtener_assistances,{numero:numero },function(data){
             //se crea al formlario
             var tabs =
@@ -194,6 +202,8 @@
                                     '<label>Usuario<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="text" class="form-control" name="usuario" id="txtusuario" placeholder="Usuario" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+
+
+
                                 '<div class="col-md-4">'+
                                 '<label>Fecha<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="date" class="form-control" name="fecha" id="txtfecha" placeholder="Fecha" onkeyup="tipoLetra(this);" required>'+

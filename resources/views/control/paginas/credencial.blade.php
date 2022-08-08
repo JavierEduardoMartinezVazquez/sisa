@@ -1,11 +1,11 @@
 <style>
     body{
-	background-color: #eee;
+	background-color: #5a57f98d;
 }
 .card{
 	background-color: #fff;
 	width: 280px;
-	border-radius: 33px;
+	border-radius: 0px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	padding: 2rem !important;
 }
@@ -14,18 +14,18 @@
 	align-items: center;
 }
 .profile-image{
-	border-radius: 10px;
+	border-radius: 35px;
 	border: 2px solid #5957f9;
 }
 .name{
 	font-size: 15px;
-	font-weight: bold;
+	font-weight: serif;
 	color: #272727;
 	position: relative;
 	top: 8px;
 }
 .mail{
-	font-size: 14px;
+	font-size: 13px;
 	color: grey;
 	position: relative;
 	top: 2px;
@@ -111,17 +111,19 @@
 	border-bottom: 1px solid #dee2e6!important;
 }
 </style>
-<div class="container d-flex justify-content-center mt-5">
+<div class="container d-flex justify-content-center">
 	<div class="card">
-		<div class="top-container">
+		<div class="container">
 			<img src="control/img/foto.jpg" class="img-fluid profile-image" width="70">
-            
 			<div class="ml-3">
-				<h5 class="name">{{ $user->name }} </h5>
+				<h5 class="name">{{ $user->name }}
+				{{ $user->lastname_p }}
+				{{ $user->lastname_m }} </h5>
 				<p class="mail">{{ $user->email }} </p>
 			</div>
 		</div>
 		<div class="recent-border mt-4">
+			<br>
 			<table>
                 <tr>
                     <td colspan="2">Horarios</td>
@@ -138,7 +140,5 @@
 		</div>
         <br>
         <div style="text-align:right">
-            {!! DNS2D::getBarcodeHTML("'".$user->id."'", 'QRCODE', 5 ,5) !!}
+            {!! DNS2D::getBarcodeHTML("'".$user->name."'", 'QRCODE', 3 ,3) !!}
         </div>
-	</div>
-</div>

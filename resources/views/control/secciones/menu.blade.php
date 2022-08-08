@@ -99,7 +99,7 @@
               @endcan
               @can('Businessreporte')
               <li class="nav-item">
-                <a href="{{route('Businessreporte')}}" class="nav-link" id="bus">
+                <a href="{{route('Businessreporte')}}" class="nav-link" id="">
                   <i class="nav-icon far fas fa-cogs"></i>
                   <p>Empresas</p>
                 </a>
@@ -107,7 +107,7 @@
               @endcan
               @can('Hourhandreporte')
               <li class="nav-item">
-                <a href="{{route('Hourhandreporte')}}" class="nav-link" id="hor">
+                <a href="{{route('Hourhandreporte')}}" class="nav-link" id="">
                 <i class="nav-icon nav-icon fas fa-book"></i>
                   <p>Horarios</p>
                 </a>
