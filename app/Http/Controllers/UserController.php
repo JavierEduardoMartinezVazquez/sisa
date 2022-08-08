@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use App\C_business;
 use App\C_hourhand;
 use App\C_Roles;
+use App\Role;
+use App\User;
 use Carbon\Carbon;
 Use Helpers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
-use Illuminate\Foundation\Auth\User;
+//use Illuminate\Foundation\Auth\User;
 
 class UserController extends Controller
 {
@@ -53,18 +55,13 @@ class UserController extends Controller
         }
     }
     public function obtener_roles(){
-        $getroles = C_Roles::orderBy("id", "DESC")->get();
-        $roles = "";
-        $contador = 1;        
-            foreach($getroles as $getrol){
-            $roles = $roles.
-            '<div class="col-md">'.
-                '<input class="form-check-input" type="radio" name="rol" id="rol'.$contador.'" value="'.$getrol->id.'" required></input>'.
-                '<label for="rol'.$contador.'">'.$getrol->tipo.'</label>'.
-            '</div>';
-            $contador++;
+        $roles = Role::all();
+        $select_roles= "<option >Selecciona...</option>";
+        foreach($roles as $rol){
+            $select_roles = $select_roles."<option value='".$rol->name."'>".$rol->name."</option>";
         }
-        return response()->json($roles);
+        return response()->json($select_roles);
+        
     }
     public function guardar_user(Request $request){
         $email=$request->email;
@@ -98,6 +95,10 @@ class UserController extends Controller
             $user->id_rol=$request->rol;*/
             $user->status="ALTA";
             $user->save();
+
+            $user->assignRole($request->rol);
+
+
         }
         return response()->json($user);
 

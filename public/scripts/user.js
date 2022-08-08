@@ -200,8 +200,8 @@
         mostrarformulario();
       }
       function obtenerroles(){
-        $.get(obtener_roles, function(roles){
-            $("#roles").html(roles);
+        $.get(obtener_roles, function(select_roles){
+            $("#txtrol").html(select_roles);
         })      
     }
     function alta(){
@@ -296,9 +296,7 @@
                                 '</div>'+
                                 '<div class="col-md-3">'+ 
                                     '<label>Rol<b style="color:#F44336 !important;">*</b></label>'+
-                                        '<select class="form-select" name="rol" id="txtsucursal" placeholder="Rol" onkeyup="tipoLetra(this);" required>'+
-                                        '<option value="ADMIN">ADMIN</option>'+
-                                        '<option value="USUARIO">USUARIO</option>'+
+                                        '<select class="form-select" name="rol" id="txtrol" placeholder="Rol" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+
                                 
                             /*'</div>'+
