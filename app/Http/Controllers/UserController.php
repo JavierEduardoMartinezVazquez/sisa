@@ -147,24 +147,14 @@ class UserController extends Controller
     public function obtener_user(Request $request){        
         $user= User::where('id', $request->numero)->first();
         $permitirmodificacion = 1;
-        $getroles = C_Roles::orderBy("id", "DESC")->get();
-        $roles = "";
-        $contador = 1;
+        $getroles = Role::orderBy("id", "DESC")->get();
+        $select_roles= "<option >Selecciona...</option>";
         foreach($getroles as $getrol){
-            if($getrol->id == $user->id_roles){
-                $roles = $roles.
-                '<div class="col-md">'.
-                    '<input class="form-check-input" type="radio" name="rol" id="rol'.$contador.'" value="'.$getrol->id.'" required checked></input>'.
-                    '<label for="rol'.$contador.'">'.$getrol->tipo.'</label>'.
-                '</div>';
+            if($getrol->name == $user->rol){
+                $select_roles = $select_roles."<option value='".$getrol->name."' selected>".$getrol->name."</option>";
             }else{
-                $roles = $roles.
-                '<div class="col-md">'.
-                    '<input class="form-check-input" type="radio" name="rol" id="rol'.$contador.'" value="'.$getrol->id.'" required></input>'.
-                    '<label for="rol'.$contador.'">'.$getrol->tipo.'</label>'.
-                '</div>';
-            }
-            $contador++;        
+                $select_roles = $select_roles."<option value='".$getrol->name."'>".$getrol->name."</option>";
+            }       
         }        
         if($user->status == 'BAJA'){ 
             $permitirmodificacion = 0;
@@ -174,7 +164,7 @@ class UserController extends Controller
             "fechadeingresocorp" => Carbon::parse($user->fechaingresocorp)->format('Y-m-d')."T".Carbon::parse($user->fechaingresocorp)->format('H:i'),
             "fechadeingresoemp" => Carbon::parse($user->fechaingresoemp)->format('Y-m-d')."T".Carbon::parse($user->fechaingresoemp)->format('H:i'),
             "fechadebaja" => Helpers::formatoinputdatetime($user->fechabaja),
-            "roles" => $roles,
+            "select_roles" => $select_roles,
             "permitirmodificacion" => $permitirmodificacion
         );
         return response()->json($data);
@@ -184,8 +174,16 @@ class UserController extends Controller
         User::where('id', $request->numero)
         ->update([
             //atributo de la Base => $request-> nombre de la caja de texto
-            'nombre'=> $request->nombre
+            'name'=> $request->nombre,
+            'lastname_p' => $request->paterno,
+            //'rol' => $request->rol,
         ]);
+
+        
+
+        //$user->assignRole($request->rol);
+
+
         return response()->json($user);
     }
     public function verificar_baja_user(Request $request){

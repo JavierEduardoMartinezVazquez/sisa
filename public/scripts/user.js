@@ -473,114 +473,64 @@
         $.get(obtener_user,{numero:numero },function(data){
             //se crea al formulario
             var tabs =
-            '<div class="row">'+
-            '<div class="col-12 col-sm-12">'+
-                    '<div class="card-body">'+
-                        '<div class="tab-content" id="custom-tabs-one-tabContent">'+
-                            '<div class="tab-pane fade show active" id="p_datos" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">'+
-
-                                '<div class="container">'+
-                                    '<div class="form-group row">'+
-                                        '<div class="col-md-1">'+
-                                            '<label>ID:</label>'+                            
-                                            '<input type="text" class="form-control" name="numero" id="txtnumero" placeholder="ID" onkeyup="tipoLetra(this);" required readonly>'+
-                                        '</div>'+
-                                        '<div class="col-md-4">'+
-                                            '<label>Nombre:</label>'+                            
-                                            '<input type="text" class="form-control" name="nombre" id="txtnombre" placeholder="Nombre" onkeyup="tipoLetra(this);" required>'+
-                                        '</div>'+ 
-                                        '<div class="col-md-4">'+ 
-                                            '<label>A. Paterno</label>'+
-                                            '<input type="text" class="form-control" name="paterno" id="txtpaterno" placeholder="1er Apellido" onkeyup="tipoLetra(this);" required>'+
-                                        '</div>'+
-                                        '<div class="col-md-3">'+ 
-                                            '<label>A. Materno</label>'+
-                                            '<input type="text" class="form-control" name="materno" id="txtmaterno" placeholder="2do Apellido"" onkeyup="tipoLetra(this);" required>'+
-                                        '</div>'+  
-                                    //'</div>'+
-                                //'</div>'+
-
-                                //'<div class="container">'+
-                                        //'<div class="form-group row">'+
-                                        '<div class="col-md-12">'+
-                                            '<label>Correo Electrónico</label>'+
-                                            '<input type="text" class="form-control" name="email" id="txtemail" placeholder="email" required autocomplete="email" data-parsley-type="email" onkeyup="tipoMinusculas(this);">'+
-                                        '</div>'+
-                                        /*
-                                        '<div class="col-md-4">'+ 
-                                            '<label>Contraseña</label>'+
-                                            '<input type="password" class="form-control" name="pass" id="txtpass" required autocomplete="new-password" placeholder="Contraseña">'+
-                                        '</div>'+
-                                        '<div class="col-md-4">'+ 
-                                            '<label>Confirmar contraseña</label>'+
-                                            '<input type="password" class="form-control" name="pass2" id="txtpass2" required autocomplete="new-password" data-parsley-equalto="#txtpass" placeholder="Confirmar contraseña">'+
-                                        '</div>'+  */
-                                    '</div>'+
-                                '</div>'+
-                            '</div>'+
-                            
-                            '<div class="tab-pane fade" id="p_detalles" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">'+
-        
-                                '<div class="container">'+
-                                    '<div class="form-group row">'+
-                                        '<div class="col-md-7">'+ 
-                                            '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+
-                                            '<input type="text" class="form-control" name="empresa" id="txtempresa" placeholder="Empresa" onkeyup="tipoLetra(this);" ondblclick="obtenerempresa();" readonly required>'+
-                                        '</div>'+
-                                        /*'<div class="col-md-7">'+
-                                            '<label>'+                                       
-                                            '<small>Nombre</small>'+
-                                            '</label>'+
-                                            '<span class="label label-danger" name="nom" id="txtnom">'+
-                                            '</span>'+                                        
-                                        '</div>'+
-                                        '<div class="col-md-4">'+
-                                            '<label>Horario<b style="color:#F44336 !important;">*</b></label>'+
-                                            '<input type="text" class="form-control" name="horario" id="txthorario" placeholder="Horario" onkeyup="tipoLetra(this);" ondblclick="obtenerhorario();"readonly required>'+
-                                        '</div>'+
-                                    '</div>'+  
-                                '</div>'+
-
-                                '<div class="container">'+
-                                    '<div class="form-group row">'+
-                                        '<div class="col-md-4">'+
-                                            '<label>Fecha Corporativo:</label>'+                            
-                                            '<input type="datetime-local" class="form-control" name="fecha_cor" id="txtfecha_cor">'+
-                                        '</div>'+
-                                        '<div class="col-md-4">'+ 
-                                            '<label>Fecha de ingreso</label>'+
-                                            '<input type="datetime-local" class="form-control" name="fecha_ini" id="txtfecha_ini">'+
-                                        '</div>'+
-                                        '<div class="col-md-4">'+ 
-                                            '<label>Fecha Baja</label>'+
-                                            '<input type="datetime-local" class="form-control" name="fecha_baj" id="txtfecha_baj" readonly>'+
-                                        '</div>'+  
-                                    '</div>'+
-                                '</div>'+
-
-                                '<div class="container">'+
-                                    '<div class="form-group row">'+
-                                        '<div class="col-md-12">'+
-                                            '<label>Rol <b style="color:#F44336 !important;">*</b></label>'+
-                                            '<div class="col-md-12 form-check" >'+
-                                                '<div class="container">'+
-                                                    '<div class="form-group row" id="roles">'+*/
-                                                        //se imprime el foreach
-                                                    '</div>'+
-                                                '</div>'+                                                                
+                    '<div class="row">'+
+                    '<div class="col-12 col-sm-12">'+
+                            '<div class="card-body">'+
+                                '<div class="tab-content" id="custom-tabs-one-tabContent">'+
+                                    '<div class="tab-pane fade show active" id="p_datos" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">'+
+                                        '<div class="container">'+
+                                            '<div class="form-group row">'+
+                                                '<div class="col-md-1">'+
+                                                    '<label>Id:</label>'+                            
+                                                    '<input type="text" class="form-control" name="numero" id="txtnumero" placeholder="ID" onkeyup="tipoLetra(this);" required readonly>'+
+                                                '</div>'+
+                                                '<div class="col-md-4">'+
+                                                    '<label>Nombre(s):</label>'+                            
+                                                    '<input type="text" class="form-control" name="nombre" id="txtnombre" placeholder="Nombre" onkeyup="tipoLetra(this);" required>'+
+                                                '</div>'+
+                                                '<div class="col-md-4">'+ 
+                                                    '<label>A. Paterno</label>'+
+                                                    '<input type="text" class="form-control" name="paterno" id="txtpaterno" placeholder="1er Apellido" onkeyup="tipoLetra(this);" required>'+
+                                                '</div>'+
+                                                '<div class="col-md-3">'+ 
+                                                    '<label>A. Materno</label>'+
+                                                    '<input type="text" class="form-control" name="materno" id="txtmaterno" placeholder="2do Apellido"" onkeyup="tipoLetra(this);" required>'+
+                                                '</div>'+  
                                             '</div>'+
                                         '</div>'+
+                                        '<div class="container">'+
+                                            '<div class="form-group row">'+
+                                                '<div class="col-md-4">'+
+                                                    '<label>Correo Electrónico</label>'+
+                                                    '<input type="text" class="form-control" name="email" id="txtemail" placeholder="Email" readonly autocomplete="Email" data-parsley-type="email" onkeyup="tipoMinusculas(this);">'+
+                                                '</div>'+
+                                                '<div class="col-md-8">'+ 
+                                                    '<label>Sucursal<b style="color:#F44336 !important;">*</b></label>'+
+                                                    '<input type="text" class="form-control" name="sucursal" id="txtsucursal" readonly onkeyup="tipoMinusculas(this);">'+
+                                            '</div>'+
+                                            '<div class="col-md-3">'+ 
+                                                    '<label>Fecha de ingreso</label>'+
+                                                    '<input type="date" class="form-control" name="ingreso" id="txtingreso" placeholder="" readonly onkeyup="tipoLetra(this);" >'+
+                                                '</div>'+
+                                            '<div class="col-md-3">'+
+                                                    '<label>H. Entrada</label>'+
+                                                    '<input type="time" class="form-control" name="hentrada" id="txthentrada" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                                '</div>'+
+                                                '<div class="col-md-3">'+ 
+                                                '<label>H. Salida</label>'+
+                                                '<input type="time" class="form-control" name="hsalida" id="txthsalida" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                            '</div>'+
+                                            '<div class="col-md-3" hidden>'+ 
+                                                '<label>Rol<b style="color:#F44336 !important;">*</b></label>'+
+                                                    '<select class="form-select" name="rol" id="txtrol" placeholder="Rol" onkeyup="tipoLetra(this);" required>'+
+                                            '</div>'+
                                     '</div>'+
                                 '</div>'+
-
                             '</div>'+
                         '</div>'+
                     '</div>'+
-                '</div>'+
-            '</div>'+
-        '</div>';
+                '</div>';
             $("#tabsform").html(tabs);
-            console.log(data);//mandas el arreglo
             $("#txtnumero").val(data.user.id);
             $("#txtnombre").val(data.user.name);
             $("#txtpaterno").val(data.user.lastname_p);
@@ -592,13 +542,7 @@
             $("#txtingreso").val(data.user.ingreso);
             $("#txthentrada").val(data.user.hentrada);
             $("#txthsalida").val(data.user.hsalida);
-            $("#txtrol").val(data.user.rol);
-            /*$("#txtempresa").val(data.user.id_empresa);
-            $("#txthorario").val(data.user.id_horario);
-            $("#txtfecha_cor").val(data.fechadeingresocorp);
-            $("#txtfecha_ini").val(data.fechadeingresoemp);
-            $("#txtfecha_baj").val(data.fechadebaja);
-            $("#roles").html(data.roles);*/
+            $("#txtrol").html(data.select_roles);
             mostrarmodalformulario('MODIFICACION', data.permitirmodificacion);
             mostrarformulario();
         }).fail( function() {

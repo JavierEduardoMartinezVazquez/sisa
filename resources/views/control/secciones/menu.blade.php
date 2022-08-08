@@ -22,7 +22,7 @@
             <ul class="nav nav-treeview">
               
               <li class="nav-item">
-                <a href="{{route('User')}}" class="nav-link" id="use">
+                <a href="{{route('User')}}" class="nav-link" id="">
                   <i class="nav-icon fas fa-user"></i>
                   <p>Usuarios</p>
                 </a>
@@ -30,7 +30,7 @@
               @endcan
               @can('Business')
               <li class="nav-item">
-                <a href="{{route('Business')}}" class="nav-link" id="bus">
+                <a href="{{route('Business')}}" class="nav-link" id="">
                   <i class="nav-icon far fas fa-cogs"></i>
                   <p>Empresas</p>
                 </a>
@@ -38,7 +38,7 @@
               @endcan
               @can('Hourhand')
               <li class="nav-item">
-                <a href="{{route('Hourhand')}}" class="nav-link" id="hor">
+                <a href="{{route('Hourhand')}}" class="nav-link" id="">
                 <i class="nav-icon nav-icon fas fa-book"></i>
                   <p>Horarios</p>
                 </a>
