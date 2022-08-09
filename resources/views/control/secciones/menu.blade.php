@@ -125,16 +125,9 @@
                   <p>Nomina</p>
                 </a>
               </li>
+              </ul>
               @endcan
-              @can('Permissionsreports')
-              <li class="nav-item">
-                <a href="{{route('Permissionsreports')}}" class="nav-link">
-                  <i class="nav-icon fas fa-calendar-check"></i>
-                  <p>Permisos</p>
-                </a>
-              </li>
-            </ul>
-            @endcan
+              
           <li class="nav-item has-treeview">
           <li class="nav-item">
             <a href="{{ route('logout') }}" class="nav-link" 
