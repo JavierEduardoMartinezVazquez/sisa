@@ -57,7 +57,7 @@ class UserController extends Controller
     }
     public function obtener_roles(){
         $roles = Role::all();
-        $select_roles= "<option >Selecciona...</option>";
+        $select_roles= "<option >Seleccionar...</option>";
         foreach($roles as $rol){
             $select_roles = $select_roles."<option value='".$rol->name."'>".$rol->name."</option>";
         }
@@ -89,11 +89,6 @@ class UserController extends Controller
             $user->hentrada=$request->hentrada;
             $user->hsalida=$request->hsalida;
             $user->rol=$request->rol;
-            /*$user->fechaingresocorp=$request->fecha_cor;
-            $user->fechaingresoemp=$request->fecha_ini;
-            $user->id_horario=$request->horario;
-            $user->id_empresa=$request->empresa;
-            $user->id_rol=$request->rol;*/
             $user->status="ALTA";
             $user->save();
 
@@ -119,13 +114,6 @@ class UserController extends Controller
             'hentrada',
             'hsalida',
             'rol',
-            /*'fechaingresocorp',
-            'fechaingresoemp',
-            'fechabaja',
-            'id_horario',
-            'id_empresa',
-            'id_area',
-            'id_rol',*/
             'status'
         );
             return DataTables::of($data)

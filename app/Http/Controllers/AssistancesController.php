@@ -6,6 +6,7 @@ use App\C_assistances;
 use App\Exports\AssistancesExport;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
+use App\User;
 
 class AssistancesController extends Controller
 {
@@ -21,6 +22,15 @@ class AssistancesController extends Controller
             $id = $ultimoNumeroTabla[0]->id+1;   
         }
         return response()->json($id);
+    }
+    public function obtener_roles(){
+        $roles = Role::all();
+        $select_roles= "<option >Seleccionar...</option>";
+        foreach($roles as $rol){
+            $select_roles = $select_roles."<option value='".$rol->name."'>".$rol->name."</option>";
+        }
+        return response()->json($select_roles);
+        
     }
     public function guardar_assistances(Request $request){
         $ultimoNumeroTabla = C_assistances::select("id")->orderBy("id", "DESC")->take(1)->get();
@@ -42,7 +52,14 @@ class AssistancesController extends Controller
     public function listar_assistances (Request $request)
     {
         if($request->ajax()){
-            $data = C_assistances::select('id','Usuario','Fecha','Entrada','Salida','Observaciones','status');
+            $data = C_assistances::select('id',
+            'Usuario',
+            'Fecha',
+            'Entrada',
+            'Salida',
+            'Observaciones',
+            'status'
+        );
             return DataTables::of($data)
             ->addColumn('operaciones', function($data){
                 $operaciones = '<div class="container">'.

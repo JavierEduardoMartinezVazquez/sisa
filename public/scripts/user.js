@@ -212,15 +212,6 @@
         var tabs =
         '<div class="row">'+
         '<div class="col-12 col-sm-12">'+
-                    /*'<ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">'+
-                        '<li class="nav-item">'+
-                            '<a class="nav-link active" id="dat" data-toggle="pill" href="#p_datos" role="tab" aria-controls="p_datos" aria-selected="true">DATOS GENERALES</a>'+
-                        '</li>'+
-                        '<li class="nav-item">'+
-                            '<a class="nav-link" id="detal" data-toggle="pill" href="#p_detalles" role="tab" aria-controls="p_detalles" aria-selected="false">DETALLES</a>'+
-                        '</li>'+
-                    '</ul>'+
-                '</div>'+*/
                 '<div class="card-body">'+
                     '<div class="tab-content" id="custom-tabs-one-tabContent">'+
                     
@@ -298,72 +289,7 @@
                                     '<label>Rol<b style="color:#F44336 !important;">*</b></label>'+
                                         '<select class="form-select" name="rol" id="txtrol" placeholder="Rol" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+
-                                
-                            /*'</div>'+
-                        '</div>'+
-                        
-                        '<div class="tab-pane fade" id="p_detalles" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">'+
-      
-                            '<div class="container">'+
-                                '<div class="form-group row">'+
-                                    '<div class="col-md-1">'+ 
-                                        '<label>#<b style="color:#F44336 !important;">*</b></label>'+                                    
-                                        '<input type="text" class="form-control" name="empresa" id="txtempresa" placeholder="Id" onkeyup="tipoLetra(this);" ondblclick="obtenerempresa();" readonly required>'+
-                                    '</div>'+
-                                    '<div class="col-md-7">'+
-                                    '<label>Nombre:<b style="color:#F44336 !important;">*</b></label>'+
-                                    '<input type="text" class="form-control" name="namee" id="txtnamee" placeholder="Empresa" onkeyup="tipoLetra(this);"  readonly required>'+                          
-                                         //'<span name="nom" id="txtnom"></span>'+
-                                                                                                                   
-                                    '</div>'+
-                                    
-                                    '<div class="container">'+
-                                    '<div class="form-group row">'+
-                                    '<div class="col-md-6">'+
-                                        '<label>Horario<b style="color:#F44336 !important;">*</b></label>'+
-                                        '<input type="text" class="form-control" name="horario" id="txthorario" placeholder="Horario" onkeyup="tipoLetra(this);" ondblclick="obtenerhorario();"readonly required>'+
-                                    '</div>'+ */
-                                    /*
-                                    '<div class="col-md-6">'+
-                                        '<label>Horario<b style="color:#F44336 !important;">*</b></label>'+
-                                        '<input type="text" class="form-control" name="horario" id="txthorario" placeholder="Horario" onkeyup="tipoLetra(this);" ondblclick="obtenerhorario();"readonly required>'+
-                                    '</div>'+
-                                '</div>'+  
-                            '</div>'+*/
-
-                           /* '<div class="container">'+
-                                '<div class="form-group row">'+
-                                    '<div class="col-md-4">'+
-                                        '<label>Fecha Corporativo:</label>'+                            
-                                        '<input type="datetime-local" class="form-control" name="fecha_cor" id="txtfecha_cor">'+
-                                    '</div>'+
-                                    '<div class="col-md-4">'+ 
-                                        '<label>Fecha de ingreso</label>'+
-                                        '<input type="datetime-local" class="form-control" name="fecha_ini" id="txtfecha_ini">'+
-                                    '</div>'+
-                                    '<div class="col-md-4">'+ 
-                                        '<label>Fecha Baja</label>'+
-                                        '<input type="datetime-local" class="form-control" name="fecha_baj" id="txtfecha_baj" readonly>'+
-                                    '</div>'+  
-                                '</div>'+
-                            '</div>'+*/
-                            
-/*
-                            '<div class="container">'+
-                                '<div class="form-group row">'+
-                                    '<div class="col-md-12">'+
-                                        '<label>Rol <b style="color:#F44336 !important;">*</b></label>'+
-                                        '<div class="col-md-12 form-check" >'+
-                                            '<div class="container">'+
-                                                '<div class="form-group row" id="roles">'+
-                                                    //se imprime el foreach
-                                                '</div>'+
-                                            '</div>'+                                                                
-                                        '</div>'+
-                                    '</div>'+
-                                '</div>'+
-                            '</div>'+*/
-
+                         
                         '</div>'+
                     '</div>'+
                 '</div>'+
@@ -512,11 +438,11 @@
                                                     '<label>Fecha de ingreso</label>'+
                                                     '<input type="date" class="form-control" name="ingreso" id="txtingreso" placeholder="" readonly onkeyup="tipoLetra(this);" >'+
                                                 '</div>'+
-                                            '<div class="col-md-3">'+
+                                            '<div class="col-md-3" hidden>'+
                                                     '<label>H. Entrada</label>'+
                                                     '<input type="time" class="form-control" name="hentrada" id="txthentrada" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                                 '</div>'+
-                                                '<div class="col-md-3">'+ 
+                                                '<div class="col-md-3" hidden>'+ 
                                                 '<label>H. Salida</label>'+
                                                 '<input type="time" class="form-control" name="hsalida" id="txthsalida" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                             '</div>'+
