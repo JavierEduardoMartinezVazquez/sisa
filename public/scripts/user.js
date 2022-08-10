@@ -288,7 +288,8 @@
                                 '<div class="col-md-3">'+ 
                                     '<label>Rol<b style="color:#F44336 !important;">*</b></label>'+
                                         '<select class="form-select" name="rol" id="txtrol" placeholder="Rol" onkeyup="tipoLetra(this);" required>'+
-                                '</div>'+
+                                        '</select>'+
+                                        '</div>'+
                          
                         '</div>'+
                     '</div>'+
