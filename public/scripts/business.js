@@ -71,15 +71,15 @@
                                     '<label>Usuario<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="text" class="form-control" name="nombre" id="txtnombre" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
-                                '<div class="col-md-10">'+ 
+                                '<div class="col-md-6">'+ 
                                 '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="text" class="form-control" name="empresa" id="txtempresa" placeholder="" onkeyup="tipoLetra(this);" required>'+
                             '</div>'+    
-                            '<div class="col-md-10">'+ 
+                            '<div class="col-md-6">'+ 
                                 '<label>Dirección<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="text" class="form-control" name="direccion" id="txtdireccion" placeholder="" onkeyup="tipoLetra(this);" required>'+
                             '</div>'+ 
-                            '<div class="col-md-10">'+ 
+                            '<div class="col-md-2">'+ 
                                 '<label>N.Empleados<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="number" class="form-control" name="numeroe" id="txtnumeroe" placeholder="" onkeyup="tipoLetra(this);" required>'+
                             '</div>'+ 
@@ -183,15 +183,15 @@
                                     '<label>Usuario<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="text" class="form-control" name="nombre" id="txtnombre" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
-                                '<div class="col-md-10">'+ 
+                                '<div class="col-md-6">'+ 
                                     '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="text" class="form-control" name="empresa" id="txtempresa" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
-                                '<div class="col-md-10">'+ 
+                                '<div class="col-md-6">'+ 
                                     '<label>Dirección<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="text" class="form-control" name="direccion" id="txtdireccion" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
-                                '<div class="col-md-10">'+ 
+                                '<div class="col-md-2">'+ 
                                     '<label>N.Empleados<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="number" class="form-control" name="numeroe" id="txtnumeroe" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+
