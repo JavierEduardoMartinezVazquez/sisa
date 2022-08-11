@@ -382,14 +382,6 @@
             { data: 'hentrada', name: 'hentrada', orderable: true, searchable: true },
             { data: 'hsalida', name: 'hsalida', orderable: true, searchable: true },
             { data: 'rol', name: 'rol', orderable: true, searchable: true },
-
-            /*{ data: 'fechaingresocorp', name: 'fechaingresocorp', orderable: true, searchable: true },
-            { data: 'fechaingresoemp', name: 'fechaingresoemp', orderable: true, searchable: true },
-            { data: 'fechabaja', name: 'fechabaja', orderable: true, searchable: true },
-            { data: 'id_horario', name: 'id_horario', orderable: true, searchable: true },
-            { data: 'id_empresa', name: 'id_empresa', orderable: true, searchable: true },
-            { data: 'id_area', name: 'id_area', orderable: true, searchable: true },
-            { data: 'id_rol', name: 'id_rol', orderable: true, searchable: true },*/
             { data: 'status', name: 'status', orderable: true, searchable: true },
         ],
         "order": [[ 1, "asc" ]]

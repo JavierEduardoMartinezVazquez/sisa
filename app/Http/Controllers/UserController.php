@@ -164,11 +164,9 @@ class UserController extends Controller
             //atributo de la Base => $request-> nombre de la caja de texto
             'name'=> $request->nombre,
             'lastname_p' => $request->paterno,
+            'lastname_m' => $request->materno,
             //'rol' => $request->rol,
         ]);
-
-        
-
         //$user->assignRole($request->rol);
 
 

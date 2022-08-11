@@ -193,51 +193,52 @@
             //se crea al formlario
             var tabs =
             '<div class="card-body">'+
-                '<div class="tab-content">'+
-                    '<div class="tab-pane active" id="datosgenerales">'+
-                        '<div class="container">'+
-                            '<div class="form-group row">'+
-                           /* '<div class="col-md-1">'+
-                            '<label>Numero:<b style="color:#F44336 !important;">*</b></label>'+                             
-                            '<input type="text" class="form-control" name="numero" id="txtnumero" required  readonly>'+ 
-                        '</div>'+
-                        '<br>'+
-                        '<div class="col-md-1">'+
-                        '</div>'+ */
-                        
-                        '<div class="col-md-2">'+ 
-                            '<label>ID de Usuario<b style="color:#F44336 !important;">*</b></label>'+
-                                '<input type="text" class="form-control" name="Usuario" id="txtUsuario" placeholder="Usuario" onkeyup="tipoLetra(this);" required>'+
-                                
-                        '</div>'+
+            '<div class="tab-content">'+
+                '<div class="tab-pane active" id="datosgenerales">'+
+                    '<div class="container">'+
+                        '<div class="form-group row">'+
+                           /*'<div class="col-md-1">'+
+                                '<label>Numero:<b style="color:#F44336 !important;">*</b></label>'+                             
+                                '<input type="text" class="form-control" name="numero" id="txtnumero" required  readonly>'+ 
+                            '</div>'+
+                            '<br>'+
+                            '<div class="col-md-1">'+
+                            '</div>'+ 
+                            */
+                            '<div class="col-md-2">'+ 
+                                '<label>ID de Usuario<b style="color:#F44336 !important;">*</b></label>'+
+                                    '<input type="text" class="form-control" name="Usuario" id="txtUsuario" placeholder="Usuario" onkeyup="tipoLetra(this);" required>'+
+                                    
+                            '</div>'+
 
 
-                                '<div class="col-md-4">'+
-                                '<label>Fecha<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="date" class="form-control" name="Fecha" id="txtFecha" placeholder="Fecha" onkeyup="tipoLetra(this);" required>'+
-                                '</div>'+
-                                '<div class="col-md-4">'+
-                                '<label>Entrada<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="time" class="form-control" name="Entrada" id="txtEntrada" placeholder="Entrada" onkeyup="tipoLetra(this);" required>'+ 
-                                '</div>'+
-                                '<div class="col-md-4">'+
-                                '<label>Salida<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="time" class="form-control" name="Salida" id="txtSalida" placeholder="Salida" onkeyup="tipoLetra(this);" required>'+
-                                '</div>'+
-                                '<div class="col-md-12">'+
-                                '<label>Observaciones<b style="color:#F44336 !important;">*</b></label>'+
-                                '<select class="form-select" name="Observaciones" id="txtObservaciones" placeholder="Observaciones" onkeyup="tipoLetra(this);" required>'+
-                                '<option value="NINGUNA">NINGUNA</option>'+
-                                '<option value="RETARDO">RETARDO</option>'+
-                                '<option value="INCAPACIDAD">INCAPACIDAD</option>'+
-                                '<option value="FALTA">FALTA</option>'+
-                                '</select>'+
+
+                            '<div class="col-md-5">'+
+                            '<label>Fecha<b style="color:#F44336 !important;">*</b></label>'+ 
+                            '<input type="date" class="form-control" name="Fecha" id="txtFecha" placeholder="Fecha" onkeyup="tipoLetra(this);" required>'+
                             '</div>'+
+                            '<div class="col-md-5">'+
+                            '<label>Entrada<b style="color:#F44336 !important;">*</b></label>'+ 
+                            '<input type="time" class="form-control" name="Entrada" id="txtEntrada" placeholder="Entrada" onkeyup="tipoLetra(this);" required>'+ 
                             '</div>'+
-                        '</div>'+    
-                    '</div>'+
-                '</div>'+ 
-            '</div>';
+                            '<div class="col-md-5">'+
+                            '<label>Salida<b style="color:#F44336 !important;">*</b></label>'+ 
+                            '<input type="time" class="form-control" name="Salida" id="txtSalida" placeholder="Salida" onkeyup="tipoLetra(this);" required>'+
+                            '</div>'+
+                            '<div class="col-md-7">'+
+                            '<label>Observaciones<b style="color:#F44336 !important;">*</b></label>'+
+                            '<select class="form-select" name="Observaciones" id="txtObservaciones" placeholder="Observaciones" onkeyup="tipoLetra(this);" required>'+
+                            '<option value="NINGUNA">NINGUNA</option>'+
+                            '<option value="RETARDO">RETARDO</option>'+
+                            '<option value="INCAPACIDAD">INCAPACIDAD</option>'+
+                            '<option value="FALTA">FALTA</option>'+
+                            '</select>'+
+                        '</div>'+
+                        '</div>'+
+                    '</div>'+    
+                '</div>'+
+            '</div>'+ 
+        '</div>';
             $("#tabsform").html(tabs);
             console.log(data);//mandas el arreglo
             $("#txtnumero").val(data.assistances.id);
