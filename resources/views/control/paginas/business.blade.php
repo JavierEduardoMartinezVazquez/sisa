@@ -52,6 +52,7 @@
                                         <th>Usuario</th>
                                         <th>Empresa</th>
                                         <th>Dirección</th>
+                                        <th>N.Empleados</th> 
                                         <th>Motivo</th> 
                                         <th>Fecha</th>
                                         <th>Autorización</th>    

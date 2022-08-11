@@ -79,6 +79,10 @@
                                 '<label>Dirección<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="text" class="form-control" name="direccion" id="txtdireccion" placeholder="" onkeyup="tipoLetra(this);" required>'+
                             '</div>'+ 
+                            '<div class="col-md-10">'+ 
+                                '<label>N.Empleados<b style="color:#F44336 !important;">*</b></label>'+ 
+                                '<input type="number" class="form-control" name="numeroe" id="txtnumeroe" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                            '</div>'+ 
                                 '<div class="col-md-2">'+
                                 '</div>'+ 
                                 '<div class="col-md-10">'+ 
@@ -168,6 +172,7 @@
             { data: 'nombre', name: 'nombre', orderable: true, searchable: true },
             { data: 'empresa', name: 'empresa', orderable: true, searchable: true },
             { data: 'direccion', name: 'direccion', orderable: true, searchable: true },
+            { data: 'numeroe', name: 'numeroe', orderable: true, searchable: true },
             { data: 'motivo', name: 'motivo', orderable: true, searchable: true },
             { data: 'fecha', name: 'fecha', orderable: true, searchable: true },
             { data: 'autorizacion', name: 'autorizacion', orderable: true, searchable: true },
@@ -204,6 +209,10 @@
                                     '<label>Dirección<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="text" class="form-control" name="direccion" id="txtdireccion" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
+                                '<div class="col-md-10">'+ 
+                                    '<label>N.Empleados<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<input type="number" class="form-control" name="numeroe" id="txtnumeroe" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+
                                 '<div class="col-md-2">'+
                                 '</div>'+ 
                                 '<div class="col-md-10">'+ 
@@ -232,6 +241,7 @@
             $("#txtnombre").val(data.business.nombre);
             $("#txtempresa").val(data.business.empresa);
             $("#txtdireccion").val(data.business.direccion);
+            $("#txtnumeroe").val(data.business.numeroe);
             $("#txtmotivo").val(data.business.motivo);
             $("#txtfecha").val(data.business.fecha);
             $("#txtautorizacion").val(data.business.autorizacion);

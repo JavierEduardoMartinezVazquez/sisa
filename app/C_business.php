@@ -13,6 +13,7 @@ class C_business extends Model
         'nombre',
         'empresa',
         'direccion',
+        'numeroe',
         'motivo',
         'fecha',
         'autorizacion',

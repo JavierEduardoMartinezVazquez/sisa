@@ -31,6 +31,7 @@ class BusinessController extends Controller
         $business->nombre=$request->nombre;
         $business->empresa=$request->empresa;
         $business->direccion=$request->direccion;
+        $business->numeroe=$request->numeroe;
         $business->motivo=$request->motivo;
         $business->autorizacion=$request->autorizacion;
         $business->fecha=$request->fecha;
@@ -42,7 +43,7 @@ class BusinessController extends Controller
     public function listar_business (Request $request)
     {
         if($request->ajax()){
-            $data = C_business::select('id','nombre','empresa','direccion','motivo','fecha','autorizacion','status');
+            $data = C_business::select('id','nombre','empresa','direccion','numeroe','motivo','fecha','autorizacion','status');
             return DataTables::of($data)
             ->addColumn('operaciones', function($data){
                 $operaciones = '<div class="container">'.
@@ -78,6 +79,7 @@ class BusinessController extends Controller
             'nombre'=> $request->nombre,
             'empresa'=> $request->empresa,
             'direccion'=> $request->direccion,
+            'numeroe'=> $request->numeroe,
             'motivo'=> $request->motivo,
             'fecha'=> $request->fecha,
             'autorizacion'=> $request->autorizacion
