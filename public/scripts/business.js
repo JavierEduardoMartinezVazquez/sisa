@@ -75,6 +75,10 @@
                                 '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="text" class="form-control" name="empresa" id="txtempresa" placeholder="" onkeyup="tipoLetra(this);" required>'+
                             '</div>'+    
+                            '<div class="col-md-10">'+ 
+                                '<label>Dirección<b style="color:#F44336 !important;">*</b></label>'+ 
+                                '<input type="text" class="form-control" name="direccion" id="txtdireccion" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                            '</div>'+ 
                                 '<div class="col-md-2">'+
                                 '</div>'+ 
                                 '<div class="col-md-10">'+ 
@@ -163,6 +167,7 @@
             { data: 'id', name: 'id', orderable: true, searchable: true },
             { data: 'nombre', name: 'nombre', orderable: true, searchable: true },
             { data: 'empresa', name: 'empresa', orderable: true, searchable: true },
+            { data: 'direccion', name: 'direccion', orderable: true, searchable: true },
             { data: 'motivo', name: 'motivo', orderable: true, searchable: true },
             { data: 'fecha', name: 'fecha', orderable: true, searchable: true },
             { data: 'autorizacion', name: 'autorizacion', orderable: true, searchable: true },
@@ -195,6 +200,10 @@
                                     '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="text" class="form-control" name="empresa" id="txtempresa" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
+                                '<div class="col-md-10">'+ 
+                                    '<label>Dirección<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<input type="text" class="form-control" name="direccion" id="txtdireccion" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+ 
                                 '<div class="col-md-2">'+
                                 '</div>'+ 
                                 '<div class="col-md-10">'+ 
@@ -222,7 +231,7 @@
             $("#txtnumero").val(data.business.id);
             $("#txtnombre").val(data.business.nombre);
             $("#txtempresa").val(data.business.empresa);
-            $("#txtempresa").val(data.business.empresa);
+            $("#txtdireccion").val(data.business.direccion);
             $("#txtmotivo").val(data.business.motivo);
             $("#txtfecha").val(data.business.fecha);
             $("#txtautorizacion").val(data.business.autorizacion);
