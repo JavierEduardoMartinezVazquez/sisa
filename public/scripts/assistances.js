@@ -6,21 +6,13 @@
         listarassistances();
      }
 
-    function asignarfechaactual(){
-        $.get(obtener_fecha_actual_datetimelocal, function(fechas){
-          $("#txtFecha").val(fechas.fecha_actual_input_date);
-          $("#txtSalida").val(fechas.input_salida);
-          $("#txtEntrada").val(fechas.input_entrada);
-        })
-    }
-
-    function mostrarmodalformulario(movimiento, permitirmodificacion){
+    function mostrarmodalformulario(movimiento, assistancestirmodificacion){
         $("#Form_Modal").modal('show');
         if(movimiento=='ALTA'){
             $('#btnGuardar').show();
             $('#btnGuardarModificacion').hide();
         }else if(movimiento == 'MODIFICACION'){
-            if(permitirmodificacion == 1){
+            if(assistancestirmodificacion == 1){
                 $('#btnGuardar').hide();
                 $('#btnGuardarModificacion').show();
             }else{
@@ -59,7 +51,7 @@
         $("#tabsform").empty();
     }
     function alta(){
-        $("#titulomodal").html('Asistencia');
+        $("#titulomodal").html('Alta de permiso');
         mostrarmodalformulario('ALTA');
         mostrarformulario();
         //formulario alta
@@ -69,51 +61,37 @@
                     '<div class="tab-pane active" id="datosgenerales">'+
                         '<div class="container">'+
                             '<div class="form-group row">'+
-                               /*'<div class="col-md-1">'+
+                                '<div class="col-md-1">'+
                                     '<label>Numero:<b style="color:#F44336 !important;">*</b></label>'+                             
                                     '<input type="text" class="form-control" name="numero" id="txtnumero" required  readonly>'+ 
-                                '</div>'+
-                                '<br>'+
+                                '</div>'+ 
                                 '<div class="col-md-1">'+
                                 '</div>'+ 
-                                */
-                                '<div class="col-md-2">'+ 
-                                    '<label>ID de Usuario<b style="color:#F44336 !important;">*</b></label>'+
-                                        '<input type="text" class="form-control" name="Usuario" id="txtUsuario" placeholder="Usuario" onkeyup="tipoLetra(this);" required>'+
-                                        
-                                '</div>'+
+                                '<div class="col-md-10">'+ 
+                                    '<label>Usuario<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<input type="text" class="form-control" name="nombre" id="txtnombre" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+ 
+                                '<div class="col-md-6">'+ 
+                                '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+ 
+                                '<input type="text" class="form-control" name="empresa" id="txtempresa" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                            '</div>'+    
+                            '<div class="col-md-6">'+ 
+                                '<label>Dirección<b style="color:#F44336 !important;">*</b></label>'+ 
+                                '<input type="text" class="form-control" name="direccion" id="txtdireccion" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                            '</div>'+ 
+                            '<div class="col-md-2">'+ 
+                                '<label>N.Empleados<b style="color:#F44336 !important;">*</b></label>'+ 
+                                '<input type="number" class="form-control" name="numeroe" id="txtnumeroe" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                            '</div>'+ 
+                                
 
-
-
-                                '<div class="col-md-5">'+
-                                '<label>Fecha<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="date" class="form-control" name="Fecha" id="txtFecha" placeholder="Fecha" onkeyup="tipoLetra(this);" required>'+
-                                '</div>'+
-                                '<div class="col-md-5">'+
-                                '<label>Entrada<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="time" class="form-control" name="Entrada" id="txtEntrada" placeholder="Entrada" onkeyup="tipoLetra(this);" required>'+ 
-                                '</div>'+
-                                '<div class="col-md-5">'+
-                                '<label>Salida<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="time" class="form-control" name="Salida" id="txtSalida" placeholder="Salida" onkeyup="tipoLetra(this);" required>'+
-                                '</div>'+
-                                '<div class="col-md-7">'+
-                                '<label>Observaciones<b style="color:#F44336 !important;">*</b></label>'+
-                                '<select class="form-select" name="Observaciones" id="txtObservaciones" placeholder="Observaciones" onkeyup="tipoLetra(this);" required>'+
-                                '<option value="NINGUNA">NINGUNA</option>'+
-                                '<option value="RETARDO">RETARDO</option>'+
-                                '<option value="INCAPACIDAD">INCAPACIDAD</option>'+
-                                '<option value="FALTA">FALTA</option>'+
-                                '</select>'+
-                            '</div>'+
                             '</div>'+
                         '</div>'+    
                     '</div>'+
                 '</div>'+ 
-            '</div>';
+            '</div>';               
         $("#tabsform").html(tabs);//tabsform es el ID del DIV donde se muestra el formulario del archivo JS <2>
         obtenerultimoidassistances();
-        asignarfechaactual();
     }
     $("#btnGuardar").on('click', function (e) {
         e.preventDefault(); //       ID del formulario donde se muestra el modal
@@ -176,77 +154,61 @@
         columns: [
             { data: 'operaciones', name: 'operaciones', orderable: false, searchable: false },
             { data: 'id', name: 'id', orderable: true, searchable: true },
-            { data: 'Usuario', name: 'Usuario', orderable: true, searchable: true },
-            { data: 'Fecha', name: 'Fecha', orderable: true, searchable: true},
-            { data: 'Entrada', name: 'Entrada', orderable: true, searchable: true},
-            { data: 'Salida', name: 'Salida', orderable: true, searchable: true},
-            { data: 'Observaciones', name: 'Observaciones', orderable: true, searchable: true},
+            { data: 'nombre', name: 'nombre', orderable: true, searchable: true },
+            { data: 'empresa', name: 'empresa', orderable: true, searchable: true },
+            { data: 'direccion', name: 'direccion', orderable: true, searchable: true },
+            { data: 'numeroe', name: 'numeroe', orderable: true, searchable: true },
             { data: 'status', name: 'status', orderable: true, searchable: true },
-            
         ],
         "order": [[ 1, "asc" ]]
         })
     }
     function obtenerassistances(numero){
-        $("#titulomodal").html('Modificación Asistencia');
+        $("#titulomodal").html('Modificación');
         $.get(obtener_assistances,{numero:numero },function(data){
             //se crea al formlario
             var tabs =
             '<div class="card-body">'+
-            '<div class="tab-content">'+
-                '<div class="tab-pane active" id="datosgenerales">'+
-                    '<div class="container">'+
-                        '<div class="form-group row">'+
-                           /*'<div class="col-md-1">'+
-                                '<label>Numero:<b style="color:#F44336 !important;">*</b></label>'+                             
-                                '<input type="text" class="form-control" name="numero" id="txtnumero" required  readonly>'+ 
+                '<div class="tab-content">'+
+                    '<div class="tab-pane active" id="datosgenerales">'+
+                        '<div class="container">'+
+                            '<div class="form-group row">'+
+                                '<div class="col-md-1">'+
+                                    '<label>Numero:<b style="color:#F44336 !important;">*</b></label>'+                             
+                                    '<input type="text" class="form-control" name="numero" id="txtnumero" required  readonly>'+ 
+                                '</div>'+ 
+                                '<div class="col-md-1">'+
+                                '</div>'+ 
+                                '<div class="col-md-10">'+ 
+                                    '<label>Usuario<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<input type="text" class="form-control" name="nombre" id="txtnombre" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+ 
+                                '<div class="col-md-6">'+ 
+                                    '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<input type="text" class="form-control" name="empresa" id="txtempresa" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+ 
+                                '<div class="col-md-6">'+ 
+                                    '<label>Dirección<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<input type="text" class="form-control" name="direccion" id="txtdireccion" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+ 
+                                '<div class="col-md-2">'+ 
+                                    '<label>N.Empleados<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<input type="number" class="form-control" name="numeroe" id="txtnumeroe" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+
+                                
                             '</div>'+
-                            '<br>'+
-                            '<div class="col-md-1">'+
-                            '</div>'+ 
-                            */
-                            '<div class="col-md-2">'+ 
-                                '<label>ID de Usuario<b style="color:#F44336 !important;">*</b></label>'+
-                                    '<input type="text" class="form-control" name="Usuario" id="txtUsuario" placeholder="Usuario" onkeyup="tipoLetra(this);" required>'+
-                                    
-                            '</div>'+
-
-
-
-                            '<div class="col-md-5">'+
-                            '<label>Fecha<b style="color:#F44336 !important;">*</b></label>'+ 
-                            '<input type="date" class="form-control" name="Fecha" id="txtFecha" placeholder="Fecha" onkeyup="tipoLetra(this);" required>'+
-                            '</div>'+
-                            '<div class="col-md-5">'+
-                            '<label>Entrada<b style="color:#F44336 !important;">*</b></label>'+ 
-                            '<input type="time" class="form-control" name="Entrada" id="txtEntrada" placeholder="Entrada" onkeyup="tipoLetra(this);" required>'+ 
-                            '</div>'+
-                            '<div class="col-md-5">'+
-                            '<label>Salida<b style="color:#F44336 !important;">*</b></label>'+ 
-                            '<input type="time" class="form-control" name="Salida" id="txtSalida" placeholder="Salida" onkeyup="tipoLetra(this);" required>'+
-                            '</div>'+
-                            '<div class="col-md-7">'+
-                            '<label>Observaciones<b style="color:#F44336 !important;">*</b></label>'+
-                            '<select class="form-select" name="Observaciones" id="txtObservaciones" placeholder="Observaciones" onkeyup="tipoLetra(this);" required>'+
-                            '<option value="NINGUNA">NINGUNA</option>'+
-                            '<option value="RETARDO">RETARDO</option>'+
-                            '<option value="INCAPACIDAD">INCAPACIDAD</option>'+
-                            '<option value="FALTA">FALTA</option>'+
-                            '</select>'+
-                        '</div>'+
-                        '</div>'+
-                    '</div>'+    
-                '</div>'+
-            '</div>'+ 
-        '</div>';
+                        '</div>'+    
+                    '</div>'+
+                '</div>'+ 
+            '</div>';
             $("#tabsform").html(tabs);
             console.log(data);//mandas el arreglo
             $("#txtnumero").val(data.assistances.id);
-            $("#txtUsuario").val(data.assistances.Usuario);
-            $("#txtFecha").val(data.assistances.Fecha);
-            $("#txtEntrada").val(data.assistances.Entrada);
-            $("#txtSalida").val(data.assistances.Salida);
-            $("#txtObservaciones").val(data.assistances.Observaciones); 
+            $("#txtnombre").val(data.assistances.nombre);
+            $("#txtempresa").val(data.assistances.empresa);
+            $("#txtdireccion").val(data.assistances.direccion);
+            $("#txtnumeroe").val(data.assistances.numeroe);
+            
             mostrarmodalformulario('MODIFICACION', data.permitirmodificacion);
             mostrarformulario();
         }).fail( function() {
