@@ -95,10 +95,10 @@ class AssistancesController extends Controller
         ->update([
             //atributo de la Base => $request-> nombre de la caja de texto
             'Usuario'=> $request->Usuario,
-            'Fecha'=> $request->fecha,
-            'Entrada'=> $request->hentrada,
-            'Salida'=> $request->hsalida,
-            'Observaciones'=> $request->observaciones
+            'Fecha'=> $request->Fecha,
+            'Entrada'=> $request->Entrada,
+            'Salida'=> $request->Salida,
+            'Observaciones'=> $request->Observaciones
         ]);
         return response()->json($assistances);
     }
@@ -119,7 +119,7 @@ class AssistancesController extends Controller
     public function export_excel(Request $request){
         ini_set('max_execution_time', 300); // 5 minutos
         ini_set('memory_limit', '-1');
-        $columns = ['Usuario','Fecha','Entrada','Salida','Observaciones'];
+        $columns = ['Usuario','Fecha','Entrada','Salida','Observaciones','status'];
         return Excel::download(new AssistancesExport($columns), "Asistencias.xlsx");
     }
 

@@ -79,8 +79,8 @@
                                 */
                                 '<div class="col-md-2">'+ 
                                     '<label>ID de Usuario<b style="color:#F44336 !important;">*</b></label>'+
-                                        '<select class="form-select" name="Usuario" id="txtUsuario" placeholder="Usuario" onkeyup="tipoLetra(this);" required>'+
-                                        '</select>'+
+                                        '<input type="text" class="form-control" name="Usuario" id="txtUsuario" placeholder="Usuario" onkeyup="tipoLetra(this);" required>'+
+                                        
                                 '</div>'+
 
 
@@ -197,17 +197,19 @@
                     '<div class="tab-pane active" id="datosgenerales">'+
                         '<div class="container">'+
                             '<div class="form-group row">'+
-                                '<div class="col-md-1">'+
-                                    '<label>Numero:<b style="color:#F44336 !important;">*</b></label>'+                             
-                                    '<input type="text" class="form-control" name="numero" id="txtnumero" required  readonly>'+ 
-                                '</div>'+
-                                '<br>'+
-                                '<div class="col-md-1">'+
-                                '</div>'+ 
-                                '<div class="col-md-10">'+
-                                    '<label>Usuario<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="text" class="form-control" name="Usuario" id="txtUsuario" placeholder="Usuario" onkeyup="tipoLetra(this);" required>'+
-                                '</div>'+
+                           /* '<div class="col-md-1">'+
+                            '<label>Numero:<b style="color:#F44336 !important;">*</b></label>'+                             
+                            '<input type="text" class="form-control" name="numero" id="txtnumero" required  readonly>'+ 
+                        '</div>'+
+                        '<br>'+
+                        '<div class="col-md-1">'+
+                        '</div>'+ */
+                        
+                        '<div class="col-md-2">'+ 
+                            '<label>ID de Usuario<b style="color:#F44336 !important;">*</b></label>'+
+                                '<input type="text" class="form-control" name="Usuario" id="txtUsuario" placeholder="Usuario" onkeyup="tipoLetra(this);" required>'+
+                                
+                        '</div>'+
 
 
                                 '<div class="col-md-4">'+
