@@ -14,6 +14,7 @@ class C_assistances extends Model
         'Fecha',
         'Entrada',
         'Salida',
+        'Observaciones',
         'status'
         
     ];

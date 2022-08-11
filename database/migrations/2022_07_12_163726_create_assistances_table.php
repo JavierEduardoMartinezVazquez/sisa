@@ -21,6 +21,7 @@ class CreateAssistancesTable extends Migration
             $table->date('Fecha',100)->nullable();
             $table->time('Entrada')->nullable();
             $table->time('Salida')->nullable();
+            $table->string('Observaciones',100)->nullable();
             $table->string('status',5)->nullable();
             $table->timestamps();
         }); 

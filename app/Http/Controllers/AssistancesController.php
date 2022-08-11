@@ -45,6 +45,7 @@ class AssistancesController extends Controller
         $assistances->Fecha=$request->Fecha;
         $assistances->Entrada=$request->Entrada;
         $assistances->Salida=$request->Salida;
+        $assistances->Observaciones=$request->Observaciones;
         
         $assistances->status='ALTA';        
         $assistances->save();
@@ -53,7 +54,7 @@ class AssistancesController extends Controller
     public function listar_assistances (Request $request)
     {
         if($request->ajax()){
-            $data = C_assistances::select('id','Usuario','Fecha','Entrada','Salida','status');
+            $data = C_assistances::select('id','Usuario','Fecha','Entrada','Salida','Observaciones','status');
             return DataTables::of($data)
             ->addColumn('operaciones', function($data){
                 $operaciones = '<div class="container">'.
@@ -90,6 +91,7 @@ class AssistancesController extends Controller
             'Fecha'=> $request->Fecha,
             'Entrada'=> $request->Entrada,
             'Salida'=> $request->Salida,
+            'Observaciones'=> $request->Observaciones,
             
         ]);
         return response()->json($assistances);

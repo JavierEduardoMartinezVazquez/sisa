@@ -91,6 +91,15 @@
                                 '<label>Salida<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="time" class="form-control" name="Salida" id="txtSalida" placeholder="Salida" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+
+                                '<div class="col-md-7">'+
+                                '<label>Observaciones<b style="color:#F44336 !important;">*</b></label>'+
+                                '<select class="form-select" name="Observaciones" id="txtObservaciones" placeholder="Observaciones" onkeyup="tipoLetra(this);" required>'+
+                                '<option value="NINGUNA">NINGUNA</option>'+
+                                '<option value="RETARDO">RETARDO</option>'+
+                                '<option value="INCAPACIDAD">INCAPACIDAD</option>'+
+                                '<option value="FALTA">FALTA</option>'+
+                                '</select>'+
+                            '</div>'+
                                 
 
                             '</div>'+
@@ -167,6 +176,7 @@
             { data: 'Fecha', name: 'Fecha', orderable: true, searchable: true },
             { data: 'Entrada', name: 'Entrada', orderable: true, searchable: true },
             { data: 'Salida', name: 'Salida', orderable: true, searchable: true },
+            { data: 'Observaciones', name: 'Observaciones', orderable: true, searchable: true },
             { data: 'status', name: 'status', orderable: true, searchable: true },
         ],
         "order": [[ 1, "asc" ]]
@@ -204,6 +214,15 @@
                                 '<label>Salida<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="time" class="form-control" name="Salida" id="txtSalida" placeholder="Salida" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+
+                                '<div class="col-md-7">'+
+                                '<label>Observaciones<b style="color:#F44336 !important;">*</b></label>'+
+                                '<select class="form-select" name="Observaciones" id="txtObservaciones" placeholder="Observaciones" onkeyup="tipoLetra(this);" required>'+
+                                '<option value="NINGUNA">NINGUNA</option>'+
+                                '<option value="RETARDO">RETARDO</option>'+
+                                '<option value="INCAPACIDAD">INCAPACIDAD</option>'+
+                                '<option value="FALTA">FALTA</option>'+
+                                '</select>'+
+                            '</div>'+
                                 
                             '</div>'+
                         '</div>'+    
@@ -217,6 +236,7 @@
             $("#txtFecha").val(data.assistances.Fecha);
             $("#txtEntrada").val(data.assistances.Entrada);
             $("#txtSalida").val(data.assistances.Salida);
+            $("#txtObservaciones").val(data.assistances.Observaciones);
             
             mostrarmodalformulario('MODIFICACION', data.permitirmodificacion);
             mostrarformulario();

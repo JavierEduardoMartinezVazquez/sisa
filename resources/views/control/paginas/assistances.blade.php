@@ -58,7 +58,8 @@
                                         <th>ID Usuario</th>
                                         <th>Fecha</th>
                                         <th>Entrada</th>
-                                        <th>Salida</th>  
+                                        <th>Salida</th> 
+                                        <th>Observaciones</th> 
                                         <th>Estatus</th>
                                         
                                     </tr>
