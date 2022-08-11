@@ -50,6 +50,7 @@
                                         <th ><div style="width:90px !important;">Operación</div></th>
                                         <th>#</th>
                                         <th>Usuario</th>
+                                        <th>Empresa</th>
                                         <th>Motivo</th> 
                                         <th>Fecha</th>
                                         <th>Autorización</th>    
