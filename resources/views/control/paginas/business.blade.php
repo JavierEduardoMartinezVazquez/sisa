@@ -30,7 +30,7 @@
                         <div class="card-header">
                             <div class="row">
                                 <div class="col-sm-8">
-                                    <h4>Alta de Empresas</h4>
+                                    <h4>Empresas</h4>
                                 </div>
                                 <div class="col-md-1">
                                     <!---->
@@ -49,10 +49,12 @@
                                     <tr>
                                         <th ><div style="width:90px !important;">Operación</div></th>
                                         <th>#</th>
-                                        <th>Empresa</th>
-                                        <th>Dirección</th>
-                                        <th>No. de empleados</th>
+                                        <th>Usuario</th>
+                                        <th>Motivo</th> 
+                                        <th>Fecha</th>
+                                        <th>Autorización</th>    
                                         <th>Estatus</th>
+                                        
                                     </tr>
                                 </thead>
                             </table>

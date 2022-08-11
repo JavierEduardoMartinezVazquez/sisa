@@ -10,11 +10,11 @@ class C_business extends Model
     protected $table = 'business';
     protected $primarykey = 'id';
     protected $fillable = [
-        'empresa',
-        'direccion',
-        'numero',
+        'nombre',
+        'motivo',
+        'fecha',
+        'autorizacion',
         'status'
         
     ];
 }
- 

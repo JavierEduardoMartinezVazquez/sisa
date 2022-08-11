@@ -17,9 +17,10 @@ class CreateBusinessTable extends Migration
     {
         Schema::create('business', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('empresa',100)->nullable();
-            $table->string('direccion')->nullable();
-            $table->integer('numero')->nullable();
+            $table->string('nombre',100)->nullable();
+            $table->string('motivo',100)->nullable();
+            $table->date('fecha')->nullable();
+            $table->string('autorizacion',15)->nullable();
             $table->string('status',5)->nullable();
             $table->timestamps();
         }); 

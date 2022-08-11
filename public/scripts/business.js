@@ -6,13 +6,13 @@
         listarbusiness();
      }
 
-    function mostrarmodalformulario(movimiento, permitirmodificacion){
+    function mostrarmodalformulario(movimiento, businesstirmodificacion){
         $("#Form_Modal").modal('show');
         if(movimiento=='ALTA'){
             $('#btnGuardar').show();
             $('#btnGuardarModificacion').hide();
         }else if(movimiento == 'MODIFICACION'){
-            if(permitirmodificacion == 1){
+            if(businesstirmodificacion == 1){
                 $('#btnGuardar').hide();
                 $('#btnGuardarModificacion').show();
             }else{
@@ -51,7 +51,7 @@
         $("#tabsform").empty();
     }
     function alta(){
-        $("#titulomodal").html('Alta Empresa');
+        $("#titulomodal").html('Alta de permiso');
         mostrarmodalformulario('ALTA');
         mostrarformulario();
         //formulario alta
@@ -64,31 +64,35 @@
                                 '<div class="col-md-1">'+
                                     '<label>Numero:<b style="color:#F44336 !important;">*</b></label>'+                             
                                     '<input type="text" class="form-control" name="numero" id="txtnumero" required  readonly>'+ 
-                                '</div>'+
-                                '<br>'+
+                                '</div>'+ 
                                 '<div class="col-md-1">'+
                                 '</div>'+ 
-                                '<div class="col-md-10">'+
-                                
-                                    '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="text" class="form-control" name="empresa" id="txtempresa" placeholder="Nombre de la empresa" onkeyup="tipoLetra(this);" required>'+
+                                '<div class="col-md-10">'+ 
+                                    '<label>Usuario<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<input type="text" class="form-control" name="nombre" id="txtnombre" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+    
                                 '<div class="col-md-2">'+
                                 '</div>'+ 
-                                '<div class="col-md-8">'+ 
-                                '<br>'+ 
-                                    '<label>Direccion<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="text" class="form-control" name="direccion" id="txtdireccion" placeholder="Direccion" onkeyup="tipoLetra(this);" required>'+
+                                '<div class="col-md-10">'+ 
+                                    '<label>Motivo<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<input type="text" class="form-control" name="motivo" id="txtmotivo" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
                                 '<div class="col-md-2">'+
-                                '<label>No. de empleados<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="number" class="form-control" name="numero" id="txtnumero" required >'+
-                            '</div>'+
+                                '</div>'+ 
+                                '<div class="col-md-5">'+ 
+                                    '<label>Fecha<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<input type="date" class="form-control" name="fecha" id="txtfecha" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+ 
+                                '<div class="col-md-5">'+ 
+                                    '<label>Autorizacion<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<input type="text" class="form-control" name="autorizacion" id="txtautorizacion" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+ 
+
                             '</div>'+
                         '</div>'+    
                     '</div>'+
                 '</div>'+ 
-            '</div>';
+            '</div>';               
         $("#tabsform").html(tabs);//tabsform es el ID del DIV donde se muestra el formulario del archivo JS <2>
         obtenerultimoidbusiness();
     }
@@ -153,17 +157,17 @@
         columns: [
             { data: 'operaciones', name: 'operaciones', orderable: false, searchable: false },
             { data: 'id', name: 'id', orderable: true, searchable: true },
-            { data: 'empresa', name: 'empresa', orderable: true, searchable: true },
-            { data: 'direccion', name: 'direccion', orderable: true, searchable: true},
-            { data: 'numero', name: 'numero', orderable: true, searchable: true},
+            { data: 'nombre', name: 'nombre', orderable: true, searchable: true },
+            { data: 'motivo', name: 'motivo', orderable: true, searchable: true },
+            { data: 'fecha', name: 'fecha', orderable: true, searchable: true },
+            { data: 'autorizacion', name: 'autorizacion', orderable: true, searchable: true },
             { data: 'status', name: 'status', orderable: true, searchable: true },
-            
         ],
         "order": [[ 1, "asc" ]]
         })
     }
     function obtenerbusiness(numero){
-        $("#titulomodal").html('Modificación Empresa');
+        $("#titulomodal").html('Modificación');
         $.get(obtener_business,{numero:numero },function(data){
             //se crea al formlario
             var tabs =
@@ -179,20 +183,26 @@
                                 '<div class="col-md-1">'+
                                 '</div>'+ 
                                 '<div class="col-md-10">'+ 
-                                    '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="text" class="form-control" name="empresa" id="txtempresa" placeholder="Empresa" onkeyup="tipoLetra(this);" required>'+
-                                '</div>'+    
-                                '<div class="col-md-2">'+
-                                '</div>'+ 
-                                '<div class="col-md-8">'+ 
-                                    '<label>Direccion<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="text" class="form-control" name="direccion" id="txtdireccion" placeholder="Direccion" onkeyup="tipoLetra(this);" required>'+
+                                    '<label>Usuario<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<input type="text" class="form-control" name="nombre" id="txtnombre" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
                                 '<div class="col-md-2">'+
-                                '<label>No. empleados<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="number" class="form-control" name="numero" id="txtnumero" required >'+
-                            '</div>'+
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                '</div>'+ 
+                                '<div class="col-md-10">'+ 
+                                    '<label>Motivo<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<input type="text" class="form-control" name="motivo" id="txtmotivo" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+
+                                '<div class="col-md-2">'+
+                                '</div>'+ 
+                                '<div class="col-md-5">'+ 
+                                    '<label>Fecha<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<input type="date" class="form-control" name="fecha" id="txtfecha" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+ 
+                                '<div class="col-md-5">'+ 
+                                    '<label>Autorizacion<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<input type="text" class="form-control" name="autorizacion" id="txtautorizacion" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+ 
+
                             '</div>'+
                         '</div>'+    
                     '</div>'+
@@ -201,10 +211,10 @@
             $("#tabsform").html(tabs);
             console.log(data);//mandas el arreglo
             $("#txtnumero").val(data.business.id);
-            $("#txtempresa").val(data.business.empresa);
-            $("#txtdireccion").val(data.business.direccion);
-            $("#txtnumero").val(data.business.numero);
-            
+            $("#txtnombre").val(data.business.nombre);
+            $("#txtmotivo").val(data.business.motivo);
+            $("#txtfecha").val(data.business.fecha);
+            $("#txtautorizacion").val(data.business.autorizacion);
             
             mostrarmodalformulario('MODIFICACION', data.permitirmodificacion);
             mostrarformulario();
