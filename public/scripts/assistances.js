@@ -6,6 +6,14 @@
         listarassistances();
      }
 
+     function asignarfechaactual(){
+        $.get(obtener_fecha_actual_datetimelocal, function(fechas){
+          $("#txtFecha").val(fechas.fecha_actual_input_date);
+          $("#txtSalida").val(fechas.input_salida);
+          $("#txtEntrada").val(fechas.input_entrada);
+        })
+    }
+
     function mostrarmodalformulario(movimiento, assistancestirmodificacion){
         $("#Form_Modal").modal('show');
         if(movimiento=='ALTA'){
@@ -69,7 +77,7 @@
                                 '</div>'+ 
                                 '<div class="col-md-10">'+ 
                                     '<label>Usuario<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="text" class="form-control" name="nombre" id="txtnombre" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                    '<input type="text" class="form-control" name="Usuario" id="txtUsuario" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
                                 '<div class="col-md-6">'+ 
                                 '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+ 
@@ -92,6 +100,7 @@
             '</div>';               
         $("#tabsform").html(tabs);//tabsform es el ID del DIV donde se muestra el formulario del archivo JS <2>
         obtenerultimoidassistances();
+        asignarfechaactual();
     }
     $("#btnGuardar").on('click', function (e) {
         e.preventDefault(); //       ID del formulario donde se muestra el modal
@@ -154,7 +163,7 @@
         columns: [
             { data: 'operaciones', name: 'operaciones', orderable: false, searchable: false },
             { data: 'id', name: 'id', orderable: true, searchable: true },
-            { data: 'nombre', name: 'nombre', orderable: true, searchable: true },
+            { data: 'Usuario', name: 'Usuario', orderable: true, searchable: true },
             { data: 'empresa', name: 'empresa', orderable: true, searchable: true },
             { data: 'direccion', name: 'direccion', orderable: true, searchable: true },
             { data: 'numeroe', name: 'numeroe', orderable: true, searchable: true },
@@ -181,7 +190,7 @@
                                 '</div>'+ 
                                 '<div class="col-md-10">'+ 
                                     '<label>Usuario<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="text" class="form-control" name="nombre" id="txtnombre" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                    '<input type="text" class="form-control" name="Usuario" id="txtUsuario" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
                                 '<div class="col-md-6">'+ 
                                     '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+ 
@@ -204,7 +213,7 @@
             $("#tabsform").html(tabs);
             console.log(data);//mandas el arreglo
             $("#txtnumero").val(data.assistances.id);
-            $("#txtnombre").val(data.assistances.nombre);
+            $("#txtUsuario").val(data.assistances.Usuario);
             $("#txtempresa").val(data.assistances.empresa);
             $("#txtdireccion").val(data.assistances.direccion);
             $("#txtnumeroe").val(data.assistances.numeroe);

@@ -1,6 +1,6 @@
 @extends('plantilla')
 @section('titulo')
-    Empresas
+    Asistencias
 @endsection
     @section('additionals_css')
 @endsection
@@ -41,6 +41,12 @@
                                 <div class="col-md-1">
                                     <button type="submit" class="btn btn-danger" onclick="alta()">Agregar</button>
                                 </div>
+                                <div class="col-md-1">
+                                    
+                                    <a class="btn  btn-success waves-effect" href="{{route('export_excel')}}" target="_blank">
+                                        Excel
+                                    </a>
+                                
                             </div>
                         </div>
                         <div class="card-body table-responsive">
@@ -49,7 +55,7 @@
                                     <tr>
                                         <th ><div style="width:90px !important;">Operación</div></th>
                                         <th>#</th>
-                                        <th>Usuario</th>
+                                        <th>Id Usuario</th>
                                         <th>Empresa</th>
                                         <th>Dirección</th>
                                         <th>N.Empleados</th>  
@@ -82,6 +88,7 @@
         var modificar_assistances = '{!!URL::to('modificar_assistances')!!}';
         var verificar_baja_assistances = '{!!URL::to('verificar_baja_assistances')!!}';
         var baja_assistances = '{!!URL::to('baja_assistances')!!}';     
+        var obtener_fecha_actual_datetimelocal = '{!!URL::to('obtener_fecha_actual_datetimelocal')!!}';  
     </script> 
     <script src="scripts/assistances.js"></script>
 @endsection    
