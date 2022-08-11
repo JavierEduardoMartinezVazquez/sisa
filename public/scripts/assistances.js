@@ -79,18 +79,18 @@
                                     '<label>Usuario<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="text" class="form-control" name="Usuario" id="txtUsuario" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
-                                '<div class="col-md-6">'+ 
-                                '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="text" class="form-control" name="empresa" id="txtempresa" placeholder="" onkeyup="tipoLetra(this);" required>'+
-                            '</div>'+    
-                            '<div class="col-md-6">'+ 
-                                '<label>Dirección<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="text" class="form-control" name="direccion" id="txtdireccion" placeholder="" onkeyup="tipoLetra(this);" required>'+
-                            '</div>'+ 
-                            '<div class="col-md-2">'+ 
-                                '<label>N.Empleados<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="number" class="form-control" name="numeroe" id="txtnumeroe" placeholder="" onkeyup="tipoLetra(this);" required>'+
-                            '</div>'+ 
+                                '<div class="col-md-5">'+
+                                '<label>Fecha<b style="color:#F44336 !important;">*</b></label>'+ 
+                                '<input type="date" class="form-control" name="Fecha" id="txtFecha" placeholder="Fecha" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+   
+                                '<div class="col-md-5">'+
+                                '<label>Entrada<b style="color:#F44336 !important;">*</b></label>'+ 
+                                '<input type="time" class="form-control" name="Entrada" id="txtEntrada" placeholder="Entrada" onkeyup="tipoLetra(this);" required>'+ 
+                                '</div>'+
+                                '<div class="col-md-5">'+
+                                '<label>Salida<b style="color:#F44336 !important;">*</b></label>'+ 
+                                '<input type="time" class="form-control" name="Salida" id="txtSalida" placeholder="Salida" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+
                                 
 
                             '</div>'+
@@ -164,9 +164,9 @@
             { data: 'operaciones', name: 'operaciones', orderable: false, searchable: false },
             { data: 'id', name: 'id', orderable: true, searchable: true },
             { data: 'Usuario', name: 'Usuario', orderable: true, searchable: true },
-            { data: 'empresa', name: 'empresa', orderable: true, searchable: true },
-            { data: 'direccion', name: 'direccion', orderable: true, searchable: true },
-            { data: 'numeroe', name: 'numeroe', orderable: true, searchable: true },
+            { data: 'Fecha', name: 'Fecha', orderable: true, searchable: true },
+            { data: 'Entrada', name: 'Entrada', orderable: true, searchable: true },
+            { data: 'Salida', name: 'Salida', orderable: true, searchable: true },
             { data: 'status', name: 'status', orderable: true, searchable: true },
         ],
         "order": [[ 1, "asc" ]]
@@ -192,17 +192,17 @@
                                     '<label>Usuario<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="text" class="form-control" name="Usuario" id="txtUsuario" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
-                                '<div class="col-md-6">'+ 
-                                    '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="text" class="form-control" name="empresa" id="txtempresa" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                '<div class="col-md-5">'+
+                                '<label>Fecha<b style="color:#F44336 !important;">*</b></label>'+ 
+                                '<input type="date" class="form-control" name="Fecha" id="txtFecha" placeholder="Fecha" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
-                                '<div class="col-md-6">'+ 
-                                    '<label>Dirección<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="text" class="form-control" name="direccion" id="txtdireccion" placeholder="" onkeyup="tipoLetra(this);" required>'+
-                                '</div>'+ 
-                                '<div class="col-md-2">'+ 
-                                    '<label>N.Empleados<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="number" class="form-control" name="numeroe" id="txtnumeroe" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                '<div class="col-md-5">'+
+                                '<label>Entrada<b style="color:#F44336 !important;">*</b></label>'+ 
+                                '<input type="time" class="form-control" name="Entrada" id="txtEntrada" placeholder="Entrada" onkeyup="tipoLetra(this);" required>'+ 
+                                '</div>'+
+                                '<div class="col-md-5">'+
+                                '<label>Salida<b style="color:#F44336 !important;">*</b></label>'+ 
+                                '<input type="time" class="form-control" name="Salida" id="txtSalida" placeholder="Salida" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+
                                 
                             '</div>'+
@@ -214,9 +214,9 @@
             console.log(data);//mandas el arreglo
             $("#txtnumero").val(data.assistances.id);
             $("#txtUsuario").val(data.assistances.Usuario);
-            $("#txtempresa").val(data.assistances.empresa);
-            $("#txtdireccion").val(data.assistances.direccion);
-            $("#txtnumeroe").val(data.assistances.numeroe);
+            $("#txtFecha").val(data.assistances.Fecha);
+            $("#txtEntrada").val(data.assistances.Entrada);
+            $("#txtSalida").val(data.assistances.Salida);
             
             mostrarmodalformulario('MODIFICACION', data.permitirmodificacion);
             mostrarformulario();
@@ -282,7 +282,7 @@ function verificarbajaassistances(numero){
             //ID del input que esta dentro del formulario del modal de baja
             $("#num").val();
             //<h5 id="textobaja"></h5> etiqueta dentro del formulario del modal de baja
-            $("#textobaja").html("Lo sentimos, esta empresa esta dada de baja.");
+            $("#textobaja").html("Lo sentimos, esta Fecha esta dada de baja.");
             // id de boton para la baja dentro del formulario del modal de baja
             $("#aceptar").hide();
             // id del div del modal id="estatusregistro"

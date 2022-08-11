@@ -55,10 +55,10 @@
                                     <tr>
                                         <th ><div style="width:90px !important;">Operación</div></th>
                                         <th>#</th>
-                                        <th>Id Usuario</th>
-                                        <th>Empresa</th>
-                                        <th>Dirección</th>
-                                        <th>N.Empleados</th>  
+                                        <th>ID Usuario</th>
+                                        <th>Fecha</th>
+                                        <th>Entrada</th>
+                                        <th>Salida</th>  
                                         <th>Estatus</th>
                                         
                                     </tr>

@@ -11,9 +11,9 @@ class C_assistances extends Model
     protected $primarykey = 'id';
     protected $fillable = [
         'Usuario',
-        'empresa',
-        'direccion',
-        'numeroe',
+        'Fecha',
+        'Entrada',
+        'Salida',
         'status'
         
     ];
