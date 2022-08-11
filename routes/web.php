@@ -163,6 +163,7 @@ Route::post('modificar_assistances', 'AssistancesController@modificar_assistance
 Route::get('verificar_baja_assistances', 'AssistancesController@verificar_baja_assistances')->name('verificar_baja_assistances');
 Route::post('baja_assistances', 'AssistancesController@baja_assistances')->name('baja_assistances');
 Route::get('export_excel', 'AssistancesController@export_excel')->name('export_excel');
+Route::get('obtener_fecha_actual_datetimelocal', 'AssistancesController@obtener_fecha_actual_datetimelocal')->name('obtener_fecha_actual_datetimelocal');
 
 
 

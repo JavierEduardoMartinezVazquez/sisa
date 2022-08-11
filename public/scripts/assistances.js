@@ -6,6 +6,14 @@
         listarassistances();
      }
 
+    function asignarfechaactual(){
+        $.get(obtener_fecha_actual_datetimelocal, function(fechas){
+          $("#txtFecha").val(fechas.fecha_actual_input_date);
+          $("#txtSalida").val(fechas.input_salida);
+          $("#txtEntrada").val(fechas.input_entrada);
+        })
+    }
+
     function mostrarmodalformulario(movimiento, permitirmodificacion){
         $("#Form_Modal").modal('show');
         if(movimiento=='ALTA'){
@@ -105,6 +113,7 @@
             '</div>';
         $("#tabsform").html(tabs);//tabsform es el ID del DIV donde se muestra el formulario del archivo JS <2>
         obtenerultimoidassistances();
+        asignarfechaactual();
     }
     $("#btnGuardar").on('click', function (e) {
         e.preventDefault(); //       ID del formulario donde se muestra el modal

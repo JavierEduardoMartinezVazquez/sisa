@@ -7,6 +7,8 @@ use App\Exports\AssistancesExport;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use App\User;
+use Helpers;
+
 
 class AssistancesController extends Controller
 {
@@ -119,5 +121,10 @@ class AssistancesController extends Controller
         ini_set('memory_limit', '-1');
         $columns = ['Usuario','Fecha','Entrada','Salida','Observaciones'];
         return Excel::download(new AssistancesExport($columns), "Asistencias.xlsx");
+    }
+
+    public function obtener_fecha_actual_datetimelocal(Request $request){
+        $fechas = Helpers::fecha_exacta_accion_dateinput();
+        return response()->json($fechas);
     }
 }

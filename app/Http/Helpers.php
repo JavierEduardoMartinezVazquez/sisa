@@ -90,6 +90,26 @@ class Helpers{
     }
 
     //se obtiene la fecha excacta para input date-timelocal
+    public static function fecha_exacta_accion_dateinput(){
+        Carbon::setLocale(config('app.locale'));
+        Carbon::setUTF8(true);
+        setlocale(LC_TIME, 'es_Es');
+        $fecha = '';
+        $fechamax = '';
+        $fechamin = '';
+        $fecha_actual_input_date = Carbon::now()->format('Y-m-d');
+        $input_salida  = Carbon::now()->format('H:i');
+        $input_entrada  = Carbon::now()->format('H:i');
+        $data = array(
+            'fecha_actual_input_date' => $fecha_actual_input_date,
+            'input_salida' => $input_salida,
+            'input_entrada' => $input_entrada
+        );
+
+        return $data;
+    }
+
+    //se obtiene la fecha excacta para input date-timelocal
     public static function fecha_exacta_accion_datetimelocal(){
         Carbon::setLocale(config('app.locale'));
         Carbon::setUTF8(true);

@@ -91,6 +91,8 @@
         var modificar_assistances = '{!!URL::to('modificar_assistances')!!}';
         var verificar_baja_assistances = '{!!URL::to('verificar_baja_assistances')!!}';
         var baja_assistances = '{!!URL::to('baja_assistances')!!}';     
+        var obtener_fecha_actual_datetimelocal = '{!!URL::to('obtener_fecha_actual_datetimelocal')!!}';     
+
     </script> 
     <script src="scripts/assistances.js"></script>
 @endsection    
