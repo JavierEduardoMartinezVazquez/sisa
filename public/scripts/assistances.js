@@ -75,15 +75,15 @@
                                 '</div>'+ 
                                 '<div class="col-md-1">'+
                                 '</div>'+ 
-                                '<div class="col-md-10">'+ 
+                                '<div class="col-md-2">'+ 
                                     '<label>Usuario<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="text" class="form-control" name="Usuario" id="txtUsuario" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                    '<input type="numeric" class="form-control" name="Usuario" id="txtUsuario" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
-                                '<div class="col-md-5">'+
+                                '<div class="col-md-4">'+
                                 '<label>Fecha<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="date" class="form-control" name="Fecha" id="txtFecha" placeholder="Fecha" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+   
-                                '<div class="col-md-5">'+
+                                '<div class="col-md-4">'+
                                 '<label>Entrada<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="time" class="form-control" name="Entrada" id="txtEntrada" placeholder="Entrada" onkeyup="tipoLetra(this);" required>'+ 
                                 '</div>'+
@@ -198,17 +198,17 @@
                                 '</div>'+ 
                                 '<div class="col-md-1">'+
                                 '</div>'+ 
-                                '<div class="col-md-10">'+ 
+                                '<div class="col-md-2">'+ 
                                     '<label>Usuario<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="text" class="form-control" name="Usuario" id="txtUsuario" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                    '<input type="numeric" class="form-control" name="Usuario" id="txtUsuario" readonly placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
-                                '<div class="col-md-5">'+
+                                '<div class="col-md-4">'+
                                 '<label>Fecha<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="date" class="form-control" name="Fecha" id="txtFecha" placeholder="Fecha" onkeyup="tipoLetra(this);" required>'+
+                                '<input type="date" class="form-control" name="Fecha" id="txtFecha" readonly placeholder="Fecha" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
-                                '<div class="col-md-5">'+
+                                '<div class="col-md-4">'+
                                 '<label>Entrada<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="time" class="form-control" name="Entrada" id="txtEntrada" placeholder="Entrada" onkeyup="tipoLetra(this);" required>'+ 
+                                '<input type="time" class="form-control" name="Entrada" id="txtEntrada" readonly placeholder="Entrada" onkeyup="tipoLetra(this);" required>'+ 
                                 '</div>'+
                                 '<div class="col-md-5">'+
                                 '<label>Salida<b style="color:#F44336 !important;">*</b></label>'+ 
