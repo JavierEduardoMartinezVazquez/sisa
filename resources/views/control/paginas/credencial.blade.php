@@ -140,5 +140,6 @@
 		</div>
         <br>
         <div style="text-align:right">
-            {!! DNS2D::getBarcodeHTML("'".$user->id."'", 'QRCODE', 3 ,3) !!}
+            <!--{!! DNS2D::getBarcodeHTML("'".$user->id."'", 'QRCODE', 3 ,3) !!}-->
+			{!! DNS1D::getBarcodeHTML("'".$user->id."'", 'C128') !!}
         </div>
