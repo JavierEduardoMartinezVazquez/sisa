@@ -55,7 +55,7 @@
                                     <tr>
                                         <th ><div style="width:90px !important;">Operación</div></th>
                                         <th>#</th>
-                                        <th>ID Usuario</th>
+                                        <th>ID</th>
                                         <th>Fecha</th>
                                         <th>Entrada</th>
                                         <th>Salida</th> 
