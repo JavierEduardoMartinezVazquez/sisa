@@ -38,9 +38,9 @@
                                 <div class="col-md-1">
                                     <!---->
                                 </div>
-                                <div class="col-md-1">
+                               <!-- <div class="col-md-1">
                                     <button type="submit" class="btn btn-danger" onclick="alta()">Agregar</button>
-                                </div>
+                               </div>--> 
                                 <div class="col-md-1">
                                     
                                     <a class="btn  btn-success waves-effect" href="{{route('export_excel')}}" target="_blank">
