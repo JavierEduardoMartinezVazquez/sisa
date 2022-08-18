@@ -30,20 +30,14 @@
                         <div class="card-header">
                             <div class="row">
                                 <div class="col-sm-8">
-                                    <h4>Registro de Asistencia</h4>
+                                    <h4>REGISTRO DE ASISTENCIA</h4>
+                                </div>
+                                <div class="col-md-3">
+                                    
+                                <input type="text" class="form-control divorinputmodxl inputnextdet" id="asistencia" placeholder="ID del Empleado" autocomplete="off">
+                                    <!--<button type="submit" class="btn btn-danger" onclick="alta()">Agregar</button>-->
                                 </div>
                                 <div class="col-md-1">
-                                    <!---->
-                                </div>
-                                <div class="col-md-1">
-                                    <!---->
-                                </div>
-                                <div class="col-md-1">
-                                    <button type="submit" class="btn btn-danger" onclick="alta()">Agregar</button>
-                               </div>
-                               <!--<div class="col-3">
-                            <input type="text" class="form-control" name="numero" id="txtnumero">-->
-                               <div class="col-md-1">
                                     
                                     <a class="btn  btn-success waves-effect" href="{{route('export_excel')}}" target="_blank">
                                         Excel
