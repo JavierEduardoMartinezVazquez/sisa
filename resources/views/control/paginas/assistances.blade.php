@@ -30,7 +30,7 @@
                         <div class="card-header">
                             <div class="row">
                                 <div class="col-sm-8">
-                                    <h4>Empresas</h4>
+                                    <h4>Registro de Asistencia</h4>
                                 </div>
                                 <div class="col-md-1">
                                     <!---->
@@ -38,10 +38,12 @@
                                 <div class="col-md-1">
                                     <!---->
                                 </div>
-                               <!-- <div class="col-md-1">
+                                <div class="col-md-1">
                                     <button type="submit" class="btn btn-danger" onclick="alta()">Agregar</button>
-                               </div>--> 
-                                <div class="col-md-1">
+                               </div>
+                               <!--<div class="col-3">
+                            <input type="text" class="form-control" name="numero" id="txtnumero">-->
+                               <div class="col-md-1">
                                     
                                     <a class="btn  btn-success waves-effect" href="{{route('export_excel')}}" target="_blank">
                                         Excel
@@ -54,8 +56,8 @@
                                 <thead>
                                     <tr>
                                         <th ><div style="width:90px !important;">Operación</div></th>
-                                        <th>#</th>
-                                        <th>ID</th>
+                                        <th></th>
+                                        <th>ID de Empleado</th>
                                         <th>Fecha</th>
                                         <th>Entrada</th>
                                         <th>Salida</th> 
