@@ -56,7 +56,7 @@
                                 <thead>
                                     <tr>
                                         <th ><div style="width:90px !important;">Operación</div></th>
-                                        <th></th>
+                                        
                                         <th>ID de Empleado</th>
                                         <th>Fecha</th>
                                         <th>Entrada</th>

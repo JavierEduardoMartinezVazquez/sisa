@@ -40,11 +40,11 @@
         $("#formulario").hide();
         $("#contenidomodaltablas").show();
     }
-    function obtenerultimoidassistances(){
+    /*function obtenerultimoidassistances(){
         $.get(obtener_ultimo_id_assistances, function(numero){
           $("#txtnumero").val(numero);
         })  
-    }
+    }*/
     //limpiar todos los inputs del formulario alta
     function limpiar(){
         $("#form_Modal_pricipal")[0].reset();   
@@ -69,12 +69,12 @@
                     '<div class="tab-pane active" id="datosgenerales">'+
                         '<div class="container">'+
                             '<div class="form-group row">'+
-                                '<div class="col-md-1">'+
+                                /*'<div class="col-md-1">'+
                                     '<label>Numero:<b style="color:#F44336 !important;">*</b></label>'+                             
                                     '<input type="text" class="form-control" name="numero" id="txtnumero" required  readonly>'+ 
                                 '</div>'+ 
                                 '<div class="col-md-1">'+
-                                '</div>'+ 
+                                '</div>'+ */
                                 '<div class="col-md-2">'+ 
                                     '<label>Usuario<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="numeric" class="form-control" name="Usuario" id="txtUsuario" placeholder="" onkeyup="tipoLetra(this);" required>'+
@@ -108,7 +108,7 @@
                 '</div>'+ 
             '</div>';               
         $("#tabsform").html(tabs);//tabsform es el ID del DIV donde se muestra el formulario del archivo JS <2>
-        obtenerultimoidassistances();
+        //obtenerultimoidassistances();
         asignarfechaactual();
     }
     $("#btnGuardar").on('click', function (e) {
@@ -171,7 +171,7 @@
         },
         columns: [
             { data: 'operaciones', name: 'operaciones', orderable: false, searchable: false },
-            { data: 'id', name: 'id', orderable: true, searchable: true },
+            //{ data: 'id', name: 'id', orderable: true, searchable: true },
             { data: 'Usuario', name: 'Usuario', orderable: true, searchable: true },
             { data: 'Fecha', name: 'Fecha', orderable: true, searchable: true },
             { data: 'Entrada', name: 'Entrada', orderable: true, searchable: true },
@@ -192,12 +192,12 @@
                     '<div class="tab-pane active" id="datosgenerales">'+
                         '<div class="container">'+
                             '<div class="form-group row">'+
-                                '<div class="col-md-1">'+
+                                /*'<div class="col-md-1">'+
                                     '<label>Numero:<b style="color:#F44336 !important;">*</b></label>'+                             
                                     '<input type="text" class="form-control" name="numero" id="txtnumero" required  readonly>'+ 
                                 '</div>'+ 
                                 '<div class="col-md-1">'+
-                                '</div>'+ 
+                                '</div>'+ */
                                 '<div class="col-md-2">'+ 
                                     '<label>Usuario<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="numeric" class="form-control" name="Usuario" id="txtUsuario" readonly placeholder="" onkeyup="tipoLetra(this);" required>'+
