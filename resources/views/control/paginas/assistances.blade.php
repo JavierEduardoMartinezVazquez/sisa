@@ -56,8 +56,8 @@
                                 <thead>
                                     <tr>
                                         <th ><div style="width:90px !important;">Operación</div></th>
-                                        
-                                        <th>ID de Empleado</th>
+                                        <th>Orden</th>
+                                        <th>ID</th>
                                         <th>Fecha</th>
                                         <th>Entrada</th>
                                         <th>Salida</th> 
