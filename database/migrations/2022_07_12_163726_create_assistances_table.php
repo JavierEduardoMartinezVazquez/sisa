@@ -17,7 +17,7 @@ class CreateAssistancesTable extends Migration
     {
         Schema::create('assistances', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('Usuario',100)->nullable();
+            $table->integer('Usuario')->nullable();
             $table->date('Fecha',100)->nullable();
             $table->time('Entrada')->nullable();
             $table->time('Salida')->nullable();

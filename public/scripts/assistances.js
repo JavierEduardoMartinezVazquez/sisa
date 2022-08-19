@@ -111,6 +111,16 @@
         obtenerultimoidassistances();
         asignarfechaactual();
     }
+    setTimeout(function(){$("#buscarcodigo").focus();},500);
+
+    $('#buscarcodigo').on('change', function(e){
+        e.preventDefault();
+        var buscarcodigo = $("#buscarcodigo").val();
+        $.get(leercodigo, {buscarcodigo:buscarcodigo}, function(data){
+          console.log(data);
+        })
+    });
+    
     $("#btnGuardar").on('click', function (e) {
         e.preventDefault(); //       ID del formulario donde se muestra el modal
         var formData = new FormData($("#form_Modal_pricipal")[0]);

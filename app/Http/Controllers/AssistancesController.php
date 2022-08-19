@@ -33,24 +33,7 @@ class AssistancesController extends Controller
         return response()->json($select_roles);
         
     }
-    public function guardar_assistances(Request $request){
-        $ultimoNumeroTabla = C_assistances::select("id")->orderBy("id", "DESC")->take(1)->get();
-        if(sizeof($ultimoNumeroTabla) == 0 || sizeof($ultimoNumeroTabla) == "" || sizeof($ultimoNumeroTabla) == null){
-            $id = 1;
-        }else{
-            $id = $ultimoNumeroTabla[0]->id+1;
-        }   
-        $assistances = new C_assistances;
-        $assistances->Usuario=$request->Usuario;
-        $assistances->Fecha=$request->Fecha;
-        $assistances->Entrada=$request->Entrada;
-        $assistances->Salida=$request->Salida;
-        $assistances->Observaciones=$request->Observaciones;
-        
-        $assistances->status='ALTA';        
-        $assistances->save();
-        return response()->json($assistances);
-    }
+    
     public function listar_assistances (Request $request)
     {
         if($request->ajax()){
@@ -120,6 +103,46 @@ class AssistancesController extends Controller
     public function obtener_fecha_actual_datetimelocal(Request $request){
         $fechas = Helpers::fecha_exacta_accion_dateinput();
         return response()->json($fechas);
+    }
+
+    //Leer codigo de barras
+    public function leercodigo(Request $request){
+        $buscarcodigo = $request->buscarcodigo;
+        $ultimoNumeroTabla = C_assistances::select("id")->orderBy("id", "DESC")->take(1)->get();
+        if(sizeof($ultimoNumeroTabla) == 0 || sizeof($ultimoNumeroTabla) == "" || sizeof($ultimoNumeroTabla) == null){
+            $id = 1;
+        }else{
+            $id = $ultimoNumeroTabla[0]->id+1;
+        }   
+        $assistances = new C_assistances;
+        $assistances->Usuario=$request->Usuario;
+        $assistances->Fecha=$request->Fecha;
+        $assistances->Entrada=$request->Entrada;
+        $assistances->Salida=$request->Salida;
+        $assistances->Observaciones=$request->Observaciones;
+        
+        $assistances->status='ALTA';        
+        $assistances->save();
+        return response()->json($buscarcodigo);
+    }
+
+    public function guardar_assistances(Request $request){
+        $ultimoNumeroTabla = C_assistances::select("id")->orderBy("id", "DESC")->take(1)->get();
+        if(sizeof($ultimoNumeroTabla) == 0 || sizeof($ultimoNumeroTabla) == "" || sizeof($ultimoNumeroTabla) == null){
+            $id = 1;
+        }else{
+            $id = $ultimoNumeroTabla[0]->id+1;
+        }   
+        $assistances = new C_assistances;
+        $assistances->Usuario=$request->Usuario;
+        $assistances->Fecha=$request->Fecha;
+        $assistances->Entrada=$request->Entrada;
+        $assistances->Salida=$request->Salida;
+        $assistances->Observaciones=$request->Observaciones;
+        
+        $assistances->status='ALTA';        
+        $assistances->save();
+        return response()->json($assistances);
     }
 }
 
