@@ -26,6 +26,7 @@ class User extends Authenticatable
         'email',
         'password',
         'edad',
+        'nss',
         'sucursal',
         'area',
         'ingreso',

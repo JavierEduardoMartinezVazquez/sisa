@@ -54,6 +54,7 @@
                                         <th>A. Materno</th>
                                         <th>Email</th>
                                         <th>Edad</th>
+                                        <th>NSS</th>
                                         <th>Sucursal</th>
                                         <th>Area</th>
                                         <th>Fecha de ingreso</th>

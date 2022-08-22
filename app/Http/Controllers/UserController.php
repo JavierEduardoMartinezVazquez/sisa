@@ -83,6 +83,7 @@ class UserController extends Controller
             $user->email=$request->email;
             $user->password=Hash::make($request->pass);
             $user->edad=$request->edad;
+            $user->nss=$request->nss;
             $user->sucursal=$request->sucursal;
             $user->area=$request->area;
             $user->ingreso=$request->ingreso;
@@ -108,6 +109,7 @@ class UserController extends Controller
             'lastname_m',
             'email',
             'edad',
+            'nss',
             'sucursal',
             'area',
             'ingreso',

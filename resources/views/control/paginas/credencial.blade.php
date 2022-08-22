@@ -84,9 +84,9 @@
 	<div class="primero">
 		<table>
                 <tr>
-                    <td>Entrada {{ $user->hentrada }} </td> <br>
-                    <td>Salida {{ $user->hsalida }} </td>
-					<td>Area: {{ $user->area }}</td>
+                    <td>NSS: {{ $user->nss }} <br><br>
+					Area: {{ $user->area }}</td>
+					<br>
                 </tr>            
             </table>
 		</div>

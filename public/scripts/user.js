@@ -259,6 +259,10 @@
                                         '<label>Edad</label>'+
                                         '<input type="number" class="form-control" name="edad" id="txtedad" required autocomplete="Edad" placeholder="Edad">'+
                                     '</div>'+
+                                    '<div class="col-md-2">'+ 
+                                        '<label>NSS</label>'+
+                                        '<input type="text" class="form-control" name="nss" id="txtnss" required autocomplete="nss" placeholder="NSS">'+
+                                    '</div>'+
                                     '<div class="col-md-10">'+ 
                                         '<label>Sucursal<b style="color:#F44336 !important;">*</b></label>'+
                                         '<select class="form-select" name="sucursal" id="txtsucursal" placeholder="Nombre de la sucursal" onkeyup="tipoLetra(this);" required>'+
@@ -376,6 +380,7 @@
             { data: 'lastname_m', name: 'lastname_m', orderable: true, searchable: true },
             { data: 'email', name: 'email', orderable: true, searchable: true },
             { data: 'edad', name: 'edad', orderable: true, searchable: true },
+            { data: 'nss', name: 'nss', orderable: true, searchable: true },
             { data: 'sucursal', name: 'sucursal', orderable: true, searchable: true },
             { data: 'area', name: 'area', orderable: true, searchable: true },
             { data: 'ingreso', name: 'ingreso', orderable: true, searchable: true },
@@ -456,6 +461,7 @@
             $("#txtmaterno").val(data.user.lastname_m);
             $("#txtemail").val(data.user.email);
             $("#txtedad").val(data.user.edad);
+            $("#txtnss").val(data.user.nss);
             $("#txtsucursal").val(data.user.sucursal);
             $("#txtarea").val(data.user.area);
             $("#txtingreso").val(data.user.ingreso);
