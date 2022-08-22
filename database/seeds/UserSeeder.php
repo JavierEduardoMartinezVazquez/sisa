@@ -21,7 +21,7 @@ class UserSeeder extends Seeder
             'password' => bcrypt('854620'),
             'edad' => '19',
             'sucursal' => 'SOLUCIONES INTEGRALES PARA TU CAMIÓN SOCASA S.A. DE C.V.',
-            'area' =>'SISTEMAS',
+            'area' =>'Sistemas',
             'ingreso' => '2022-05-01',
             'hentrada' =>'08:30:00',
             'hsalida' => '05:30:00',
