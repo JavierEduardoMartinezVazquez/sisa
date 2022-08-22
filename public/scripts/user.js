@@ -255,11 +255,11 @@
                                         '<label>Confirmar contraseña</label>'+
                                         '<input type="password" class="form-control" name="pass2" id="txtpass2" required autocomplete="new-password" data-parsley-equalto="#txtpass" placeholder="Confirmar contraseña">'+
                                     '</div>'+
-                                '<div class="col-md-2">'+ 
+                                '<div class="col-md-3">'+ 
                                         '<label>Edad</label>'+
                                         '<input type="number" class="form-control" name="edad" id="txtedad" required autocomplete="Edad" placeholder="Edad">'+
                                     '</div>'+
-                                    '<div class="col-md-2">'+ 
+                                    '<div class="col-md-9">'+ 
                                         '<label>NSS</label>'+
                                         '<input type="text" class="form-control" name="nss" id="txtnss" required autocomplete="nss" placeholder="NSS">'+
                                     '</div>'+
