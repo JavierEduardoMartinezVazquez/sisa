@@ -39,9 +39,9 @@
                                     <!---->
                                 </div>
                                 @can('User')
-                                <div class="col-md-1">
+                                <!--<div class="col-md-1">
                                     <button type="submit" class="btn btn-danger" onclick="alta()">Agregar</button>
-                                </div>
+                                </div>-->
                                 @endcan
                                 <div class="col-md-1">
                                     
@@ -56,9 +56,9 @@
                             <table id="tablelist" class=" tablelist table table-bordered table-striped display nowrap">
                                 <thead>
                                     <tr>
-                                        <th ><div style="width:90px !important;">Operación</div></th>
-                                        <th>#</th>
-                                        <th>Usuario</th>
+                                        <th><div style="width:90px !important;">Operación</div></th>
+                                        <th>Orden</th>
+                                        <th>ID</th>
                                         <th>Fecha</th>
                                         <th>Entrada</th>
                                         <th>Salida</th>
@@ -83,12 +83,12 @@
     </script>
     <script>
         var obtener_ultimo_id_assistances = '{!!URL::to('obtener_ultimo_id_assistances')!!}';
-        var guardar_assistances = '{!!URL::to('guardar_assistances')!!}';
+        //var guardar_assistances = '{!!URL::to('guardar_assistances')!!}';
         var listar_assistances = '{!!URL::to('listar_assistances')!!}';
         var obtener_assistances = '{!!URL::to('obtener_assistances')!!}';
-        var modificar_assistances = '{!!URL::to('modificar_assistances')!!}';
-        var verificar_baja_assistances = '{!!URL::to('verificar_baja_assistances')!!}';
-        var baja_assistances = '{!!URL::to('baja_assistances')!!}';     
+        //var modificar_assistances = '{!!URL::to('modificar_assistances')!!}';
+        //var verificar_baja_assistances = '{!!URL::to('verificar_baja_assistances')!!}';
+        //var baja_assistances = '{!!URL::to('baja_assistances')!!}';     
     </script> 
     <script src="scripts/assistances.js"></script>
 @endsection    
