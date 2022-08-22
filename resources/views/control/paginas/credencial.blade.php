@@ -10,8 +10,6 @@
 	padding: 1.96rem !important;
 }
 .profile-image{
-	border-radius: 35px;
-	border: 1px solid #a3a3a3;
 }
 .name{
 	font-size: 15px;
@@ -40,6 +38,13 @@
 	display: flex;
 }
 
+.espacio{
+	font-size: 6px;
+	color: rgb(255, 255, 255);
+	position: justify;
+	top: 2px;
+}
+
 .letra{
 	font-size: 6px;
 	color: rgb(75, 75, 75);
@@ -54,7 +59,10 @@
 	<div class="card">
 		<div class="container">
 			<center>
-			<img src="control/img/foto.jpg" class="img-fluid profile-image" width="70">
+			<a class="espacio">
+				---------------------------------------------------------------------------------
+			 ----------------------
+			<img src="control/img/logo_socasa.png" class="img-fluid profile-image" width="70">
 			<div>
 				<h5 class="name">{{ $user->name }}
 				{{ $user->lastname_p }}
@@ -92,7 +100,7 @@
 			<div class="letra">
 				<center> SOLUCIONES INTEGRALES PARA TU CAMIÓN SOCASA S.A. de C.V.</center>
 				<!--{{ $user->hentrada }}-->
-				<center>AVENIDA PRINCIPAL TOLUCA NAUCALPAN #7, BO.EL ESPINO, XONACATLÁN, ESTADO DE MÉXICO. ESTA CREDENCIAL ES PROPIEDAD DE 
+				<center>AVENIDA PRINCIPAL #7, BO.EL ESPINO, XONACATLÁN, ESTADO DE MÉXICO. C.P.52067.ESTA CREDENCIAL ES PROPIEDAD DE 
 					SOLUCIONES INTEGRALES PARA TU CAMIÓN SOCASA S.A. DE C.V. ES DE USO EXCLUSIVO PARA LA EMPRESA SIENDO UN DOCUMENTO INTRANSFERIBLE, NO
 					ES VÁLIDO SI PRESENTA RAYADURAS O TACHADURAS.
 				</center>
