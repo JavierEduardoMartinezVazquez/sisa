@@ -122,7 +122,7 @@
                     tabla.ajax.reload();
         
         })
-        toastr.success( "Se registro la asistencia", "Mensaje", {
+        toastr.success( "Listo", "Mensaje", {
             "timeOut": "6000",
             "progressBar": true,
             "extendedTImeout": "6000"});
