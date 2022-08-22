@@ -122,7 +122,7 @@
                     tabla.ajax.reload();
         
         })
-        toastr.success( "Asistennia registrada correctamente", "Mensaje", {
+        toastr.success( "Se registro la asistencia", "Mensaje", {
             "timeOut": "6000",
             "progressBar": true,
             "extendedTImeout": "6000"});
