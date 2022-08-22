@@ -110,6 +110,7 @@
         $("#tabsform").html(tabs);//tabsform es el ID del DIV donde se muestra el formulario del archivo JS <2>
         obtenerultimoidassistances();
         asignarfechaactual();
+        //obtenerusers();
     }
     setTimeout(function(){$("#buscarcodigo").focus();},500);
 
@@ -117,9 +118,18 @@
         e.preventDefault();
         var buscarcodigo = $("#buscarcodigo").val();
         $.get(leercodigo, {buscarcodigo:buscarcodigo}, function(data){
-          console.log(data);
+            var tabla = $('.tablelist').DataTable(); //classe tbreadyCustomer de la tabla donde se muestran los registros
+                    tabla.ajax.reload();
+        
         })
+        toastr.success( "Asistennia registrada correctamente", "Mensaje", {
+            "timeOut": "6000",
+            "progressBar": true,
+            "extendedTImeout": "6000"});
+
+            $('#buscarcodigo').val("");
     });
+    
     
     $("#btnGuardar").on('click', function (e) {
         e.preventDefault(); //       ID del formulario donde se muestra el modal
@@ -222,7 +232,7 @@
                                 '</div>'+
                                 '<div class="col-md-5">'+
                                 '<label>Salida<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="time" class="form-control" name="Salida" id="txtSalida" placeholder="Salida" onkeyup="tipoLetra(this);" required>'+
+                                '<input type="time" class="form-control" name="Salida" id="txtSalida" placeholder="Salida" onkeyup="tipoLetra(this);" required readonly>'+
                                 '</div>'+
                                 '<div class="col-md-7">'+
                                 '<label>Observaciones<b style="color:#F44336 !important;">*</b></label>'+

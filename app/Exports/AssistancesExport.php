@@ -7,6 +7,7 @@ use Maatwebsite\Excel\Concerns\Exportable;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\FromArray;
 use Maatwebsite\Excel\Concerns\FromQuery;
+use Carbon\Carbon;
 
 class AssistancesExport implements FromCollection,WithTitle,WithHeadings
 {
@@ -31,7 +32,7 @@ class AssistancesExport implements FromCollection,WithTitle,WithHeadings
 
 
     public function collection(){
-        $assitance = \App\C_assistances::select($this->columns)->orderBy('id','DESC')->get();
+        $assitance = \App\C_assistances::select($this->columns)->whereDate('Fecha', Carbon::now()->format("Y-m-d"))->orderBy('id','DESC')->get();
         return $assitance;
         
     }

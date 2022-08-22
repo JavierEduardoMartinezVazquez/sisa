@@ -165,7 +165,7 @@ Route::post('baja_assistances', 'AssistancesController@baja_assistances')->name(
 Route::get('export_excel', 'AssistancesController@export_excel')->name('export_excel');
 Route::get('obtener_fecha_actual_datetimelocal', 'AssistancesController@obtener_fecha_actual_datetimelocal')->name('obtener_fecha_actual_datetimelocal');
 Route::get('leercodigo', 'AssistancesController@leercodigo')->name('leercodigo');
-
+//Route::get('obtener_users', 'AssistancesController@obtener_users')->name('obtener_users');
 
 
 /*--------------------Controlador Reporte de Asistencias-------------------*/

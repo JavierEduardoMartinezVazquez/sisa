@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use App\User;
 use Helpers;
+use Carbon\Carbon;
 
 class AssistancesController extends Controller
 {
@@ -33,6 +34,16 @@ class AssistancesController extends Controller
         return response()->json($select_roles);
         
     }
+
+   /* public function obtener_users(){
+        $users = Usuario::all();
+        $select_users= "<option >Seleccionar...</option>";
+        foreach($users as $users){
+            $select_users = $select_users."<option value='".$users->id."'>".$users->id."</option>";
+        }
+        return response()->json($select_users);
+        
+    }*/
     
     public function listar_assistances (Request $request)
     {
@@ -108,25 +119,43 @@ class AssistancesController extends Controller
     //Leer codigo de barras
     public function leercodigo(Request $request){
         $buscarcodigo = $request->buscarcodigo;
-        $ultimoNumeroTabla = C_assistances::select("id")->orderBy("id", "DESC")->take(1)->get();
-        if(sizeof($ultimoNumeroTabla) == 0 || sizeof($ultimoNumeroTabla) == "" || sizeof($ultimoNumeroTabla) == null){
-            $id = 1;
-        }else{
-            $id = $ultimoNumeroTabla[0]->id+1;
-        }   
-        $assistances = new C_assistances;
-        $assistances->Usuario=$request->Usuario;
-        $assistances->Fecha=$request->Fecha;
-        $assistances->Entrada=$request->Entrada;
-        $assistances->Salida=$request->Salida;
-        $assistances->Observaciones=$request->Observaciones;
-        
-        $assistances->status='ALTA';        
-        $assistances->save();
+
+        $exiteusuario = User::where('id', $buscarcodigo)->count();
+        if($exiteusuario > 0){
+
+            
+
+            $exiteasistencia = C_assistances::where('Usuario', $buscarcodigo)->whereDate('Fecha', Carbon::now()->format("Y-m-d"))->count();
+
+            if($exiteasistencia===0){
+                $ultimoNumeroTabla = C_assistances::select("id")->orderBy("id", "DESC")->take(1)->get();
+                if(sizeof($ultimoNumeroTabla) == 0 || sizeof($ultimoNumeroTabla) == "" || sizeof($ultimoNumeroTabla) == null){
+                    $id = 1;
+                }else{
+                    $id = $ultimoNumeroTabla[0]->id+1;
+                }  
+                $assistances = new C_assistances;
+                $assistances->Usuario=$buscarcodigo;
+                $assistances->Fecha=Carbon::now()->format("Y-m-d");;
+                $assistances->Entrada=Carbon::now()->format("H:i:s");
+                $assistances->Observaciones='NINGUNA';
+                
+                $assistances->status='ALTA';        
+                $assistances->save();
+            }
+            else{
+                
+                C_assistances::where('Usuario', $buscarcodigo)->where('Fecha', Carbon::now()->format("Y-m-d"))
+                    ->update([
+                        'Salida'=> Carbon::now()->format("H:i:s")
+                    ]);
+            }
+
+        }
+       
         return response()->json($buscarcodigo);
     }
-
-    public function guardar_assistances(Request $request){
+    /*public function guardar_assistances(Request $request){
         $ultimoNumeroTabla = C_assistances::select("id")->orderBy("id", "DESC")->take(1)->get();
         if(sizeof($ultimoNumeroTabla) == 0 || sizeof($ultimoNumeroTabla) == "" || sizeof($ultimoNumeroTabla) == null){
             $id = 1;
@@ -143,6 +172,6 @@ class AssistancesController extends Controller
         $assistances->status='ALTA';        
         $assistances->save();
         return response()->json($assistances);
-    }
+    }*/
 }
 
