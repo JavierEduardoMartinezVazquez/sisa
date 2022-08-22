@@ -121,7 +121,7 @@
             var tabla = $('.tablelist').DataTable(); //classe tbreadyCustomer de la tabla donde se muestran los registros
                     tabla.ajax.reload();
         
-        })
+        }) 
         toastr.success( "Listo", "Mensaje", {
             "timeOut": "6000",
             "progressBar": true,
