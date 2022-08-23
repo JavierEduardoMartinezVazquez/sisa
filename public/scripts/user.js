@@ -267,7 +267,7 @@
                                         '<label>Sucursal<b style="color:#F44336 !important;">*</b></label>'+
                                         '<select class="form-select" name="sucursal" id="txtsucursal" placeholder="Nombre de la sucursal" onkeyup="tipoLetra(this);" required>'+
                                         '<option value="SOLUCIONES INTEGRALES PARA TU CAMIÓN SOCASA S.A. DE C.V.">SOLUCIONES INTEGRALES PARA TU CAMIÓN SOCASA S.A. DE C.V.</option>'+
-                                        '<option value="SOCASA TOLUCA">SOCASA TOLUCA</option>'+
+                                        '<option value="UTP">UTP</option>'+
                                         '<option value="SOCASA REFACCIONARIA">SOCASA REFACCIONARIA</option>'+
                                         '<option value="UTP USADOS">UTP USADOS</option>'+
                                         '<option value="UTP SEMINUEVOS">UTP SEMINUEVOS</option>'+
