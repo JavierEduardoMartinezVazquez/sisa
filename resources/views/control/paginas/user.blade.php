@@ -55,19 +55,13 @@
                                         <th>Email</th>
                                         <th>Edad</th>
                                         <th>NSS</th>
+                                        <th>Tel</th>
                                         <th>Sucursal</th>
                                         <th>Area</th>
                                         <th>Fecha de ingreso</th>
                                         <th>Hora entrada</th>
                                         <th>Hora salida</th>
                                         <th>Rol</th>
-                                        <!--<th>Fecha Corporativo</th>
-                                        <th>Fecha Alta</th>
-                                        <th>Facha Baja</th>
-                                        <th>Horario</th>
-                                        <th>Empresa</th>
-                                        <th>Area</th>
-                                        <th>Rol</th>-->
                                         <th>Estatus</th>
                                     </tr>
                                 </thead>
