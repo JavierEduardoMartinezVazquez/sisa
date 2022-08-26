@@ -267,6 +267,10 @@
                                         '<label>Tel</label>'+
                                         '<input type="text" class="form-control" name="tel" id="txttel" required autocomplete="tel" placeholder="Tel">'+
                                     '</div>'+
+                                    '<div class="col-md-9">'+ 
+                                        '<label>CURP</label>'+
+                                        '<input type="text" class="form-control" name="curp" id="txtcurp" required autocomplete="curp" placeholder="CURP">'+
+                                    '</div>'+
                                     '<div class="col-md-10">'+ 
                                         '<label>Sucursal<b style="color:#F44336 !important;">*</b></label>'+
                                         '<select class="form-select" name="sucursal" id="txtsucursal" placeholder="Nombre de la sucursal" onkeyup="tipoLetra(this);" required>'+
@@ -386,6 +390,7 @@
             { data: 'edad', name: 'edad', orderable: true, searchable: true },
             { data: 'nss', name: 'nss', orderable: true, searchable: true },
             { data: 'tel', name: 'tel', orderable: true, searchable: true },
+            { data: 'curp', name: 'curp', orderable: true, searchable: true },
             { data: 'sucursal', name: 'sucursal', orderable: true, searchable: true },
             { data: 'area', name: 'area', orderable: true, searchable: true },
             { data: 'ingreso', name: 'ingreso', orderable: true, searchable: true },
@@ -451,7 +456,11 @@
                                             '</div>'+
                                             '<div class="col-md-4">'+
                                                     '<label>Tel</label>'+                            
-                                                    '<input type="text" class="form-control" name="tel" id="txttel" placeholder="Nombre" onkeyup="tipoLetra(this);" required>'+
+                                                    '<input type="text" class="form-control" name="tel" id="txttel" placeholder="Tel" onkeyup="tipoLetra(this);" required>'+
+                                                '</div>'+
+                                            '<div class="col-md-4">'+
+                                                    '<label>CURP</label>'+                            
+                                                    '<input type="text" class="form-control" name="curp" id="txtcurp" placeholder="CURP" onkeyup="tipoLetra(this);" required>'+
                                                 '</div>'+
                                             '<div class="col-md-3" hidden>'+ 
                                                 '<label>Rol<b style="color:#F44336 !important;">*</b></label>'+
@@ -472,6 +481,7 @@
             $("#txtedad").val(data.user.edad);
             $("#txtnss").val(data.user.nss);
             $("#txttel").val(data.user.tel);
+            $("#txtcurp").val(data.user.curp);
             $("#txtsucursal").val(data.user.sucursal);
             $("#txtarea").val(data.user.area);
             $("#txtingreso").val(data.user.ingreso);

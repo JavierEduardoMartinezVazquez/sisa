@@ -28,6 +28,7 @@ class User extends Authenticatable
         'edad',
         'nss',
         'tel',
+        'curp',
         'sucursal',
         'area',
         'ingreso',

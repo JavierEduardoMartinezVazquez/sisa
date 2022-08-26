@@ -56,6 +56,7 @@
                                         <th>Edad</th>
                                         <th>NSS</th>
                                         <th>Tel</th>
+                                        <th>CURP</th>
                                         <th>Sucursal</th>
                                         <th>Area</th>
                                         <th>Fecha de ingreso</th>
