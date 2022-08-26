@@ -86,6 +86,7 @@ class UserController extends Controller
             $user->nss=$request->nss;
             $user->tel=$request->tel;
             $user->curp=$request->curp;
+            $user->rfc=$request->rfc;
             $user->sucursal=$request->sucursal;
             $user->area=$request->area;
             $user->ingreso=$request->ingreso;
@@ -114,6 +115,7 @@ class UserController extends Controller
             'nss',
             'tel',
             'curp',
+            'rfc',
             'sucursal',
             'area',
             'ingreso',
@@ -173,6 +175,7 @@ class UserController extends Controller
             'lastname_m' => $request->materno,
             'tel' => $request->tel,
             'curp' => $request->curp,
+            'rfc' => $request->rfc,
             //'rol' => $request->rol,
         ]);
         //$user->assignRole($request->rol);

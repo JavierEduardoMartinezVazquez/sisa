@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('nss')->nullable();
             $table->string('tel')->nullable();
             $table->string('curp')->nullable();
+            $table->string('rfc')->nullable();
             $table->string('sucursal', 60)->nullable();
             $table->string('area', 20)->nullable();
             $table->date('ingreso')->nullable();

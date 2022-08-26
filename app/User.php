@@ -29,6 +29,7 @@ class User extends Authenticatable
         'nss',
         'tel',
         'curp',
+        'rfc',
         'sucursal',
         'area',
         'ingreso',

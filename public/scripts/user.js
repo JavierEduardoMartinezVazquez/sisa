@@ -263,13 +263,17 @@
                                         '<label>NSS</label>'+
                                         '<input type="text" class="form-control" name="nss" id="txtnss" required autocomplete="nss" placeholder="NSS">'+
                                     '</div>'+
-                                    '<div class="col-md-9">'+ 
+                                    '<div class="col-md-4">'+ 
                                         '<label>Tel</label>'+
                                         '<input type="text" class="form-control" name="tel" id="txttel" required autocomplete="tel" placeholder="Tel">'+
                                     '</div>'+
-                                    '<div class="col-md-9">'+ 
+                                    '<div class="col-md-4">'+ 
                                         '<label>CURP</label>'+
                                         '<input type="text" class="form-control" name="curp" id="txtcurp" required autocomplete="curp" placeholder="CURP">'+
+                                    '</div>'+
+                                    '<div class="col-md-4">'+ 
+                                        '<label>R.F.C.</label>'+
+                                        '<input type="text" class="form-control" name="rfc" id="txtrfc" required autocomplete="rfc" placeholder="R.F.C.">'+
                                     '</div>'+
                                     '<div class="col-md-10">'+ 
                                         '<label>Sucursal<b style="color:#F44336 !important;">*</b></label>'+
@@ -391,6 +395,7 @@
             { data: 'nss', name: 'nss', orderable: true, searchable: true },
             { data: 'tel', name: 'tel', orderable: true, searchable: true },
             { data: 'curp', name: 'curp', orderable: true, searchable: true },
+            { data: 'rfc', name: 'rfc', orderable: true, searchable: true },
             { data: 'sucursal', name: 'sucursal', orderable: true, searchable: true },
             { data: 'area', name: 'area', orderable: true, searchable: true },
             { data: 'ingreso', name: 'ingreso', orderable: true, searchable: true },
@@ -454,14 +459,19 @@
                                                 '<label>H. Salida</label>'+
                                                 '<input type="time" class="form-control" name="hsalida" id="txthsalida" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                             '</div>'+
-                                            '<div class="col-md-4">'+
+                                            '<div class="col-md-3">'+
                                                     '<label>Tel</label>'+                            
                                                     '<input type="text" class="form-control" name="tel" id="txttel" placeholder="Tel" onkeyup="tipoLetra(this);" required>'+
                                                 '</div>'+
-                                            '<div class="col-md-4">'+
+                                            '<div class="col-md-3">'+
                                                     '<label>CURP</label>'+                            
                                                     '<input type="text" class="form-control" name="curp" id="txtcurp" placeholder="CURP" onkeyup="tipoLetra(this);" required>'+
                                                 '</div>'+
+                                            '<div class="col-md-3">'+
+                                                '<label>R.F.C.</label>'+                            
+                                                '<input type="text" class="form-control" name="rfc" id="txtrfc" placeholder="RFC" onkeyup="tipoLetra(this);" required>'+
+                                            '</div>'+
+                                            
                                             '<div class="col-md-3" hidden>'+ 
                                                 '<label>Rol<b style="color:#F44336 !important;">*</b></label>'+
                                                     '<select class="form-select" name="rol" id="txtrol" placeholder="Rol" onkeyup="tipoLetra(this);" required>'+
@@ -482,6 +492,7 @@
             $("#txtnss").val(data.user.nss);
             $("#txttel").val(data.user.tel);
             $("#txtcurp").val(data.user.curp);
+            $("#txtrfc").val(data.user.rfc);
             $("#txtsucursal").val(data.user.sucursal);
             $("#txtarea").val(data.user.area);
             $("#txtingreso").val(data.user.ingreso);

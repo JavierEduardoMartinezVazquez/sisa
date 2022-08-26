@@ -57,6 +57,7 @@
                                         <th>NSS</th>
                                         <th>Tel</th>
                                         <th>CURP</th>
+                                        <th>R.F.C.</th>
                                         <th>Sucursal</th>
                                         <th>Area</th>
                                         <th>Fecha de ingreso</th>
