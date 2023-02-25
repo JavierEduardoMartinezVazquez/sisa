@@ -32,7 +32,7 @@
 .primero{
 	font-family: sans-serif;
 	border-left: 0px solid #5957f9;
-	font-size: 13px;
+	font-size: 12px;
 	color: rgb(0, 0, 0);
 	align-items: center;
 	top: 2px;
@@ -48,7 +48,7 @@
 
 .letra{
 	font-family: sans-serif;
-	font-size: 10px;
+	font-size: 9px;
 	color: rgb(75, 75, 75);
 	position: justify;
 	top: 2px;
@@ -66,11 +66,11 @@
 			
 			<!-- CAMBIAR LOGOS EN LA CREDENCIAL -->
 
-			<!-- LOGO SOCASA --> 
-			<img src="control/img/logo_socasa.png" class="img-fluid profile-image" width="70">
+			<!-- LOGO SOCASA -->
+			<img src="control/img/logo_socasa.png" class="img-fluid profile-image" width="70"> 
 			
-			<!-- LOGO TECNODIESEL -->
-			<!--<img src="control/img/logo_TECNODIESEL.jpg" class="img-fluid profile-image" width="70">-->
+			<!-- LOGO TECNODIESEL 
+			<img src="control/img/logo_TECNODIESEL.jpg" class="img-fluid profile-image" width="70">-->
 			
 			<!-- LOGO UTP -->
 			<!--<img src="control/img/logo_UTP.jpg" class="img-fluid profile-image" width="70">-->
@@ -88,7 +88,7 @@
 
 <div class="primero">
 	
-</div>
+</div> 
 	<div class="primero">
 		<table>
                 <tr>
@@ -114,7 +114,7 @@
 				</center>
 
 				<!-- SOCASA REFACCIONARIA
-				<center>AVENIDA PRINCIPAL #7 INT. 1, BO.EL ESPINO, XONACATLÁN, ESTADO DE MÉXICO. C.P.52067. R.F.C. 
+				<center>BOULEVARD MIGUEL ALEMAN, 122 COLINIA ALVARO OBREGON, MUNICIPIO DE SAN MATEO ATENCO, C.P. 52105
 				</center>-->
 
 				<!-- UTP
@@ -122,7 +122,7 @@
 				</center> -->
 				
 				<!-- TECNODIESEL 
-				<center>AVENIDA PRINCIPAL #7 INT. 1, BO.EL ESPINO, XONACATLÁN, ESTADO DE MÉXICO. C.P.52067. R.F.C. 
+				<center>AUTOBUSES Y TRACTOCAMIONES DE QUERETARO S.A. DE C.V. AUTOPISTA MEXICO QUERETARO KM. 191.490, EL COLORADO, EL MARQUES, QUERETARO,  C.P. 76246, R.F.C. ATQ090625GE4
 				</center> -->
 
 
@@ -140,19 +140,19 @@
 		<table>
                 <tr>
                     <td>
-						<b>Telefono de emergencia: </b>
+						<b>TELEFONO DE EMERGENCIA: </b>
 						<br>
-						{{ $user->nss }} 
+						{{ $user->tel }} 
 						<br>
 						<br>
 						<b>CURP: </b>
 						<br>
-						{{ $user->area }}
+						{{ $user->curp }}
 						<br>
 						<br>
 						<b>R.F.C: </b> 
 						<br>
-						{{ $user->area }}
+						{{ $user->rfc }}
 						<br>
 						<br>
 						<br>
