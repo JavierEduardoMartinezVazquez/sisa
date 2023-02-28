@@ -14,99 +14,16 @@
         })
     }
 
-    function mostrarmodalformulario(movimiento, assistancestirmodificacion){
-        $("#Form_Modal").modal('show');
-        if(movimiento=='ALTA'){
-            $('#btnGuardar').show();
-            $('#btnGuardarModificacion').hide();
-        }else if(movimiento == 'MODIFICACION'){
-            if(assistancestirmodificacion == 1){
-                $('#btnGuardar').hide();
-                $('#btnGuardarModificacion').show();
-            }else{
-                $("#btnGuardar").hide();
-                $("#btnGuardarModificacion").hide();
-            }    
-        }
-    }
-    //mostrar formulario en modal y ocultar tabla de seleccion
-    function mostrarformulario(){
-        $("#formulario").show();// $("#formulario") es el ID del DIV del formulario del modal <1> 
-        $("#contenidomodaltablas").hide();
-    }
-
-    //mostrar tabla de seleccion y ocultar formulario en modal
-    function ocultarformulario(){
-        $("#formulario").hide();
-        $("#contenidomodaltablas").show();
-    }
     function obtenerultimoidassistances(){
         $.get(obtener_ultimo_id_assistances, function(numero){
           $("#txtnumero").val(numero);
         })  
     }
-    //limpiar todos los inputs del formulario alta
-    function limpiar(){
-        $("#form_Modal_pricipal")[0].reset();   
-        //Resetear las validaciones del formulario alta
-        form = $("#form_Modal_pricipal");
-        form.parsley().reset();
-    }
-    function ocultarmodalformulario(){
-        $("#Form_Modal").modal('hide');
-    }
+   
     function limpiarmodales(){
         $("#tabsform").empty();
     }
-    function alta(){
-        $("#titulomodal").html('Alta de permiso');
-        mostrarmodalformulario('ALTA');
-        mostrarformulario();
-        //formulario alta
-        var tabs =
-            '<div class="card-body">'+
-                '<div class="tab-content">'+
-                    '<div class="tab-pane active" id="datosgenerales">'+
-                        '<div class="container">'+
-                            '<div class="form-group row">'+
-                                '<div class="col-md-1">'+
-                                    '<label>Numero:<b style="color:#F44336 !important;">*</b></label>'+                             
-                                    '<input type="text" class="form-control" name="numero" id="txtnumero" required  readonly>'+ 
-                                '</div>'+ 
-                                '<div class="col-md-1">'+
-                                '</div>'+ 
-                                '<div class="col-md-2">'+ 
-                                    '<label>Usuario<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="numeric" class="form-control" name="Usuario" id="txtUsuario" placeholder="" onkeyup="tipoLetra(this);" required>'+
-                                '</div>'+ 
-                                '<div class="col-md-4">'+
-                                '<label>Fecha<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="date" class="form-control" name="Fecha" id="txtFecha" placeholder="Fecha" onkeyup="tipoLetra(this);" required>'+
-                                '</div>'+   
-                                '<div class="col-md-4">'+
-                                '<label>Entrada<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="time" class="form-control" name="Entrada" id="txtEntrada" placeholder="Entrada" onkeyup="tipoLetra(this);" required>'+ 
-                                '</div>'+
-                                '<div class="col-md-5">'+
-                                '<label>Salida<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="time" class="form-control" name="Salida" id="txtSalida" placeholder="Salida" onkeyup="tipoLetra(this);" required>'+
-                                '</div>'+
-                                '<div class="col-md-7">'+
-                                '<label>Observaciones<b style="color:#F44336 !important;">*</b></label>'+
-                                '<select class="form-select" name="Observaciones" id="txtObservaciones" placeholder="Observaciones" onkeyup="tipoLetra(this);" required>'+
-                                '<option value="NINGUNA">NINGUNA</option>'+
-                                '<option value="RETARDO">RETARDO</option>'+
-                                '<option value="INCAPACIDAD">INCAPACIDAD</option>'+
-                                '<option value="FALTA">FALTA</option>'+
-                                '</select>'+
-                            '</div>'+
-                                
-
-                            '</div>'+
-                        '</div>'+    
-                    '</div>'+
-                '</div>'+ 
-            '</div>';               
+    function alta(){         
         $("#tabsform").html(tabs);//tabsform es el ID del DIV donde se muestra el formulario del archivo JS <2>
         obtenerultimoidassistances();
         asignarfechaactual();

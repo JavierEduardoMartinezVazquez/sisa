@@ -15,7 +15,7 @@
           <li class="nav-item has-treeview">
             <a class="nav-link active">
               <i class="nav-icon fas fa-copy"></i>
-              <p>Catalogos
+              <p>Administración
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -50,7 +50,7 @@
           <li class="nav-item has-treeview">
             <a class="nav-link active">
               <i class="nav-icon fas fa-edit"></i>
-              <p>Registro
+              <p>Registros
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
