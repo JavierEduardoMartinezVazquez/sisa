@@ -51,7 +51,7 @@
         $("#tabsform").empty();
     }
     function alta(){
-        $("#titulomodal").html('Alta de permiso');
+        $("#titulomodal").html('Alta de Empresas');
         mostrarmodalformulario('ALTA');
         mostrarformulario();
         //formulario alta
@@ -61,27 +61,25 @@
                     '<div class="tab-pane active" id="datosgenerales">'+
                         '<div class="container">'+
                             '<div class="form-group row">'+
-                                '<div class="col-md-1">'+
+                                '<div class="col-md-2">'+
                                     '<label>Numero:<b style="color:#F44336 !important;">*</b></label>'+                             
                                     '<input type="text" class="form-control" name="numero" id="txtnumero" required  readonly>'+ 
                                 '</div>'+ 
-                                '<div class="col-md-1">'+
-                                '</div>'+ 
                                 '<div class="col-md-10">'+ 
-                                    '<label>Usuario<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="text" class="form-control" name="nombre" id="txtnombre" placeholder="" onkeyup="tipoLetra(this);" required>'+
-                                '</div>'+ 
-                                '<div class="col-md-6">'+ 
                                 '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="text" class="form-control" name="empresa" id="txtempresa" placeholder="" onkeyup="tipoLetra(this);" required>'+
                             '</div>'+    
-                            '<div class="col-md-6">'+ 
+                            '<div class="col-md-10">'+ 
+                                '<label>Logo<b style="color:#F44336 !important;">*</b></label>'+ 
+                                '<input type="text" class="form-control" name="logo" id="txtlogo" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                            '</div>'+  
+                            '<div class="col-md-10">'+ 
                                 '<label>Dirección<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="text" class="form-control" name="direccion" id="txtdireccion" placeholder="" onkeyup="tipoLetra(this);" required>'+
                             '</div>'+ 
                             '<div class="col-md-2">'+ 
-                                '<label>N.Empleados<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="number" class="form-control" name="numeroe" id="txtnumeroe" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                '<label>RFC<b style="color:#F44336 !important;">*</b></label>'+ 
+                                '<input type="text" class="form-control" name="rfc_e" id="txtrfc_e" placeholder="" onkeyup="tipoLetra(this);" required>'+
                             '</div>'+ 
                                 
 
@@ -154,10 +152,10 @@
         columns: [
             { data: 'operaciones', name: 'operaciones', orderable: false, searchable: false },
             { data: 'id', name: 'id', orderable: true, searchable: true },
-            { data: 'nombre', name: 'nombre', orderable: true, searchable: true },
             { data: 'empresa', name: 'empresa', orderable: true, searchable: true },
+            { data: 'logo', name: 'logo', orderable: true, searchable: true },
             { data: 'direccion', name: 'direccion', orderable: true, searchable: true },
-            { data: 'numeroe', name: 'numeroe', orderable: true, searchable: true },
+            { data: 'rfc_e', name: 'rfc_e', orderable: true, searchable: true },
             { data: 'status', name: 'status', orderable: true, searchable: true },
         ],
         "order": [[ 1, "asc" ]]
@@ -173,27 +171,25 @@
                     '<div class="tab-pane active" id="datosgenerales">'+
                         '<div class="container">'+
                             '<div class="form-group row">'+
-                                '<div class="col-md-1">'+
+                                '<div class="col-md-2">'+
                                     '<label>Numero:<b style="color:#F44336 !important;">*</b></label>'+                             
                                     '<input type="text" class="form-control" name="numero" id="txtnumero" required  readonly>'+ 
                                 '</div>'+ 
-                                '<div class="col-md-1">'+
-                                '</div>'+ 
                                 '<div class="col-md-10">'+ 
-                                    '<label>Usuario<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="text" class="form-control" name="nombre" id="txtnombre" placeholder="" onkeyup="tipoLetra(this);" required>'+
-                                '</div>'+ 
-                                '<div class="col-md-6">'+ 
                                     '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="text" class="form-control" name="empresa" id="txtempresa" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
-                                '<div class="col-md-6">'+ 
+                                '<div class="col-md-10">'+ 
+                                    '<label>Logo<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<input type="text" class="form-control" name="logo" id="txtlogo" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+ 
+                                '<div class="col-md-10">'+ 
                                     '<label>Dirección<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="text" class="form-control" name="direccion" id="txtdireccion" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
                                 '<div class="col-md-2">'+ 
-                                    '<label>N.Empleados<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="number" class="form-control" name="numeroe" id="txtnumeroe" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                    '<label>RFC<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<input type="number" class="form-control" name="rfc_e" id="txtrfc_e" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+
                                 
                             '</div>'+
@@ -204,10 +200,10 @@
             $("#tabsform").html(tabs);
             console.log(data);//mandas el arreglo
             $("#txtnumero").val(data.business.id);
-            $("#txtnombre").val(data.business.nombre);
             $("#txtempresa").val(data.business.empresa);
+            $("#txtlogo").val(data.business.logo);
             $("#txtdireccion").val(data.business.direccion);
-            $("#txtnumeroe").val(data.business.numeroe);
+            $("#txtrfc_e").val(data.business.rfc_e);
             
             mostrarmodalformulario('MODIFICACION', data.permitirmodificacion);
             mostrarformulario();

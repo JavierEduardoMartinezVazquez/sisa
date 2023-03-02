@@ -17,10 +17,10 @@ class CreateBusinessTable extends Migration
     {
         Schema::create('business', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nombre',100)->nullable();
             $table->string('empresa',100)->nullable();
+            $table->string('logo')->nullable();
             $table->string('direccion',100)->nullable();
-            $table->integer('numeroe')->nullable();
+            $table->string('rfc_e')->nullable();
             $table->string('status',5)->nullable();
             $table->timestamps();
         }); 

@@ -17,7 +17,6 @@ class AddHourhand extends Migration
         DB::table('hourhand')->insert(array(
             'entrada' => '08:30:00',
             'salida' => '05:30:00',
-            'empresa' => 'SOLUCIONES INTEGRALES PARA TU CAMION S.A DE C.V',
             'status' => 'ALTA',
             'created_at' => date('Y-m-d H:m:s'),
             'updated_at' => date('Y-m-d H:m:s'),
@@ -25,7 +24,6 @@ class AddHourhand extends Migration
         DB::table('hourhand')->insert(array(
             'entrada' => '08:30:00',
             'salida' => '05:30:00',
-            'empresa' => 'SOLUCIONES INTEGRALES PARA TU CAMION S.A DE C.V',
             'status' => 'ALTA',
             'created_at' => date('Y-m-d H:m:s'),
             'updated_at' => date('Y-m-d H:m:s'),

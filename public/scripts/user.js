@@ -255,29 +255,30 @@
                                         '<label>Confirmar contraseña</label>'+
                                         '<input type="password" class="form-control" name="pass2" id="txtpass2" required autocomplete="new-password" data-parsley-equalto="#txtpass" placeholder="Confirmar contraseña">'+
                                     '</div>'+
-                                '<div class="col-md-3">'+ 
-                                        '<label>Edad</label>'+
-                                        '<input type="number" class="form-control" name="edad" id="txtedad" required autocomplete="Edad" placeholder="Edad">'+
-                                    '</div>'+
+                                
                                     '<div class="col-md-9">'+ 
                                         '<label>NSS</label>'+
-                                        '<input type="text" class="form-control" name="nss" id="txtnss" required autocomplete="nss" placeholder="NSS">'+
+                                        '<input type="text" class="form-control" name="nss" id="txtnss"  onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
+                                    '<div class="col-md-3">'+ 
+                                    '<label>Dias Vacaciones</label>'+
+                                    '<input type="number" class="form-control" name="diasvacaciones" id="txtdiasvacaciones" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+
                                     '<div class="col-md-4">'+ 
                                         '<label>Tel</label>'+
                                         '<input type="text" class="form-control" name="tel" id="txttel" required autocomplete="tel" placeholder="Tel">'+
                                     '</div>'+
                                     '<div class="col-md-4">'+ 
-                                        '<label>CURP</label>'+
-                                        '<input type="text" class="form-control" name="curp" id="txtcurp" required autocomplete="curp" placeholder="CURP">'+
+                                                    '<label>CURP</label>'+
+                                                    '<input type="text" class="form-control" name="curp" id="txtcurp" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
                                     '<div class="col-md-4">'+ 
-                                        '<label>R.F.C.</label>'+
-                                        '<input type="text" class="form-control" name="rfc" id="txtrfc" required autocomplete="rfc" placeholder="R.F.C.">'+
+                                                    '<label>RFC</label>'+
+                                                    '<input type="text" class="form-control" name="rfc" id="txtrfc" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
-                                    '<div class="col-md-10">'+ 
-                                        '<label>Sucursal<b style="color:#F44336 !important;">*</b></label>'+
-                                        '<select class="form-select" name="sucursal" id="txtsucursal" placeholder="Nombre de la sucursal" onkeyup="tipoLetra(this);" required>'+
+                                    '<div class="col-md-12">'+ 
+                                        '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+
+                                        '<select class="form-select" name="empresa_id" id="txtempresa_idl" placeholder="Nombre de la sucursal" onkeyup="tipoLetra(this);" required>'+
                                         '<option value="SOLUCIONES INTEGRALES PARA TU CAMIÓN SOCASA S.A. DE C.V.">SOLUCIONES INTEGRALES PARA TU CAMIÓN SOCASA S.A. DE C.V.</option>'+
                                         '<option value="UTP">UTP</option>'+
                                         '<option value="SOCASA REFACCIONARIA">SOCASA REFACCIONARIA</option>'+
@@ -286,27 +287,36 @@
                                         '</select>'+
                                 '</div>'+
                                     '<div class="col-md-3">'+ 
-                                        '<label>Area</label>'+
-                                        '<input type="text" class="form-control" name="area" id="txtsucursal" placeholder="Area" onkeyup="tipoLetra(this);" required>'+
+                                        '<label>Puesto</label>'+
+                                        '<input type="text" class="form-control" name="puesto" id="txtsucursal" placeholder="Puesto" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
                                 '<div class="col-md-3">'+ 
                                         '<label>Fecha de ingreso</label>'+
                                         '<input type="date" class="form-control" name="ingreso" id="txtingreso" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
                                 '<div class="col-md-3">'+
-                                        '<label>H. Entrada</label>'+
-                                        '<input type="time" class="form-control" name="hentrada" id="txthentrada" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                        '<label>Horario L-V</label>'+
+                                        '<input type="time" class="form-control" name="horariolv_id" id="txthorariolv_id" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
                                     '<div class="col-md-3">'+ 
-                                    '<label>H. Salida</label>'+
-                                    '<input type="time" class="form-control" name="hsalida" id="txthsalida" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                    '<label>Horario Sabado</label>'+
+                                    '<input type="time" class="form-control" name="horariosab_id" id="txthorariosab_id" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+
                                 '<div class="col-md-3">'+ 
                                     '<label>Rol<b style="color:#F44336 !important;">*</b></label>'+
                                         '<select class="form-select" name="rol" id="txtrol" placeholder="Rol" onkeyup="tipoLetra(this);" required>'+
                                         '</select>'+
                                         '</div>'+
-                         
+                                        '<div class="col-md-3">'+ 
+                                                    '<label>Fotografía</label>'+
+                                                    '<input type="text" class="form-control" name="foto" id="txtfoto" placeholder="Subir" onkeyup="tipoLetra(this);" required>'+
+                                        '</div>'+
+                                        /*'<form>'+
+                                '<div class="form-group">'+
+                                 '<label for="exampleFormControlFile1">Subir Fotografia</label>'+
+                                 '<input type="file" class="form-control-file" id="exampleFormControlFile1">'+
+                             '</div>'+
+                            '</form>'+*/
                         '</div>'+
                     '</div>'+
                 '</div>'+
@@ -391,17 +401,18 @@
             { data: 'lastname_p', name: 'lastname_p', orderable: true, searchable: true },
             { data: 'lastname_m', name: 'lastname_m', orderable: true, searchable: true },
             { data: 'email', name: 'email', orderable: true, searchable: true },
-            { data: 'edad', name: 'edad', orderable: true, searchable: true },
             { data: 'nss', name: 'nss', orderable: true, searchable: true },
             { data: 'tel', name: 'tel', orderable: true, searchable: true },
             { data: 'curp', name: 'curp', orderable: true, searchable: true },
             { data: 'rfc', name: 'rfc', orderable: true, searchable: true },
-            { data: 'sucursal', name: 'sucursal', orderable: true, searchable: true },
-            { data: 'area', name: 'area', orderable: true, searchable: true },
+            { data: 'empresa_id', name: 'empresa_id', orderable: true, searchable: true },
+            { data: 'puesto', name: 'puesto', orderable: true, searchable: true },
             { data: 'ingreso', name: 'ingreso', orderable: true, searchable: true },
-            { data: 'hentrada', name: 'hentrada', orderable: true, searchable: true },
-            { data: 'hsalida', name: 'hsalida', orderable: true, searchable: true },
+            { data: 'horariolv_id', name: 'horariolv_id', orderable: true, searchable: true },
+            { data: 'horariosab_id', name: 'horariosab_id', orderable: true, searchable: true },
+            { data: 'diasvacaciones', name: 'diasvacaciones', orderable: true, searchable: true },
             { data: 'rol', name: 'rol', orderable: true, searchable: true },
+            { data: 'foto', name: 'foto', orderable: true, searchable: true },
             { data: 'status', name: 'status', orderable: true, searchable: true },
         ],
         "order": [[ 1, "asc" ]]
@@ -423,11 +434,11 @@
                                                     '<label>Id:</label>'+                            
                                                     '<input type="text" class="form-control" name="numero" id="txtnumero" placeholder="ID" onkeyup="tipoLetra(this);" required readonly>'+
                                                 '</div>'+
-                                                '<div class="col-md-4">'+
+                                                '<div class="col-md-3">'+
                                                     '<label>Nombre(s):</label>'+                            
                                                     '<input type="text" class="form-control" name="nombre" id="txtnombre" placeholder="Nombre" onkeyup="tipoLetra(this);" required>'+
                                                 '</div>'+
-                                                '<div class="col-md-4">'+ 
+                                                '<div class="col-md-3">'+ 
                                                     '<label>A. Paterno</label>'+
                                                     '<input type="text" class="form-control" name="paterno" id="txtpaterno" placeholder="1er Apellido" onkeyup="tipoLetra(this);" required>'+
                                                 '</div>'+
@@ -435,6 +446,10 @@
                                                     '<label>A. Materno</label>'+
                                                     '<input type="text" class="form-control" name="materno" id="txtmaterno" placeholder="2do Apellido"" onkeyup="tipoLetra(this);" required>'+
                                                 '</div>'+  
+                                                '<div class="col-md-2">'+ 
+                                                '<label>Dias Vacaciones</label>'+
+                                                '<input type="number" class="form-control" name="diasvacaciones" id="txtdiasvacaciones" placeholder="" readonly onkeyup="tipoLetra(this);" required>'+
+                                             '</div>'+
                                             '</div>'+
                                         '</div>'+
                                         '<div class="container">'+
@@ -452,12 +467,12 @@
                                                     '<input type="date" class="form-control" name="ingreso" id="txtingreso" placeholder="" readonly onkeyup="tipoLetra(this);" >'+
                                                 '</div>'+
                                             '<div class="col-md-3" hidden>'+
-                                                    '<label>H. Entrada</label>'+
-                                                    '<input type="time" class="form-control" name="hentrada" id="txthentrada" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                                    '<label>Horario L-V</label>'+
+                                                    '<input type="time" class="form-control" name="horariolv_id" id="txthorariolv_id" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                                 '</div>'+
                                                 '<div class="col-md-3" hidden>'+ 
-                                                '<label>H. Salida</label>'+
-                                                '<input type="time" class="form-control" name="hsalida" id="txthsalida" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                                '<label>Horario Sabado</label>'+
+                                                '<input type="time" class="form-control" name="horariosab_id" id="txthorariosab_id" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                             '</div>'+
                                             '<div class="col-md-3">'+
                                                     '<label>Tel</label>'+                            
@@ -476,6 +491,10 @@
                                                 '<label>Rol<b style="color:#F44336 !important;">*</b></label>'+
                                                     '<select class="form-select" name="rol" id="txtrol" placeholder="Rol" onkeyup="tipoLetra(this);" required>'+
                                             '</div>'+
+                                            '<div class="col-md-3">'+ 
+                                                    '<label>Fotografía</label>'+
+                                                    '<input type="text" class="form-control" name="foto" id="txtfoto" placeholder="2do Apellido"" onkeyup="tipoLetra(this);" required>'+
+                                                '</div>'+ 
                                     '</div>'+
                                 '</div>'+
                             '</div>'+
@@ -488,17 +507,18 @@
             $("#txtpaterno").val(data.user.lastname_p);
             $("#txtmaterno").val(data.user.lastname_m);
             $("#txtemail").val(data.user.email);
-            $("#txtedad").val(data.user.edad);
             $("#txtnss").val(data.user.nss);
             $("#txttel").val(data.user.tel);
             $("#txtcurp").val(data.user.curp);
             $("#txtrfc").val(data.user.rfc);
-            $("#txtsucursal").val(data.user.sucursal);
-            $("#txtarea").val(data.user.area);
+            $("#txtempresa_id").val(data.user.empresa_id);
+            $("#txtpuesto").val(data.user.puesto);
             $("#txtingreso").val(data.user.ingreso);
-            $("#txthentrada").val(data.user.hentrada);
-            $("#txthsalida").val(data.user.hsalida);
+            $("#txthorariolv_id").val(data.user.horariolv_id);
+            $("#txthorariosab_id").val(data.user.horariosab_id);
+            $("#txtdiasvacaciones").val(data.user.diasvacaciones);
             $("#txtrol").html(data.select_roles);
+            $("#txtfoto").val(data.user.foto);
             mostrarmodalformulario('MODIFICACION', data.permitirmodificacion);
             mostrarformulario();
         }).fail( function() {

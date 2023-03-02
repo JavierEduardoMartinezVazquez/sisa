@@ -81,10 +81,7 @@
 
                             '<div class="col-md-2">'+
                             '</div>'+ 
-                            '<div class="col-md-10">'+ 
-                                '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+
-                                '<input type="text" class="form-control" name="empresa" id="txtempresa" placeholder="Nombre de la empresa" onkeyup="tipoLetra(this);" required>'+
-                        '</div>'+
+                            
                     '</div>'+    
                 '</div>'+
             '</div>'+ 
@@ -155,7 +152,6 @@
             { data: 'id', name: 'id', orderable: true, searchable: true },
             { data: 'entrada', name: 'entrada', orderable: true, searchable: true },
             { data: 'salida', name: 'salida', orderable: true, searchable: true },
-            { data: 'empresa', name: 'empresa', orderable: true, searchable: true },
             { data: 'status', name: 'status', orderable: true, searchable: true },
         ],
         "order": [[ 1, "asc" ]]
@@ -189,10 +185,7 @@
                             '</div>'+   
                             '<div class="col-md-2">'+
                             '</div>'+ 
-                            '<div class="col-md-10">'+ 
-                                '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+
-                                '<input type="text" class="form-control" name="empresa" id="txtempresa" placeholder="Nombre de la empresa" onkeyup="tipoLetra(this);" required>'+
-                        '</div>'+
+                            
                     '</div>'+    
                 '</div>'+
             '</div>'+ 
@@ -202,7 +195,6 @@
             $("#txtnumero").val(data.hourhand.id);
             $("#txtentrada").val(data.hourhand.entrada);
             $("#txtsalida").val(data.hourhand.salida);
-            $("#txtempresa").val(data.hourhand.empresa);
             mostrarmodalformulario('MODIFICACION', data.permitirmodificacion);
             mostrarformulario();
         }).fail( function() {

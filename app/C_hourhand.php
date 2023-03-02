@@ -12,7 +12,6 @@ class C_hourhand extends Model
     protected $fillable = [
         'entrada',
         'salida',
-        'empresa',
         'status'
     ];
 }

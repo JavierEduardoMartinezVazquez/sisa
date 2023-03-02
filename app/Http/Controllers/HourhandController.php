@@ -31,7 +31,6 @@ class HourhandController extends Controller
         $hourhand = new C_hourhand;
         $hourhand->entrada=$request->entrada;
         $hourhand->salida=$request->salida;
-        $hourhand->empresa=$request->empresa;
         $hourhand->status='ALTA';        
         $hourhand->save();
         return response()->json($hourhand);
@@ -39,7 +38,7 @@ class HourhandController extends Controller
     public function listar_hourhand (Request $request)
     {
         if($request->ajax()){
-            $data = C_hourhand::select('id', 'entrada', 'salida', 'empresa', 'status');
+            $data = C_hourhand::select('id', 'entrada', 'salida', 'status');
             return DataTables::of($data)
             ->addColumn('operaciones', function($data){
                 $operaciones = '<div class="container">'.
@@ -73,8 +72,7 @@ class HourhandController extends Controller
         ->update([
             //atributo de la Base => $request-> nombre de la caja de texto
             'entrada'=> $request->entrada,
-            'salida'=> $request->salida,
-            'empresa'=> $request->empresa
+            'salida'=> $request->salida
         ]);
         return response()->json($hourhand);
     }

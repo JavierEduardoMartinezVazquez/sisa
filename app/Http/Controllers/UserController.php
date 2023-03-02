@@ -82,17 +82,18 @@ class UserController extends Controller
             $user->lastname_m=$request->materno;
             $user->email=$request->email;
             $user->password=Hash::make($request->pass);
-            $user->edad=$request->edad;
             $user->nss=$request->nss;
             $user->tel=$request->tel;
             $user->curp=$request->curp;
             $user->rfc=$request->rfc;
-            $user->sucursal=$request->sucursal;
-            $user->area=$request->area;
+            $user->empresa_id=$request->empresa_id;
+            $user->puesto=$request->puesto;
             $user->ingreso=$request->ingreso;
-            $user->hentrada=$request->hentrada;
-            $user->hsalida=$request->hsalida;
+            $user->horariolv_id=$request->horariolv_id;
+            $user->horariosab_id=$request->horariosab_id;
+            $user->diasvacaciones=$request->diasvacaciones;
             $user->rol=$request->rol;
+            $user->foto=$request->foto;
             $user->status="ALTA";
             $user->save();
 
@@ -111,17 +112,18 @@ class UserController extends Controller
             'lastname_p',
             'lastname_m',
             'email',
-            'edad',
             'nss',
             'tel',
             'curp',
             'rfc',
-            'sucursal',
-            'area',
+            'empresa_id',
+            'puesto',
             'ingreso',
-            'hentrada',
-            'hsalida',
+            'horariolv_id',
+            'horariosab_id',
+            'diasvacaciones',
             'rol',
+            'foto',
             'status'
         );
             return DataTables::of($data)

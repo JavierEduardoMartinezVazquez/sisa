@@ -28,10 +28,10 @@ class BusinessController extends Controller
             $id = $ultimoNumeroTabla[0]->id+1;
         }   
         $business = new C_business;
-        $business->nombre=$request->nombre;
         $business->empresa=$request->empresa;
+        $business->logo=$request->logo;
         $business->direccion=$request->direccion;
-        $business->numeroe=$request->numeroe;
+        $business->rfc_e=$request->rfc_e;
         
         $business->status='ALTA';        
         $business->save();
@@ -40,7 +40,7 @@ class BusinessController extends Controller
     public function listar_business (Request $request)
     {
         if($request->ajax()){
-            $data = C_business::select('id','nombre','empresa','direccion','numeroe','status');
+            $data = C_business::select('id','empresa','direccion','logo','rfc_e','status');
             return DataTables::of($data)
             ->addColumn('operaciones', function($data){
                 $operaciones = '<div class="container">'.
@@ -73,10 +73,10 @@ class BusinessController extends Controller
         C_business::where('id', $request->numero)
         ->update([
             //atributo de la Base => $request-> nombre de la caja de texto
-            'nombre'=> $request->nombre,
+            
             'empresa'=> $request->empresa,
             'direccion'=> $request->direccion,
-            'numeroe'=> $request->numeroe,
+            'rfc_e'=> $request->rfc_e,
             
         ]);
         return response()->json($business);

@@ -52,7 +52,7 @@
                                     <tr>
                                         <th ><div style="width:90px !important;">Operación</div></th>
                                         <th>Orden</th>
-                                        <th>Id Empleado</th>
+                                        <th>Empleado</th>
                                         <th>Fecha</th>
                                         <th>Entrada</th>
                                         <th>Salida</th> 

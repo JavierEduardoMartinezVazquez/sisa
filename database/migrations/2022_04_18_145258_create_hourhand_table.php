@@ -17,7 +17,6 @@ class CreateHourhandTable extends Migration
             $table->bigIncrements('id');
             $table->time('entrada')->nullable();
             $table->time('salida')->nullable();
-            $table->string('empresa',70)->nullable();
             $table->string('status',5)->nullable();
             $table->timestamps();
         });

@@ -53,17 +53,18 @@
                                         <th>A. Paterno</th>
                                         <th>A. Materno</th>
                                         <th>Email</th>
-                                        <th>Edad</th>
                                         <th>NSS</th>
                                         <th>Tel</th>
                                         <th>CURP</th>
                                         <th>R.F.C.</th>
-                                        <th>Sucursal</th>
-                                        <th>Area</th>
+                                        <th>Empresa</th>
+                                        <th>Puesto</th>
                                         <th>Fecha de ingreso</th>
-                                        <th>Hora entrada</th>
-                                        <th>Hora salida</th>
+                                        <th>Horario L-V</th>
+                                        <th>Horario Sabado</th>
+                                        <th>Dias Vacaciones</th>
                                         <th>Rol</th>
+                                        <th>Foto</th>
                                         <th>Estatus</th>
                                     </tr>
                                 </thead>

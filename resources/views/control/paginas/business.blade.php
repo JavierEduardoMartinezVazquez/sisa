@@ -49,10 +49,10 @@
                                     <tr>
                                         <th ><div style="width:90px !important;">Operación</div></th>
                                         <th>#</th>
-                                        <th>Usuario</th>
                                         <th>Empresa</th>
                                         <th>Dirección</th>
-                                        <th>N.Empleados</th>  
+                                        <th>Logo</th>
+                                        <th>RFC</th>  
                                         <th>Estatus</th>
                                         
                                     </tr>

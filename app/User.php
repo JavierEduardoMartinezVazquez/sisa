@@ -25,17 +25,18 @@ class User extends Authenticatable
         'lastname_m',
         'email',
         'password',
-        'edad',
         'nss',
         'tel',
         'curp',
         'rfc',
-        'sucursal',
-        'area',
+        'empresa_id',
+        'puesto',
         'ingreso',
-        'hentrada',
-        'hsalida',
+        'horariolv_id',
+        'horariosab_id',
+        'diasvacaciones',
         'rol',
+        'foto',
         'status'
     ];
 
