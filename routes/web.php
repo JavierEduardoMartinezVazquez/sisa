@@ -21,6 +21,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('prueba', 'PruebaController@Prueba')->name('prueba');
 //Route::get('/login', 'LoginController@index')->name('login');
 
 
@@ -187,3 +188,4 @@ Route::get('obtener_businessreporte', 'BusinessreporteController@obtener_busines
 Route::post('modificar_businessreporte', 'BusinessreporteController@modificar_businessreporte')->name('modificar_businessreporte');
 Route::get('verificar_baja_businessreporte', 'BusinessreporteController@verificar_baja_businessreporte')->name('verificar_baja_businessreporte');
 Route::post('baja_businessreporte', 'BusinessreporteController@baja_businessreporte')->name('baja_businessreporte');
+

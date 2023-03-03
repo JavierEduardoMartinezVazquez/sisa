@@ -62,7 +62,7 @@
                         '<div class="container">'+
                             '<div class="form-group row">'+
                                 '<div class="col-md-2">'+
-                                    '<label>Numero:<b style="color:#F44336 !important;">*</b></label>'+                             
+                                    '<label>Numero<b style="color:#F44336 !important;">*</b></label>'+                             
                                     '<input type="text" class="form-control" name="numero" id="txtnumero" required  readonly>'+ 
                                 '</div>'+ 
                                 '<div class="col-md-10">'+ 
@@ -172,7 +172,7 @@
                         '<div class="container">'+
                             '<div class="form-group row">'+
                                 '<div class="col-md-2">'+
-                                    '<label>Numero:<b style="color:#F44336 !important;">*</b></label>'+                             
+                                    '<label>Numero<b style="color:#F44336 !important;">*</b></label>'+                             
                                     '<input type="text" class="form-control" name="numero" id="txtnumero" required  readonly>'+ 
                                 '</div>'+ 
                                 '<div class="col-md-10">'+ 

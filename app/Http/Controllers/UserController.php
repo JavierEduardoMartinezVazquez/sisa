@@ -211,4 +211,9 @@ class UserController extends Controller
         //->setOption('margin-bottom', 10);
         return $pdf->stream();
     }
+
+    public function store(Request $request){
+        return $request->all();
+
+    }
 }

@@ -205,7 +205,7 @@
         })      
     }
     function alta(){
-        $("#titulomodal").html('Alta Usuario');
+        $("#titulomodal").html('Alta de Usuario');
         mostrarmodalformulario('ALTA');
         mostrarformulario();
         //formulario alta
@@ -220,60 +220,56 @@
                             '<div class="container">'+
                                 '<div class="form-group row">'+
                                     '<div class="col-md-1">'+
-                                        '<label>Id:</label>'+                            
+                                        '<label>Id</label>'+                            
                                         '<input type="text" class="form-control" name="numero" id="txtnumero" placeholder="ID" onkeyup="tipoLetra(this);" required readonly>'+
                                     '</div>'+
                                     '<div class="col-md-4">'+
-                                        '<label>Nombre(s):</label>'+                            
+                                        '<label>Nombre(s):<b style="color:#F44336 !important;">*</b></label>'+                             
                                         '<input type="text" class="form-control" name="nombre" id="txtnombre" placeholder="Nombre" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
-
-                                    
-                                    
                                     '<div class="col-md-4">'+ 
-                                        '<label>A. Paterno</label>'+
+                                        '<label>A. Paterno<b style="color:#F44336 !important;">*</b></label>'+ 
                                         '<input type="text" class="form-control" name="paterno" id="txtpaterno" placeholder="1er Apellido" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
                                     '<div class="col-md-3">'+ 
-                                        '<label>A. Materno</label>'+
+                                        '<label>A. Materno<b style="color:#F44336 !important;">*</b></label>'+ 
                                         '<input type="text" class="form-control" name="materno" id="txtmaterno" placeholder="2do Apellido"" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+  
                                 '</div>'+
                             '</div>'+
-
                             '<div class="container">'+
                                 '<div class="form-group row">'+
                                     '<div class="col-md-4">'+
-                                        '<label>Correo Electrónico</label>'+
+                                        '<label>Correo Electrónico<b style="color:#F44336 !important;">*</b></label>'+ 
                                         '<input type="text" class="form-control" name="email" id="txtemail" placeholder="Email" required autocomplete="Email" data-parsley-type="email" onkeyup="tipoMinusculas(this);">'+
                                     '</div>'+
                                     '<div class="col-md-4">'+ 
-                                        '<label>Contraseña</label>'+
+                                        '<label>Contraseña<b style="color:#F44336 !important;">*</b></label>'+ 
                                         '<input type="password" class="form-control" name="pass" id="txtpass" required autocomplete="new-password" placeholder="Contraseña">'+
                                     '</div>'+
                                     '<div class="col-md-4">'+ 
-                                        '<label>Confirmar contraseña</label>'+
+                                        '<label>Confirmar contraseña<b style="color:#F44336 !important;">*</b></label>'+ 
                                         '<input type="password" class="form-control" name="pass2" id="txtpass2" required autocomplete="new-password" data-parsley-equalto="#txtpass" placeholder="Confirmar contraseña">'+
                                     '</div>'+
                                 
                                     '<div class="col-md-9">'+ 
-                                        '<label>NSS</label>'+
+                                        '<label>NSS<b style="color:#F44336 !important;">*</b></label>'+ 
                                         '<input type="text" class="form-control" name="nss" id="txtnss"  onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
                                     '<div class="col-md-3">'+ 
-                                    '<label>Dias Vacaciones</label>'+
+                                    '<label>Dias Vacaciones<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="number" class="form-control" name="diasvacaciones" id="txtdiasvacaciones" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+
                                     '<div class="col-md-4">'+ 
-                                        '<label>Tel</label>'+
-                                        '<input type="text" class="form-control" name="tel" id="txttel" required autocomplete="tel" placeholder="Tel">'+
+                                        '<label>Tel<b style="color:#F44336 !important;">*</b></label>'+ 
+                                        '<input type="number" class="form-control" name="tel" id="txttel" required autocomplete="tel" placeholder="Tel"  value="" maxlength="10" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">'+
                                     '</div>'+
                                     '<div class="col-md-4">'+ 
-                                                    '<label>CURP</label>'+
+                                                    '<label>CURP<b style="color:#F44336 !important;">*</b></label>'+ 
                                                     '<input type="text" class="form-control" name="curp" id="txtcurp" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
                                     '<div class="col-md-4">'+ 
-                                                    '<label>RFC</label>'+
+                                                    '<label>RFC<b style="color:#F44336 !important;">*</b></label>'+ 
                                                     '<input type="text" class="form-control" name="rfc" id="txtrfc" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
                                     '<div class="col-md-12">'+ 
@@ -287,33 +283,33 @@
                                         '</select>'+
                                 '</div>'+
                                     '<div class="col-md-3">'+ 
-                                        '<label>Puesto</label>'+
+                                        '<label>Puesto<b style="color:#F44336 !important;">*</b></label>'+ 
                                         '<input type="text" class="form-control" name="puesto" id="txtsucursal" placeholder="Puesto" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
                                 '<div class="col-md-3">'+ 
-                                        '<label>Fecha de ingreso</label>'+
+                                        '<label>Fecha de ingreso<b style="color:#F44336 !important;">*</b></label>'+ 
                                         '<input type="date" class="form-control" name="ingreso" id="txtingreso" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
                                 '<div class="col-md-3">'+
-                                        '<label>Horario L-V</label>'+
+                                        '<label>Horario L-V<b style="color:#F44336 !important;">*</b></label>'+ 
                                         '<input type="time" class="form-control" name="horariolv_id" id="txthorariolv_id" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
                                     '<div class="col-md-3">'+ 
-                                    '<label>Horario Sabado</label>'+
+                                    '<label>Horario Sabado<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="time" class="form-control" name="horariosab_id" id="txthorariosab_id" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+
                                 '<div class="col-md-3">'+ 
-                                    '<label>Rol<b style="color:#F44336 !important;">*</b></label>'+
+                                    '<label>Rol<b style="color:#F44336 !important;">*</b></label>'+ 
                                         '<select class="form-select" name="rol" id="txtrol" placeholder="Rol" onkeyup="tipoLetra(this);" required>'+
                                         '</select>'+
                                         '</div>'+
-                                        '<div class="col-md-3">'+ 
-                                                    '<label>Fotografía</label>'+
-                                                    '<input type="text" class="form-control" name="foto" id="txtfoto" placeholder="Subir" onkeyup="tipoLetra(this);" required>'+
+                                        '<form>'+ 
+                                                    '<label>Fotografía<b style="color:#F44336 !important;">*</b></label>'+ 
+                                                    '<input type="file" class="form-control" name="foto" id="txtfoto" placeholder="Subir" onkeyup="tipoLetra(this);" required>'+
                                         '</div>'+
-                                        /*'<form>'+
+                                        '</form>'+/*
                                 '<div class="form-group">'+
-                                 '<label for="exampleFormControlFile1">Subir Fotografia</label>'+
+                                 '<label for="exampleFormControlFile1">Subir Fotografia<b style="color:#F44336 !important;">*</b></label>'+ 
                                  '<input type="file" class="form-control-file" id="exampleFormControlFile1">'+
                              '</div>'+
                             '</form>'+*/
@@ -431,23 +427,23 @@
                                         '<div class="container">'+
                                             '<div class="form-group row">'+
                                                 '<div class="col-md-1">'+
-                                                    '<label>Id:</label>'+                            
+                                                    '<label>Id <b style="color:#F44336 !important;">*</b></label>'+                             
                                                     '<input type="text" class="form-control" name="numero" id="txtnumero" placeholder="ID" onkeyup="tipoLetra(this);" required readonly>'+
                                                 '</div>'+
                                                 '<div class="col-md-3">'+
-                                                    '<label>Nombre(s):</label>'+                            
+                                                    '<label>Nombre(s)<b style="color:#F44336 !important;">*</b></label>'+                             
                                                     '<input type="text" class="form-control" name="nombre" id="txtnombre" placeholder="Nombre" onkeyup="tipoLetra(this);" required>'+
                                                 '</div>'+
                                                 '<div class="col-md-3">'+ 
-                                                    '<label>A. Paterno</label>'+
+                                                    '<label>A. Paterno<b style="color:#F44336 !important;">*</b></label>'+ 
                                                     '<input type="text" class="form-control" name="paterno" id="txtpaterno" placeholder="1er Apellido" onkeyup="tipoLetra(this);" required>'+
                                                 '</div>'+
                                                 '<div class="col-md-3">'+ 
-                                                    '<label>A. Materno</label>'+
+                                                    '<label>A. Materno<b style="color:#F44336 !important;">*</b></label>'+ 
                                                     '<input type="text" class="form-control" name="materno" id="txtmaterno" placeholder="2do Apellido"" onkeyup="tipoLetra(this);" required>'+
                                                 '</div>'+  
                                                 '<div class="col-md-2">'+ 
-                                                '<label>Dias Vacaciones</label>'+
+                                                '<label>Dias Vacaciones<b style="color:#F44336 !important;">*</b></label>'+ 
                                                 '<input type="number" class="form-control" name="diasvacaciones" id="txtdiasvacaciones" placeholder="" readonly onkeyup="tipoLetra(this);" required>'+
                                              '</div>'+
                                             '</div>'+
@@ -455,7 +451,7 @@
                                         '<div class="container">'+
                                             '<div class="form-group row">'+
                                                 '<div class="col-md-4">'+
-                                                    '<label>Correo Electrónico</label>'+
+                                                    '<label>Correo Electrónico<b style="color:#F44336 !important;">*</b></label>'+ 
                                                     '<input type="text" class="form-control" name="email" id="txtemail" placeholder="Email" readonly autocomplete="Email" data-parsley-type="email" onkeyup="tipoMinusculas(this);">'+
                                                 '</div>'+
                                                 '<div class="col-md-8">'+ 
@@ -463,27 +459,27 @@
                                                     '<input type="text" class="form-control" name="sucursal" id="txtsucursal" readonly onkeyup="tipoMinusculas(this);">'+
                                             '</div>'+
                                             '<div class="col-md-3">'+ 
-                                                    '<label>Fecha de ingreso</label>'+
+                                                    '<label>Fecha de ingreso<b style="color:#F44336 !important;">*</b></label>'+ 
                                                     '<input type="date" class="form-control" name="ingreso" id="txtingreso" placeholder="" readonly onkeyup="tipoLetra(this);" >'+
                                                 '</div>'+
                                             '<div class="col-md-3" hidden>'+
-                                                    '<label>Horario L-V</label>'+
+                                                    '<label>Horario L-V<b style="color:#F44336 !important;">*</b></label>'+ 
                                                     '<input type="time" class="form-control" name="horariolv_id" id="txthorariolv_id" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                                 '</div>'+
                                                 '<div class="col-md-3" hidden>'+ 
-                                                '<label>Horario Sabado</label>'+
+                                                '<label>Horario Sabado<b style="color:#F44336 !important;">*</b></label>'+ 
                                                 '<input type="time" class="form-control" name="horariosab_id" id="txthorariosab_id" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                             '</div>'+
                                             '<div class="col-md-3">'+
-                                                    '<label>Tel</label>'+                            
+                                                    '<label>Tel<b style="color:#F44336 !important;">*</b></label>'+                             
                                                     '<input type="text" class="form-control" name="tel" id="txttel" placeholder="Tel" onkeyup="tipoLetra(this);" required>'+
                                                 '</div>'+
                                             '<div class="col-md-3">'+
-                                                    '<label>CURP</label>'+                            
+                                                    '<label>CURP<b style="color:#F44336 !important;">*</b></label>'+                             
                                                     '<input type="text" class="form-control" name="curp" id="txtcurp" placeholder="CURP" onkeyup="tipoLetra(this);" required>'+
                                                 '</div>'+
                                             '<div class="col-md-3">'+
-                                                '<label>R.F.C.</label>'+                            
+                                                '<label>R.F.C.<b style="color:#F44336 !important;">*</b></label>'+                             
                                                 '<input type="text" class="form-control" name="rfc" id="txtrfc" placeholder="RFC" onkeyup="tipoLetra(this);" required>'+
                                             '</div>'+
                                             
@@ -492,7 +488,7 @@
                                                     '<select class="form-select" name="rol" id="txtrol" placeholder="Rol" onkeyup="tipoLetra(this);" required>'+
                                             '</div>'+
                                             '<div class="col-md-3">'+ 
-                                                    '<label>Fotografía</label>'+
+                                                    '<label>Fotografía<b style="color:#F44336 !important;">*</b></label>'+ 
                                                     '<input type="text" class="form-control" name="foto" id="txtfoto" placeholder="2do Apellido"" onkeyup="tipoLetra(this);" required>'+
                                                 '</div>'+ 
                                     '</div>'+
