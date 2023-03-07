@@ -96,7 +96,7 @@ class UserController extends Controller
             $user->foto=$request->foto;
             if ($request->hasFile('foto')){
                 $file=$request->file('foto');
-                $destinationPath = 'img/usersfoto';
+                $destinationPath = 'img/usersfoto/';
                 $filename = time() . '-' . $file->getClientOriginalName();
                 $uploadSuccess = $request->file('foto')->move($destinationPath, $filename);
                 $user->foto = $destinationPath . $filename;
@@ -115,26 +115,12 @@ class UserController extends Controller
     public function listar_user (Request $request)
     {
         if($request->ajax()){
-            $data = User::select('id', 
-            'name',
-            'lastname_p',
-            'lastname_m',
-            'email',
-            'nss',
-            'tel',
-            'curp',
-            'rfc',
-            'empresa_id',
-            'puesto',
-            'ingreso',
-            'horariolv_id',
-            'horariosab_id',
-            'diasvacaciones',
-            'rol',
-            'foto',
-            'status'
-        );
+            $data = User::select('id','name','lastname_p','lastname_m','email','nss','tel','curp','rfc','empresa_id','puesto','ingreso','horariolv_id','horariosab_id','diasvacaciones','rol','foto','status');
             return DataTables::of($data)
+            ->addColumn('foto', function ($data) {
+                $url= asset($data->foto);
+                return '<img src="'.$url.'" class="img-fluid img-thumbnail" width="50px" height="50px"/>';
+            })
             ->addColumn('operaciones', function($data){
                 $operaciones = '<div class="container">'.
                                     '<div class="row">'.
@@ -145,7 +131,7 @@ class UserController extends Controller
                                 '</div>';
                 return $operaciones;
             })
-            ->rawColumns(['operaciones'])
+            ->rawColumns(['operaciones','foto'])
             ->make(true);
         }
     }

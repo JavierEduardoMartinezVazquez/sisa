@@ -32,7 +32,7 @@ class BusinessController extends Controller
         $business->empresa=$request->empresa;
         if ($request->hasFile('logo')){
             $file=$request->file('logo');
-            $destinationPath = 'img/businesslogo';
+            $destinationPath = 'img/businesslogo/';
             $filename = time() . '-' . $file->getClientOriginalName();
             $uploadSuccess = $request->file('logo')->move($destinationPath, $filename);
             $business->logo = $destinationPath . $filename;
@@ -50,6 +50,10 @@ class BusinessController extends Controller
         if($request->ajax()){
             $data = C_business::select('id','empresa','direccion','logo','rfc_e','status');
             return DataTables::of($data)
+            ->addColumn('logo', function ($data) {
+                $url= asset($data->logo);
+                return '<img src="'.$url.'" class="img-fluid img-thumbnail" width="50px" height="50px"/>';
+            })
             ->addColumn('operaciones', function($data){
                 $operaciones = '<div class="container">'.
                                     '<div class="row">'.
@@ -59,7 +63,7 @@ class BusinessController extends Controller
                                 '</div>';
                 return $operaciones;
             })
-            ->rawColumns(['operaciones'])
+            ->rawColumns(['operaciones', 'logo'])
             ->make(true);
         }
     }
@@ -103,16 +107,6 @@ class BusinessController extends Controller
         ]);
         return response()->json($business);
     }
-    public function store( Request $request){
-        if ($request->hasFile('logo')){
-            $file=$request->file('logo');
-            $destinationPath = 'img/featureds/';
-            $filename = time() . '-' . $file->getClientOriginalName();
-            $uploadSuccess = $request->file('logo')->move($destinationPath, $filename);
-            $business->logo = $destinationPath . $filename;
-
-        }
-
-    }
+    
 }
 

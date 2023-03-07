@@ -15,10 +15,10 @@ class AddBusiness extends Migration
     public function up()
     {
         DB::table('business')->insert(array(
-            'empresa' => 'SOLUCIONES INTEGRALES PARA TU CAMION S.A DE C.V',
-            'logo' => 'xona',
-            'direccion' => 'uno',
-            'rfc_e' => 'dos',
+            'empresa' => 'SOLUCIONES INTEGRALES PARA TU CAMION SOCASA S.A DE C.V',
+            'logo' => 'img\businesslogo\logo_socasa_p.jpg',
+            'direccion' => 'CARRETERA PRINCIPAL EL ESPINO XONACATLAN',
+            'rfc_e' => 'A-A-A-A-A-A-A',
             'status' => 'ALTA',
             'created_at' => date('Y-m-d H:m:s'),
             'updated_at' => date('Y-m-d H:m:s'),

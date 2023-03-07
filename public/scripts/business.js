@@ -69,7 +69,7 @@
                                 '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="text" class="form-control" name="empresa" id="txtempresa" placeholder="Nombre de la empresa" maxlength="50" onkeyup="tipoLetra(this);" required>'+
                             '</div>'+    
-                            '<form action = "{{route(control.paginas.store)}}" method="POST"enctype="multipart/form-data">'+
+                            '<form action = "{{route(control.paginas.business)}}" method="POST"enctype="multipart/form-data">'+
                                 '<div class="col-md-6">'+ 
                                 '<label>Logo<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="file" class="form-control" name="logo" id="txtlogo" onkeyup="tipoLetra(this);" required>'+
