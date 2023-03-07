@@ -73,18 +73,20 @@
               </li>
               @endcan
 
-              @can('Permi')
+              @can('Nominas')
               <li class="nav-item">
-                <a href="{{route('Permi')}}" class="nav-link" id="perm">
-                  <i class="nav-icon fas fa-calendar-check"></i>
-                  <p>Permisos</p>
+                <a href="{{route('Nominas')}}" class="nav-link">
+                  <i class="nav-icon fas fa-user"></i>
+                  <p>Nomina</p>
                 </a>
               </li>
-            </ul>
-            @endcan
+              </ul>
+              @endcan
+
+              
 
 <!--USUARIO -->
-@can('Businessreporte')     
+<!--@can('Businessreporte')     
       <li class="nav-item has-treeview">
               <a class="nav-link active">
                 <i class="nav-icon fas fa-chart-pie"></i>
@@ -118,26 +120,22 @@
                 </a>
               </li>
               @endcan
-              @can('Nominas')
+              @can('Permi')
               <li class="nav-item">
-                <a href="{{route('Nominas')}}" class="nav-link">
-                  <i class="nav-icon fas fa-user"></i>
-                  <p>Nomina</p>
+                <a href="{{route('Permi')}}" class="nav-link" id="perm">
+                  <i class="nav-icon fas fa-calendar-check"></i>
+                  <p>Permisos</p>
                 </a>
               </li>
-              </ul>
-              @endcan
+            </ul>
+            @endcan-->
               
-          <li class="nav-item has-treeview">
           <li class="nav-item">
             <a href="{{ route('logout') }}" class="nav-link" 
                onclick="event.preventDefault();
                              document.getElementById('logout-form').submit();">
                              <i class="nav-icon fas fa-sign-out-alt"></i>
                             </a>
-                          </li>
-                          
-                        </li>
                       </ul>
                     </nav>
                   </div>

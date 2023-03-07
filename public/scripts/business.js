@@ -67,22 +67,22 @@
                                 '</div>'+ 
                                 '<div class="col-md-10">'+ 
                                 '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="text" class="form-control" name="empresa" id="txtempresa" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                '<input type="text" class="form-control" name="empresa" id="txtempresa" placeholder="Nombre de la empresa" maxlength="50" onkeyup="tipoLetra(this);" required>'+
                             '</div>'+    
-                            '<div class="col-md-10">'+ 
+                            '<form action = "{{route(control.paginas.store)}}" method="POST"enctype="multipart/form-data">'+
+                                '<div class="col-md-6">'+ 
                                 '<label>Logo<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="text" class="form-control" name="logo" id="txtlogo" placeholder="" onkeyup="tipoLetra(this);" required>'+
-                            '</div>'+  
-                            '<div class="col-md-10">'+ 
+                                '<input type="file" class="form-control" name="logo" id="txtlogo" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+ 
+                                '</form>'+
+                            '<div class="col-md-6">'+ 
                                 '<label>Dirección<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="text" class="form-control" name="direccion" id="txtdireccion" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                '<input type="text" class="form-control" name="direccion" id="txtdireccion" placeholder="Dirección" onkeyup="tipoLetra(this);" required>'+
                             '</div>'+ 
-                            '<div class="col-md-2">'+ 
+                            '<div class="col-md-5">'+ 
                                 '<label>RFC<b style="color:#F44336 !important;">*</b></label>'+ 
-                                '<input type="text" class="form-control" name="rfc_e" id="txtrfc_e" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                '<input type="text" class="form-control" name="rfc_e" id="txtrfc_e" placeholder="R.F.C" maxlength="30" onkeyup="tipoLetra(this);" required>'+
                             '</div>'+ 
-                                
-
                             '</div>'+
                         '</div>'+    
                     '</div>'+
@@ -177,19 +177,15 @@
                                 '</div>'+ 
                                 '<div class="col-md-10">'+ 
                                     '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="text" class="form-control" name="empresa" id="txtempresa" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                    '<input type="text" class="form-control" name="empresa" id="txtempresa" placeholder="" maxlength="50" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
-                                '<div class="col-md-10">'+ 
-                                    '<label>Logo<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="text" class="form-control" name="logo" id="txtlogo" placeholder="" onkeyup="tipoLetra(this);" required>'+
-                                '</div>'+ 
-                                '<div class="col-md-10">'+ 
+                                '<div class="col-md-6">'+ 
                                     '<label>Dirección<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="text" class="form-control" name="direccion" id="txtdireccion" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+ 
-                                '<div class="col-md-2">'+ 
+                                '<div class="col-md-5">'+ 
                                     '<label>RFC<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="number" class="form-control" name="rfc_e" id="txtrfc_e" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                    '<input type="text" class="form-control" name="rfc_e" id="txtrfc_e" placeholder="" maxlength="30" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+
                                 
                             '</div>'+

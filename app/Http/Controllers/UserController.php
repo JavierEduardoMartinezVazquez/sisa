@@ -94,6 +94,14 @@ class UserController extends Controller
             $user->diasvacaciones=$request->diasvacaciones;
             $user->rol=$request->rol;
             $user->foto=$request->foto;
+            if ($request->hasFile('foto')){
+                $file=$request->file('foto');
+                $destinationPath = 'img/usersfoto';
+                $filename = time() . '-' . $file->getClientOriginalName();
+                $uploadSuccess = $request->file('foto')->move($destinationPath, $filename);
+                $user->foto = $destinationPath . $filename;
+    
+            }
             $user->status="ALTA";
             $user->save();
 
@@ -212,8 +220,4 @@ class UserController extends Controller
         return $pdf->stream();
     }
 
-    public function store(Request $request){
-        return $request->all();
-
-    }
 }

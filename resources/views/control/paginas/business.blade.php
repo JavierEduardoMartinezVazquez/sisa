@@ -50,8 +50,8 @@
                                         <th ><div style="width:90px !important;">Operación</div></th>
                                         <th>#</th>
                                         <th>Empresa</th>
-                                        <th>Dirección</th>
                                         <th>Logo</th>
+                                        <th>Dirección</th>
                                         <th>RFC</th>  
                                         <th>Estatus</th>
                                         

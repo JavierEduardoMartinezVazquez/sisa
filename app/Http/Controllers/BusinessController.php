@@ -28,8 +28,16 @@ class BusinessController extends Controller
             $id = $ultimoNumeroTabla[0]->id+1;
         }   
         $business = new C_business;
+
         $business->empresa=$request->empresa;
-        $business->logo=$request->logo;
+        if ($request->hasFile('logo')){
+            $file=$request->file('logo');
+            $destinationPath = 'img/businesslogo';
+            $filename = time() . '-' . $file->getClientOriginalName();
+            $uploadSuccess = $request->file('logo')->move($destinationPath, $filename);
+            $business->logo = $destinationPath . $filename;
+
+        }
         $business->direccion=$request->direccion;
         $business->rfc_e=$request->rfc_e;
         
@@ -94,6 +102,17 @@ class BusinessController extends Controller
             'status'=> 'BAJA'
         ]);
         return response()->json($business);
+    }
+    public function store( Request $request){
+        if ($request->hasFile('logo')){
+            $file=$request->file('logo');
+            $destinationPath = 'img/featureds/';
+            $filename = time() . '-' . $file->getClientOriginalName();
+            $uploadSuccess = $request->file('logo')->move($destinationPath, $filename);
+            $business->logo = $destinationPath . $filename;
+
+        }
+
     }
 }
 

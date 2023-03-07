@@ -14,14 +14,15 @@ class AddBusiness extends Migration
      */
     public function up()
     {
-        /*DB::table('business')->insert(array(
+        DB::table('business')->insert(array(
             'empresa' => 'SOLUCIONES INTEGRALES PARA TU CAMION S.A DE C.V',
-            'direccion' => 'xona',
-            'numeroe' => 23,
+            'logo' => 'xona',
+            'direccion' => 'uno',
+            'rfc_e' => 'dos',
             'status' => 'ALTA',
             'created_at' => date('Y-m-d H:m:s'),
             'updated_at' => date('Y-m-d H:m:s'),
-        ));*/
+        ));
        
     }
 

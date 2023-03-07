@@ -229,11 +229,11 @@
                                     '</div>'+
                                     '<div class="col-md-4">'+ 
                                         '<label>A. Paterno<b style="color:#F44336 !important;">*</b></label>'+ 
-                                        '<input type="text" class="form-control" name="paterno" id="txtpaterno" placeholder="1er Apellido" onkeyup="tipoLetra(this);" required>'+
+                                        '<input type="text" class="form-control" name="paterno" id="txtpaterno" placeholder="Paterno" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
                                     '<div class="col-md-3">'+ 
                                         '<label>A. Materno<b style="color:#F44336 !important;">*</b></label>'+ 
-                                        '<input type="text" class="form-control" name="materno" id="txtmaterno" placeholder="2do Apellido"" onkeyup="tipoLetra(this);" required>'+
+                                        '<input type="text" class="form-control" name="materno" id="txtmaterno" placeholder="Materno"" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+  
                                 '</div>'+
                             '</div>'+
@@ -257,7 +257,7 @@
                                         '<input type="text" class="form-control" name="nss" id="txtnss"  onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
                                     '<div class="col-md-3">'+ 
-                                    '<label>Dias Vacaciones<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<label>D. Vacaciones<b style="color:#F44336 !important;">*</b></label>'+ 
                                     '<input type="number" class="form-control" name="diasvacaciones" id="txtdiasvacaciones" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+
                                     '<div class="col-md-4">'+ 
@@ -284,7 +284,7 @@
                                 '</div>'+
                                     '<div class="col-md-3">'+ 
                                         '<label>Puesto<b style="color:#F44336 !important;">*</b></label>'+ 
-                                        '<input type="text" class="form-control" name="puesto" id="txtsucursal" placeholder="Puesto" onkeyup="tipoLetra(this);" required>'+
+                                        '<input type="text" class="form-control" name="puesto" id="txtsucursal" placeholder="EJ.SISTEMAS" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
                                 '<div class="col-md-3">'+ 
                                         '<label>Fecha de ingreso<b style="color:#F44336 !important;">*</b></label>'+ 
@@ -303,16 +303,12 @@
                                         '<select class="form-select" name="rol" id="txtrol" placeholder="Rol" onkeyup="tipoLetra(this);" required>'+
                                         '</select>'+
                                         '</div>'+
-                                        '<form>'+ 
-                                                    '<label>Fotografía<b style="color:#F44336 !important;">*</b></label>'+ 
-                                                    '<input type="file" class="form-control" name="foto" id="txtfoto" placeholder="Subir" onkeyup="tipoLetra(this);" required>'+
-                                        '</div>'+
-                                        '</form>'+/*
-                                '<div class="form-group">'+
-                                 '<label for="exampleFormControlFile1">Subir Fotografia<b style="color:#F44336 !important;">*</b></label>'+ 
-                                 '<input type="file" class="form-control-file" id="exampleFormControlFile1">'+
-                             '</div>'+
-                            '</form>'+*/
+                            '<form action = "{{route(control.paginas.store)}}" method="POST"enctype="multipart/form-data">'+
+                                        '<div class="col-md-6">'+ 
+                                        '<label>Fotografía<b style="color:#F44336 !important;">*</b></label>'+ 
+                                        '<input type="file" class="form-control" name="foto" id="txtfoto" onkeyup="tipoLetra(this);" required>'+
+                                        '</div>'+ 
+                                        '</form>'+
                         '</div>'+
                     '</div>'+
                 '</div>'+
@@ -443,7 +439,7 @@
                                                     '<input type="text" class="form-control" name="materno" id="txtmaterno" placeholder="2do Apellido"" onkeyup="tipoLetra(this);" required>'+
                                                 '</div>'+  
                                                 '<div class="col-md-2">'+ 
-                                                '<label>Dias Vacaciones<b style="color:#F44336 !important;">*</b></label>'+ 
+                                                '<label>D.Vacaciones<b style="color:#F44336 !important;">*</b></label>'+ 
                                                 '<input type="number" class="form-control" name="diasvacaciones" id="txtdiasvacaciones" placeholder="" readonly onkeyup="tipoLetra(this);" required>'+
                                              '</div>'+
                                             '</div>'+
@@ -487,10 +483,6 @@
                                                 '<label>Rol<b style="color:#F44336 !important;">*</b></label>'+
                                                     '<select class="form-select" name="rol" id="txtrol" placeholder="Rol" onkeyup="tipoLetra(this);" required>'+
                                             '</div>'+
-                                            '<div class="col-md-3">'+ 
-                                                    '<label>Fotografía<b style="color:#F44336 !important;">*</b></label>'+ 
-                                                    '<input type="text" class="form-control" name="foto" id="txtfoto" placeholder="2do Apellido"" onkeyup="tipoLetra(this);" required>'+
-                                                '</div>'+ 
                                     '</div>'+
                                 '</div>'+
                             '</div>'+
