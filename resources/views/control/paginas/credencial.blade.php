@@ -12,17 +12,25 @@
 .profile-image{
 }
 .name{
-	font-size: 15px;
+	font-size: 11px;
 	font-family: sans-serif;
 	color: #272727;
 	position: relative;
 	top: 8px;
 }
 .mail{
-	font-size: 11px;
+	font-size: 9px;
 	color: grey;
 	position: relative;
 	top: 2px;
+}
+
+.atras{
+	font-size: 15px;
+	font-family: sans-serif;
+	color: #272727;
+	position: relative;
+	top: 8px;
 }
 
 .codi{
@@ -73,14 +81,15 @@
 			<img src="control/img/logo_TECNODIESEL.jpg" class="img-fluid profile-image" width="70">-->
 			
 			<!-- LOGO UTP -->
-			<!--<img src="control/img/logo_UTP.jpg" class="img-fluid profile-image" width="70">-->
+			<img class="img-fluid profile-image" src= "{{ $user->foto }}" width="80px" height="80px"/>
+
 
 			<div>
 				<h5 class="name">{{ $user->name }}
 				{{ $user->lastname_p }}
 				{{ $user->lastname_m }}
 			</h5>
-				<p class="mail">{{ $user->sucursal }} </p>
+				<p class="mail">{{ $user->empresa_id }} </p>
 			</div>
 		</div>
 </center>
@@ -94,7 +103,7 @@
                 <tr>
 					<td>ID: {{ $user->id }}<br>
                     NSS: {{ $user->nss }} <br>
-					Puesto: {{ $user->area }}</td>
+					Puesto: {{ $user->puesto }}</td>
 					<br>
                 </tr>            
             </table>
@@ -114,7 +123,7 @@
 				</center>
 
 				<!-- SOCASA REFACCIONARIA
-				<center>BOULEVARD MIGUEL ALEMAN, 122 COLINIA ALVARO OBREGON, MUNICIPIO DE SAN MATEO ATENCO, C.P. 52105
+				<center>BOULEVARD MIGUEL ALEMAN, 122 COLONIA ALVARO OBREGON, MUNICIPIO DE SAN MATEO ATENCO, C.P. 52105
 				</center>-->
 
 				<!-- UTP
@@ -136,7 +145,7 @@
 
 
 
-	<div class="name">
+	<div class="atras">
 		<table>
                 <tr>
                     <td>

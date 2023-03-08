@@ -79,7 +79,7 @@
                                 '<label>Dirección<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="text" class="form-control" name="direccion" id="txtdireccion" placeholder="Dirección" onkeyup="tipoLetra(this);" required>'+
                             '</div>'+ 
-                            '<div class="col-md-5">'+ 
+                            '<div class="col-md-6">'+ 
                                 '<label>RFC<b style="color:#F44336 !important;">*</b></label>'+ 
                                 '<input type="text" class="form-control" name="rfc_e" id="txtrfc_e" placeholder="R.F.C" maxlength="30" onkeyup="tipoLetra(this);" required>'+
                             '</div>'+ 

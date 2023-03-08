@@ -411,7 +411,7 @@
         })
     }
     function obteneruser(numero){
-        $("#titulomodal").html('Modificación Usuario');
+        $("#titulomodal").html('Modificación del Usuario');
         $.get(obtener_user,{numero:numero },function(data){
             //se crea al formulario
             var tabs =
@@ -432,11 +432,11 @@
                                                 '</div>'+
                                                 '<div class="col-md-3">'+ 
                                                     '<label>A. Paterno<b style="color:#F44336 !important;">*</b></label>'+ 
-                                                    '<input type="text" class="form-control" name="paterno" id="txtpaterno" placeholder="1er Apellido" onkeyup="tipoLetra(this);" required>'+
+                                                    '<input type="text" class="form-control" name="paterno" id="txtpaterno" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                                 '</div>'+
                                                 '<div class="col-md-3">'+ 
                                                     '<label>A. Materno<b style="color:#F44336 !important;">*</b></label>'+ 
-                                                    '<input type="text" class="form-control" name="materno" id="txtmaterno" placeholder="2do Apellido"" onkeyup="tipoLetra(this);" required>'+
+                                                    '<input type="text" class="form-control" name="materno" id="txtmaterno" placeholder=""" onkeyup="tipoLetra(this);" required>'+
                                                 '</div>'+  
                                                 '<div class="col-md-2">'+ 
                                                 '<label>D.Vacaciones<b style="color:#F44336 !important;">*</b></label>'+ 
@@ -468,7 +468,7 @@
                                             '</div>'+
                                             '<div class="col-md-3">'+
                                                     '<label>Tel<b style="color:#F44336 !important;">*</b></label>'+                             
-                                                    '<input type="text" class="form-control" name="tel" id="txttel" placeholder="Tel" onkeyup="tipoLetra(this);" required>'+
+                                                    '<input type="number" class="form-control" name="tel" id="txttel" placeholder="Tel" onkeyup="tipoLetra(this);" maxlength="10" required>'+
                                                 '</div>'+
                                             '<div class="col-md-3">'+
                                                     '<label>CURP<b style="color:#F44336 !important;">*</b></label>'+                             

@@ -25,26 +25,6 @@ class AssistancesController extends Controller
         }
         return response()->json($id);
     }
-    public function obtener_roles(){
-        $roles = Role::all();
-        $select_roles= "<option >Seleccionar...</option>";
-        foreach($roles as $rol){
-            $select_roles = $select_roles."<option value='".$rol->name."'>".$rol->name."</option>";
-        }
-        return response()->json($select_roles);
-        
-    }
-
-   /* public function obtener_users(){
-        $users = Usuario::all();
-        $select_users= "<option >Seleccionar...</option>";
-        foreach($users as $users){
-            $select_users = $select_users."<option value='".$users->id."'>".$users->id."</option>";
-        }
-        return response()->json($select_users);
-        
-    }*/
-    
     public function listar_assistances (Request $request)
     {
         if($request->ajax()){
