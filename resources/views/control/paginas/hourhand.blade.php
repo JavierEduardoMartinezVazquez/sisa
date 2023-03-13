@@ -33,10 +33,10 @@
                                     <h4>Alta de Horarios</h4>
                                 </div>
                                 <div class="col-md-1">
-                                    <!---->
                                 </div>
                                 <div class="col-md-1">
-                                    <!---->
+                                </div>
+                                <div class="col-md-1">
                                 </div>
                                 <div class="col-md-1">
                                     <button type="submit" class="btn btn-danger" onclick="alta()">Agregar</button>

@@ -26,35 +26,32 @@
         <section class="content">
             <div class="row">
                 <div class="col-12">
-                    <div class="card"> 
+                    <div class="card">
                         <div class="card-header">
                             <div class="row">
                                 <div class="col-sm-8">
                                     <h4>Empresas</h4>
                                 </div>
                                 <div class="col-md-1">
-                                    <!---->
                                 </div>
                                 <div class="col-md-1">
-                                    <!---->
+                                </div>
+                                <div class="col-md-1">
                                 </div>
                                 <div class="col-md-1">
                                     <button type="submit" class="btn btn-danger" onclick="alta()">Agregar</button>
                                 </div>
-                            </div>
-                        </div>
                         <div class="card-body table-responsive">
                             <table id="tablelist" class=" tablelist table table-bordered table-striped display nowrap">
                                 <thead>
                                     <tr>
-                                        <th ><div style="width:90px !important;">Operación</div></th>
+                                        <th ><div style="width:90px !important;">Operación </div></th>
                                         <th>#</th>
                                         <th>Empresa</th>
                                         <th>Logo</th>
                                         <th>Dirección</th>
-                                        <th>RFC</th>  
+                                        <th>RFC</th>
                                         <th>Estatus</th>
-                                        
                                     </tr>
                                 </thead>
                             </table>
@@ -71,7 +68,7 @@
     <script>
     //detectar cuando en el input de buscar por codigo de producto el usuario presione la tecla enter, si es asi se realizara la busqueda con el codigo escrito
         $(document).ready(function(){
-        $("#bus").addClass('active');
+        $("#hor").addClass('active');
         });
     </script>
     <script>

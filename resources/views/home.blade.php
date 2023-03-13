@@ -40,9 +40,9 @@
                                     <h6>      
                                     Usuario: {{ Auth::user()->name }}
                                     <br>Email: {{ Auth::user()->email }}
+                                    <br>Empresa: {{ Auth::user()->empresa_id }}
+                                    <br>Area: {{ Auth::user()->puesto }}
                                     <br>Rol: {{ Auth::user()->rol }}
-                                    <br>Empresa: {{ Auth::user()->sucursal }}
-                                    <br>Area: {{ Auth::user()->area }}
                                     </h6>
                             </div>
                             </div>

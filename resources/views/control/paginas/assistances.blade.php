@@ -30,7 +30,7 @@
                         <div class="card-header">
                             <div class="row">
                                 <div class="col-sm-8">
-                                    <h4>REGISTRO DE ASISTENCIA</h4>
+                                    <h4>Registro de Asistencias</h4>
                                 </div>
                                 <div class="col-md-3">
                                     

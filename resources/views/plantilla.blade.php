@@ -16,6 +16,8 @@
                 @include('control.secciones.header')
                 @include('control.secciones.menu')
                 @yield('content')
+                <aside class="control-sidebar control-sidebar-dark">
+            </aside>
                 @include('control.secciones.footer')
             </div>
             @include('control.secciones.footer_lib')
