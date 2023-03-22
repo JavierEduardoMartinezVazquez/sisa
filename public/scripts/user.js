@@ -18,12 +18,12 @@
             }else{
                 $("#btnGuardar").hide();
                 $("#btnGuardarModificacion").hide();
-            }    
+            }
         }
     }
     //mostrar formulario en modal y ocultar tabla de seleccion
     function mostrarformulario(){
-        $("#formulario").show();// $("#formulario") es el ID del DIV del formulario del modal <1> 
+        $("#formulario").show();// $("#formulario") es el ID del DIV del formulario del modal <1>
         $("#contenidomodaltablas").hide();
     }
 
@@ -39,7 +39,7 @@
     }
     //limpiar todos los inputs del formulario alta
     function limpiar(){
-        $("#form_Modal_pricipal")[0].reset();   
+        $("#form_Modal_pricipal")[0].reset();
         //Resetear las validaciones del formulario alta
         form = $("#form_Modal_pricipal");
         form.parsley().reset();
@@ -71,7 +71,7 @@
                                                 '<tbody></tbody>'+
                                             '</table>'+
                                         '</div>'+
-                                    '</div>'+   
+                                    '</div>'+
                                 '</div>'+
                             '</div>'+
                             '<div class="modal-footer">'+
@@ -83,7 +83,7 @@
               "pageLength": 250,
               "sScrollX": "110%",
               "sScrollY": "370px",
-              "bScrollCollapse": true,  
+              "bScrollCollapse": true,
               processing: true,
               'language': {
                 "url": "control/plugins/datatables/es_es.json",
@@ -107,15 +107,15 @@
                       }
                   });
               },
-          });  
+          });
           //seleccionar registro al dar doble click
           $('#tbllistadoempresas tbody').on('dblclick', 'tr', function () {
               var data = tagen.row( this ).data();
               seleccionarempresa(data.id, data.nombre);
-          }); 
+          });
     }
     function seleccionarempresa(id, nombre){
-    
+
         $("#txtempresa").val(id);
         $("#txtnom").html(nombre);
         $("#txtnamee").val(nombre);
@@ -147,7 +147,7 @@
                                                 '<tbody></tbody>'+
                                             '</table>'+
                                         '</div>'+
-                                    '</div>'+   
+                                    '</div>'+
                                 '</div>'+
                             '</div>'+
                             '<div class="modal-footer">'+
@@ -159,7 +159,7 @@
               "pageLength": 250,
               "sScrollX": "110%",
               "sScrollY": "370px",
-              "bScrollCollapse": true,  
+              "bScrollCollapse": true,
               processing: true,
               'language': {
                 "url": "control/plugins/datatables/es_es.json",
@@ -184,15 +184,15 @@
                       }
                   });
               },
-          });  
+          });
           //seleccionar registro al dar doble click
           $('#tbllistadohorario tbody').on('dblclick', 'tr', function () {
               var data = tagen.row( this ).data();
               seleccionarhorario(data.id);
-          }); 
+          });
     }
     function seleccionarhorario(id){
-    
+
         $("#txthorario").val(id);
         //if(nombre != null){
          // $("#txtcliente").html(nombre.substring(0, 40));
@@ -202,7 +202,7 @@
       function obtenerroles(){
         $.get(obtener_roles, function(select_roles){
             $("#txtrol").html(select_roles);
-        })      
+        })
     }
     function alta(){
         $("#titulomodal").html('Alta de Usuario');
@@ -214,65 +214,65 @@
         '<div class="col-12 col-sm-12">'+
                 '<div class="card-body">'+
                     '<div class="tab-content" id="custom-tabs-one-tabContent">'+
-                    
+
                         '<div class="tab-pane fade show active" id="p_datos" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">'+
 
                             '<div class="container">'+
                                 '<div class="form-group row">'+
                                     '<div class="col-md-1">'+
-                                        '<label>Id</label>'+                            
+                                        '<label>Id</label>'+
                                         '<input type="text" class="form-control" name="numero" id="txtnumero" placeholder="ID" onkeyup="tipoLetra(this);" required readonly>'+
                                     '</div>'+
                                     '<div class="col-md-4">'+
-                                        '<label>Nombre(s):<b style="color:#F44336 !important;">*</b></label>'+                             
+                                        '<label>Nombre(s):<b style="color:#F44336 !important;">*</b></label>'+
                                         '<input type="text" class="form-control" name="nombre" id="txtnombre" placeholder="Nombre" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
-                                    '<div class="col-md-4">'+ 
-                                        '<label>A. Paterno<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<div class="col-md-4">'+
+                                        '<label>A. Paterno<b style="color:#F44336 !important;">*</b></label>'+
                                         '<input type="text" class="form-control" name="paterno" id="txtpaterno" placeholder="Paterno" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
-                                    '<div class="col-md-3">'+ 
-                                        '<label>A. Materno<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<div class="col-md-3">'+
+                                        '<label>A. Materno<b style="color:#F44336 !important;">*</b></label>'+
                                         '<input type="text" class="form-control" name="materno" id="txtmaterno" placeholder="Materno"" onkeyup="tipoLetra(this);" required>'+
-                                    '</div>'+  
+                                    '</div>'+
                                 '</div>'+
                             '</div>'+
                             '<div class="container">'+
                                 '<div class="form-group row">'+
                                     '<div class="col-md-4">'+
-                                        '<label>Correo Electrónico<b style="color:#F44336 !important;">*</b></label>'+ 
+                                        '<label>Correo Electrónico<b style="color:#F44336 !important;">*</b></label>'+
                                         '<input type="text" class="form-control" name="email" id="txtemail" placeholder="Email" required autocomplete="Email" data-parsley-type="email" onkeyup="tipoMinusculas(this);">'+
                                     '</div>'+
-                                    '<div class="col-md-4">'+ 
-                                        '<label>Contraseña<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<div class="col-md-4">'+
+                                        '<label>Contraseña<b style="color:#F44336 !important;">*</b></label>'+
                                         '<input type="password" class="form-control" name="pass" id="txtpass" required autocomplete="new-password" placeholder="Contraseña">'+
                                     '</div>'+
-                                    '<div class="col-md-4">'+ 
-                                        '<label>Confirmar contraseña<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<div class="col-md-4">'+
+                                        '<label>Confirmar contraseña<b style="color:#F44336 !important;">*</b></label>'+
                                         '<input type="password" class="form-control" name="pass2" id="txtpass2" required autocomplete="new-password" data-parsley-equalto="#txtpass" placeholder="Confirmar contraseña">'+
                                     '</div>'+
-                                
-                                    '<div class="col-md-9">'+ 
-                                        '<label>NSS<b style="color:#F44336 !important;">*</b></label>'+ 
+
+                                    '<div class="col-md-9">'+
+                                        '<label>NSS<b style="color:#F44336 !important;">*</b></label>'+
                                         '<input type="text" class="form-control" name="nss" id="txtnss"  onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
-                                    '<div class="col-md-3">'+ 
-                                    '<label>D. Vacaciones<b style="color:#F44336 !important;">*</b></label>'+ 
-                                    '<input type="number" class="form-control" name="diasvacaciones" id="txtdiasvacaciones" placeholder="" onkeyup="tipoLetra(this);" required>'+
-                                '</div>'+
-                                    '<div class="col-md-4">'+ 
-                                        '<label>Tel<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<div class="col-md-3">'+
+                                        '<label>Fecha de ingreso<b style="color:#F44336 !important;">*</b></label>'+
+                                        '<input type="date" class="form-control" name="ingreso" id="txtingreso" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                    '</div>'+
+                                    '<div class="col-md-4">'+
+                                        '<label>Tel<b style="color:#F44336 !important;">*</b></label>'+
                                         '<input type="number" class="form-control" name="tel" id="txttel" required autocomplete="tel" placeholder="Tel"  value="" maxlength="10" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">'+
                                     '</div>'+
-                                    '<div class="col-md-4">'+ 
-                                                    '<label>CURP<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<div class="col-md-4">'+
+                                                    '<label>CURP<b style="color:#F44336 !important;">*</b></label>'+
                                                     '<input type="text" class="form-control" name="curp" id="txtcurp" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
-                                    '<div class="col-md-4">'+ 
-                                                    '<label>RFC<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<div class="col-md-4">'+
+                                                    '<label>RFC<b style="color:#F44336 !important;">*</b></label>'+
                                                     '<input type="text" class="form-control" name="rfc" id="txtrfc" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
-                                    '<div class="col-md-12">'+ 
+                                    '<div class="col-md-12">'+
                                         '<label>Empresa<b style="color:#F44336 !important;">*</b></label>'+
                                         '<select class="form-select" name="empresa_id" id="txtempresa_idl" placeholder="Nombre de la sucursal" onkeyup="tipoLetra(this);" required>'+
                                         '<option value="SOLUCIONES INTEGRALES PARA TU CAMIÓN SOCASA S.A. DE C.V.">SOLUCIONES INTEGRALES PARA TU CAMIÓN SOCASA S.A. DE C.V.</option>'+
@@ -282,32 +282,32 @@
                                         '<option value="UTP SEMINUEVOS">UTP SEMINUEVOS</option>'+
                                         '</select>'+
                                 '</div>'+
-                                    '<div class="col-md-3">'+ 
-                                        '<label>Puesto<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<div class="col-md-3">'+
+                                        '<label>Puesto<b style="color:#F44336 !important;">*</b></label>'+
                                         '<input type="text" class="form-control" name="puesto" id="txtsucursal" placeholder="EJ.SISTEMAS" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
-                                '<div class="col-md-3">'+ 
-                                        '<label>Fecha de ingreso<b style="color:#F44336 !important;">*</b></label>'+ 
-                                        '<input type="date" class="form-control" name="ingreso" id="txtingreso" placeholder="" onkeyup="tipoLetra(this);" required>'+
-                                    '</div>'+
                                 '<div class="col-md-3">'+
-                                        '<label>Horario L-V<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<label>D. Vacaciones<b style="color:#F44336 !important;">*</b></label>'+
+                                    '<input type="number" class="form-control" name="diasvacaciones" id="txtdiasvacaciones" placeholder="" onkeyup="tipoLetra(this);" required>'+
+                                '</div>'+
+                                '<div class="col-md-3">'+
+                                        '<label>Horario L-V<b style="color:#F44336 !important;">*</b></label>'+
                                         '<input type="time" class="form-control" name="horariolv_id" id="txthorariolv_id" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                     '</div>'+
-                                    '<div class="col-md-3">'+ 
-                                    '<label>Horario Sabado<b style="color:#F44336 !important;">*</b></label>'+ 
+                                    '<div class="col-md-3">'+
+                                    '<label>Horario Sabado<b style="color:#F44336 !important;">*</b></label>'+
                                     '<input type="time" class="form-control" name="horariosab_id" id="txthorariosab_id" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                 '</div>'+
-                                '<div class="col-md-3">'+ 
-                                    '<label>Rol<b style="color:#F44336 !important;">*</b></label>'+ 
+                                '<div class="col-md-3">'+
+                                    '<label>Rol<b style="color:#F44336 !important;">*</b></label>'+
                                         '<select class="form-select" name="rol" id="txtrol" placeholder="Rol" onkeyup="tipoLetra(this);" required>'+
                                         '</select>'+
                                         '</div>'+
                             '<form action = "{{route(control.paginas.store)}}" method="POST"enctype="multipart/form-data">'+
-                                        '<div class="col-md-6">'+ 
-                                        '<label>Fotografía<b style="color:#F44336 !important;">*</b></label>'+ 
+                                        '<div class="col-md-6">'+
+                                        '<label>Fotografía<b style="color:#F44336 !important;">*</b></label>'+
                                         '<input type="file" class="form-control" name="foto" id="txtfoto" onkeyup="tipoLetra(this);" required>'+
-                                        '</div>'+ 
+                                        '</div>'+
                                         '</form>'+
                         '</div>'+
                     '</div>'+
@@ -358,7 +358,7 @@
                         toastr.error( "No tiene permisos para realizar esta acción, contacta al administrador del sistema", "Mensaje", {
                             "timeOut": "6000",
                             "progressBar": true,
-                            "extendedTImeout": "6000" 
+                            "extendedTImeout": "6000"
                         });
                     }else{
                         toastr.error( "Aviso, estamos experimentando problemas, contacta al administrador del sistema", "Mensaje", {
@@ -423,23 +423,23 @@
                                         '<div class="container">'+
                                             '<div class="form-group row">'+
                                                 '<div class="col-md-1">'+
-                                                    '<label>Id <b style="color:#F44336 !important;">*</b></label>'+                             
+                                                    '<label>Id <b style="color:#F44336 !important;">*</b></label>'+
                                                     '<input type="text" class="form-control" name="numero" id="txtnumero" placeholder="ID" onkeyup="tipoLetra(this);" required readonly>'+
                                                 '</div>'+
                                                 '<div class="col-md-3">'+
-                                                    '<label>Nombre(s)<b style="color:#F44336 !important;">*</b></label>'+                             
+                                                    '<label>Nombre(s)<b style="color:#F44336 !important;">*</b></label>'+
                                                     '<input type="text" class="form-control" name="nombre" id="txtnombre" placeholder="Nombre" onkeyup="tipoLetra(this);" required>'+
                                                 '</div>'+
-                                                '<div class="col-md-3">'+ 
-                                                    '<label>A. Paterno<b style="color:#F44336 !important;">*</b></label>'+ 
+                                                '<div class="col-md-3">'+
+                                                    '<label>A. Paterno<b style="color:#F44336 !important;">*</b></label>'+
                                                     '<input type="text" class="form-control" name="paterno" id="txtpaterno" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                                 '</div>'+
-                                                '<div class="col-md-3">'+ 
-                                                    '<label>A. Materno<b style="color:#F44336 !important;">*</b></label>'+ 
+                                                '<div class="col-md-3">'+
+                                                    '<label>A. Materno<b style="color:#F44336 !important;">*</b></label>'+
                                                     '<input type="text" class="form-control" name="materno" id="txtmaterno" placeholder=""" onkeyup="tipoLetra(this);" required>'+
-                                                '</div>'+  
-                                                '<div class="col-md-2">'+ 
-                                                '<label>D.Vacaciones<b style="color:#F44336 !important;">*</b></label>'+ 
+                                                '</div>'+
+                                                '<div class="col-md-2">'+
+                                                '<label>D.Vacaciones<b style="color:#F44336 !important;">*</b></label>'+
                                                 '<input type="number" class="form-control" name="diasvacaciones" id="txtdiasvacaciones" placeholder="" readonly onkeyup="tipoLetra(this);" required>'+
                                              '</div>'+
                                             '</div>'+
@@ -447,39 +447,39 @@
                                         '<div class="container">'+
                                             '<div class="form-group row">'+
                                                 '<div class="col-md-4">'+
-                                                    '<label>Correo Electrónico<b style="color:#F44336 !important;">*</b></label>'+ 
+                                                    '<label>Correo Electrónico<b style="color:#F44336 !important;">*</b></label>'+
                                                     '<input type="text" class="form-control" name="email" id="txtemail" placeholder="Email" readonly autocomplete="Email" data-parsley-type="email" onkeyup="tipoMinusculas(this);">'+
                                                 '</div>'+
-                                                '<div class="col-md-8">'+ 
+                                                '<div class="col-md-8">'+
                                                     '<label>Sucursal<b style="color:#F44336 !important;">*</b></label>'+
                                                     '<input type="text" class="form-control" name="sucursal" id="txtsucursal" readonly onkeyup="tipoMinusculas(this);">'+
                                             '</div>'+
-                                            '<div class="col-md-3">'+ 
-                                                    '<label>Fecha de ingreso<b style="color:#F44336 !important;">*</b></label>'+ 
+                                            '<div class="col-md-3">'+
+                                                    '<label>Fecha de ingreso<b style="color:#F44336 !important;">*</b></label>'+
                                                     '<input type="date" class="form-control" name="ingreso" id="txtingreso" placeholder="" readonly onkeyup="tipoLetra(this);" >'+
                                                 '</div>'+
                                             '<div class="col-md-3" hidden>'+
-                                                    '<label>Horario L-V<b style="color:#F44336 !important;">*</b></label>'+ 
+                                                    '<label>Horario L-V<b style="color:#F44336 !important;">*</b></label>'+
                                                     '<input type="time" class="form-control" name="horariolv_id" id="txthorariolv_id" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                                 '</div>'+
-                                                '<div class="col-md-3" hidden>'+ 
-                                                '<label>Horario Sabado<b style="color:#F44336 !important;">*</b></label>'+ 
+                                                '<div class="col-md-3" hidden>'+
+                                                '<label>Horario Sabado<b style="color:#F44336 !important;">*</b></label>'+
                                                 '<input type="time" class="form-control" name="horariosab_id" id="txthorariosab_id" placeholder="" onkeyup="tipoLetra(this);" required>'+
                                             '</div>'+
                                             '<div class="col-md-3">'+
-                                                    '<label>Tel<b style="color:#F44336 !important;">*</b></label>'+                             
+                                                    '<label>Tel<b style="color:#F44336 !important;">*</b></label>'+
                                                     '<input type="number" class="form-control" name="tel" id="txttel" placeholder="Tel" onkeyup="tipoLetra(this);" maxlength="10" required>'+
                                                 '</div>'+
                                             '<div class="col-md-3">'+
-                                                    '<label>CURP<b style="color:#F44336 !important;">*</b></label>'+                             
+                                                    '<label>CURP<b style="color:#F44336 !important;">*</b></label>'+
                                                     '<input type="text" class="form-control" name="curp" id="txtcurp" placeholder="CURP" onkeyup="tipoLetra(this);" required>'+
                                                 '</div>'+
                                             '<div class="col-md-3">'+
-                                                '<label>R.F.C.<b style="color:#F44336 !important;">*</b></label>'+                             
+                                                '<label>R.F.C.<b style="color:#F44336 !important;">*</b></label>'+
                                                 '<input type="text" class="form-control" name="rfc" id="txtrfc" placeholder="RFC" onkeyup="tipoLetra(this);" required>'+
                                             '</div>'+
-                                            
-                                            '<div class="col-md-3" hidden>'+ 
+
+                                            '<div class="col-md-3" hidden>'+
                                                 '<label>Rol<b style="color:#F44336 !important;">*</b></label>'+
                                                     '<select class="form-select" name="rol" id="txtrol" placeholder="Rol" onkeyup="tipoLetra(this);" required>'+
                                             '</div>'+
@@ -527,7 +527,7 @@ $("#btnGuardarModificacion").on('click', function (e) {
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
             url:modificar_user,
-            type: "post", 
+            type: "post",
             dataType: "html",
             data: formData,
             cache: false,
@@ -559,7 +559,7 @@ $("#btnGuardarModificacion").on('click', function (e) {
                         "extendedTImeout": "6000"
                     });
                 }
-            }    
+            }
         })
     }else{
         form.parsley().validate();
@@ -613,7 +613,7 @@ $("#aceptar").on('click', function(e){
                     toastr.error( "No tiene permisos para realizar esta acción, contacta al administrador del sistema", "Mensaje", {
                         "timeOut": "6000",
                         "progressBar": true,
-                        "extendedTImeout": "6000" 
+                        "extendedTImeout": "6000"
                     });
                 }else{
                     toastr.error( "Aviso, estamos experimentando problemas, contacta al administrador del sistema", "Mensaje", {
@@ -629,5 +629,5 @@ $("#aceptar").on('click', function(e){
         form.parsley().validate();
     }
 });
-    
+
 init();

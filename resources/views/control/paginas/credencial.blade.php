@@ -80,7 +80,7 @@
 			<!-- LOGO TECNODIESEL 
 			<img src="control/img/logo_TECNODIESEL.jpg" class="img-fluid profile-image" width="70">-->
 			
-			<!-- LOGO UTP -->
+			<!-- Fot de credencial -->
 			<img class="img-fluid profile-image" src= "{{ $user->foto }}" width="80px" height="80px"/>
 
 

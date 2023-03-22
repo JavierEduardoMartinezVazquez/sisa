@@ -26,7 +26,7 @@ class UserController extends Controller
         if(sizeof($ultimoNumeroTabla) == 0 || sizeof($ultimoNumeroTabla) == "" || sizeof($ultimoNumeroTabla) == null){
             $id = 1;
         }else{
-            $id = $ultimoNumeroTabla[0]->id+1;   
+            $id = $ultimoNumeroTabla[0]->id+1;
         }
         return response()->json($id);
     }
@@ -62,7 +62,7 @@ class UserController extends Controller
             $select_roles = $select_roles."<option value='".$rol->name."'>".$rol->name."</option>";
         }
         return response()->json($select_roles);
-        
+
     }
     public function guardar_user(Request $request){
         $email=$request->email;
@@ -100,7 +100,7 @@ class UserController extends Controller
                 $filename = time() . '-' . $file->getClientOriginalName();
                 $uploadSuccess = $request->file('foto')->move($destinationPath, $filename);
                 $user->foto = $destinationPath . $filename;
-    
+
             }
             $user->status="ALTA";
             $user->save();
@@ -136,7 +136,7 @@ class UserController extends Controller
         }
     }
 
-    public function obtener_user(Request $request){        
+    public function obtener_user(Request $request){
         $user= User::where('id', $request->numero)->first();
         $permitirmodificacion = 1;
         $getroles = Role::orderBy("id", "DESC")->get();
@@ -146,9 +146,9 @@ class UserController extends Controller
                 $select_roles = $select_roles."<option value='".$getrol->name."' selected>".$getrol->name."</option>";
             }else{
                 $select_roles = $select_roles."<option value='".$getrol->name."'>".$getrol->name."</option>";
-            }       
-        }        
-        if($user->status == 'BAJA'){ 
+            }
+        }
+        if($user->status == 'BAJA'){
             $permitirmodificacion = 0;
         }
         $data = array(

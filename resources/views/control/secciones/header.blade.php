@@ -1,4 +1,4 @@
-<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+<nav class="main-header navbar navbar-expand navbar-white navbar-light" style="background-color: rgb(112, 112, 112)">
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" role="button"><i class="fas fa-bars"></i></a>
@@ -17,9 +17,9 @@
                          document.getElementById('logout-form').submit();">
                          <i class="fas fa-sign-out-alt"></i>
         </a>
-    </li> 
-      
-      
+    </li>
+
+
         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
           @csrf
         </form>

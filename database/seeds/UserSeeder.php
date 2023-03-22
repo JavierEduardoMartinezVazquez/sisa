@@ -31,7 +31,7 @@ class UserSeeder extends Seeder
             'diasvacaciones' => '6',
             'rol' => 'Admin',
             'status' => 'ALTA',
-            'foto' => 'img\usersfoto\usuario.jpg',
+            'foto' => 'img\usersfoto\javier.jpg',
         ])->assignRole('Admin');
 
         User::create([

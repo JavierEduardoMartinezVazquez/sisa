@@ -5,7 +5,7 @@
     @section('additionals_css')
 @endsection
 @section('content')
-    <div class="content-wrapper"> 
+    <div class="content-wrapper">
         <section class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
@@ -21,29 +21,29 @@
                     </div>
                 </div>
             </div>
-        </section> 
+        </section>
 
         <section class="content">
             <div class="row">
                 <div class="col-12">
-                    <div class="card"> 
+                    <div class="card">
                         <div class="card-header">
                             <div class="row">
                                 <div class="col-sm-8">
                                     <h4>Registro de Asistencias</h4>
                                 </div>
                                 <div class="col-md-3">
-                                    
+
                                 <input type="text" class="form-control divorinputmodxl inputnextdet" id="buscarcodigo" placeholder="ID del Empleado" autocomplete="off">
-                                 
+
                         <!--<button type="submit" class="btn btn-danger" onclick="alta()">Agregar</button>-->
                                 </div>
                                 <div class="col-md-1">
-                                    
+
                                     <a class="btn  btn-success waves-effect" href="{{route('export_excel')}}" target="_blank">
                                         Excel
                                     </a>
-                                
+
                             </div>
                         </div>
                         <div class="card-body table-responsive">
@@ -55,10 +55,10 @@
                                         <th>Empleado</th>
                                         <th>Fecha</th>
                                         <th>Entrada</th>
-                                        <th>Salida</th> 
-                                        <th>Observaciones</th> 
+                                        <th>Salida</th>
+                                        <th>Observaciones</th>
                                         <th>Estatus</th>
-                                        
+
                                     </tr>
                                 </thead>
                             </table>
@@ -85,10 +85,10 @@
         var obtener_assistances = '{!!URL::to('obtener_assistances')!!}';
         var modificar_assistances = '{!!URL::to('modificar_assistances')!!}';
         var verificar_baja_assistances = '{!!URL::to('verificar_baja_assistances')!!}';
-        var baja_assistances = '{!!URL::to('baja_assistances')!!}';     
-        var obtener_fecha_actual_datetimelocal = '{!!URL::to('obtener_fecha_actual_datetimelocal')!!}';  
+        var baja_assistances = '{!!URL::to('baja_assistances')!!}';
+        var obtener_fecha_actual_datetimelocal = '{!!URL::to('obtener_fecha_actual_datetimelocal')!!}';
         var leercodigo = '{!!URL::to('leercodigo')!!}';
         //var obtener_users = '{!!URL::to('obtener_users')!!}';
-    </script> 
+    </script>
     <script src="scripts/assistances.js"></script>
-@endsection    
+@endsection

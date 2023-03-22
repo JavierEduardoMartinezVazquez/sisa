@@ -1,4 +1,4 @@
-<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: rgb(56, 56, 56)">
+<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: rgb(44, 43, 43)">
     <div class="sidebar">
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
@@ -20,7 +20,7 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              
+
               <li class="nav-item">
                 <a href="{{route('User')}}" class="nav-link" id="">
                   <i class="nav-icon fas fa-user"></i>
@@ -55,7 +55,7 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              
+
               <li class="nav-item">
                 <a href="{{route('Holidays')}}" class="nav-link" id="hol">
                   <i class="nav-icon nav-icon fas fa-book"></i>
@@ -83,10 +83,10 @@
               </ul>
               @endcan
 
-              
+
 
 <!--USUARIO -->
-<!--@can('Businessreporte')     
+<!--@can('Businessreporte')
       <li class="nav-item has-treeview">
               <a class="nav-link active">
                 <i class="nav-icon fas fa-chart-pie"></i>
@@ -95,7 +95,7 @@
                 </p>
               </a>
               <ul class="nav nav-treeview">
-            
+
               <li class="nav-item">
                 <a href="{{route('Businessreporte')}}" class="nav-link" id="">
                   <i class="nav-icon far fas fa-cogs"></i>
@@ -129,9 +129,9 @@
               </li>
             </ul>
             @endcan-->
-              
+
           <li class="nav-item">
-            <a href="{{ route('logout') }}" class="nav-link" 
+            <a href="{{ route('logout') }}" class="nav-link"
                onclick="event.preventDefault();
                              document.getElementById('logout-form').submit();">
                              <i class="nav-icon fas fa-sign-out-alt"></i>

@@ -21,7 +21,7 @@ class AssistancesController extends Controller
         if(sizeof($ultimoNumeroTabla) == 0 || sizeof($ultimoNumeroTabla) == "" || sizeof($ultimoNumeroTabla) == null){
             $id = 1;
         }else{
-            $id = $ultimoNumeroTabla[0]->id+1;   
+            $id = $ultimoNumeroTabla[0]->id+1;
         }
         return response()->json($id);
     }
@@ -33,7 +33,7 @@ class AssistancesController extends Controller
             ->addColumn('operaciones', function($data){
                 $operaciones = '<div class="container">'.
                                     '<div class="row">'.
-                                            '<div class="col"><a href="javascript:void(0);" onclick="obtenerassistances('.$data->id.')"><i class="fas fa-pen-square" aria-hidden="true"></i></a></div>'.
+                                            //'<div class="col"><a href="javascript:void(0);" onclick="obtenerassistances('.$data->id.')"><i class="fas fa-pen-square" aria-hidden="true"></i></a></div>'.
                                             '<div class="col"><a href="javascript:void(0);" onclick="verificarbajaassistances('.$data->id.')"><i class="fa fa-minus-square" aria-hidden="true"></i></a></div>'.
                                         '</div>'.
                                 '</div>';
@@ -47,7 +47,7 @@ class AssistancesController extends Controller
     public function obtener_assistances(Request $request){
         $assistances= C_assistances::where('id', $request->numero)->first();
         $permitirmodificacion = 1;
-        if($assistances->status == 'BAJA'){ 
+        if($assistances->status == 'BAJA'){
             $permitirmodificacion = 0;
         }
         $data = array(
@@ -66,7 +66,7 @@ class AssistancesController extends Controller
             'Entrada'=> $request->Entrada,
             'Salida'=> $request->Salida,
             'Observaciones'=> $request->Observaciones,
-            
+
         ]);
         return response()->json($assistances);
     }
@@ -96,6 +96,19 @@ class AssistancesController extends Controller
         return response()->json($fechas);
     }
 
+    /* public function observaciones_asis(Request $request){
+        if ($hentrada >= 7 && $hentrada <= 9){
+            "NINGUNA"
+        }else if ($hentrada >= 10 && $hentrada <= 7){
+            "RETARDO"
+        }
+        else{
+            "FALTA"
+        }
+        return response()->json($observaciones);
+
+    } */
+
     //Leer codigo de barras
     public function leercodigo(Request $request){
         $buscarcodigo = $request->buscarcodigo;
@@ -103,7 +116,7 @@ class AssistancesController extends Controller
         $exiteusuario = User::where('id', $buscarcodigo)->count();
         if($exiteusuario > 0){
 
-            
+
 
             $exiteasistencia = C_assistances::where('Usuario', $buscarcodigo)->whereDate('Fecha', Carbon::now()->format("Y-m-d"))->count();
 
@@ -113,18 +126,18 @@ class AssistancesController extends Controller
                     $id = 1;
                 }else{
                     $id = $ultimoNumeroTabla[0]->id+1;
-                }  
+                }
                 $assistances = new C_assistances;
                 $assistances->Usuario=$buscarcodigo;
                 $assistances->Fecha=Carbon::now()->format("Y-m-d");;
                 $assistances->Entrada=Carbon::now()->format("H:i:s");
                 $assistances->Observaciones='NINGUNA';
-                
-                $assistances->status='ALTA';        
+
+                $assistances->status='ALTA';
                 $assistances->save();
             }
             else{
-                
+
                 C_assistances::where('Usuario', $buscarcodigo)->where('Fecha', Carbon::now()->format("Y-m-d"))
                     ->update([
                         'Salida'=> Carbon::now()->format("H:i:s")
@@ -132,7 +145,7 @@ class AssistancesController extends Controller
             }
 
         }
-       
+
         return response()->json($buscarcodigo);
     }
     /*public function guardar_assistances(Request $request){
@@ -141,15 +154,15 @@ class AssistancesController extends Controller
             $id = 1;
         }else{
             $id = $ultimoNumeroTabla[0]->id+1;
-        }   
+        }
         $assistances = new C_assistances;
         $assistances->Usuario=$request->Usuario;
         $assistances->Fecha=$request->Fecha;
         $assistances->Entrada=$request->Entrada;
         $assistances->Salida=$request->Salida;
         $assistances->Observaciones=$request->Observaciones;
-        
-        $assistances->status='ALTA';        
+
+        $assistances->status='ALTA';
         $assistances->save();
         return response()->json($assistances);
     }*/
