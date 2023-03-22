@@ -40,6 +40,10 @@ class User extends Authenticatable
         'status'
     ];
 
+    public function business(){
+        return $this->belongsTo('\App\C_bussines');
+    }
+
     /**
      * The attributes that should be hidden for arrays.
      *

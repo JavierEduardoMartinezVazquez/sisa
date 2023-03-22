@@ -15,6 +15,10 @@ class C_business extends Model
         'direccion',
         'rfc_e',
         'status'
-        
+
     ];
+
+    public function users(){
+    return $this->hasMany('\App\User');
+}
 }

@@ -24,7 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('tel')->nullable();
             $table->string('curp')->nullable();
             $table->string('rfc')->nullable();
-            $table->string('empresa_id', 60)->nullable();
+            $table->string('empresa_id')->nullable();
             $table->string('puesto', 20)->nullable();
             $table->date('ingreso')->nullable();
             $table->time('horariolv_id')->nullable();
@@ -35,6 +35,11 @@ class CreateUsersTable extends Migration
             $table->string('foto')->nullable();
             $table->rememberToken();
             $table->timestamps();
+
+            /* $table->foreign('empresa_id')
+            ->references('id')
+            ->on('business')
+            ->onDelete('set null'); */
         });
     }
     /**
